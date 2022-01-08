@@ -12,7 +12,6 @@ const AboutPage = ({ data }) => {
   const { leadText } = data.allContentfulAbout.edges[0].node.leadText;
   const { teamTitle, team } = data.allContentfulAbout.edges[0].node;
 
-  console.log(data);
   return (
     <>
       <Helmet>
@@ -38,7 +37,10 @@ const AboutPage = ({ data }) => {
             </h2>
             <div className="grid place-content-around max-w-2xl mx-auto grid-flow-col">
               {team.map(({ name, image }) => (
-                <div className="flex flex-col items-center justify-center">
+                <div
+                  className="flex flex-col items-center justify-center"
+                  key={name}
+                >
                   <div className="flex flex-col items-center justify-center">
                     <GatsbyImage
                       image={image.gatsbyImageData}

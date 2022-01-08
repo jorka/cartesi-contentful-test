@@ -7,7 +7,6 @@ import Hero from "../components/hero";
 import { Reveal, Tween } from "react-gsap";
 
 const IndexPage = ({ data }) => {
-  console.log(data);
   const { heroTitle, heroImage } =
     data.allContentfulHomepage.edges[0].node.hero;
   const { leadText } = data.allContentfulHomepage.edges[0].node.leadText;
