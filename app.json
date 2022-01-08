@@ -1,4 +1,7 @@
 {
+  "name": "Cartesio.io Test",
+  "description": "Cartesi.io marketing site",
+  "success_url": "/",
   "buildpacks": [
     {
       "url": "heroku/nodejs"
