@@ -1,23 +1,19 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.cartesi.io",
     title: "Cartesi",
   },
   plugins: [
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "VzCFSvDk5aduU807DsgQHK1zdF-TQ4Xn0SGf96FZicI",
-        spaceId: "",
+        accessToken: "qC0bPLKs1fLSkYJ3lJR-wrgz5NlsXDRAXmJ2IGPuhH0",
+        spaceId: "wpoprmv1hzgw",
       },
     },
     "gatsby-plugin-postcss",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "GT-123456",
-      },
-    },
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-transition-link",
     "gatsby-plugin-mdx",
     {
       resolve: "gatsby-source-filesystem",
@@ -27,5 +23,24 @@ module.exports = {
       },
       __key: "pages",
     },
+
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "YOUR_GOOGLE_TAGMANAGER_ID",
+        includeInDevelopment: false,
+        enableWebVitalsTracking: true,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "images",
+        path: "./src/assets/images/",
+      },
+    },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 };

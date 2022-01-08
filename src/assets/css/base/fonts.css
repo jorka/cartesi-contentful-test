@@ -1,0 +1,67 @@
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.125,1140,18,1.25,9,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+:root {
+  --step--2: clamp(0.79rem, 0.82rem + -0.14vw, 0.72rem);
+  --step--1: clamp(0.89rem, 0.88rem + 0.02vw, 0.9rem);
+  --step-0: clamp(1rem, 0.95rem + 0.24vw, 1.13rem);
+  --step-1: clamp(1.13rem, 1.02rem + 0.55vw, 1.41rem);
+  --step-2: clamp(1.27rem, 1.07rem + 0.96vw, 1.76rem);
+  --step-3: clamp(1.42rem, 1.12rem + 1.51vw, 2.2rem);
+  --step-4: clamp(1.6rem, 1.16rem + 2.23vw, 2.75rem);
+  --step-5: clamp(1.8rem, 1.17rem + 3.18vw, 3.43rem);
+  --step-6: clamp(2.03rem, 1.14rem + 4.42vw, 4.29rem);
+  --step-7: clamp(2.28rem, 1.08rem + 6.02vw, 5.36rem);
+  --step-8: clamp(2.57rem, 0.95rem + 8.08vw, 6.71rem);
+  --step-9: clamp(2.89rem, 0.74rem + 10.72vw, 8.38rem);
+}
+
+@font-face {
+  font-family: "FK Roman Display";
+  src: local("FK Roman Display Medium"), local("FKRomanDisplay-Medium"),
+    url("../fonts/FKRomanDisplay-Medium.woff2") format("woff2"),
+    url("../fonts/FKRomanDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FK Grotesk";
+  src: local("FK Grotesk Light Italic"), local("FKGrotesk-LightItalic"),
+    url("../fonts/FKGrotesk-LightItalic.woff2") format("woff2"),
+    url("../fonts/FKGrotesk-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  font-size: 30px;
+}
+
+@font-face {
+  font-family: "FK Grotesk";
+  src: local("FK Grotesk Italic"), local("FKGrotesk-Italic"),
+    url("../fonts/FKGrotesk-Italic.woff2") format("woff2"),
+    url("../fonts/FKGrotesk-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FK Grotesk";
+  src: local("FK Grotesk Light"), local("FKGrotesk-Light"),
+    url("../fonts/FKGrotesk-Light.woff2") format("woff2"),
+    url("../fonts/FKGrotesk-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FK Grotesk";
+  src: local("FK Grotesk Regular"), local("FKGrotesk-Regular"),
+    url("../fonts/FKGrotesk-Regular.woff2") format("woff2"),
+    url("../fonts/FKGrotesk-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
