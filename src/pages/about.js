@@ -15,7 +15,7 @@ const AboutPage = ({ data }) => {
   return (
     <>
       <Helmet>
-        <title>Cartesi.io</title>
+        <title>About | Cartesi.io</title>
         <link rel="canonical" href="http://cartesio.io" />
       </Helmet>
       <Layout>
