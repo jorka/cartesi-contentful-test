@@ -5,13 +5,13 @@ import * as React from "react";
 import Layout from "../components/layout";
 import Hero from "../components/hero";
 
-const IndexPage = ({ data }) => {
-  const { heroImage } = data.allContentfulPageAbout.edges[0].node.hero;
+const PeoplePage = ({ data }) => {
+  const { heroImage } = data.allContentfulPagePeople.edges[0].node.hero;
 
   return (
     <>
       <Helmet>
-        <title>Cartesi.io</title>
+        <title>Token | Cartesi.io</title>
         <link rel="canonical" href="http://cartesio.io" />
       </Helmet>
       <Layout>
@@ -20,7 +20,6 @@ const IndexPage = ({ data }) => {
             src: heroImage.gatsbyImageData,
             alt: heroImage.title,
           }}
-          title="Homepage Design Missing"
         />
       </Layout>
     </>
@@ -29,7 +28,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    allContentfulPageAbout {
+    allContentfulPagePeople {
       edges {
         node {
           hero {
@@ -44,4 +43,4 @@ export const query = graphql`
     }
   }
 `;
-export default IndexPage;
+export default PeoplePage;

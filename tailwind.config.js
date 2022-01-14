@@ -16,13 +16,55 @@ module.exports = {
     },
     fontFamily: {
       sans: ["FK Grotesk", "sans-serif"],
-      serif: ["FK Roman Display", "serif"],
     },
     container: {
       center: true,
       padding: "1.5rem",
     },
-    extend: {},
+
+    extend: {
+      colors: {
+        gray: {
+          50: "#FAFAFB",
+          100: "#E0E0E8",
+          200: "#C7C7D4",
+          300: "#ADADBF",
+          400: "#9494AB",
+          500: "#7C7B96",
+          600: "#646281",
+          700: "#4C496C",
+          800: "#353157",
+          900: "#1E1941",
+        },
+        blue: {
+          50: "#F0F6FE",
+          100: "#C1DAF9",
+          200: "#85B4FF",
+          300: "#709BE3",
+          400: "#4D7BD2",
+          500: "#2D5ABE",
+          600: "#254DA9",
+          700: "#1E4092",
+          800: "#17347C",
+          900: "#112864",
+        },
+        yellow: {
+          50: "#FFFAE7",
+          100: "#FFF9CB",
+          200: "#FFF6A9",
+          300: "#FFF38A",
+          400: "#FFEF70",
+          500: "#FFE95A",
+          600: "#DEB94C",
+          700: "#BD8D3E",
+          800: "#9C6632",
+          900: "#7A4426",
+        },
+      },
+      lineHeight: {
+        tighter: 1.1,
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

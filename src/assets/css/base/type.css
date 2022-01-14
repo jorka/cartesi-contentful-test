@@ -1,0 +1,26 @@
+@layer base {
+  :root {
+    --step--2: clamp(0.79rem, 0.82rem + -0.14vw, 0.72rem);
+    --step--1: clamp(0.89rem, 0.88rem + 0.02vw, 0.9rem);
+    --step-0: clamp(1rem, 0.95rem + 0.24vw, 1.13rem);
+    --step-1: clamp(1.13rem, 1.02rem + 0.55vw, 1.41rem);
+    --step-2: clamp(1.27rem, 1.07rem + 0.96vw, 1.76rem);
+    --step-3: clamp(1.42rem, 1.12rem + 1.51vw, 2.2rem);
+    --step-4: clamp(1.6rem, 1.16rem + 2.23vw, 2.75rem);
+    --step-5: clamp(1.8rem, 1.17rem + 3.18vw, 3.43rem);
+    --step-6: clamp(2.03rem, 1.14rem + 4.42vw, 4.29rem);
+    --step-7: clamp(2.28rem, 1.08rem + 6.02vw, 5.36rem);
+    --step-8: clamp(2.57rem, 0.95rem + 8.08vw, 6.71rem);
+    --step-9: clamp(2.89rem, 0.74rem + 10.72vw, 8.38rem);
+  }
+
+  h1 {
+    @apply leading-none;
+  }
+  h2 {
+    @apply leading-none;
+  }
+  h3 {
+    @apply leading-none;
+  }
+}
