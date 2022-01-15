@@ -2,9 +2,10 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import * as React from "react";
 import DownScrollLink from "./downScrollLink";
 
-const Hero = ({ title, image, sectionLinkTo }) => {
+const Hero = ({ image, sectionLinkTo, children }) => {
   return (
     <div className="h-screen overflow-hidden bg-gray-800 text-white grid content-center justify-center relative">
+      {children}
       <div className="z-0 absolute inset-0">
         <GatsbyImage
           image={image.src}

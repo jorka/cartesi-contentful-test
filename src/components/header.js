@@ -15,7 +15,7 @@ const Header = ({ isStatic }) => {
     gsap.to(headerRef.current, {
       yPercent: "-100",
       duration: 0.5,
-      ease: "ease",
+      ease: "power2.inOut",
       paused: true,
       scrollTrigger: {
         id: "header",
@@ -23,7 +23,9 @@ const Header = ({ isStatic }) => {
         end: 99999,
         trigger: headerRef.current,
 
-        onUpdate: ({ isActive, direction, trigger, animation }) => {
+        onUpdate: (self) => {
+          const { direction, trigger, animation, progress } = self;
+
           if (direction === -1) {
             animation.reverse();
             trigger.classList.add("bg-blue-200", "text-gray-900");
@@ -31,9 +33,9 @@ const Header = ({ isStatic }) => {
           }
           if (direction === 1) {
             animation.play();
-          } else if (direction === 1 && isActive === true) {
+          } else if (direction === 1) {
             animation.play();
-          } else if (!isActive) {
+          } else if (progress === 0) {
             trigger.classList.remove("bg-blue-200", "text-gray-900");
             trigger.classList.add("text-white");
           }

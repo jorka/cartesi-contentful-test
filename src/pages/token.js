@@ -1,4 +1,4 @@
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { Helmet } from "react-helmet";
 
 import * as React from "react";
@@ -8,6 +8,8 @@ import DownScrollLink from "../components/downScrollLink";
 import SectionLink from "../components/sectionLink";
 import Collapse from "../components/collapse";
 import { StaticImage } from "gatsby-plugin-image";
+import ReadmoreLink from "../components/readmoreLink";
+import BlogArticles from "../components/blogArticles";
 
 const TokenPage = ({ data }) => {
   const { heroImage } = data.allContentfulPageToken.edges[0].node.hero;
@@ -94,7 +96,7 @@ const TokenPage = ({ data }) => {
 
         {/*  */}
         <div className="bg-blue-50  section" id="how-to-get-ctsi">
-          <div className="container mx-auto max-w-5xl">
+          <div className="container max-w-5xl">
             <h2 className="text-6xl mb-8 lg:mb-12">How to get CTSI</h2>
 
             <div className="mb-12 lg:mb-24">
@@ -200,9 +202,104 @@ const TokenPage = ({ data }) => {
         <div className="h-screen relative overflow-hidden">
           <StaticImage
             src={`../assets/images/uploads/token-01.jpg`}
-            className="absolute inset-0 object-cover"
+            className="left-0 top-0 object-cover w-full h-full"
             alt="token-01"
           />
+        </div>
+        {/*  */}
+
+        {/*  */}
+        <div
+          className="bg-yellow-50 min-h-screen grid place-content-center section"
+          id="new-os"
+        >
+          <div className="container max-w-5xl">
+            <h2 className="text-6xl mb-8 lg:mb-12">About tokens</h2>
+
+            <div className="prose mb-12 lg:mb-24">
+              <p>
+                Our CTSI is a token, not a coin. The main difference between a
+                coin and a token is in the structure. Coins, like ETH and
+                Bitcoin, are separate currencies and have their own blockchain,
+                while tokens are created on an already existing blockchain.
+              </p>
+              <p>
+                The tokenomics for our crypto token is thoroughly discussed in
+                our project whitepaper, and it should help you grasp the
+                functionality, objective, allocation policy, and more about
+                CTSI.
+              </p>
+            </div>
+
+            <div className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8">
+              <ReadmoreLink to="/labs" className=" hover:text-blue-500">
+                Read our whitepaper
+              </ReadmoreLink>
+              <ReadmoreLink to="#" className=" hover:text-blue-500">
+                Get CTSI
+              </ReadmoreLink>
+            </div>
+
+            <DownScrollLink to="#hello-world" />
+          </div>
+        </div>
+        {/*  */}
+
+        {/*  */}
+        <div
+          className="bg-gray-900 text-white section grid min-h-screen place-content-center"
+          id="new-os"
+        >
+          <div className="container max-w-5xl">
+            <h2 className="text-3xl mb-8 lg:mb-12">Highlights</h2>
+
+            <div className="grid grid-cols-3 gap-8 mb-12 xl:mb-24">
+              <div className="flex flex-col col-span-1">
+                <span className="text-5xl xl:text-6xl text-blue-200 leading-none">
+                  <span>20</span>
+                  <span>+</span>
+                </span>
+                <span>Wallets & exchanges</span>
+              </div>
+              <div className="flex flex-col col-span-2 text-right">
+                <span className="text-5xl xl:text-6xl text-blue-200 leading-none">
+                  <span>139.96</span>
+                  <span>million</span>
+                </span>
+                <span>CTSI staked</span>
+              </div>
+              <div className="flex flex-col col-span-2">
+                <span className="text-5xl xl:text-6xl text-blue-200 leading-none">
+                  <span>54.96</span>
+                  <span>million</span>
+                </span>
+                <span>CTSI staked</span>
+              </div>
+              <div className="flex flex-col col-span-1 text-right">
+                <span className="text-5xl xl:text-6xl text-blue-200 leading-none">
+                  <span>20</span>
+                  <span>+</span>
+                </span>
+                <span>Wallets & exchanges</span>
+              </div>
+            </div>
+
+            <div className="mt-8 flex justify-between gap-8 border-t border-white pt-8">
+              <ReadmoreLink to="#" className="text-white hover:text-blue-200">
+                See all highlights
+              </ReadmoreLink>
+            </div>
+
+            <DownScrollLink to="#articles" />
+          </div>
+        </div>
+        {/*  */}
+
+        {/*  */}
+        <div className="section" id="new-os">
+          <div className="container max-w-5xl">
+            <BlogArticles />
+          </div>
         </div>
         {/*  */}
       </Layout>

@@ -1,5 +1,5 @@
 @layer components {
   .container {
-    @apply sm:max-w-none md:max-w-none lg:max-w-screen-lg xl:max-w-screen-2xl;
+    @apply w-full mx-auto sm:max-w-none md:max-w-none lg:max-w-screen-lg xl:max-w-screen-2xl;
   }
 }

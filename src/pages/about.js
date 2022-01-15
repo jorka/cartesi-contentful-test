@@ -95,7 +95,7 @@ const AboutPage = ({ data }) => {
 
         {/*  */}
         <div className="bg-gray-900 text-white section" id="new-os">
-          <div className="container mx-auto max-w-5xl">
+          <div className="container max-w-5xl">
             <h2 className="text-6xl mb-8 lg:mb-12">
               Hello world.
               <br />
@@ -222,7 +222,7 @@ const AboutPage = ({ data }) => {
         <div className="h-screen relative overflow-hidden">
           <StaticImage
             src={`../assets/images/uploads/about-01.jpg`}
-            className="absolute inset-0 object-cover"
+            className="left-0 top-0 object-cover w-full h-full"
             alt="about-01"
           />
         </div>
@@ -230,7 +230,7 @@ const AboutPage = ({ data }) => {
 
         {/*  */}
         <div className="bg-yellow-500 section min-h-screen" id="new-world">
-          <div className="container mx-auto max-w-5xl">
+          <div className="container max-w-5xl">
             <h2 className="text-6xl mb-8 lg:mb-12">
               Hello
               <br />
@@ -265,7 +265,7 @@ const AboutPage = ({ data }) => {
 
         {/*  */}
         <div className="bg-blue-50 section min-h-screen" id="hello-new-economy">
-          <div className="container mx-auto max-w-5xl">
+          <div className="container max-w-5xl">
             <h2 className="text-6xl mb-8 lg:mb-12">
               Hello
               <br />
@@ -287,7 +287,7 @@ const AboutPage = ({ data }) => {
               </p>
             </div>
 
-            <div className="mt-8 flex justify-between gap-8 border-t border-blue-900 pt-8">
+            <div className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8">
               <ReadmoreLink to="/token">Get CTSI</ReadmoreLink>
             </div>
           </div>
