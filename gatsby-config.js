@@ -32,13 +32,7 @@ module.exports = {
         enableWebVitalsTracking: true,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `./src/assets/images/`,
-      },
-    },
+
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,

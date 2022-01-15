@@ -1,8 +1,10 @@
 @import "tailwindcss/base";
-@import "./base/body.css";
-@import "./base/fonts.css";
-@import "./base/type.css";
+@import "./base/_body";
+@import "./base/_fonts";
+@import "./base/_type";
 
 @import "tailwindcss/components";
+@import "./components/_container";
+@import "./components/_section";
 
 @import "tailwindcss/utilities";

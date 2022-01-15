@@ -37,7 +37,7 @@ module.exports = {
           900: "#1E1941",
         },
         blue: {
-          50: "#F0F6FE",
+          50: "#E1EBFF",
           100: "#C1DAF9",
           200: "#85B4FF",
           300: "#709BE3",
@@ -49,7 +49,7 @@ module.exports = {
           900: "#112864",
         },
         yellow: {
-          50: "#FFFAE7",
+          50: "#FFFAE6",
           100: "#FFF9CB",
           200: "#FFF6A9",
           300: "#FFF38A",
@@ -64,6 +64,132 @@ module.exports = {
       lineHeight: {
         tighter: 1.1,
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: [
+            {
+              fontSize: "var(--step-0)",
+              color: theme.colors.gray[900],
+              maxWidth: "none",
+
+              a: {
+                color: "inherit",
+              },
+              h1: {
+                fontWeight: "400",
+                fontSize: "var(--step-4)",
+              },
+              h2: {
+                fontWeight: "400",
+                fontSize: "var(--step-2)",
+              },
+              h3: {
+                fontWeight: "400",
+                fontSize: "var(--step-2)",
+              },
+              h4: {
+                fontWeight: "400",
+                fontSize: "var(--step-1)",
+              },
+              h5: {
+                fontWeight: "400",
+                fontSize: "var(--step-0)",
+              },
+            },
+          ],
+        },
+        lg: {
+          css: [
+            {
+              fontSize: "var(--step-1)",
+
+              h1: {
+                fontWeight: "400",
+                fontSize: "var(--step-5)",
+              },
+              h2: {
+                fontWeight: "400",
+                fontSize: "var(--step-4)",
+              },
+              h3: {
+                fontWeight: "400",
+                fontSize: "var(--step-3)",
+              },
+              h4: {
+                fontWeight: "400",
+                fontSize: "var(--step-2)",
+              },
+              h5: {
+                fontWeight: "400",
+                fontSize: "var(--step-1)",
+              },
+            },
+          ],
+        },
+        xl: {
+          css: [
+            {
+              fontSize: "var(--step-2)",
+              h1: {
+                fontWeight: "400",
+                fontSize: "var(--step-6)",
+              },
+              h2: {
+                fontWeight: "400",
+                fontSize: "var(--step-5)",
+              },
+              h3: {
+                fontWeight: "400",
+                fontSize: "var(--step-4)",
+              },
+              h4: {
+                fontWeight: "400",
+                fontSize: "var(--step-3)",
+              },
+              h5: {
+                fontWeight: "400",
+                fontSize: "var(--step-2)",
+              },
+            },
+          ],
+        },
+        "2xl": {
+          css: [
+            {
+              fontSize: "var(--step-3)",
+              h1: {
+                fontWeight: "400",
+                fontSize: "var(--step-7)",
+              },
+              h2: {
+                fontWeight: "400",
+                fontSize: "var(--step-6)",
+              },
+              h3: {
+                fontWeight: "400",
+                fontSize: "var(--step-5)",
+              },
+              h4: {
+                fontWeight: "400",
+                fontSize: "var(--step-4)",
+              },
+              h5: {
+                fontWeight: "400",
+                fontSize: "var(--step-3)",
+              },
+            },
+          ],
+        },
+        invert: {
+          css: {
+            color: theme.colors.white,
+
+            a: {
+              color: "inherit",
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [require("@tailwindcss/typography")],

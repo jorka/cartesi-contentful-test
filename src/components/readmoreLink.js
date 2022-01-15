@@ -7,7 +7,7 @@ const ReadmoreLink = (props) => {
     <Link {...props}>
       <span className="inline-flex gap-2 items-center">
         {props.children}
-        <Icon className="w-6 h-6 fill-current" />
+        <Icon className="w-6 h-6 fill-current flex-shrink-0" />
       </span>
     </Link>
   );

@@ -4,10 +4,12 @@ import Logo from "./logo";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const Header = () => {
+const Header = ({ isStatic }) => {
   const headerRef = React.useRef(null);
 
   React.useEffect(() => {
+    if (isStatic) return;
+
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(headerRef.current, {
@@ -16,9 +18,11 @@ const Header = () => {
       ease: "ease",
       paused: true,
       scrollTrigger: {
-        start: "10px top",
+        id: "header",
+        start: "40px top",
         end: 99999,
         trigger: headerRef.current,
+
         onUpdate: ({ isActive, direction, trigger, animation }) => {
           if (direction === -1) {
             animation.reverse();
@@ -36,12 +40,14 @@ const Header = () => {
         },
       },
     });
-  }, []);
+  }, [isStatic]);
 
   return (
     <header
       ref={headerRef}
-      className="text-white fixed inset-x-0 top-0 py-4 flex flex-col justify-center transition-all ease duration-500 z-40"
+      className={`inset-x-0 top-0 py-4 flex flex-col justify-center transition-all ease duration-500 z-40 ${
+        isStatic ? "relative" : "text-white fixed"
+      }`}
     >
       <div className="container">
         <div className="flex justify-between items-center">

@@ -2,13 +2,13 @@ import * as React from "react";
 import Footer from "./footer";
 import Header from "./header";
 
-const Layout = (props) => {
+const Layout = ({ children, staticHeader }) => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-grow">{props.children}</main>
+    <>
+      <Header isStatic={staticHeader} />
+      <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };
 

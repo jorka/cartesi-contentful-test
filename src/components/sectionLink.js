@@ -1,4 +1,5 @@
 import { Link } from "gatsby";
+
 import React from "react";
 import Icon from "../assets/images/icon-arrow-more.svg";
 
@@ -7,12 +8,12 @@ if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]');
 }
 
-const SectionLink = (props) => {
+const SectionLink = ({ children, ...rest }) => {
   return (
-    <Link {...props}>
+    <Link {...rest}>
       <span className="inline-flex gap-2 items-center">
-        {props.children}
-        <Icon className="w-6 h-6 fill-current" />
+        {children}
+        <Icon className="w-6 h-6 fill-current flex-shrink-0" />
       </span>
     </Link>
   );

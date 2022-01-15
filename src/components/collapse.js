@@ -1,8 +1,8 @@
 import gsap from "gsap";
 import React from "react";
 
-const Collapse = ({ label, children, expanded = false, ...rest }) => {
-  const [reversed, setReversed] = React.useState(expanded);
+const Collapse = ({ label, children, isExpanded = false, ...rest }) => {
+  const [reversed, setReversed] = React.useState(isExpanded);
 
   const collapse = React.useRef(null);
   const iconPlusPath = React.useRef(null);
