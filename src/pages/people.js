@@ -6,15 +6,17 @@ import Layout from "../components/layout";
 import Hero from "../components/hero";
 import DownScrollLink from "../components/downScrollLink";
 import TeamList from "../components/teamList";
+import { StaticImage } from "gatsby-plugin-image";
 
 const PeoplePage = ({ data }) => {
   const { heroImage } = data.allContentfulPagePeople.edges[0].node.hero;
-  const { team } = data.allContentfulPagePeople.edges[0].node;
+  const teamCategories =
+    data.allContentfulPagePeople.edges[0].node.teamCategory;
 
   return (
     <>
       <Helmet>
-        <title>Token | Cartesi.io</title>
+        <title>People | Cartesi.io</title>
         <link rel="canonical" href="http://cartesio.io" />
       </Helmet>
       <Layout>
@@ -52,9 +54,19 @@ const PeoplePage = ({ data }) => {
             <h2 className="text-6xl mb-8 lg:mb-12">Meet</h2>
 
             <div className="mb-12 lg:mb-24">
-              <TeamList items={team} />
+              <TeamList items={teamCategories} />
             </div>
           </div>
+        </div>
+        {/*  */}
+
+        {/*  */}
+        <div className="h-screen relative overflow-hidden">
+          <StaticImage
+            src={`../assets/images/uploads/people-01.jpg`}
+            className="left-0 top-0 object-cover w-full h-full"
+            alt="about-01"
+          />
         </div>
         {/*  */}
       </Layout>
@@ -73,14 +85,28 @@ export const query = graphql`
               title
             }
           }
-          team {
+          teamCategory {
+            categoryName
             id
-            name
-            position
-            category
-            coreTeamSubCategory
-            image {
-              gatsbyImageData
+            teamMembers {
+              id
+              name
+              image {
+                gatsbyImageData
+              }
+              position
+            }
+            subCategory {
+              categoryName
+              id
+              teamMembers {
+                id
+                image {
+                  gatsbyImageData
+                }
+                name
+                position
+              }
             }
           }
         }

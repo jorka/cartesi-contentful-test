@@ -1,20 +1,44 @@
 import { GatsbyImage } from "gatsby-plugin-image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as React from "react";
 import DownScrollLink from "./downScrollLink";
 
 const Hero = ({ image, sectionLinkTo, children }) => {
+  const heroRef = React.useRef(null);
+  React.useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap
+      .timeline()
+      .from(heroRef.current, {
+        scale: 1.2,
+        ease: "power2.out",
+        duration: 2,
+        transformOrigin: "50% 50%",
+      })
+
+      .from(heroRef.current, {
+        scale: 1,
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: "center center",
+          scrub: true,
+          markers: true,
+        },
+      });
+  }, []);
+
   return (
     <div className="h-screen overflow-hidden bg-gray-800 text-white grid content-center justify-center relative">
       {children}
-      <div className="z-0 absolute inset-0">
+      <div ref={heroRef} className="z-0 absolute inset-0 overflow-hidden">
         <GatsbyImage
           image={image.src}
           alt={image.alt}
           className="left-0 top-0 object-cover w-full h-full"
         />
-
         {sectionLinkTo && <DownScrollLink to={sectionLinkTo} />}
-
         {/* <div className="absolute left-0 top-0 object-cover w-full h-full z-10 bg-gray-800 bg-blend-multiply bg-opacity-30" /> */}
       </div>
     </div>

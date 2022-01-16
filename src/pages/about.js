@@ -12,7 +12,6 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const AboutPage = ({ data }) => {
   const { heroImage } = data.allContentfulPageAbout.edges[0].node.hero;
-
   return (
     <>
       <Helmet>

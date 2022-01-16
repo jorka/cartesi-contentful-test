@@ -145,7 +145,7 @@ const LabsPage = ({ data }) => {
 
             <div className="grid grid-cols-4 gap-x-6 gap-y-12 mb-12 lg:mb-24">
               {Array.from({ length: 6 }).map((_, i) => (
-                <div>
+                <div key={i}>
                   <Link to="#">
                     <StaticImage
                       src={`https://picsum.photos/960/380`}
