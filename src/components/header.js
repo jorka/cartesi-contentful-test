@@ -24,22 +24,20 @@ const Header = ({ isStatic }) => {
         start: "40px top",
         end: 99999,
         trigger: headerRef.current,
-        scrub: false,
+        forse3D: true,
 
         onUpdate: (self) => {
-          const { direction, trigger, animation, progress } = self;
-          if (direction === -1) {
-            animation.reverse();
-            trigger.classList.add(...scrolledUpClasses);
-            trigger.classList.remove(...defaultClasses);
-          }
-          if (direction === 1) {
-            animation.play();
-          } else if (direction === 1) {
-            animation.play();
-          } else if (progress === 0) {
+          const { direction, trigger, animation, isActive } = self;
+          console.log(isActive);
+          if (!isActive) {
             trigger.classList.remove(...scrolledUpClasses);
             trigger.classList.add(...defaultClasses);
+          } else if (direction === -1) {
+            trigger.classList.add(...scrolledUpClasses);
+            trigger.classList.remove(...defaultClasses);
+            animation.reverse();
+          } else if (direction === 1) {
+            animation.play();
           }
         },
       },
@@ -53,7 +51,7 @@ const Header = ({ isStatic }) => {
   return (
     <header
       ref={headerRef}
-      className={`inset-x-0 top-0 py-4 lg:py-8 flex flex-col justify-center transition-all ease duration-500 z-40 ${
+      className={`inset-x-0 top-0 py-4 lg:py-8 flex flex-col justify-center z-40 ${
         isStatic ? "relative" : "text-white fixed"
       }`}
     >
