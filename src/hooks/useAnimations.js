@@ -8,7 +8,7 @@ export function useTextAnimations() {
   return React.useEffect(() => {
     const textElements = gsap.utils.toArray("[data-anim-fade]");
     if (!textElements.length) return;
-    ScrollTrigger.refresh(true);
+
     textElements.forEach((item, i) => {
       gsap.from(item, {
         opacity: 0,
@@ -33,7 +33,7 @@ export function useHeroAnimation(targetRef) {
 
   return React.useEffect(() => {
     if (!targetRef) return;
-    ScrollTrigger.refresh(true);
+
     const heroAnim = gsap
       .timeline()
       .from(targetRef, {
@@ -63,7 +63,7 @@ export function useHeroAnimation(targetRef) {
 
 export function useDownScrollAnimation(targetRef) {
   gsap.registerPlugin(ScrollTrigger);
-  ScrollTrigger.refresh(true);
+
   return React.useEffect(() => {
     if (!targetRef) return;
     const downScrollAnim = gsap.from(targetRef, {
@@ -90,7 +90,7 @@ export function useDownScrollAnimation(targetRef) {
 export const counterAnimation = (targetRef, cb) => {
   if (!targetRef) return;
   gsap.registerPlugin(ScrollTrigger);
-  ScrollTrigger.refresh(true);
+
   gsap.from(targetRef, {
     textContent: 0,
     duration: 4,
@@ -112,7 +112,7 @@ export const counterAnimation = (targetRef, cb) => {
 
 export function useImageRevealAnimations() {
   gsap.registerPlugin(ScrollTrigger);
-  ScrollTrigger.refresh(true);
+
   return React.useEffect(() => {
     const imageElements = gsap.utils.toArray("[data-anim-image-reveal]");
     if (!imageElements.length) return;
@@ -143,7 +143,6 @@ export function useSnapAnimations() {
   return React.useEffect(() => {
     const sections = gsap.utils.toArray("[data-anim-snap]");
     if (!sections.length) return;
-    ScrollTrigger.refresh(true);
 
     ScrollTrigger.matchMedia({
       "(min-width: 768px)": function () {
