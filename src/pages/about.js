@@ -12,6 +12,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const AboutPage = ({ data }) => {
   const { heroImage } = data.allContentfulPageAbout.edges[0].node.hero;
+
   return (
     <>
       <Helmet>
@@ -28,12 +29,19 @@ const AboutPage = ({ data }) => {
         {/*  */}
 
         <div
-          className="bg-yellow-50 min-h-screen grid place-content-center section"
+          className="bg-yellow-50 section min-h-screen grid items-center"
           id="about"
+          data-anim-snap
         >
           <div className="container max-w-5xl">
-            <h2 className="mb-12 text-lg">About</h2>
-            <div className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight">
+            <h2 className="mb-12 text-lg" data-anim-fade>
+              About
+            </h2>
+
+            <div
+              className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight"
+              data-anim-fade
+            >
               <p>
                 The blockchain OS connects 30 years of mainstream software
                 development with blockchain. We are a home to the next wave of
@@ -47,15 +55,18 @@ const AboutPage = ({ data }) => {
         {/*  */}
 
         {/*  */}
-        <div>
-          <div id="hello" className="relative">
+        <div id="hello" data-anim-snap>
+          <div className="relative">
             <div className="bg-yellow-500 absolute w-1/2 aboslute h-full z-0 bottom-0 left-0 hidden lg:block" />
             <div className="bg-blue-200 absolute w-1/2 aboslute h-full z-0 bottom-0 right-0 hidden lg:block" />
 
             <div className="container relative">
               <div className="flex flex-col lg:flex-row lg:gap-64 -mx-6">
                 <div className="w-full lg:w-1/2 section bg-yellow-500 px-6">
-                  <div className="prose prose-2xl prose-p:text-lg mb-8">
+                  <div
+                    className="prose prose-2xl prose-p:text-lg mb-8"
+                    data-anim-fade
+                  >
                     <h2>
                       Hello
                       <br />
@@ -71,7 +82,10 @@ const AboutPage = ({ data }) => {
                   </p>
                 </div>
                 <div className="w-full lg:w-1/2 section bg-blue-200 px-6">
-                  <div className="prose prose-2xl prose-p:text-lg mb-8">
+                  <div
+                    className="prose prose-2xl prose-p:text-lg mb-8"
+                    data-anim-fade
+                  >
                     <h2>
                       Hello
                       <br />
@@ -95,13 +109,13 @@ const AboutPage = ({ data }) => {
         {/*  */}
         <div className="bg-gray-900 text-white section" id="new-os">
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12">
+            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
               Hello world.
               <br />
               There’s a new OS
             </h2>
 
-            <div className="prose prose-invert mb-12 lg:mb-24">
+            <div className="prose prose-invert mb-12 lg:mb-24" data-anim-fade>
               <p>
                 We see an OS as the line between order and chaos. Blockchains
                 need to have an OS because the blockchain- specific VM does not
@@ -118,9 +132,10 @@ const AboutPage = ({ data }) => {
                 are used to.
               </p>
             </div>
+
             <div className="mb-12 lg:mb-24">
               <Collapse
-                isExpanded
+                data-anim-fade
                 label={
                   <span className="text-lg hover:text-blue-200 transition-colors">
                     Scalable
@@ -136,6 +151,7 @@ const AboutPage = ({ data }) => {
                 </div>
               </Collapse>
               <Collapse
+                data-anim-fade
                 label={
                   <span className="text-lg hover:text-blue-200 transition-colors">
                     Sophisticated
@@ -151,6 +167,7 @@ const AboutPage = ({ data }) => {
                 </div>
               </Collapse>
               <Collapse
+                data-anim-fade
                 label={
                   <span className="text-lg hover:text-blue-200 transition-colors">
                     Programmable
@@ -166,6 +183,7 @@ const AboutPage = ({ data }) => {
                 </div>
               </Collapse>
               <Collapse
+                data-anim-fade
                 label={
                   <span className="text-lg hover:text-blue-200 transition-colors">
                     Inviting
@@ -181,6 +199,7 @@ const AboutPage = ({ data }) => {
                 </div>
               </Collapse>
               <Collapse
+                data-anim-fade
                 label={
                   <span className="text-lg hover:text-blue-200 transition-colors">
                     Secure
@@ -197,7 +216,7 @@ const AboutPage = ({ data }) => {
               </Collapse>
             </div>
 
-            <div className="mt-8 flex justify-between gap-8">
+            <div className="mt-8 flex justify-between gap-8" data-anim-fade>
               <ReadmoreLink
                 to="/labs"
                 className="text-white hover:text-blue-200"
@@ -212,13 +231,16 @@ const AboutPage = ({ data }) => {
               </ReadmoreLink>
             </div>
 
-            <DownScrollLink to="#hello-world" />
+            <DownScrollLink to="#new-world" />
           </div>
         </div>
         {/*  */}
 
         {/*  */}
-        <div className="h-screen relative overflow-hidden">
+        <div
+          className="h-[50vh] relative overflow-hidden"
+          data-anim-image-reveal
+        >
           <StaticImage
             src={`../assets/images/uploads/about-01.jpg`}
             className="left-0 top-0 object-cover w-full h-full"
@@ -228,15 +250,19 @@ const AboutPage = ({ data }) => {
         {/*  */}
 
         {/*  */}
-        <div className="bg-yellow-500 section min-h-screen" id="new-world">
+        <div
+          className="bg-yellow-500 section min-h-screen flex items-center"
+          id="new-world"
+          data-anim-snap
+        >
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12">
+            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
               Hello
               <br />
               new world
             </h2>
 
-            <div className="prose mb-12 lg:mb-24">
+            <div className="prose mb-12 lg:mb-24" data-anim-fade>
               <p>
                 Blockchain technology can return control to the people and bring
                 about a more transparent society. By distributing value and
@@ -253,7 +279,10 @@ const AboutPage = ({ data }) => {
               </p>
             </div>
 
-            <div className="mt-8 flex justify-between gap-8 border-t border-blue-900 pt-8">
+            <div
+              className="mt-8 flex justify-between gap-8 border-t border-blue-900 pt-8"
+              data-anim-fade
+            >
               <ReadmoreLink to="/labs">Transit to blockchain</ReadmoreLink>
             </div>
 
@@ -263,15 +292,18 @@ const AboutPage = ({ data }) => {
         {/*  */}
 
         {/*  */}
-        <div className="bg-blue-50 section min-h-screen" id="hello-new-economy">
+        <div
+          className="bg-blue-50 section min-h-screen grid items-center"
+          id="hello-new-economy"
+        >
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12">
+            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
               Hello
               <br />
               new economy
             </h2>
 
-            <div className="prose mb-12 lg:mb-24">
+            <div className="prose mb-12 lg:mb-24" data-anim-fade>
               <p>
                 Blockchain, more specifically smart contracts, provides new
                 earning models. More and more economic segments are awakening to
@@ -286,7 +318,10 @@ const AboutPage = ({ data }) => {
               </p>
             </div>
 
-            <div className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8">
+            <div
+              className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8"
+              data-anim-fade
+            >
               <ReadmoreLink to="/token">Get CTSI</ReadmoreLink>
             </div>
           </div>

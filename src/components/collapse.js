@@ -5,6 +5,7 @@ const Collapse = ({ label, children, isExpanded = false, ...rest }) => {
   const [reversed, setReversed] = React.useState(isExpanded);
 
   const collapse = React.useRef(null);
+  const collapseContent = React.useRef(null);
   const iconPlusPath = React.useRef(null);
 
   const tl = React.useRef();
@@ -17,14 +18,19 @@ const Collapse = ({ label, children, isExpanded = false, ...rest }) => {
     tl.current = gsap
       .timeline()
       .to(collapse.current, {
-        height: 0,
+        height: "auto",
+        duration: 0.5,
+        ease: "power2.inOut",
+      })
+      .to(collapseContent.current, {
+        height: "auto",
         duration: 0.5,
         ease: "power2.inOut",
       })
       .to(iconPlusPath.current, {
         delay: -0.5,
         opacity: 1,
-        rotate: 180,
+        rotate: 90,
         scale: 1,
         transformOrigin: "50% 50%",
         duration: 0.5,
@@ -37,7 +43,7 @@ const Collapse = ({ label, children, isExpanded = false, ...rest }) => {
   }, []);
 
   React.useEffect(() => {
-    tl.current.reversed(reversed);
+    tl.current.reversed(!reversed);
   }, [reversed]);
 
   return (
@@ -56,19 +62,19 @@ const Collapse = ({ label, children, isExpanded = false, ...rest }) => {
             className="fill-current hover:fill-current"
           >
             <rect width="24" height="2" transform="translate(0 11)" />
-
             <rect
-              ref={iconPlusPath}
               width="2"
               height="24"
-              transform="translate(13 0) scale(-1 1)"
-              opacity="0"
+              transform="translate(11 0 ) rotate(0)"
+              ref={iconPlusPath}
             />
           </svg>
         </span>
       </button>
       <div ref={collapse} className="overflow-hidden">
-        {children}
+        <div ref={collapseContent} className="h-0">
+          {children}
+        </div>
       </div>
     </div>
   );

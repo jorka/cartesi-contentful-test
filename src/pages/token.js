@@ -1,4 +1,4 @@
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 
 import * as React from "react";
@@ -10,6 +10,7 @@ import Collapse from "../components/collapse";
 import { StaticImage } from "gatsby-plugin-image";
 import ReadmoreLink from "../components/readmoreLink";
 import BlogArticles from "../components/blogArticles";
+import Counter from "../components/counter";
 
 const TokenPage = ({ data }) => {
   const { heroImage } = data.allContentfulPageToken.edges[0].node.hero;
@@ -31,12 +32,18 @@ const TokenPage = ({ data }) => {
         {/*  */}
 
         <div
-          className="bg-yellow-500 min-h-screen grid place-content-center section"
+          className="bg-yellow-500 min-h-screen grid items-center section"
           id="ctsi-token"
+          data-anim-snap
         >
           <div className="container max-w-5xl">
-            <h2 className="mb-12 text-lg">CTSI token</h2>
-            <div className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight">
+            <h2 className="mb-12 text-lg" data-anim-fade>
+              CTSI token
+            </h2>
+            <div
+              className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight"
+              data-anim-fade
+            >
               <p>
                 Our token CTSI is the fuel of our network. If you buy CTSI, you
                 fund our ecosystem, keep our network healthy and support our
@@ -50,15 +57,18 @@ const TokenPage = ({ data }) => {
         {/*  */}
 
         {/*  */}
-        <div>
-          <div id="hello" className="relative">
+        <div data-anim-snap>
+          <div id="how-about" className="relative">
             <div className="bg-blue-200 absolute w-1/2 aboslute h-full z-0 bottom-0 left-0 hidden lg:block" />
             <div className="bg-yellow-50 absolute w-1/2 aboslute h-full z-0 bottom-0 right-0 hidden lg:block" />
 
             <div className="container relative">
               <div className="flex flex-col lg:flex-row lg:gap-64 -mx-6">
                 <div className="w-full lg:w-1/2 section bg-blue-200 px-6">
-                  <div className="prose prose-2xl prose-p:text-lg mb-8">
+                  <div
+                    className="prose prose-2xl prose-p:text-lg mb-8"
+                    data-anim-fade
+                  >
                     <h2>
                       How to
                       <br /> get CTSI
@@ -73,7 +83,10 @@ const TokenPage = ({ data }) => {
                   </p>
                 </div>
                 <div className="w-full lg:w-1/2 section bg-yellow-50 px-6">
-                  <div className="prose prose-2xl prose-p:text-lg mb-8">
+                  <div
+                    className="prose prose-2xl prose-p:text-lg mb-8"
+                    data-anim-fade
+                  >
                     <h2>
                       About
                       <br />
@@ -97,10 +110,13 @@ const TokenPage = ({ data }) => {
         {/*  */}
         <div className="bg-blue-50  section" id="how-to-get-ctsi">
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12">How to get CTSI</h2>
+            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
+              How to get CTSI
+            </h2>
 
             <div className="mb-12 lg:mb-24">
               <Collapse
+                data-anim-fade
                 isExpanded
                 label={
                   <span className="text-lg hover:text-blue-500 transition-colors">
@@ -117,6 +133,7 @@ const TokenPage = ({ data }) => {
                 </div>
               </Collapse>
               <Collapse
+                data-anim-fade
                 label={
                   <span className="text-lg hover:text-blue-500 transition-colors">
                     Store your CTSI safely
@@ -132,6 +149,7 @@ const TokenPage = ({ data }) => {
                 </div>
               </Collapse>
               <Collapse
+                data-anim-fade
                 label={
                   <span className="text-lg hover:text-blue-500 transition-colors">
                     Track your CTSI
@@ -147,6 +165,7 @@ const TokenPage = ({ data }) => {
                 </div>
               </Collapse>
               <Collapse
+                data-anim-fade
                 label={
                   <span className="text-lg hover:text-blue-500 transition-colors">
                     Trade your CTSI
@@ -162,6 +181,7 @@ const TokenPage = ({ data }) => {
                 </div>
               </Collapse>
               <Collapse
+                data-anim-fade
                 label={
                   <span className="text-lg hover:text-blue-500 transition-colors">
                     Pay with CTSI
@@ -177,6 +197,7 @@ const TokenPage = ({ data }) => {
                 </div>
               </Collapse>
               <Collapse
+                data-anim-fade
                 label={
                   <span className="text-lg hover:text-blue-500 transition-colors">
                     Stake your CTSI
@@ -193,13 +214,16 @@ const TokenPage = ({ data }) => {
               </Collapse>
             </div>
 
-            <DownScrollLink to="#hello-world" />
+            <DownScrollLink to="#about-tokens" data-anim-fade />
           </div>
         </div>
         {/*  */}
 
         {/*  */}
-        <div className="h-screen relative overflow-hidden">
+        <div
+          className="h-[50vh] relative overflow-hidden"
+          data-anim-image-reveal
+        >
           <StaticImage
             src={`../assets/images/uploads/token-01.jpg`}
             className="left-0 top-0 object-cover w-full h-full"
@@ -210,13 +234,16 @@ const TokenPage = ({ data }) => {
 
         {/*  */}
         <div
-          className="bg-yellow-50 min-h-screen grid place-content-center section"
-          id="new-os"
+          className="bg-yellow-50 min-h-screen grid items-center section"
+          id="about-tokens"
+          data-anim-snap
         >
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12">About tokens</h2>
+            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
+              About tokens
+            </h2>
 
-            <div className="prose mb-12 lg:mb-24">
+            <div className="prose mb-12 lg:mb-24" data-anim-fade>
               <p>
                 Our CTSI is a token, not a coin. The main difference between a
                 coin and a token is in the structure. Coins, like ETH and
@@ -231,7 +258,10 @@ const TokenPage = ({ data }) => {
               </p>
             </div>
 
-            <div className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8">
+            <div
+              className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8"
+              data-anim-fade
+            >
               <ReadmoreLink to="/labs" className=" hover:text-blue-500">
                 Read our whitepaper
               </ReadmoreLink>
@@ -240,44 +270,47 @@ const TokenPage = ({ data }) => {
               </ReadmoreLink>
             </div>
 
-            <DownScrollLink to="#hello-world" />
+            <DownScrollLink to="#highlights" />
           </div>
         </div>
         {/*  */}
 
         {/*  */}
         <div
-          className="bg-gray-900 text-white section grid min-h-screen place-content-center"
-          id="new-os"
+          className="bg-gray-900 text-white section grid min-h-screen items-center"
+          id="highlights"
         >
           <div className="container max-w-5xl">
-            <h2 className="text-3xl mb-8 lg:mb-12">Highlights</h2>
+            <h2 className="text-3xl mb-8 lg:mb-12" data-anim-fade>
+              Highlights
+            </h2>
 
             <div className="grid grid-cols-3 gap-8 mb-12 xl:mb-24">
               <div className="flex flex-col col-span-1">
                 <span className="text-5xl xl:text-6xl text-blue-200 leading-none">
-                  <span>20</span>
+                  <Counter number={20} />
                   <span>+</span>
                 </span>
                 <span>Wallets & exchanges</span>
               </div>
               <div className="flex flex-col col-span-2 text-right">
                 <span className="text-5xl xl:text-6xl text-blue-200 leading-none">
-                  <span>139.96</span>
+                  <Counter number={139.96} />
                   <span>million</span>
                 </span>
                 <span>CTSI staked</span>
               </div>
               <div className="flex flex-col col-span-2">
                 <span className="text-5xl xl:text-6xl text-blue-200 leading-none">
-                  <span>54.96</span>
+                  <Counter number={54.96} />
+
                   <span>million</span>
                 </span>
                 <span>CTSI staked</span>
               </div>
               <div className="flex flex-col col-span-1 text-right">
                 <span className="text-5xl xl:text-6xl text-blue-200 leading-none">
-                  <span>20</span>
+                  <Counter number={20} />
                   <span>+</span>
                 </span>
                 <span>Wallets & exchanges</span>
@@ -285,7 +318,11 @@ const TokenPage = ({ data }) => {
             </div>
 
             <div className="mt-8 flex justify-between gap-8 border-t border-white pt-8">
-              <ReadmoreLink to="#" className="text-white hover:text-blue-200">
+              <ReadmoreLink
+                to="#"
+                className="text-white hover:text-blue-200"
+                data-anim-fade
+              >
                 See all highlights
               </ReadmoreLink>
             </div>
@@ -296,8 +333,8 @@ const TokenPage = ({ data }) => {
         {/*  */}
 
         {/*  */}
-        <div className="section" id="new-os">
-          <div className="container max-w-5xl">
+        <div className="section" id="articles">
+          <div className="container max-w-5xl" data-anim-fade>
             <BlogArticles />
           </div>
         </div>

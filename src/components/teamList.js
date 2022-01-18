@@ -1,27 +1,45 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Pagination, Navigation } from "swiper";
 import "swiper/css";
+import "swiper/css/navigation";
 import { GatsbyImage } from "gatsby-plugin-image";
 import Collapse from "./collapse";
+SwiperCore.use([Pagination, Navigation]);
 
 const TeamMembersList = ({ items }) => {
   return (
     <>
       <Swiper
-        slidesPerView={3.5}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        slidesPerView={2.5}
+        spaceBetween={8}
+        navigation
+        breakpoints={{
+          640: {
+            slidesPerView: 2.5,
+          },
+          768: {
+            slidesPerView: 3.5,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        }}
       >
         {items.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="w-full h-full flex flex-col justify-center items-center py-4">
-              <GatsbyImage
-                image={item.image.gatsbyImageData}
-                alt={item.name}
-                className="w-24 h-24 rounded-full"
-              />
-              <h3 className="mt-4">{item.name}</h3>
-              <p className="text-sm">{item.position}</p>
+            <div className="flex flex-col justify-center items-center py-12 text-center">
+              <div className="rounded-full w-16 sm:w-24 h-16 sm:h-24 overflow-hidden">
+                <GatsbyImage
+                  image={item.image.gatsbyImageData}
+                  alt={item.name}
+                  className="w-16 sm:w-24 h-16 sm:h-24 rounded-full"
+                />
+              </div>
+              <h3 className="mt-4 mb-1">{item.name}</h3>
+              <p className="text-xs sm:text-sm leading-none opacity-50">
+                {item.position}
+              </p>
             </div>
           </SwiperSlide>
         ))}
@@ -31,7 +49,6 @@ const TeamMembersList = ({ items }) => {
 };
 
 const TeamList = ({ items }) => {
-  console.log(items);
   return (
     <>
       {items.map((item) => (
@@ -47,19 +64,21 @@ const TeamList = ({ items }) => {
           {item.teamMembers && <TeamMembersList items={item.teamMembers} />}
           {item.subCategory && (
             <>
-              {item.subCategory.map((item) => (
-                <Collapse
-                  key={item.id}
-                  label={
-                    <span className=" hover:text-yellow-800 transition-colors">
-                      {item.categoryName}
-                    </span>
-                  }
-                  className="py-4 lg:py-6"
-                >
-                  <TeamMembersList items={item.teamMembers} />
-                </Collapse>
-              ))}
+              <div className="py-6">
+                {item.subCategory.map((item) => (
+                  <Collapse
+                    key={item.id}
+                    label={
+                      <span className=" hover:text-yellow-800 transition-colors">
+                        {item.categoryName}
+                      </span>
+                    }
+                    className="py-4"
+                  >
+                    <TeamMembersList items={item.teamMembers} />
+                  </Collapse>
+                ))}
+              </div>
             </>
           )}
         </Collapse>

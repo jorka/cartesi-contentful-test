@@ -6,5 +6,6 @@
 @import "tailwindcss/components";
 @import "./components/_container";
 @import "./components/_section";
+@import "./components/_swiper";
 
 @import "tailwindcss/utilities";

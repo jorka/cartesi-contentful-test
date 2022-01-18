@@ -1,5 +1,5 @@
 @layer components {
   .section {
-    @apply pt-12 sm:pt-24 lg:pt-32 pb-32 xl:py-40 relative;
+    @apply pt-12 sm:pt-24 lg:pt-32 pb-32 xl:py-40 relative flex-shrink-0;
   }
 }

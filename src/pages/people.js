@@ -30,12 +30,18 @@ const PeoplePage = ({ data }) => {
         {/*  */}
 
         <div
-          className="bg-blue-50 min-h-screen grid place-content-center section"
-          id="about"
+          className="bg-blue-50 min-h-screen grid items-center section"
+          id="people"
+          data-anim-snap
         >
           <div className="container max-w-5xl">
-            <h2 className="mb-12 text-lg">People</h2>
-            <div className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight">
+            <h2 className="mb-12 text-lg" data-anim-fade>
+              People
+            </h2>
+            <div
+              className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight"
+              data-anim-fade
+            >
               <p>
                 The success of our blockchain OS doesn’t happen overnight. We
                 need visionaries with exciting and new ideas, technological
@@ -51,7 +57,9 @@ const PeoplePage = ({ data }) => {
         {/*  */}
         <div className="bg-yellow-500 section" id="meet">
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12">Meet</h2>
+            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
+              Meet
+            </h2>
 
             <div className="mb-12 lg:mb-24">
               <TeamList items={teamCategories} />
@@ -61,7 +69,10 @@ const PeoplePage = ({ data }) => {
         {/*  */}
 
         {/*  */}
-        <div className="h-screen relative overflow-hidden">
+        <div
+          className="h-[50vh] relative overflow-hidden"
+          data-anim-image-reveal
+        >
           <StaticImage
             src={`../assets/images/uploads/people-01.jpg`}
             className="left-0 top-0 object-cover w-full h-full"

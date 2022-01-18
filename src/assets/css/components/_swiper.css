@@ -1,0 +1,20 @@
+.swiper-button-prev,
+.swiper-button-next {
+  --swiper-navigation-size: 1.5rem !important;
+  @apply transition-colors text-gray-900 hidden md:block !important;
+}
+
+.swiper-button-disabled {
+  opacity: 0 !important;
+}
+
+.swiper-button-prev {
+  left: 0 !important;
+}
+.swiper-button-next {
+  right: 0 !important;
+}
+
+.swiper {
+  @apply px-32;
+}

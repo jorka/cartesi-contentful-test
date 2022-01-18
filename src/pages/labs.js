@@ -29,12 +29,18 @@ const LabsPage = ({ data }) => {
         {/*  */}
 
         <div
-          className="bg-blue-200 min-h-screen grid place-content-center section"
+          className="bg-blue-200 min-h-screen grid items-center section"
           id="labs"
+          data-anim-snap
         >
           <div className="container max-w-5xl">
-            <h2 className="mb-12 text-lg">Labs</h2>
-            <div className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight">
+            <h2 className="mb-12 text-lg" data-anim-fade>
+              Labs
+            </h2>
+            <div
+              className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight"
+              data-anim-fade
+            >
               <p>
                 Pioneers are the devs who want to make the jump to blockchain.
                 Daring developers who want to bring their existing libraries to
@@ -48,7 +54,7 @@ const LabsPage = ({ data }) => {
         {/*  */}
 
         {/*  */}
-        <div>
+        <div data-anim-snap>
           <div id="hello" className="relative">
             <div className="bg-blue-50 absolute w-1/2 aboslute h-full z-0 bottom-0 left-0 hidden lg:block" />
             <div className="bg-yellow-500 absolute w-1/2 aboslute h-full z-0 bottom-0 right-0 hidden lg:block" />
@@ -56,7 +62,10 @@ const LabsPage = ({ data }) => {
             <div className="container relative">
               <div className="flex flex-col lg:flex-row lg:gap-64 -mx-6">
                 <div className="w-full lg:w-1/2 section bg-blue-50 px-6">
-                  <div className="prose prose-2xl prose-p:text-lg mb-8">
+                  <div
+                    className="prose prose-2xl prose-p:text-lg mb-8"
+                    data-anim-fade
+                  >
                     <h2>
                       Genesis
                       <br />
@@ -72,7 +81,10 @@ const LabsPage = ({ data }) => {
                   </p>
                 </div>
                 <div className="w-full lg:w-1/2 section bg-yellow-500 px-6">
-                  <div className="prose prose-2xl prose-p:text-lg mb-8">
+                  <div
+                    className="prose prose-2xl prose-p:text-lg mb-8"
+                    data-anim-fade
+                  >
                     <h2>
                       About
                       <br />
@@ -96,9 +108,11 @@ const LabsPage = ({ data }) => {
         {/*  */}
         <div className="bg-gray-900 text-white section" id="genesis-apps">
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12">Genesis apps</h2>
+            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
+              Genesis apps
+            </h2>
 
-            <div className="prose prose-invert mb-12 lg:mb-24">
+            <div className="prose prose-invert mb-12 lg:mb-24" data-anim-fade>
               <p>
                 We see an OS as the line between order and chaos. Blockchains
                 need to have an OS because the blockchain- specific VM does not
@@ -122,7 +136,10 @@ const LabsPage = ({ data }) => {
         {/*  */}
 
         {/*  */}
-        <div className="h-screen relative overflow-hidden">
+        <div
+          className="h-[50vh] relative overflow-hidden"
+          data-anim-image-reveal
+        >
           <StaticImage
             src={`../assets/images/uploads/labs-01.jpg`}
             className="left-0 top-0 object-cover w-full h-full"
@@ -133,11 +150,12 @@ const LabsPage = ({ data }) => {
 
         {/*  */}
         <div
-          className="bg-yellow-500 min-h-screen grid place-content-center section"
+          className="bg-yellow-500 min-h-screen grid items-center section"
           id="created-by-heroes"
+          data-anim-snap
         >
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12">
+            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
               Created by
               <br />
               heroes
@@ -145,7 +163,7 @@ const LabsPage = ({ data }) => {
 
             <div className="grid grid-cols-4 gap-x-6 gap-y-12 mb-12 lg:mb-24">
               {Array.from({ length: 6 }).map((_, i) => (
-                <div key={i}>
+                <div key={i} data-anim-fade>
                   <Link to="#">
                     <StaticImage
                       src={`https://picsum.photos/960/380`}
@@ -161,7 +179,11 @@ const LabsPage = ({ data }) => {
             </div>
 
             <div className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8">
-              <ReadmoreLink to="#" className=" hover:text-blue-500">
+              <ReadmoreLink
+                to="#"
+                className=" hover:text-blue-500"
+                data-anim-fade
+              >
                 Get CTSI
               </ReadmoreLink>
             </div>
@@ -173,13 +195,15 @@ const LabsPage = ({ data }) => {
 
         {/*  */}
         <div
-          className="bg-blue-50 min-h-screen grid place-content-center section"
+          className="bg-blue-50 min-h-screen grid items-center section"
           id="about-labs"
         >
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12">About labs</h2>
+            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
+              About labs
+            </h2>
 
-            <div className="prose mb-12 lg:mb-24">
+            <div className="prose mb-12 lg:mb-24" data-anim-fade>
               <p>
                 More information about labs, conse sita ne pos rersper umquiaspe
                 mostist, que nimus ex ex enderciis a sa eatus volla volupturia
@@ -197,19 +221,23 @@ const LabsPage = ({ data }) => {
             </div>
 
             <div className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8">
-              <ReadmoreLink to="#" className=" hover:text-blue-500">
+              <ReadmoreLink
+                to="#"
+                className=" hover:text-blue-500"
+                data-anim-fade
+              >
                 Transit to blockchain
               </ReadmoreLink>
             </div>
 
-            <DownScrollLink to="#about-labs" />
+            <DownScrollLink to="#articles" />
           </div>
         </div>
         {/*  */}
 
         {/*  */}
-        <div className="section" id="new-os">
-          <div className="container max-w-5xl">
+        <div className="section" id="articles">
+          <div className="container max-w-5xl" data-anim-fade>
             <BlogArticles />
           </div>
         </div>

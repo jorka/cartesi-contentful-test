@@ -1,8 +1,7 @@
 import { Link } from "gatsby";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React from "react";
 import Icon from "../assets/images/icon-arrow-down.svg";
+import { useDownScrollAnimation } from "../hooks/useAnimations";
 
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require
@@ -11,27 +10,11 @@ if (typeof window !== "undefined") {
 
 const DownScrollLink = ({ children, ...rest }) => {
   const linkRef = React.useRef(null);
-
-  React.useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to(linkRef.current, {
-      opacity: 0,
-      yPercent: -20,
-      scrollTrigger: {
-        trigger: linkRef.current,
-        start: "top center",
-        end: "top 200px",
-        scrub: true,
-        //markers: true,
-        id: "down-scroll-link",
-      },
-    });
-  }, []);
+  useDownScrollAnimation(linkRef.current);
 
   return (
     <div
-      className="absolute inset-x-0 bottom-0 z-10 flex justify-center py-4 md:py-12 transition-all"
+      className="absolute inset-x-0 bottom-0 z-10 flex justify-center py-4 md:py-12"
       ref={linkRef}
     >
       <Link {...rest}>
