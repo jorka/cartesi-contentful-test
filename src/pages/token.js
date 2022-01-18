@@ -41,7 +41,7 @@ const TokenPage = ({ data }) => {
               CTSI token
             </h2>
             <div
-              className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight"
+              className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight font-serif"
               data-anim-fade
             >
               <p>
@@ -63,43 +63,41 @@ const TokenPage = ({ data }) => {
             <div className="bg-yellow-50 absolute w-1/2 aboslute h-full z-0 bottom-0 right-0 hidden lg:block" />
 
             <div className="container relative">
-              <div className="flex flex-col lg:flex-row lg:gap-64 -mx-6">
+              <div className="flex flex-col lg:flex-row -mx-6">
                 <div className="w-full lg:w-1/2 section bg-blue-200 px-6">
-                  <div
-                    className="prose prose-2xl prose-p:text-lg mb-8"
-                    data-anim-fade
-                  >
-                    <h2>
-                      How to
-                      <br /> get CTSI
-                    </h2>
+                  <div className="lg:px-12" data-anim-fade>
+                    <div className="prose prose-2xl prose-headings:font-serif prose-p:text-lg mb-8">
+                      <h2>
+                        How to
+                        <br /> get CTSI
+                      </h2>
+                      <p>
+                        Always use two lines of intro text Always use two lines
+                        of intro text
+                      </p>
+                    </div>
                     <p>
-                      Always use two lines of intro text Always use two lines of
-                      intro text
+                      <SectionLink to="#how-to-get-ctsi" className="p-2" />
                     </p>
                   </div>
-                  <p>
-                    <SectionLink to="#how-to-get-ctsi" className="p-2" />
-                  </p>
                 </div>
                 <div className="w-full lg:w-1/2 section bg-yellow-50 px-6">
-                  <div
-                    className="prose prose-2xl prose-p:text-lg mb-8"
-                    data-anim-fade
-                  >
-                    <h2>
-                      About
-                      <br />
-                      Tokens
-                    </h2>
-                    <p>
-                      Always use two lines of intro text Always use two lines of
-                      intro text
+                  <div className="lg:px-12" data-anim-fade>
+                    <div className="prose prose-2xl prose-headings:font-serif prose-p:text-lg mb-8">
+                      <h2>
+                        About
+                        <br />
+                        Tokens
+                      </h2>
+                      <p>
+                        Always use two lines of intro text Always use two lines
+                        of intro text
+                      </p>
+                    </div>
+                    <p className="mt-8">
+                      <SectionLink to="#about-tokens" className="p-2" />
                     </p>
                   </div>
-                  <p className="mt-8">
-                    <SectionLink to="#about-tokens" className="p-2" />
-                  </p>
                 </div>
               </div>
             </div>
@@ -110,7 +108,7 @@ const TokenPage = ({ data }) => {
         {/*  */}
         <div className="bg-blue-50  section" id="how-to-get-ctsi">
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
+            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               How to get CTSI
             </h2>
 
@@ -239,7 +237,7 @@ const TokenPage = ({ data }) => {
           data-anim-snap
         >
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
+            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               About tokens
             </h2>
 
@@ -281,27 +279,27 @@ const TokenPage = ({ data }) => {
           id="highlights"
         >
           <div className="container max-w-5xl">
-            <h2 className="text-3xl mb-8 lg:mb-12" data-anim-fade>
+            <h2 className="text-3xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               Highlights
             </h2>
 
             <div className="grid grid-cols-3 gap-8 mb-12 xl:mb-24">
               <div className="flex flex-col col-span-1">
-                <span className="text-5xl xl:text-6xl text-blue-200 leading-none">
+                <span className="text-5xl xl:text-6xl text-blue-200 leading-none font-serif">
                   <Counter number={20} />
                   <span>+</span>
                 </span>
                 <span>Wallets & exchanges</span>
               </div>
               <div className="flex flex-col col-span-2 text-right">
-                <span className="text-5xl xl:text-6xl text-blue-200 leading-none">
+                <span className="text-5xl xl:text-6xl text-blue-200 leading-none font-serif">
                   <Counter number={139.96} />
                   <span>million</span>
                 </span>
                 <span>CTSI staked</span>
               </div>
               <div className="flex flex-col col-span-2">
-                <span className="text-5xl xl:text-6xl text-blue-200 leading-none">
+                <span className="text-5xl xl:text-6xl text-blue-200 leading-none font-serif">
                   <Counter number={54.96} />
 
                   <span>million</span>
@@ -309,7 +307,7 @@ const TokenPage = ({ data }) => {
                 <span>CTSI staked</span>
               </div>
               <div className="flex flex-col col-span-1 text-right">
-                <span className="text-5xl xl:text-6xl text-blue-200 leading-none">
+                <span className="text-5xl xl:text-6xl text-blue-200 leading-none font-serif">
                   <Counter number={20} />
                   <span>+</span>
                 </span>

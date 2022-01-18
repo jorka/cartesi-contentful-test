@@ -39,7 +39,7 @@ const AboutPage = ({ data }) => {
             </h2>
 
             <div
-              className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight"
+              className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight font-serif"
               data-anim-fade
             >
               <p>
@@ -61,44 +61,42 @@ const AboutPage = ({ data }) => {
             <div className="bg-blue-200 absolute w-1/2 aboslute h-full z-0 bottom-0 right-0 hidden lg:block" />
 
             <div className="container relative">
-              <div className="flex flex-col lg:flex-row lg:gap-64 -mx-6">
+              <div className="flex flex-col lg:flex-row -mx-6">
                 <div className="w-full lg:w-1/2 section bg-yellow-500 px-6">
-                  <div
-                    className="prose prose-2xl prose-p:text-lg mb-8"
-                    data-anim-fade
-                  >
-                    <h2>
-                      Hello
-                      <br />
-                      new OS
-                    </h2>
+                  <div className="lg:px-12" data-anim-fade>
+                    <div className="prose prose-2xl prose-headings:font-serif prose-p:text-lg mb-8">
+                      <h2>
+                        Hello
+                        <br />
+                        new OS
+                      </h2>
+                      <p>
+                        Cartesi is the first blockchain OS. This allows
+                        developers to code scalable…
+                      </p>
+                    </div>
                     <p>
-                      Cartesi is the first blockchain OS. This allows developers
-                      to code scalable…
+                      <SectionLink to="#new-os" className="p-2" />
                     </p>
                   </div>
-                  <p>
-                    <SectionLink to="#new-os" className="p-2" />
-                  </p>
                 </div>
                 <div className="w-full lg:w-1/2 section bg-blue-200 px-6">
-                  <div
-                    className="prose prose-2xl prose-p:text-lg mb-8"
-                    data-anim-fade
-                  >
-                    <h2>
-                      Hello
-                      <br />
-                      new world
-                    </h2>
-                    <p>
-                      Blockchain technology can return control to the people and
-                      bring about a more…
+                  <div className="lg:px-12" data-anim-fade>
+                    <div className="prose prose-2xl prose-headings:font-serif prose-p:text-lg mb-8">
+                      <h2>
+                        Hello
+                        <br />
+                        new world
+                      </h2>
+                      <p>
+                        Blockchain technology can return control to the people
+                        and bring about a more…
+                      </p>
+                    </div>
+                    <p className="mt-8">
+                      <SectionLink to="#new-world" className="p-2" />
                     </p>
                   </div>
-                  <p className="mt-8">
-                    <SectionLink to="#new-world" className="p-2" />
-                  </p>
                 </div>
               </div>
             </div>
@@ -109,7 +107,7 @@ const AboutPage = ({ data }) => {
         {/*  */}
         <div className="bg-gray-900 text-white section" id="new-os">
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
+            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               Hello world.
               <br />
               There’s a new OS
@@ -256,7 +254,7 @@ const AboutPage = ({ data }) => {
           data-anim-snap
         >
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
+            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               Hello
               <br />
               new world
@@ -297,7 +295,7 @@ const AboutPage = ({ data }) => {
           id="hello-new-economy"
         >
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
+            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               Hello
               <br />
               new economy

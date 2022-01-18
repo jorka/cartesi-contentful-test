@@ -39,7 +39,7 @@ const PeoplePage = ({ data }) => {
               People
             </h2>
             <div
-              className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight"
+              className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight font-serif"
               data-anim-fade
             >
               <p>
@@ -57,7 +57,7 @@ const PeoplePage = ({ data }) => {
         {/*  */}
         <div className="bg-yellow-500 section" id="meet">
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
+            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               Meet
             </h2>
 

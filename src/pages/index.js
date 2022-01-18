@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => {
       </Helmet>
       <Layout staticHeader>
         <div className="container max-w-6xl py-1 lg:pb-24">
-          <h1 className="text-5xl">Homepage - Design Missing</h1>
+          <h1 className="text-5xl font-serif">Homepage - Design Missing</h1>
           <p className="my-8">
             <span className="text-xs px-3 uppercase tracking-widest py-1 bg-blue-500 rounded-full text-white">
               Colors

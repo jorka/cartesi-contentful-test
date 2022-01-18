@@ -38,7 +38,7 @@ const LabsPage = ({ data }) => {
               Labs
             </h2>
             <div
-              className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight"
+              className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight font-serif"
               data-anim-fade
             >
               <p>
@@ -60,44 +60,42 @@ const LabsPage = ({ data }) => {
           <div className="bg-yellow-500 absolute w-1/2 aboslute h-full z-0 bottom-0 right-0 hidden lg:block" />
 
           <div className="container relative">
-            <div className="flex flex-col lg:flex-row lg:gap-64 -mx-6">
+            <div className="flex flex-col lg:flex-row -mx-6">
               <div className="w-full lg:w-1/2 section bg-blue-50 px-6">
-                <div
-                  className="prose prose-2xl prose-p:text-lg mb-8"
-                  data-anim-fade
-                >
-                  <h2>
-                    Genesis
-                    <br />
-                    Apps
-                  </h2>
+                <div className="lg:px-12" data-anim-fade>
+                  <div className="prose prose-2xl prose-headings:font-serif prose-p:text-lg mb-8">
+                    <h2>
+                      Genesis
+                      <br />
+                      Apps
+                    </h2>
+                    <p>
+                      Always use two lines of intro text Always use two lines of
+                      intro text
+                    </p>
+                  </div>
                   <p>
-                    Always use two lines of intro text Always use two lines of
-                    intro text
+                    <SectionLink to="#genesis-apps" className="p-2" />
                   </p>
                 </div>
-                <p>
-                  <SectionLink to="#genesis-apps" className="p-2" />
-                </p>
               </div>
               <div className="w-full lg:w-1/2 section bg-yellow-500 px-6">
-                <div
-                  className="prose prose-2xl prose-p:text-lg mb-8"
-                  data-anim-fade
-                >
-                  <h2>
-                    About
-                    <br />
-                    Labs
-                  </h2>
-                  <p>
-                    Always use two lines of intro text Always use two lines of
-                    intro text
+                <div className="lg:px-12" data-anim-fade>
+                  <div className="prose prose-2xl prose-headings:font-serif prose-p:text-lg mb-8">
+                    <h2>
+                      About
+                      <br />
+                      Labs
+                    </h2>
+                    <p>
+                      Always use two lines of intro text Always use two lines of
+                      intro text
+                    </p>
+                  </div>
+                  <p className="mt-8">
+                    <SectionLink to="#about-labs" className="p-2" />
                   </p>
                 </div>
-                <p className="mt-8">
-                  <SectionLink to="#about-labs" className="p-2" />
-                </p>
               </div>
             </div>
           </div>
@@ -108,7 +106,7 @@ const LabsPage = ({ data }) => {
         {/*  */}
         <div className="bg-gray-900 text-white section" id="genesis-apps">
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
+            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               Genesis apps
             </h2>
 
@@ -154,7 +152,7 @@ const LabsPage = ({ data }) => {
           id="created-by-heroes"
         >
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
+            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               Created by
               <br />
               heroes
@@ -198,7 +196,7 @@ const LabsPage = ({ data }) => {
           id="about-labs"
         >
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12" data-anim-fade>
+            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               About labs
             </h2>
 

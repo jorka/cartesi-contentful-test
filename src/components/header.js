@@ -10,6 +10,7 @@ const Header = ({ isStatic }) => {
   React.useEffect(() => {
     if (isStatic) return;
     gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.refresh(true);
 
     const scrolledUpClasses = ["bg-blue-200", "text-gray-900"];
     const defaultClasses = ["text-white", "bg-transparent"];
@@ -28,7 +29,7 @@ const Header = ({ isStatic }) => {
 
         onUpdate: (self) => {
           const { direction, trigger, animation, isActive } = self;
-          console.log(isActive);
+
           if (!isActive) {
             trigger.classList.remove(...scrolledUpClasses);
             trigger.classList.add(...defaultClasses);

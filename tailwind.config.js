@@ -16,6 +16,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ["FK Grotesk", "sans-serif"],
+      serif: ["FK Roman Display", "serif"],
     },
     container: {
       center: true,
