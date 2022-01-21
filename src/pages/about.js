@@ -58,7 +58,7 @@ const AboutPage = ({ data }) => {
         <div id="hello" data-anim-snap>
           <div className="relative">
             <div className="bg-yellow-500 absolute w-1/2 aboslute h-full z-0 bottom-0 left-0 hidden lg:block" />
-            <div className="bg-blue-200 absolute w-1/2 aboslute h-full z-0 bottom-0 right-0 hidden lg:block" />
+            <div className="bg-blue-50 absolute w-1/2 aboslute h-full z-0 bottom-0 right-0 hidden lg:block" />
 
             <div className="container relative">
               <div className="flex flex-col lg:flex-row -mx-6">
@@ -80,7 +80,7 @@ const AboutPage = ({ data }) => {
                     </p>
                   </div>
                 </div>
-                <div className="w-full lg:w-1/2 section bg-blue-200 px-6">
+                <div className="w-full lg:w-1/2 section bg-blue-50 px-6">
                   <div className="lg:px-12" data-anim-fade>
                     <div className="prose prose-2xl prose-headings:font-serif prose-p:text-lg mb-8">
                       <h2>
