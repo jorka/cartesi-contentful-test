@@ -13,7 +13,7 @@ export default function BlogArticles() {
               src={`https://picsum.photos/960/640?random=1`}
               alt="Article"
             />
-            <h3 className="text-lg mb-2 mt-4 lg:mt-8">Article</h3>
+            <h3 className="text-lg mb-6 mt-4 lg:mt-8">Article</h3>
             <p>
               Verified Carbon Certification for Carbon positive people,
               products, buildings and businesses.

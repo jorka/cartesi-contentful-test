@@ -34,14 +34,13 @@ const TokenPage = ({ data }) => {
         <div
           className="bg-yellow-500 min-h-screen grid items-center section"
           id="ctsi-token"
-          data-anim-snap
         >
           <div className="container max-w-5xl">
-            <h2 className="mb-12 text-lg" data-anim-fade>
+            <h2 className="mb-6" data-anim-fade>
               CTSI token
             </h2>
             <div
-              className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight font-serif"
+              className="prose prose-p:text-2xl prose-p:leading-tight font-serif"
               data-anim-fade
             >
               <p>
@@ -65,8 +64,8 @@ const TokenPage = ({ data }) => {
             <div className="container relative">
               <div className="flex flex-col lg:flex-row -mx-6">
                 <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-blue-200 px-6">
-                  <div className="lg:px-12" data-anim-fade>
-                    <div className="prose prose-2xl prose-headings:font-serif prose-p:text-lg mb-8">
+                  <div className="lg:px-12" data-anim-fade-left>
+                    <div className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8">
                       <h2>
                         How to
                         <br /> get CTSI
@@ -76,14 +75,14 @@ const TokenPage = ({ data }) => {
                         of intro text
                       </p>
                     </div>
-                    <p>
+                    <p className="mb-0">
                       <SectionLink to="#how-to-get-ctsi" className="p-2" />
                     </p>
                   </div>
                 </div>
                 <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-yellow-50 px-6">
-                  <div className="lg:px-12" data-anim-fade>
-                    <div className="prose prose-2xl prose-headings:font-serif prose-p:text-lg mb-8">
+                  <div className="lg:px-12" data-anim-fade-left>
+                    <div className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8">
                       <h2>
                         About
                         <br />
@@ -94,7 +93,7 @@ const TokenPage = ({ data }) => {
                         of intro text
                       </p>
                     </div>
-                    <p className="mt-8">
+                    <p className="mb-0">
                       <SectionLink to="#about-tokens" className="p-2" />
                     </p>
                   </div>
@@ -108,7 +107,7 @@ const TokenPage = ({ data }) => {
         {/*  */}
         <div className="bg-blue-50  section" id="how-to-get-ctsi">
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
+            <h2 className="text-3xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               How to get CTSI
             </h2>
 
@@ -234,10 +233,9 @@ const TokenPage = ({ data }) => {
         <div
           className="bg-yellow-50 min-h-screen grid items-center section"
           id="about-tokens"
-          data-anim-snap
         >
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
+            <h2 className="text-4xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               About tokens
             </h2>
 
@@ -260,10 +258,13 @@ const TokenPage = ({ data }) => {
               className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8"
               data-anim-fade
             >
-              <ReadmoreLink to="/labs" className=" hover:text-blue-500">
+              <ReadmoreLink
+                to="/labs"
+                className=" hover:text-blue-500 font-light"
+              >
                 Read our whitepaper
               </ReadmoreLink>
-              <ReadmoreLink to="#" className=" hover:text-blue-500">
+              <ReadmoreLink to="#" className=" hover:text-blue-500 font-light">
                 Get CTSI
               </ReadmoreLink>
             </div>
@@ -279,27 +280,27 @@ const TokenPage = ({ data }) => {
           id="highlights"
         >
           <div className="container max-w-5xl">
-            <h2 className="text-3xl mb-8 lg:mb-12 font-serif" data-anim-fade>
+            <h2 className="text-3xl mb-8 lg:mb-16 font-serif" data-anim-fade>
               Highlights
             </h2>
 
             <div className="grid grid-cols-3 gap-8 mb-12 xl:mb-24">
               <div className="flex flex-col col-span-1">
-                <span className="text-5xl xl:text-6xl text-blue-200 leading-none font-serif">
+                <span className="text-5xl text-blue-200 leading-none font-serif">
                   <Counter number={20} />
                   <span>+</span>
                 </span>
                 <span>Wallets & exchanges</span>
               </div>
               <div className="flex flex-col col-span-2 text-right">
-                <span className="text-5xl xl:text-6xl text-blue-200 leading-none font-serif">
+                <span className="text-5xl text-blue-200 leading-none font-serif">
                   <Counter number={139.96} />
                   <span>million</span>
                 </span>
                 <span>CTSI staked</span>
               </div>
               <div className="flex flex-col col-span-2">
-                <span className="text-5xl xl:text-6xl text-blue-200 leading-none font-serif">
+                <span className="text-5xl text-blue-200 leading-none font-serif">
                   <Counter number={54.96} />
 
                   <span>million</span>
@@ -307,7 +308,7 @@ const TokenPage = ({ data }) => {
                 <span>CTSI staked</span>
               </div>
               <div className="flex flex-col col-span-1 text-right">
-                <span className="text-5xl xl:text-6xl text-blue-200 leading-none font-serif">
+                <span className="text-5xl text-blue-200 leading-none font-serif">
                   <Counter number={20} />
                   <span>+</span>
                 </span>
@@ -318,7 +319,7 @@ const TokenPage = ({ data }) => {
             <div className="mt-8 flex justify-between gap-8 border-t border-white pt-8">
               <ReadmoreLink
                 to="#"
-                className="text-white hover:text-blue-200"
+                className="text-white hover:text-blue-200 font-light"
                 data-anim-fade
               >
                 See all highlights
@@ -332,7 +333,7 @@ const TokenPage = ({ data }) => {
 
         {/*  */}
         <div className="section" id="articles">
-          <div className="container max-w-5xl" data-anim-fade>
+          <div className="container max-w-6xl" data-anim-fade>
             <BlogArticles />
           </div>
         </div>

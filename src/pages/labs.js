@@ -31,14 +31,13 @@ const LabsPage = ({ data }) => {
         <div
           className="bg-blue-200 min-h-screen grid items-center section"
           id="labs"
-          data-anim-snap
         >
           <div className="container max-w-5xl">
-            <h2 className="mb-12 text-lg" data-anim-fade>
+            <h2 className="mb-6" data-anim-fade>
               Labs
             </h2>
             <div
-              className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight font-serif"
+              className="prose prose-p:text-2xl prose-p:leading-tight font-serif"
               data-anim-fade
             >
               <p>
@@ -62,8 +61,8 @@ const LabsPage = ({ data }) => {
           <div className="container relative">
             <div className="flex flex-col lg:flex-row -mx-6">
               <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-blue-50 px-6">
-                <div className="lg:px-12" data-anim-fade>
-                  <div className="prose prose-2xl prose-headings:font-serif prose-p:text-lg mb-8">
+                <div className="lg:px-12" data-anim-fade-left>
+                  <div className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8">
                     <h2>
                       Genesis
                       <br />
@@ -74,14 +73,14 @@ const LabsPage = ({ data }) => {
                       intro text
                     </p>
                   </div>
-                  <p>
+                  <p className="mb-0">
                     <SectionLink to="#genesis-apps" className="p-2" />
                   </p>
                 </div>
               </div>
               <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-yellow-500 px-6">
-                <div className="lg:px-12" data-anim-fade>
-                  <div className="prose prose-2xl prose-headings:font-serif prose-p:text-lg mb-8">
+                <div className="lg:px-12" data-anim-fade-left>
+                  <div className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8">
                     <h2>
                       About
                       <br />
@@ -92,7 +91,7 @@ const LabsPage = ({ data }) => {
                       intro text
                     </p>
                   </div>
-                  <p className="mt-8">
+                  <p className="mb-0">
                     <SectionLink to="#about-labs" className="p-2" />
                   </p>
                 </div>
@@ -106,7 +105,7 @@ const LabsPage = ({ data }) => {
         {/*  */}
         <div className="bg-gray-900 text-white section" id="genesis-apps">
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
+            <h2 className="text-4xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               Genesis apps
             </h2>
 
@@ -152,7 +151,7 @@ const LabsPage = ({ data }) => {
           id="created-by-heroes"
         >
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
+            <h2 className="text-4xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               Created by
               <br />
               heroes
@@ -166,7 +165,7 @@ const LabsPage = ({ data }) => {
                       src={`https://picsum.photos/960/380`}
                       alt="Article"
                     />
-                    <p className="mt-4">
+                    <p className="mt-4 text-sm">
                       Carti is a decentralized package manager for Cartesi
                       machines.
                     </p>
@@ -178,7 +177,7 @@ const LabsPage = ({ data }) => {
             <div className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8">
               <ReadmoreLink
                 to="#"
-                className=" hover:text-blue-500"
+                className=" hover:text-blue-500 font-light"
                 data-anim-fade
               >
                 Get CTSI
@@ -196,7 +195,7 @@ const LabsPage = ({ data }) => {
           id="about-labs"
         >
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
+            <h2 className="text-4xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               About labs
             </h2>
 
@@ -220,7 +219,7 @@ const LabsPage = ({ data }) => {
             <div className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8">
               <ReadmoreLink
                 to="#"
-                className=" hover:text-blue-500"
+                className=" hover:text-blue-500 font-light"
                 data-anim-fade
               >
                 Transit to blockchain
@@ -234,7 +233,7 @@ const LabsPage = ({ data }) => {
 
         {/*  */}
         <div className="section" id="articles">
-          <div className="container max-w-5xl" data-anim-fade>
+          <div className="container max-w-6xl" data-anim-fade>
             <BlogArticles />
           </div>
         </div>

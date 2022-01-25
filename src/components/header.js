@@ -12,8 +12,8 @@ const Header = ({ isStatic }) => {
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.refresh(true);
 
-    const scrolledUpClasses = ["bg-blue-200", "text-gray-900"];
-    const defaultClasses = ["text-white", "bg-transparent"];
+    const scrolledUpClasses = ["is-scrolled"];
+    const defaultClasses = ["is-transparent"];
 
     const headerAnim = gsap.to(headerRef.current, {
       yPercent: "-100",
@@ -31,11 +31,11 @@ const Header = ({ isStatic }) => {
           const { direction, trigger, animation, isActive } = self;
 
           if (!isActive) {
-            trigger.classList.remove(...scrolledUpClasses);
-            trigger.classList.add(...defaultClasses);
+            trigger.classList.remove(scrolledUpClasses);
+            trigger.classList.add(defaultClasses);
           } else if (direction === -1) {
-            trigger.classList.add(...scrolledUpClasses);
-            trigger.classList.remove(...defaultClasses);
+            trigger.classList.add(scrolledUpClasses);
+            trigger.classList.remove(defaultClasses);
             animation.reverse();
           } else if (direction === 1) {
             animation.play();
@@ -52,9 +52,7 @@ const Header = ({ isStatic }) => {
   return (
     <header
       ref={headerRef}
-      className={`inset-x-0 top-0 py-4 lg:py-8 flex flex-col justify-center z-40 ${
-        isStatic ? "relative" : "text-white fixed"
-      }`}
+      className={`header ${isStatic ? "is-static" : "is-transparent"}`}
     >
       <div className="container">
         <div className="flex justify-between items-center">

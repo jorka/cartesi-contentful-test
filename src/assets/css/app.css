@@ -4,9 +4,11 @@
 @import "./base/_type";
 
 @import "tailwindcss/components";
+
 @import "./components/_container";
 @import "./components/_section";
 @import "./components/_swiper";
+@import "./components/_header";
 
 @import "tailwindcss/utilities";
 

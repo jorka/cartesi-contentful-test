@@ -18,7 +18,9 @@ const DownScrollLink = ({ children, ...rest }) => {
       ref={linkRef}
     >
       <Link {...rest}>
-        <Icon className="fill-current w-8 h-8 md:w-9 md:h-9" />
+        <span>
+          <Icon className="fill-current w-8 h-8 md:w-9 md:h-9 transition-transform hover:translate-y-2" />
+        </span>
       </Link>
     </div>
   );

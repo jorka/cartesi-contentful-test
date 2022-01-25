@@ -24,6 +24,9 @@ module.exports = {
     },
 
     extend: {
+      maxWidth: {
+        "5xl": "58rem",
+      },
       colors: {
         gray: {
           50: "#FAFAFB",
@@ -79,22 +82,28 @@ module.exports = {
               h1: {
                 fontWeight: "400",
                 fontSize: "var(--step-4)",
+
+                color: theme.colors.gray[900],
               },
               h2: {
                 fontWeight: "400",
                 fontSize: "var(--step-2)",
+                color: theme.colors.gray[900],
               },
               h3: {
                 fontWeight: "400",
                 fontSize: "var(--step-2)",
+                color: theme.colors.gray[900],
               },
               h4: {
                 fontWeight: "400",
                 fontSize: "var(--step-1)",
+                color: theme.colors.gray[900],
               },
               h5: {
                 fontWeight: "400",
                 fontSize: "var(--step-0)",
+                color: theme.colors.gray[900],
               },
             },
           ],

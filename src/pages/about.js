@@ -31,15 +31,14 @@ const AboutPage = ({ data }) => {
         <div
           className="bg-yellow-50 section min-h-screen grid items-center"
           id="about"
-          data-anim-snap
         >
           <div className="container max-w-5xl">
-            <h2 className="mb-12 text-lg" data-anim-fade>
+            <h2 className="mb-6" data-anim-fade>
               About
             </h2>
 
             <div
-              className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight font-serif"
+              className="prose prose-p:text-2xl prose-p:leading-tight font-serif"
               data-anim-fade
             >
               <p>
@@ -63,8 +62,8 @@ const AboutPage = ({ data }) => {
             <div className="container relative">
               <div className="flex flex-col lg:flex-row -mx-6">
                 <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-yellow-500 px-6">
-                  <div className="lg:px-12" data-anim-fade>
-                    <div className="prose prose-2xl prose-headings:font-serif prose-p:text-lg mb-8">
+                  <div className="lg:px-12" data-anim-fade-left>
+                    <div className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8">
                       <h2>
                         Hello
                         <br />
@@ -75,14 +74,14 @@ const AboutPage = ({ data }) => {
                         developers to code scalable…
                       </p>
                     </div>
-                    <p>
+                    <p className="mb-0">
                       <SectionLink to="#new-os" className="p-2" />
                     </p>
                   </div>
                 </div>
                 <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-blue-50 px-6">
-                  <div className="lg:px-12" data-anim-fade>
-                    <div className="prose prose-2xl prose-headings:font-serif prose-p:text-lg mb-8">
+                  <div className="lg:px-12" data-anim-fade-left>
+                    <div className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8">
                       <h2>
                         Hello
                         <br />
@@ -93,7 +92,7 @@ const AboutPage = ({ data }) => {
                         and bring about a more…
                       </p>
                     </div>
-                    <p className="mt-8">
+                    <p className="mb-0">
                       <SectionLink to="#new-world" className="p-2" />
                     </p>
                   </div>
@@ -107,7 +106,7 @@ const AboutPage = ({ data }) => {
         {/*  */}
         <div className="bg-gray-900 text-white section" id="new-os">
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
+            <h2 className="text-4xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               Hello world.
               <br />
               There’s a new OS
@@ -217,13 +216,13 @@ const AboutPage = ({ data }) => {
             <div className="mt-8 flex justify-between gap-8" data-anim-fade>
               <ReadmoreLink
                 to="/labs"
-                className="text-white hover:text-blue-200"
+                className="text-white hover:text-blue-200 font-light"
               >
                 Read our whitepaper
               </ReadmoreLink>
               <ReadmoreLink
                 to="/token"
-                className="text-white hover:text-blue-200"
+                className="text-white hover:text-blue-200 font-light"
               >
                 How our OS works
               </ReadmoreLink>
@@ -251,10 +250,9 @@ const AboutPage = ({ data }) => {
         <div
           className="bg-yellow-500 section min-h-screen flex items-center"
           id="new-world"
-          data-anim-snap
         >
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
+            <h2 className="text-4xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               Hello
               <br />
               new world
@@ -278,7 +276,7 @@ const AboutPage = ({ data }) => {
             </div>
 
             <div
-              className="mt-8 flex justify-between gap-8 border-t border-blue-900 pt-8"
+              className="mt-8 flex justify-between gap-8 border-t border-blue-900 pt-8 font-light"
               data-anim-fade
             >
               <ReadmoreLink to="/labs">Transit to blockchain</ReadmoreLink>
@@ -295,7 +293,7 @@ const AboutPage = ({ data }) => {
           id="hello-new-economy"
         >
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
+            <h2 className="text-4xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               Hello
               <br />
               new economy
@@ -317,7 +315,7 @@ const AboutPage = ({ data }) => {
             </div>
 
             <div
-              className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8"
+              className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8 font-light"
               data-anim-fade
             >
               <ReadmoreLink to="/token">Get CTSI</ReadmoreLink>

@@ -4,12 +4,12 @@ import Logo from "./logo";
 
 const Footer = () => {
   return (
-    <footer className="py-8 lg:py-12 xl:py-16 bg-gray-900 text-white">
+    <footer className="py-8 lg:py-12 xl:py-16 bg-gray-900 text-white text-xs font-light">
       <div className="container">
-        <div className="flex flex-col sm:flex-row gap-6 justify-between text-sm">
-          <div className="flex gap-12 justify-between">
+        <div className="flex flex-col sm:flex-row gap-6 justify-between items-end">
+          <div className="flex gap-12 lg:gap-24 justify-between">
             <div>
-              <ul className="mb-8">
+              <ul className="mb-6">
                 <li>
                   <Link to="#" className="hover:text-gray-200">
                     About
@@ -31,7 +31,7 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
-              <ul className="mb-8">
+              <ul className="mb-6">
                 <li>
                   <Link to="#" className="hover:text-gray-200">
                     Hello world
@@ -48,7 +48,7 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
-              <ul className="mb-8">
+              <ul>
                 <li>
                   <Link to="#" className="hover:text-gray-200">
                     Our whitepaper
@@ -63,7 +63,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <ul className="mb-8">
+              <ul className="mb-6">
                 <li>
                   <Link to="#" className="hover:text-gray-200">
                     Docs
@@ -81,7 +81,7 @@ const Footer = () => {
                 </li>
               </ul>
 
-              <ul className="mb-8">
+              <ul className="mb-6">
                 <li>
                   <Link to="#" className="hover:text-gray-200">
                     Discord
@@ -104,17 +104,17 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
+              <p>
+                All rights reserved © Cartesi Foundation Ltd.
+                <br />
+                The Cartesi Project is commissioned by the Cartesi Foundation.
+              </p>
             </div>
           </div>
-          <div className="mb-8 sm:mb-0 flex justify-center">
-            <Logo />
+          <div className="mb-6 sm:mb-0 flex justify-center">
+            <Logo width="213" height="73" />
           </div>
         </div>
-        <p className="text-sm text-gray-400">
-          All rights reserved © Cartesi Foundation Ltd.
-          <br />
-          The Cartesi Project is commissioned by the Cartesi Foundation.
-        </p>
       </div>
     </footer>
   );

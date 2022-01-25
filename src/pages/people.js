@@ -32,14 +32,13 @@ const PeoplePage = ({ data }) => {
         <div
           className="bg-blue-50 min-h-screen grid items-center section"
           id="people"
-          data-anim-snap
         >
           <div className="container max-w-5xl">
-            <h2 className="mb-12 text-lg" data-anim-fade>
+            <h2 className="mb-6" data-anim-fade>
               People
             </h2>
             <div
-              className="prose prose-2xl prose-p:text-2xl prose-p:leading-tight font-serif"
+              className="prose prose-p:text-2xl prose-p:leading-tight font-serif"
               data-anim-fade
             >
               <p>
@@ -57,7 +56,7 @@ const PeoplePage = ({ data }) => {
         {/*  */}
         <div className="bg-yellow-500 section" id="meet">
           <div className="container max-w-5xl">
-            <h2 className="text-6xl mb-8 lg:mb-12 font-serif" data-anim-fade>
+            <h2 className="text-4xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               Meet
             </h2>
 

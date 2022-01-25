@@ -7,6 +7,8 @@ export function useTextAnimations() {
 
   return React.useEffect(() => {
     const textElements = gsap.utils.toArray("[data-anim-fade]");
+    const textElementsLeft = gsap.utils.toArray("[data-anim-fade-left]");
+
     if (!textElements.length) return;
 
     textElements.forEach((item, i) => {
@@ -15,6 +17,24 @@ export function useTextAnimations() {
         yPercent: 50,
         duration: 1,
         delay: 0.2,
+
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: item,
+          start: "top bottom",
+          toggleActions: "play none none reverse",
+          id: "textAnimation",
+        },
+      });
+    });
+
+    if (!textElementsLeft.length) return;
+
+    textElementsLeft.forEach((item, i) => {
+      gsap.from(item, {
+        opacity: 0,
+        xPercent: -20,
+        duration: 1,
 
         ease: "power2.out",
         scrollTrigger: {

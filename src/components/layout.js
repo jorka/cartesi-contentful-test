@@ -15,7 +15,7 @@ const Layout = ({ children, staticHeader }) => {
   return (
     <>
       <Header isStatic={staticHeader} />
-      <main>{children}</main>
+      <main className="text-gray-900">{children}</main>
       <Footer />
     </>
   );

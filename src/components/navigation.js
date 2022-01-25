@@ -53,7 +53,7 @@ const Navigation = () => {
         </AniLink>
       </nav>
       <button className="ml-auto z-20 lg:hidden" onClick={toggleNav}>
-        <Icon className="fill-current w-8 h-8" />
+        <Icon className="fill-current w-6 h-6" />
       </button>
     </>
   );
