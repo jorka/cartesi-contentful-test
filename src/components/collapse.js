@@ -56,16 +56,16 @@ const Collapse = ({ label, children, isExpanded = false, ...rest }) => {
         <span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
             className="fill-current hover:fill-current"
           >
-            <rect width="24" height="2" transform="translate(0 11)" />
+            <rect width="18" height="2" transform="translate(0 8)" />
             <rect
               width="2"
-              height="24"
-              transform="translate(11 0 ) rotate(0)"
+              height="18"
+              transform="translate(8 0 ) rotate(0)"
               ref={iconPlusPath}
             />
           </svg>

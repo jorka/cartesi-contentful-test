@@ -13,7 +13,7 @@ const SectionLink = ({ children, ...rest }) => {
     <Link {...rest}>
       <span className="inline-flex gap-2 items-center">
         {children}
-        <Icon className="w-6 h-6 fill-current flex-shrink-0" />
+        <Icon className="w-8 h-8 fill-current flex-shrink-0" />
       </span>
     </Link>
   );

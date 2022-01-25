@@ -61,7 +61,7 @@ const LabsPage = ({ data }) => {
 
           <div className="container relative">
             <div className="flex flex-col lg:flex-row -mx-6">
-              <div className="w-full lg:w-1/2 section bg-blue-50 px-6">
+              <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-blue-50 px-6">
                 <div className="lg:px-12" data-anim-fade>
                   <div className="prose prose-2xl prose-headings:font-serif prose-p:text-lg mb-8">
                     <h2>
@@ -79,7 +79,7 @@ const LabsPage = ({ data }) => {
                   </p>
                 </div>
               </div>
-              <div className="w-full lg:w-1/2 section bg-yellow-500 px-6">
+              <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-yellow-500 px-6">
                 <div className="lg:px-12" data-anim-fade>
                   <div className="prose prose-2xl prose-headings:font-serif prose-p:text-lg mb-8">
                     <h2>
@@ -135,7 +135,7 @@ const LabsPage = ({ data }) => {
 
         {/*  */}
         <div
-          className="h-[50vh] relative overflow-hidden"
+          className="h-screen relative overflow-hidden"
           data-anim-image-reveal
         >
           <StaticImage

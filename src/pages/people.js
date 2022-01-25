@@ -70,7 +70,7 @@ const PeoplePage = ({ data }) => {
 
         {/*  */}
         <div
-          className="h-[50vh] relative overflow-hidden"
+          className="h-screen relative overflow-hidden"
           data-anim-image-reveal
         >
           <StaticImage
