@@ -29,16 +29,19 @@ const Header = ({ isStatic }) => {
 
         onUpdate: (self) => {
           const { direction, trigger, animation, isActive } = self;
-
-          if (!isActive) {
-            trigger.classList.remove(scrolledUpClasses);
-            trigger.classList.add(defaultClasses);
-          } else if (direction === -1) {
+          // if scrolled to top of the window
+          console.log(isActive);
+          if (direction === -1) {
             trigger.classList.add(scrolledUpClasses);
             trigger.classList.remove(defaultClasses);
             animation.reverse();
           } else if (direction === 1) {
             animation.play();
+          }
+
+          if (!isActive) {
+            trigger.classList.add(defaultClasses);
+            trigger.classList.remove(scrolledUpClasses);
           }
         },
       },
