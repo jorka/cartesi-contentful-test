@@ -81,7 +81,7 @@ const TokenPage = ({ data }) => {
                   </div>
                 </div>
                 <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-yellow-50 px-6">
-                  <div className="lg:px-12" data-anim-fade-left>
+                  <div className="lg:px-12" data-anim-fade-right>
                     <div className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8">
                       <h2>
                         About
@@ -107,7 +107,7 @@ const TokenPage = ({ data }) => {
         {/*  */}
         <div className="bg-blue-50  section" id="how-to-get-ctsi">
           <div className="container max-w-5xl">
-            <h2 className="text-3xl mb-8 lg:mb-12 font-serif" data-anim-fade>
+            <h2 className="text-2xl mb-8 lg:mb-12 font-serif" data-anim-fade>
               How to get CTSI
             </h2>
 
@@ -280,35 +280,32 @@ const TokenPage = ({ data }) => {
           id="highlights"
         >
           <div className="container max-w-5xl">
-            <h2 className="text-3xl mb-8 lg:mb-16 font-serif" data-anim-fade>
+            <h2 className="text-2xl mb-8 lg:mb-16 font-serif" data-anim-fade>
               Highlights
             </h2>
 
             <div className="grid grid-cols-3 gap-8 mb-12 xl:mb-24">
               <div className="flex flex-col col-span-1">
-                <span className="text-5xl text-blue-200 leading-none font-serif">
+                <span className="text-4xl text-blue-200 leading-none font-serif">
                   <Counter number={20} />
                   <span>+</span>
                 </span>
                 <span>Wallets & exchanges</span>
               </div>
               <div className="flex flex-col col-span-2 text-right">
-                <span className="text-5xl text-blue-200 leading-none font-serif">
-                  <Counter number={139.96} />
-                  <span>million</span>
+                <span className="text-4xl text-blue-200 leading-none font-serif">
+                  <Counter number={139.96} /> <span>million</span>
                 </span>
                 <span>CTSI staked</span>
               </div>
               <div className="flex flex-col col-span-2">
-                <span className="text-5xl text-blue-200 leading-none font-serif">
-                  <Counter number={54.96} />
-
-                  <span>million</span>
+                <span className="text-4xl text-blue-200 leading-none font-serif">
+                  <Counter number={54.96} /> <span>million</span>
                 </span>
                 <span>CTSI staked</span>
               </div>
               <div className="flex flex-col col-span-1 text-right">
-                <span className="text-5xl text-blue-200 leading-none font-serif">
+                <span className="text-4xl text-blue-200 leading-none font-serif">
                   <Counter number={20} />
                   <span>+</span>
                 </span>

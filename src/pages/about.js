@@ -80,7 +80,7 @@ const AboutPage = ({ data }) => {
                   </div>
                 </div>
                 <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-blue-50 px-6">
-                  <div className="lg:px-12" data-anim-fade-left>
+                  <div className="lg:px-12" data-anim-fade-right>
                     <div className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8">
                       <h2>
                         Hello

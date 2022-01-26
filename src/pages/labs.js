@@ -47,14 +47,14 @@ const LabsPage = ({ data }) => {
               </p>
             </div>
           </div>
-          <DownScrollLink to="#about-labs" />
+          <DownScrollLink to="#genesis-about" />
         </div>
 
         {/*  */}
 
         {/*  */}
 
-        <div id="hello" className="relative" data-anim-snap>
+        <div id="genesis-about" className="relative" data-anim-snap>
           <div className="bg-blue-50 absolute w-1/2 aboslute h-full z-0 bottom-0 left-0 hidden lg:block" />
           <div className="bg-yellow-500 absolute w-1/2 aboslute h-full z-0 bottom-0 right-0 hidden lg:block" />
 
@@ -79,7 +79,7 @@ const LabsPage = ({ data }) => {
                 </div>
               </div>
               <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-yellow-500 px-6">
-                <div className="lg:px-12" data-anim-fade-left>
+                <div className="lg:px-12" data-anim-fade-right>
                   <div className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8">
                     <h2>
                       About
