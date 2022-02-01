@@ -9,6 +9,7 @@ import SectionLink from "../components/sectionLink";
 import ReadmoreLink from "../components/readmoreLink";
 import DownScrollLink from "../components/downScrollLink";
 import { StaticImage } from "gatsby-plugin-image";
+import AltNavigation from "../components/altNavigation";
 
 const AboutPage = ({ data }) => {
   const { heroImage } = data.allContentfulPageAbout.edges[0].node.hero;
@@ -213,20 +214,22 @@ const AboutPage = ({ data }) => {
               </Collapse>
             </div>
 
-            <div className="mt-8 flex justify-between gap-8" data-anim-fade>
-              <ReadmoreLink
-                to="/labs"
-                className="text-white hover:text-blue-200 font-light"
-              >
-                Read our whitepaper
-              </ReadmoreLink>
-              <ReadmoreLink
-                to="/token"
-                className="text-white hover:text-blue-200 font-light"
-              >
-                How our OS works
-              </ReadmoreLink>
-            </div>
+            <AltNavigation>
+              <div className="flex justify-between gap-8">
+                <ReadmoreLink
+                  to="/labs"
+                  className="text-white hover:text-blue-200 font-light"
+                >
+                  Read our whitepaper
+                </ReadmoreLink>
+                <ReadmoreLink
+                  to="/token"
+                  className="text-white hover:text-blue-200 font-light"
+                >
+                  How our OS works
+                </ReadmoreLink>
+              </div>
+            </AltNavigation>
 
             <DownScrollLink to="#new-world" />
           </div>
@@ -275,12 +278,11 @@ const AboutPage = ({ data }) => {
               </p>
             </div>
 
-            <div
-              className="mt-8 flex justify-between gap-8 border-t border-blue-900 pt-8 font-light"
-              data-anim-fade
-            >
-              <ReadmoreLink to="/labs">Transit to blockchain</ReadmoreLink>
-            </div>
+            <AltNavigation className="border-t mt-8 border-blue-900">
+              <div className="flex justify-between gap-8 font-light">
+                <ReadmoreLink to="/labs">Transit to blockchain</ReadmoreLink>
+              </div>
+            </AltNavigation>
 
             <DownScrollLink to="#hello-new-economy" />
           </div>
@@ -314,12 +316,11 @@ const AboutPage = ({ data }) => {
               </p>
             </div>
 
-            <div
-              className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8 font-light"
-              data-anim-fade
-            >
-              <ReadmoreLink to="/token">Get CTSI</ReadmoreLink>
-            </div>
+            <AltNavigation className=" border-t mt-8 border-blue-900">
+              <div className="flex justify-between gap-8 font-light">
+                <ReadmoreLink to="/token">Get CTSI</ReadmoreLink>
+              </div>
+            </AltNavigation>
           </div>
         </div>
         {/*  */}

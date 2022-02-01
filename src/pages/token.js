@@ -11,6 +11,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import ReadmoreLink from "../components/readmoreLink";
 import BlogArticles from "../components/blogArticles";
 import Counter from "../components/counter";
+import AltNavigation from "../components/altNavigation";
 
 const TokenPage = ({ data }) => {
   const { heroImage } = data.allContentfulPageToken.edges[0].node.hero;
@@ -254,20 +255,22 @@ const TokenPage = ({ data }) => {
               </p>
             </div>
 
-            <div
-              className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8"
-              data-anim-fade
-            >
-              <ReadmoreLink
-                to="/labs"
-                className=" hover:text-blue-500 font-light"
-              >
-                Read our whitepaper
-              </ReadmoreLink>
-              <ReadmoreLink to="#" className=" hover:text-blue-500 font-light">
-                Get CTSI
-              </ReadmoreLink>
-            </div>
+            <AltNavigation className=" border-t mt-8 border-blue-900">
+              <div className="flex justify-between gap-8 font-light">
+                <ReadmoreLink
+                  to="/labs"
+                  className=" hover:text-blue-500 font-light"
+                >
+                  Read our whitepaper
+                </ReadmoreLink>
+                <ReadmoreLink
+                  to="#"
+                  className=" hover:text-blue-500 font-light"
+                >
+                  Get CTSI
+                </ReadmoreLink>
+              </div>
+            </AltNavigation>
 
             <DownScrollLink to="#highlights" />
           </div>
@@ -313,15 +316,17 @@ const TokenPage = ({ data }) => {
               </div>
             </div>
 
-            <div className="mt-8 flex justify-between gap-8 border-t border-white pt-8">
-              <ReadmoreLink
-                to="#"
-                className="text-white hover:text-blue-200 font-light"
-                data-anim-fade
-              >
-                See all highlights
-              </ReadmoreLink>
-            </div>
+            <AltNavigation className="mt-8 border-t border-white">
+              <div className="flex justify-between gap-8 font-light">
+                <ReadmoreLink
+                  to="#"
+                  className="text-white hover:text-blue-200 font-light"
+                  data-anim-fade
+                >
+                  See all highlights
+                </ReadmoreLink>
+              </div>
+            </AltNavigation>
 
             <DownScrollLink to="#articles" />
           </div>

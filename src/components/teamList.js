@@ -28,12 +28,13 @@ const TeamMembersList = ({ items }) => {
       >
         {items.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="flex flex-col justify-center items-center py-12 text-center">
-              <div className="rounded-full w-16 sm:w-24 h-16 sm:h-24 overflow-hidden">
+            <div className="flex flex-col justify-center items-center py-12 text-center group">
+              <div className="rounded-full w-16 sm:w-24 h-16 sm:h-24 overflow-hidden transition-transform group-hover:scale-110  duration-500">
                 <GatsbyImage
                   image={item.image.gatsbyImageData}
                   alt={item.name}
-                  className="w-16 sm:w-24 h-16 sm:h-24 rounded-full"
+                  imgStyle={{ borderRadius: "50%" }}
+                  className="w-16 sm:w-24 h-16 sm:h-24 rounded-full transition-transform group-hover:scale-125 duration-700 overflow-hidden"
                 />
               </div>
               <h3 className="mt-4 mb-1">{item.name}</h3>

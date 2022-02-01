@@ -16,13 +16,11 @@ export function useTextAnimations() {
       gsap.from(item, {
         opacity: 0,
         yPercent: 50,
-        duration: 1,
-        delay: 0.2,
-
-        ease: "power2.out",
+        duration: 1.5,
+        ease: "power3.out",
         scrollTrigger: {
           trigger: item,
-          start: "top bottom",
+          start: "top 90%",
           toggleActions: "play none none reverse",
           id: "textAnimation",
         },
@@ -34,13 +32,13 @@ export function useTextAnimations() {
     textElementsLeft.forEach((item, i) => {
       gsap.from(item, {
         opacity: 0,
-        xPercent: -20,
-        duration: 1,
+        xPercent: -30,
+        duration: 1.5,
 
-        ease: "power2.out",
+        ease: "power3.out",
         scrollTrigger: {
           trigger: item,
-          start: "top bottom",
+          start: "top 90%",
           toggleActions: "play none none reverse",
           id: "textAnimation",
         },
@@ -52,13 +50,13 @@ export function useTextAnimations() {
     textElementsRight.forEach((item, i) => {
       gsap.from(item, {
         opacity: 0,
-        xPercent: 20,
-        duration: 1,
+        xPercent: 30,
+        duration: 1.5,
 
-        ease: "power2.out",
+        ease: "power3.out",
         scrollTrigger: {
           trigger: item,
-          start: "top bottom",
+          start: "top 90%",
           toggleActions: "play none none reverse",
           id: "textAnimation",
         },

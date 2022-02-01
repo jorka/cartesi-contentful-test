@@ -8,11 +8,14 @@ export default function BlogArticles() {
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
       {Array.from({ length: 2 }).map((_, i) => (
         <div key={i}>
-          <Link to="#">
-            <StaticImage
-              src={`https://picsum.photos/960/640?random=1`}
-              alt="Article"
-            />
+          <Link to="#" className="group">
+            <div className="overflow-hidden">
+              <StaticImage
+                src={`https://picsum.photos/960/640?random=1`}
+                alt="Article"
+                className="transition-transform group-hover:scale-110 duration-700"
+              />
+            </div>
             <h3 className="text-lg mb-6 mt-4 lg:mt-8">Article</h3>
             <p>
               Verified Carbon Certification for Carbon positive people,

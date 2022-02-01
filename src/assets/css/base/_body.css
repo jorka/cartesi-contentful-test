@@ -3,10 +3,6 @@ body {
   overscroll-behavior-y: none;
 }
 
-html {
-  @apply scroll-smooth;
-}
-
 html,
 body,
 #___gatsby,

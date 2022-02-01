@@ -8,48 +8,47 @@ const Header = ({ isStatic }) => {
   const headerRef = React.useRef(null);
 
   React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  React.useEffect(() => {
     if (isStatic) return;
+    const header = headerRef.current;
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.refresh(true);
 
     const scrolledUpClasses = ["is-scrolled"];
     const defaultClasses = ["is-transparent"];
 
-    const headerAnim = gsap.to(headerRef.current, {
-      yPercent: "-100",
-      duration: 0.5,
-      ease: "power2.inOut",
-      paused: true,
-      scrollTrigger: {
-        id: "header",
-        start: "40px top",
-        end: 99999,
-        trigger: headerRef.current,
-        forse3D: true,
+    const headerAnim = gsap
+      .from(header, {
+        yPercent: "-100",
+        duration: 0.5,
+        ease: "power2.inOut",
+        paused: true,
+      })
+      .progress(1);
 
-        onUpdate: (self) => {
-          const { direction, trigger, animation, isActive } = self;
-          // if scrolled to top of the window
-          console.log(isActive);
-          if (direction === -1) {
-            trigger.classList.add(scrolledUpClasses);
-            trigger.classList.remove(defaultClasses);
-            animation.reverse();
-          } else if (direction === 1) {
-            animation.play();
-          }
+    ScrollTrigger.create({
+      id: "header",
+      start: "40px top",
+      end: 99999,
 
-          if (!isActive) {
-            trigger.classList.add(defaultClasses);
-            trigger.classList.remove(scrolledUpClasses);
-          }
-        },
+      onUpdate: ({ direction, progress }) => {
+        if (direction === -1) {
+          headerAnim.play();
+          header.classList.remove(...defaultClasses);
+          header.classList.add(...scrolledUpClasses);
+        } else if (direction === 1) {
+          headerAnim.reverse();
+        }
+
+        if (progress === 0) {
+          header.classList.add(...defaultClasses);
+          header.classList.remove(...scrolledUpClasses);
+        }
       },
     });
-
-    return () => {
-      headerAnim.kill();
-    };
   }, [isStatic]);
 
   return (

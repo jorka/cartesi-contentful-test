@@ -9,6 +9,7 @@ import SectionLink from "../components/sectionLink";
 import ReadmoreLink from "../components/readmoreLink";
 import { StaticImage } from "gatsby-plugin-image";
 import BlogArticles from "../components/blogArticles";
+import AltNavigation from "../components/altNavigation";
 
 const LabsPage = ({ data }) => {
   const { heroImage } = data.allContentfulPageLabs.edges[0].node.hero;
@@ -160,12 +161,15 @@ const LabsPage = ({ data }) => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12 mb-12 lg:mb-24">
               {Array.from({ length: 6 }).map((_, i) => (
                 <div key={i} data-anim-fade>
-                  <Link to="#">
-                    <StaticImage
-                      src={`https://picsum.photos/960/380`}
-                      alt="Article"
-                    />
-                    <p className="mt-4 text-sm">
+                  <Link to="#" className="group">
+                    <div className="overflow-hidden">
+                      <StaticImage
+                        src={`https://picsum.photos/960/460`}
+                        alt="Article"
+                        className="transition-transform group-hover:scale-110 duration-700"
+                      />
+                    </div>
+                    <p className="mt-4 text-sm leading-tight">
                       Carti is a decentralized package manager for Cartesi
                       machines.
                     </p>
@@ -174,15 +178,17 @@ const LabsPage = ({ data }) => {
               ))}
             </div>
 
-            <div className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8">
-              <ReadmoreLink
-                to="#"
-                className=" hover:text-blue-500 font-light"
-                data-anim-fade
-              >
-                Get CTSI
-              </ReadmoreLink>
-            </div>
+            <AltNavigation className="mt-8 border-t border-gray-900">
+              <div className="flex justify-between gap-8 font-light">
+                <ReadmoreLink
+                  to="#"
+                  className=" hover:text-blue-500 font-light"
+                  data-anim-fade
+                >
+                  Get CTSI
+                </ReadmoreLink>
+              </div>
+            </AltNavigation>
 
             <DownScrollLink to="#about-labs" />
           </div>
@@ -216,15 +222,17 @@ const LabsPage = ({ data }) => {
               </p>
             </div>
 
-            <div className="mt-8 flex justify-between gap-8 border-t border-gray-900 pt-8">
-              <ReadmoreLink
-                to="#"
-                className=" hover:text-blue-500 font-light"
-                data-anim-fade
-              >
-                Transit to blockchain
-              </ReadmoreLink>
-            </div>
+            <AltNavigation className="mt-8 border-t border-gray-900">
+              <div className="flex justify-between gap-8 font-light">
+                <ReadmoreLink
+                  to="#"
+                  className=" hover:text-blue-500 font-light"
+                  data-anim-fade
+                >
+                  Transit to blockchain
+                </ReadmoreLink>
+              </div>
+            </AltNavigation>
 
             <DownScrollLink to="#articles" />
           </div>
