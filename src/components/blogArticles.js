@@ -2,6 +2,7 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import ReadmoreLink from "./readmoreLink";
+import Icon from "../assets/images/icon-read-more.svg";
 
 export default function BlogArticles() {
   return (
@@ -21,10 +22,12 @@ export default function BlogArticles() {
               Verified Carbon Certification for Carbon positive people,
               products, buildings and businesses.
             </p>
+            <p className="mt-6">
+              <span className="inline-flex gap-4 items-center">
+                <Icon className="fill-current flex-shrink-0 transition-transform group-hover:translate-x-2" />
+              </span>
+            </p>
           </Link>
-          <p className="mt-6">
-            <ReadmoreLink to="#" />
-          </p>
         </div>
       ))}
     </div>

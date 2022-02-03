@@ -12,6 +12,7 @@ import ReadmoreLink from "../components/readmoreLink";
 import BlogArticles from "../components/blogArticles";
 import Counter from "../components/counter";
 import AltNavigation from "../components/altNavigation";
+import ArrowMoreIcon from "../assets/images/icon-arrow-more.svg";
 
 const TokenPage = ({ data }) => {
   const { heroImage } = data.allContentfulPageToken.edges[0].node.hero;
@@ -57,16 +58,16 @@ const TokenPage = ({ data }) => {
         {/*  */}
 
         {/*  */}
-        <div data-anim-snap>
-          <div id="how-about" className="relative">
-            <div className="bg-blue-200 absolute w-1/2 aboslute h-full z-0 bottom-0 left-0 hidden lg:block" />
-            <div className="bg-yellow-50 absolute w-1/2 aboslute h-full z-0 bottom-0 right-0 hidden lg:block" />
-
-            <div className="container relative">
-              <div className="flex flex-col lg:flex-row -mx-6">
-                <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-blue-200 px-6">
-                  <div className="lg:px-12" data-anim-fade-left>
-                    <div className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8">
+        <div id="how-about" data-anim-snap>
+          <div className="container">
+            <div className="flex flex-col lg:flex-row -mx-6">
+              <div className="w-full lg:w-1/2 py-12 sm:py-24 px-6 relative">
+                <SectionLink to="#how-to-get-ctsi" className="text-left group">
+                  <div className="lg:px-12 relative z-10">
+                    <div
+                      className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8"
+                      data-anim-fade-left
+                    >
                       <h2>
                         How to
                         <br /> get CTSI
@@ -76,14 +77,20 @@ const TokenPage = ({ data }) => {
                         of intro text
                       </p>
                     </div>
-                    <p className="mb-0">
-                      <SectionLink to="#how-to-get-ctsi" className="p-2" />
+                    <p className="mb-0" data-anim-fade-left>
+                      <ArrowMoreIcon className="w-8 h-8 fill-current transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
                     </p>
                   </div>
-                </div>
-                <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-yellow-50 px-6">
-                  <div className="lg:px-12" data-anim-fade-right>
-                    <div className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8">
+                  <div className="bg-blue-200 transition-colors duration-300 absolute w-full lg:w-[50vw] h-full z-0 bottom-0 right-0 group-hover:bg-blue-300" />
+                </SectionLink>
+              </div>
+              <div className="w-full lg:w-1/2 py-12 sm:py-24 px-6 relative">
+                <SectionLink to="#about-tokens" className="text-left group">
+                  <div className="lg:px-12 relative z-10">
+                    <div
+                      className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8"
+                      data-anim-fade-right
+                    >
                       <h2>
                         About
                         <br />
@@ -94,11 +101,12 @@ const TokenPage = ({ data }) => {
                         of intro text
                       </p>
                     </div>
-                    <p className="mb-0">
-                      <SectionLink to="#about-tokens" className="p-2" />
+                    <p className="mb-0" data-anim-fade-right>
+                      <ArrowMoreIcon className="w-8 h-8 fill-current transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
                     </p>
                   </div>
-                </div>
+                  <div className="bg-yellow-50 transition-colors duration-300 absolute w-full lg:w-[50vw] h-full z-0 bottom-0 left-0 group-hover:bg-yellow-100" />
+                </SectionLink>
               </div>
             </div>
           </div>
@@ -256,20 +264,15 @@ const TokenPage = ({ data }) => {
             </div>
 
             <AltNavigation className=" border-t mt-8 border-blue-900">
-              <div className="flex justify-between gap-8 font-light">
-                <ReadmoreLink
-                  to="/labs"
-                  className=" hover:text-blue-500 font-light"
-                >
-                  Read our whitepaper
-                </ReadmoreLink>
-                <ReadmoreLink
-                  to="#"
-                  className=" hover:text-blue-500 font-light"
-                >
-                  Get CTSI
-                </ReadmoreLink>
-              </div>
+              <ReadmoreLink
+                to="/labs"
+                className=" hover:text-blue-500 font-light"
+              >
+                Read our whitepaper
+              </ReadmoreLink>
+              <ReadmoreLink to="#" className=" hover:text-blue-500 font-light">
+                Get CTSI
+              </ReadmoreLink>
             </AltNavigation>
 
             <DownScrollLink to="#highlights" />
@@ -317,15 +320,12 @@ const TokenPage = ({ data }) => {
             </div>
 
             <AltNavigation className="mt-8 border-t border-white">
-              <div className="flex justify-between gap-8 font-light">
-                <ReadmoreLink
-                  to="#"
-                  className="text-white hover:text-blue-200 font-light"
-                  data-anim-fade
-                >
-                  See all highlights
-                </ReadmoreLink>
-              </div>
+              <ReadmoreLink
+                to="#"
+                className="text-white hover:text-blue-200 font-light"
+              >
+                See all highlights
+              </ReadmoreLink>
             </AltNavigation>
 
             <DownScrollLink to="#articles" />

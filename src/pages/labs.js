@@ -10,6 +10,7 @@ import ReadmoreLink from "../components/readmoreLink";
 import { StaticImage } from "gatsby-plugin-image";
 import BlogArticles from "../components/blogArticles";
 import AltNavigation from "../components/altNavigation";
+import ArrowMoreIcon from "../assets/images/icon-arrow-more.svg";
 
 const LabsPage = ({ data }) => {
   const { heroImage } = data.allContentfulPageLabs.edges[0].node.hero;
@@ -54,53 +55,60 @@ const LabsPage = ({ data }) => {
         {/*  */}
 
         {/*  */}
-
-        <div id="genesis-about" className="relative" data-anim-snap>
-          <div className="bg-blue-50 absolute w-1/2 aboslute h-full z-0 bottom-0 left-0 hidden lg:block" />
-          <div className="bg-yellow-500 absolute w-1/2 aboslute h-full z-0 bottom-0 right-0 hidden lg:block" />
-
-          <div className="container relative">
+        <div id="genesis-about" data-anim-snap>
+          <div className="container">
             <div className="flex flex-col lg:flex-row -mx-6">
-              <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-blue-50 px-6">
-                <div className="lg:px-12" data-anim-fade-left>
-                  <div className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8">
-                    <h2>
-                      Genesis
-                      <br />
-                      Apps
-                    </h2>
-                    <p>
-                      Always use two lines of intro text Always use two lines of
-                      intro text
+              <div className="w-full lg:w-1/2 py-12 sm:py-24 px-6 relative">
+                <SectionLink to="#genesis-apps" className="text-left group">
+                  <div className="lg:px-12 relative z-10">
+                    <div
+                      className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8"
+                      data-anim-fade-left
+                    >
+                      <h2>
+                        Genesis
+                        <br />
+                        Apps
+                      </h2>
+                      <p>
+                        Always use two lines of intro text Always use two lines
+                        of intro text
+                      </p>
+                    </div>
+                    <p className="mb-0" data-anim-fade-left>
+                      <ArrowMoreIcon className="w-8 h-8 fill-current transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
                     </p>
                   </div>
-                  <p className="mb-0">
-                    <SectionLink to="#genesis-apps" className="p-2" />
-                  </p>
-                </div>
+                  <div className="bg-blue-50 transition-colors duration-300 absolute w-full lg:w-[50vw] h-full z-0 bottom-0 right-0 group-hover:bg-blue-100" />
+                </SectionLink>
               </div>
-              <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-yellow-500 px-6">
-                <div className="lg:px-12" data-anim-fade-right>
-                  <div className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8">
-                    <h2>
-                      About
-                      <br />
-                      Labs
-                    </h2>
-                    <p>
-                      Always use two lines of intro text Always use two lines of
-                      intro text
+              <div className="w-full lg:w-1/2 py-12 sm:py-24 px-6 relative">
+                <SectionLink to="#about-labs" className="text-left group">
+                  <div className="lg:px-12 relative z-10">
+                    <div
+                      className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8"
+                      data-anim-fade-right
+                    >
+                      <h2>
+                        About
+                        <br />
+                        Labs
+                      </h2>
+                      <p>
+                        Always use two lines of intro text Always use two lines
+                        of intro text
+                      </p>
+                    </div>
+                    <p className="mb-0" data-anim-fade-right>
+                      <ArrowMoreIcon className="w-8 h-8 fill-current transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
                     </p>
                   </div>
-                  <p className="mb-0">
-                    <SectionLink to="#about-labs" className="p-2" />
-                  </p>
-                </div>
+                  <div className="bg-yellow-500 transition-colors duration-300 absolute w-full lg:w-[50vw] h-full z-0 bottom-0 left-0 group-hover:bg-yellow-600" />
+                </SectionLink>
               </div>
             </div>
           </div>
         </div>
-
         {/*  */}
 
         {/*  */}
@@ -179,15 +187,9 @@ const LabsPage = ({ data }) => {
             </div>
 
             <AltNavigation className="mt-8 border-t border-gray-900">
-              <div className="flex justify-between gap-8 font-light">
-                <ReadmoreLink
-                  to="#"
-                  className=" hover:text-blue-500 font-light"
-                  data-anim-fade
-                >
-                  Get CTSI
-                </ReadmoreLink>
-              </div>
+              <ReadmoreLink to="#" className=" hover:text-blue-500 font-light">
+                Get CTSI
+              </ReadmoreLink>
             </AltNavigation>
 
             <DownScrollLink to="#about-labs" />
@@ -223,15 +225,9 @@ const LabsPage = ({ data }) => {
             </div>
 
             <AltNavigation className="mt-8 border-t border-gray-900">
-              <div className="flex justify-between gap-8 font-light">
-                <ReadmoreLink
-                  to="#"
-                  className=" hover:text-blue-500 font-light"
-                  data-anim-fade
-                >
-                  Transit to blockchain
-                </ReadmoreLink>
-              </div>
+              <ReadmoreLink to="#" className=" hover:text-blue-500 font-light">
+                Transit to blockchain
+              </ReadmoreLink>
             </AltNavigation>
 
             <DownScrollLink to="#articles" />

@@ -10,6 +10,7 @@ import ReadmoreLink from "../components/readmoreLink";
 import DownScrollLink from "../components/downScrollLink";
 import { StaticImage } from "gatsby-plugin-image";
 import AltNavigation from "../components/altNavigation";
+import ArrowMoreIcon from "../assets/images/icon-arrow-more.svg";
 
 const AboutPage = ({ data }) => {
   const { heroImage } = data.allContentfulPageAbout.edges[0].node.hero;
@@ -56,15 +57,15 @@ const AboutPage = ({ data }) => {
 
         {/*  */}
         <div id="hello" data-anim-snap>
-          <div className="relative">
-            <div className="bg-yellow-500 absolute w-1/2 aboslute h-full z-0 bottom-0 left-0 hidden lg:block" />
-            <div className="bg-blue-50 absolute w-1/2 aboslute h-full z-0 bottom-0 right-0 hidden lg:block" />
-
-            <div className="container relative">
-              <div className="flex flex-col lg:flex-row -mx-6">
-                <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-yellow-500 px-6">
-                  <div className="lg:px-12" data-anim-fade-left>
-                    <div className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8">
+          <div className="container">
+            <div className="flex flex-col lg:flex-row -mx-6">
+              <div className="w-full lg:w-1/2 py-12 sm:py-24 px-6 relative">
+                <SectionLink to="#new-os" className="text-left group">
+                  <div className="lg:px-12 relative z-10">
+                    <div
+                      className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8"
+                      data-anim-fade-left
+                    >
                       <h2>
                         Hello
                         <br />
@@ -75,14 +76,20 @@ const AboutPage = ({ data }) => {
                         developers to code scalable…
                       </p>
                     </div>
-                    <p className="mb-0">
-                      <SectionLink to="#new-os" className="p-2" />
+                    <p className="mb-0" data-anim-fade-left>
+                      <ArrowMoreIcon className="w-8 h-8 fill-current transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
                     </p>
                   </div>
-                </div>
-                <div className="w-full lg:w-1/2 py-12 sm:py-24 bg-blue-50 px-6">
-                  <div className="lg:px-12" data-anim-fade-right>
-                    <div className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8">
+                  <div className="bg-yellow-500 transition-colors duration-300 absolute w-full lg:w-[50vw] h-full z-0 bottom-0 right-0 group-hover:bg-yellow-600" />
+                </SectionLink>
+              </div>
+              <div className="w-full lg:w-1/2 py-12 sm:py-24 px-6 relative">
+                <SectionLink to="#new-world" className="text-left group">
+                  <div className="lg:px-12 relative z-10">
+                    <div
+                      className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8"
+                      data-anim-fade-right
+                    >
                       <h2>
                         Hello
                         <br />
@@ -93,11 +100,12 @@ const AboutPage = ({ data }) => {
                         and bring about a more…
                       </p>
                     </div>
-                    <p className="mb-0">
-                      <SectionLink to="#new-world" className="p-2" />
+                    <p className="mb-0" data-anim-fade-right>
+                      <ArrowMoreIcon className="w-8 h-8 fill-current transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
                     </p>
                   </div>
-                </div>
+                  <div className="bg-blue-50 transition-colors duration-300 absolute w-full lg:w-[50vw] h-full z-0 bottom-0 left-0 group-hover:bg-blue-100" />
+                </SectionLink>
               </div>
             </div>
           </div>
@@ -215,20 +223,18 @@ const AboutPage = ({ data }) => {
             </div>
 
             <AltNavigation>
-              <div className="flex justify-between gap-8">
-                <ReadmoreLink
-                  to="/labs"
-                  className="text-white hover:text-blue-200 font-light"
-                >
-                  Read our whitepaper
-                </ReadmoreLink>
-                <ReadmoreLink
-                  to="/token"
-                  className="text-white hover:text-blue-200 font-light"
-                >
-                  How our OS works
-                </ReadmoreLink>
-              </div>
+              <ReadmoreLink
+                to="/labs"
+                className="text-white hover:text-blue-200 font-light"
+              >
+                Read our whitepaper
+              </ReadmoreLink>
+              <ReadmoreLink
+                to="/token"
+                className="text-white hover:text-blue-200 font-light"
+              >
+                How our OS works
+              </ReadmoreLink>
             </AltNavigation>
 
             <DownScrollLink to="#new-world" />
@@ -279,9 +285,7 @@ const AboutPage = ({ data }) => {
             </div>
 
             <AltNavigation className="border-t mt-8 border-blue-900">
-              <div className="flex justify-between gap-8 font-light">
-                <ReadmoreLink to="/labs">Transit to blockchain</ReadmoreLink>
-              </div>
+              <ReadmoreLink to="/labs">Transit to blockchain</ReadmoreLink>
             </AltNavigation>
 
             <DownScrollLink to="#hello-new-economy" />
@@ -317,9 +321,7 @@ const AboutPage = ({ data }) => {
             </div>
 
             <AltNavigation className=" border-t mt-8 border-blue-900">
-              <div className="flex justify-between gap-8 font-light">
-                <ReadmoreLink to="/token">Get CTSI</ReadmoreLink>
-              </div>
+              <ReadmoreLink to="/token">Get CTSI</ReadmoreLink>
             </AltNavigation>
           </div>
         </div>

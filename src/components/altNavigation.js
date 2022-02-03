@@ -12,16 +12,17 @@ export default function AltNavigation({ children, ...rest }) {
     const overflowEl = overflowRef.current;
     const overflowElInner = overflowRefInner.current;
 
-    gsap.from(overflowElInner, {
-      y: "-100%",
-      duration: 2,
-      ease: "power2.out",
+    const links = gsap.utils.toArray(overflowElInner.children);
+
+    gsap.from(links, {
+      x: "-100%",
+      opacity: 0,
+      duration: 1.2,
+      stagger: 0.3,
+      ease: "power3.out",
       scrollTrigger: {
         trigger: overflowEl,
-        scrub: 0.5,
-        duration: 2,
-        start: "top 80%",
-        end: "bottom 70%",
+        start: "top 90%",
         id: "altNavigation",
       },
     });
@@ -29,10 +30,11 @@ export default function AltNavigation({ children, ...rest }) {
 
   return (
     <div {...rest} ref={overflowRef}>
-      <div className="overflow-y-hidden overflow-x-visible">
-        <div className="py-6 pr-4" ref={overflowRefInner}>
-          {children}
-        </div>
+      <div
+        className="flex justify-between gap-8 py-6 pr-4 overflow-hidden"
+        ref={overflowRefInner}
+      >
+        {children}
       </div>
     </div>
   );

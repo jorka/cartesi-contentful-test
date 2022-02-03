@@ -34,6 +34,7 @@ export function useTextAnimations() {
         opacity: 0,
         xPercent: -30,
         duration: 1.5,
+        scale: 0.8,
 
         ease: "power3.out",
         scrollTrigger: {
@@ -51,6 +52,7 @@ export function useTextAnimations() {
       gsap.from(item, {
         opacity: 0,
         xPercent: 30,
+        scale: 0.8,
         duration: 1.5,
 
         ease: "power3.out",
