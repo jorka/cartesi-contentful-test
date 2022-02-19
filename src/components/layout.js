@@ -7,14 +7,14 @@ import {
 import Footer from "./footer";
 import Header from "./header";
 
-const Layout = ({ children, staticHeader }) => {
+const Layout = ({ children, staticHeader, invertedHeader }) => {
   useSnapAnimations();
   useTextAnimations();
   useImageRevealAnimations();
 
   return (
     <>
-      <Header isStatic={staticHeader} />
+      <Header isStatic={staticHeader} isInverted={invertedHeader} />
       <main>{children}</main>
       <Footer />
     </>

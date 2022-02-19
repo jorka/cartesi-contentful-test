@@ -4,10 +4,10 @@ import Logo from "./logo";
 
 const Footer = () => {
   return (
-    <footer className="py-8 lg:py-12 xl:py-16 bg-gray-900 text-white text-xs font-light">
+    <footer className="bg-gray-900 py-8 text-xs font-light text-yellow-50 lg:py-12 xl:py-16">
       <div className="container">
-        <div className="flex flex-col sm:flex-row gap-6 justify-between items-start sm:items-end">
-          <div className="flex gap-12 lg:gap-24 justify-between">
+        <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+          <div className="flex justify-between gap-12 lg:gap-24">
             <div>
               <ul className="mb-6">
                 <li>
@@ -111,7 +111,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="mb-6 sm:mb-0 flex justify-center">
+          <div className="mb-6 flex justify-center sm:mb-0">
             <Logo width="213" height="73" />
           </div>
         </div>

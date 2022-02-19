@@ -1,351 +1,134 @@
-import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 
 import * as React from "react";
 import Layout from "../components/layout";
-import Hero from "../components/hero";
-import Collapse from "../components/collapse";
-import SectionLink from "../components/sectionLink";
 import ReadmoreLink from "../components/readmoreLink";
 import DownScrollLink from "../components/downScrollLink";
 import { StaticImage } from "gatsby-plugin-image";
 import AltNavigation from "../components/altNavigation";
-import ArrowMoreIcon from "../assets/images/icon-arrow-more.svg";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
-const AboutPage = ({ data }) => {
-  const { heroImage } = data.allContentfulPageAbout.edges[0].node.hero;
-
+const AboutPage = () => {
   return (
     <>
       <Helmet>
         <title>About | Cartesi.io</title>
       </Helmet>
       <Layout>
-        <Hero
-          image={{
-            src: heroImage.gatsbyImageData,
-            alt: heroImage.title,
-          }}
-          sectionLinkTo="#about"
-        />
-        {/*  */}
-
-        <div
-          className="bg-yellow-50 section min-h-screen grid items-center"
-          id="about"
-        >
-          <div className="container max-w-5xl">
-            <h2 className="mb-6" data-anim-fade>
-              About
-            </h2>
-
-            <div
-              className="prose prose-p:text-2xl prose-p:leading-tight font-serif"
-              data-anim-fade
-            >
-              <p>
-                The blockchain OS connects 30 years of mainstream software
-                development with blockchain. We are a home to the next wave of
-                decentralized and inclusive applications.
-              </p>
-            </div>
-          </div>
-          <DownScrollLink to="#hello" />
-        </div>
-
-        {/*  */}
-
-        {/*  */}
-        <div id="hello" data-anim-snap>
-          <div className="container">
-            <div className="flex flex-col lg:flex-row -mx-6">
-              <div className="w-full lg:w-1/2 py-12 sm:py-24 px-6 relative">
-                <SectionLink to="#new-os" className="text-left group">
-                  <div className="lg:px-12 relative z-10">
-                    <div
-                      className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8"
-                      data-anim-fade-left
-                    >
-                      <h2>
-                        Hello
-                        <br />
-                        new OS
-                      </h2>
-                      <p>
-                        Cartesi is the first blockchain OS. This allows
-                        developers to code scalable…
-                      </p>
-                    </div>
-                    <p className="mb-0" data-anim-fade-left>
-                      <ArrowMoreIcon className="w-8 h-8 fill-current transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
-                    </p>
-                  </div>
-                  <div className="bg-yellow-500 transition-colors duration-300 absolute w-full lg:w-[50vw] h-full z-0 bottom-0 right-0 group-hover:bg-yellow-600" />
-                </SectionLink>
+        <div className="bg-yellow-50 pt-20 text-gray-900 lg:pt-24">
+          <div className="section xl:pt-[10vh]">
+            <div className="container max-w-4xl">
+              <div className="prose prose-lg text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif">
+                <h1>Hello, mission.</h1>
+                <p>
+                  The blockchain OS was founded to bridge the best of two
+                  worlds: intense computational jobs as we know in the world
+                  today, with independency of central authorities or middle men,
+                  as seen in the decentralized world of tomorrow. Create the new
+                  world with us.
+                </p>
               </div>
-              <div className="w-full lg:w-1/2 py-12 sm:py-24 px-6 relative">
-                <SectionLink to="#new-world" className="text-left group">
-                  <div className="lg:px-12 relative z-10">
-                    <div
-                      className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8"
-                      data-anim-fade-right
-                    >
-                      <h2>
-                        Hello
-                        <br />
-                        new world
-                      </h2>
-                      <p>
-                        Blockchain technology can return control to the people
-                        and bring about a more…
-                      </p>
-                    </div>
-                    <p className="mb-0" data-anim-fade-right>
-                      <ArrowMoreIcon className="w-8 h-8 fill-current transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
-                    </p>
-                  </div>
-                  <div className="bg-blue-50 transition-colors duration-300 absolute w-full lg:w-[50vw] h-full z-0 bottom-0 left-0 group-hover:bg-blue-100" />
-                </SectionLink>
+              <div className="mt-8 flex flex-col justify-center gap-4 text-center sm:flex-row sm:items-center lg:mt-16">
+                <button
+                  onClick={() => scrollTo("#cartesi-foundation")}
+                  className="btn-outline"
+                >
+                  <span>Hello Cartesi foundation</span>
+                </button>
+                <button
+                  onClick={() => scrollTo("#decentralization")}
+                  className="btn-outline"
+                >
+                  <span>Hello decentralization</span>
+                </button>
               </div>
             </div>
           </div>
-        </div>
-        {/*  */}
+          <div className="section pt-0">
+            <div className="container max-w-7xl">
+              <StaticImage
+                src="../assets/images/uploads/man-inside-train.jpg"
+                alt=""
+                width={1280}
+              />
 
-        {/*  */}
-        <div className="bg-gray-900 text-white section" id="new-os">
-          <div className="container max-w-5xl">
-            <h2 className="text-4xl mb-8 lg:mb-12 font-serif" data-anim-fade>
-              Hello world.
-              <br />
-              There’s a new OS
-            </h2>
-
-            <div className="prose prose-invert mb-12 lg:mb-24" data-anim-fade>
-              <p>
-                We see an OS as the line between order and chaos. Blockchains
-                need to have an OS because the blockchain- specific VM does not
-                support the ecosystem of modern software and applications that
-                rely on a tree of dependencies (libraries, components, tools).
-                This is making the lives of developers hard when they want to
-                start programming for blockchain.
-              </p>
-              <p>
-                Cartesi is the first blockchain OS. Our Layer-2 solution
-                integrates Linux and standard programming environments to
-                blockchain. This allows developers to code scalable smart
-                contracts with rich software tools, libraries, and services they
-                are used to.
-              </p>
+              <DownScrollLink to="#cartesi-foundation" />
             </div>
-
-            <div className="mb-12 lg:mb-24">
-              <Collapse
-                data-anim-fade
-                label={
-                  <span className="text-lg hover:text-blue-200 transition-colors">
-                    Scalable
-                  </span>
-                }
-                className="border-b py-4 lg:py-6"
-              >
-                <div className="prose prose-p:mb-0 text-white text-base py-4">
-                  <p>
-                    Our scalability solutions provide an immense capacity
-                    increase to any blockchains our OS is integrated with.
-                  </p>
-                </div>
-              </Collapse>
-              <Collapse
-                data-anim-fade
-                label={
-                  <span className="text-lg hover:text-blue-200 transition-colors">
-                    Sophisticated
-                  </span>
-                }
-                className="border-b py-4 lg:py-6"
-              >
-                <div className="prose prose-p:mb-0 text-white text-base py-4">
-                  <p>
-                    Our scalability solutions provide an immense capacity
-                    increase to any blockchains our OS is integrated with.
-                  </p>
-                </div>
-              </Collapse>
-              <Collapse
-                data-anim-fade
-                label={
-                  <span className="text-lg hover:text-blue-200 transition-colors">
-                    Programmable
-                  </span>
-                }
-                className="border-b py-4 lg:py-6"
-              >
-                <div className="prose prose-p:mb-0 text-white text-base py-4">
-                  <p>
-                    Our scalability solutions provide an immense capacity
-                    increase to any blockchains our OS is integrated with.
-                  </p>
-                </div>
-              </Collapse>
-              <Collapse
-                data-anim-fade
-                label={
-                  <span className="text-lg hover:text-blue-200 transition-colors">
-                    Inviting
-                  </span>
-                }
-                className="border-b py-4 lg:py-6"
-              >
-                <div className="prose prose-p:mb-0 text-white text-base py-4">
-                  <p>
-                    Our scalability solutions provide an immense capacity
-                    increase to any blockchains our OS is integrated with.
-                  </p>
-                </div>
-              </Collapse>
-              <Collapse
-                data-anim-fade
-                label={
-                  <span className="text-lg hover:text-blue-200 transition-colors">
-                    Secure
-                  </span>
-                }
-                className="border-b py-4 lg:py-6"
-              >
-                <div className="prose prose-p:mb-0 text-white text-base py-4">
-                  <p>
-                    Our scalability solutions provide an immense capacity
-                    increase to any blockchains our OS is integrated with.
-                  </p>
-                </div>
-              </Collapse>
-            </div>
-
-            <AltNavigation>
-              <ReadmoreLink
-                to="/labs"
-                className="text-white hover:text-blue-200 font-light"
-              >
-                Read our whitepaper
-              </ReadmoreLink>
-              <ReadmoreLink
-                to="/token"
-                className="text-white hover:text-blue-200 font-light"
-              >
-                How our OS works
-              </ReadmoreLink>
-            </AltNavigation>
-
-            <DownScrollLink to="#new-world" />
           </div>
         </div>
-        {/*  */}
 
-        {/*  */}
         <div
-          className="h-screen relative overflow-hidden"
-          data-anim-image-reveal
+          className="section bg-gray-900 text-yellow-50"
+          id="cartesi-foundation"
         >
+          <div className="container max-w-4xl">
+            <div className="prose prose-invert prose-headings:font-serif prose-headings:text-3xl">
+              <h2>
+                The Cartesi
+                <br />
+                foundation
+              </h2>
+              <p>
+                The Cartesi Foundation is a non-profit organization dedicated to
+                supporting the Cartesi technology and the decentralization of
+                the Cartesi network. The Foundation’s mission is to be a
+                supporting member of the Cartesi community, alongside the many
+                devoted contributors and participants that give Cartesi life,
+                through funding, education, grants, strategic alliances, and
+                other focused activities. The Foundation is committed to
+                supporting the development of the first operating system (OS)
+                for blockchains; bringing mainstream scalability and convenience
+                to developers and users of decentralized applications.
+              </p>
+            </div>
+            <DownScrollLink to="#decentralization" className="text-yellow-50" />
+          </div>
+        </div>
+
+        <div className="relative h-screen overflow-hidden">
           <StaticImage
-            src={`../assets/images/uploads/about-01.jpg`}
-            className="left-0 top-0 object-cover w-full h-full"
-            alt="about-01"
+            src={`../assets/images/uploads/woman-in-library.jpg`}
+            className="left-0 top-0 h-full w-full object-cover"
+            alt=""
           />
         </div>
-        {/*  */}
 
-        {/*  */}
         <div
-          className="bg-yellow-500 section min-h-screen flex items-center"
-          id="new-world"
+          className="section bg-yellow-500 text-gray-900"
+          id="decentralization"
         >
-          <div className="container max-w-5xl">
-            <h2 className="text-4xl mb-8 lg:mb-12 font-serif" data-anim-fade>
-              Hello
-              <br />
-              new world
-            </h2>
-
-            <div className="prose mb-12 lg:mb-24" data-anim-fade>
+          <div className="container max-w-4xl">
+            <div className="prose prose-headings:font-serif prose-headings:text-3xl">
+              <h2>Why the Blockchain OS is, and will be, decentralized</h2>
               <p>
-                Blockchain technology can return control to the people and bring
-                about a more transparent society. By distributing value and
-                trust, it can replace archaic corruptible centralized systems
-                with incorruptible code and collective decision- making. We
-                expand the limits of these technological possibilities. On our
-                OS, people can create a more democratic reality without any
-                restrictions. A new reality that’s as eloquent and robust as it
-                is today, only better. More inclusive, democratic, transparent.
+                With a decentralized OS, not one company controls the features,
+                upgrades, and rules. Everyone can have a say. When it comes to
+                proposing new features, gathering community feedback, and
+                documenting design decisions, the Cartesi Foundation intends to
+                use a Cartesi Improvement Proposal (CIP). It is a formalized
+                design document for the Cartesi community. It gives information
+                or describes a new feature for the Cartesi network, its
+                processes, or the ecosystem in a concise and technically
+                sufficient way for the Cartesi community to understand.
               </p>
               <p>
-                Let’s not just talk about this the new world. Let’s build it,
-                together.
+                This CIP process allows mainstream developers the flexibility to
+                help shape the OS they want to use, i.e. “If there’s a feature
+                you need, propose it to the community and let’s build it
+                together”.
               </p>
             </div>
-
-            <AltNavigation className="border-t mt-8 border-blue-900">
-              <ReadmoreLink to="/labs">Transit to blockchain</ReadmoreLink>
-            </AltNavigation>
-
-            <DownScrollLink to="#hello-new-economy" />
-          </div>
-        </div>
-        {/*  */}
-
-        {/*  */}
-        <div
-          className="bg-blue-50 section min-h-screen grid items-center"
-          id="hello-new-economy"
-        >
-          <div className="container max-w-5xl">
-            <h2 className="text-4xl mb-8 lg:mb-12 font-serif" data-anim-fade>
-              Hello
-              <br />
-              new economy
-            </h2>
-
-            <div className="prose mb-12 lg:mb-24" data-anim-fade>
-              <p>
-                Blockchain, more specifically smart contracts, provides new
-                earning models. More and more economic segments are awakening to
-                the new economy blockchain can bring: finance, gaming, art
-                collectors… the number of use- cases grows every day.
-              </p>
-              <p>
-                Users can earn tokens by creating, publishing, liking, and
-                sharing content. The more users add value to networks, the more
-                these networks can afford to pay their users. In games, players
-                can help the game’s growth by playing to earn.
-              </p>
-            </div>
-
-            <AltNavigation className=" border-t mt-8 border-blue-900">
-              <ReadmoreLink to="/token">Get CTSI</ReadmoreLink>
+            <AltNavigation className="mt-12 border-t border-blue-900 lg:mt-24">
+              <ReadmoreLink to="/blockchain-os">
+                Enter the blockchain OS (start coding)
+              </ReadmoreLink>
+              <ReadmoreLink to="/">Take me home</ReadmoreLink>
             </AltNavigation>
           </div>
         </div>
-        {/*  */}
       </Layout>
     </>
   );
 };
 
-export const query = graphql`
-  {
-    allContentfulPageAbout {
-      edges {
-        node {
-          hero {
-            heroImage {
-              gatsbyImageData
-              title
-            }
-          }
-          title
-        }
-      }
-    }
-  }
-`;
 export default AboutPage;

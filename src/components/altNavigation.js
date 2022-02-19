@@ -31,7 +31,7 @@ export default function AltNavigation({ children, ...rest }) {
   return (
     <div {...rest} ref={overflowRef}>
       <div
-        className="flex justify-between gap-8 py-6 pr-4 overflow-hidden"
+        className="flex justify-between gap-8 overflow-hidden py-6 pr-4 font-light"
         ref={overflowRefInner}
       >
         {children}

@@ -1,10 +1,10 @@
 import * as React from "react";
-import Navigation from "./navigation";
+import HeaderNavigation from "./headerNavigation";
 import Logo from "./logo";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const Header = ({ isStatic }) => {
+const Header = ({ isStatic, isInverted }) => {
   const headerRef = React.useRef(null);
 
   React.useEffect(() => {
@@ -54,12 +54,14 @@ const Header = ({ isStatic }) => {
   return (
     <header
       ref={headerRef}
-      className={`header ${isStatic ? "is-static" : "is-transparent"}`}
+      className={`header ${isStatic ? "is-static" : "is-transparent"} ${
+        isInverted ? "is-inverted" : ""
+      }`}
     >
       <div className="container">
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           <Logo />
-          <Navigation />
+          <HeaderNavigation isHeaderInverted={isInverted} />
         </div>
       </div>
     </header>

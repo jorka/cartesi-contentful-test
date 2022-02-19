@@ -1,267 +1,281 @@
-import { graphql, Link } from "gatsby";
+import { Link } from "gatsby";
 import { Helmet } from "react-helmet";
 
 import * as React from "react";
 import Layout from "../components/layout";
-import Hero from "../components/hero";
 import DownScrollLink from "../components/downScrollLink";
-import SectionLink from "../components/sectionLink";
-import ReadmoreLink from "../components/readmoreLink";
 import { StaticImage } from "gatsby-plugin-image";
-import BlogArticles from "../components/blogArticles";
 import AltNavigation from "../components/altNavigation";
-import ArrowMoreIcon from "../assets/images/icon-arrow-more.svg";
+import scrollTo from "gatsby-plugin-smoothscroll";
+import Collapse from "../components/collapse";
+import ReadmoreLink from "../components/readmoreLink";
 
-const LabsPage = ({ data }) => {
-  const { heroImage } = data.allContentfulPageLabs.edges[0].node.hero;
-
+const LabsPage = () => {
   return (
     <>
       <Helmet>
         <title>Labs | Cartesi.io</title>
       </Helmet>
       <Layout>
-        <Hero
-          image={{
-            src: heroImage.gatsbyImageData,
-            alt: heroImage.title,
-          }}
-          sectionLinkTo="#labs"
-        />
-        {/*  */}
-
-        <div
-          className="bg-blue-200 min-h-screen grid items-center section"
-          id="labs"
-        >
-          <div className="container max-w-5xl">
-            <h2 className="mb-6" data-anim-fade>
-              Labs
-            </h2>
-            <div
-              className="prose prose-p:text-2xl prose-p:leading-tight font-serif"
-              data-anim-fade
-            >
-              <p>
-                Pioneers are the devs who want to make the jump to blockchain.
-                Daring developers who want to bring their existing libraries to
-                our blockchain OS and build the new world. Together.
-              </p>
-            </div>
-          </div>
-          <DownScrollLink to="#genesis-about" />
-        </div>
-
-        {/*  */}
-
-        {/*  */}
-        <div id="genesis-about" data-anim-snap>
-          <div className="container">
-            <div className="flex flex-col lg:flex-row -mx-6">
-              <div className="w-full lg:w-1/2 py-12 sm:py-24 px-6 relative">
-                <SectionLink to="#genesis-apps" className="text-left group">
-                  <div className="lg:px-12 relative z-10">
-                    <div
-                      className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8"
-                      data-anim-fade-left
-                    >
-                      <h2>
-                        Genesis
-                        <br />
-                        Apps
-                      </h2>
-                      <p>
-                        Always use two lines of intro text Always use two lines
-                        of intro text
-                      </p>
-                    </div>
-                    <p className="mb-0" data-anim-fade-left>
-                      <ArrowMoreIcon className="w-8 h-8 fill-current transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
-                    </p>
-                  </div>
-                  <div className="bg-blue-50 transition-colors duration-300 absolute w-full lg:w-[50vw] h-full z-0 bottom-0 right-0 group-hover:bg-blue-100" />
-                </SectionLink>
+        <div className="bg-blue-200 pt-20 text-gray-900 lg:pt-24">
+          <div className="section xl:pt-[10vh]">
+            <div className="container max-w-4xl">
+              <div className="prose prose-lg text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif">
+                <h1>Hello, pioneers.</h1>
+                <p>
+                  Cartesi Labs. A program run by the Cartesi Foundation; to fund
+                  research, to develop a decentralized system with our
+                  technology stack, to the future-minded you. From the tech
+                  pioneer to the daring developer, this is all about bringing
+                  existing software to the blockchain OS. This is our moment to
+                  create whole new territories together.
+                </p>
               </div>
-              <div className="w-full lg:w-1/2 py-12 sm:py-24 px-6 relative">
-                <SectionLink to="#about-labs" className="text-left group">
-                  <div className="lg:px-12 relative z-10">
-                    <div
-                      className="prose prose-headings:font-serif prose-h2:text-2xl prose-headings:mb-4 prose-headings:leading-tighter max-w-lg mb-8"
-                      data-anim-fade-right
-                    >
-                      <h2>
-                        About
-                        <br />
-                        Labs
-                      </h2>
-                      <p>
-                        Always use two lines of intro text Always use two lines
-                        of intro text
-                      </p>
-                    </div>
-                    <p className="mb-0" data-anim-fade-right>
-                      <ArrowMoreIcon className="w-8 h-8 fill-current transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
-                    </p>
-                  </div>
-                  <div className="bg-yellow-500 transition-colors duration-300 absolute w-full lg:w-[50vw] h-full z-0 bottom-0 left-0 group-hover:bg-yellow-600" />
-                </SectionLink>
+              <div className="mt-8 flex flex-col justify-center gap-4 text-center sm:flex-row sm:items-center lg:mt-16">
+                <button
+                  onClick={() => scrollTo("#welcome-to-labs")}
+                  className="btn-outline"
+                >
+                  <span>Welcome to Labs</span>
+                </button>
+                <button
+                  onClick={() => scrollTo("#how-to-apply-for-grants")}
+                  className="btn-outline"
+                >
+                  <span>How to apply for grants</span>
+                </button>
               </div>
             </div>
           </div>
-        </div>
-        {/*  */}
+          <div className="section pt-0">
+            <div className="container max-w-7xl">
+              <StaticImage
+                src="../assets/images/uploads/two-man-congratulating-each-other.jpg"
+                alt=""
+                width={1280}
+              />
 
-        {/*  */}
-        <div className="bg-gray-900 text-white section" id="genesis-apps">
-          <div className="container max-w-5xl">
-            <h2 className="text-4xl mb-8 lg:mb-12 font-serif" data-anim-fade>
-              Genesis apps
-            </h2>
-
-            <div className="prose prose-invert mb-12 lg:mb-24" data-anim-fade>
-              <p>
-                We see an OS as the line between order and chaos. Blockchains
-                need to have an OS because the blockchain- specific VM does not
-                support the ecosystem of modern software and applications that
-                rely on a tree of dependencies (libraries, components, tools).
-                This is making the lives of developers hard when they want to
-                start programming for blockchain.
-              </p>
-              <p>
-                Cartesi is the first blockchain OS. Our Layer-2 solution
-                integrates Linux and standard programming environments to
-                blockchain. This allows developers to code scalable smart
-                contracts with rich software tools, libraries, and services they
-                are used to.
-              </p>
+              <DownScrollLink to="#welcome-to-labs" />
             </div>
-
-            <DownScrollLink to="#created-by-heroes" />
           </div>
         </div>
-        {/*  */}
 
-        {/*  */}
         <div
-          className="h-screen relative overflow-hidden"
-          data-anim-image-reveal
-        >
-          <StaticImage
-            src={`../assets/images/uploads/labs-01.jpg`}
-            className="left-0 top-0 object-cover w-full h-full"
-            alt="token-01"
-          />
-        </div>
-        {/*  */}
-
-        {/*  */}
-        <div
-          className="bg-yellow-500 min-h-screen grid items-center section"
+          className="section bg-yellow-500 text-gray-900"
           id="created-by-heroes"
         >
           <div className="container max-w-5xl">
-            <h2 className="text-4xl mb-8 lg:mb-12 font-serif" data-anim-fade>
-              Created by
-              <br />
-              heroes
-            </h2>
+            <div className="prose  prose-headings:font-serif prose-headings:text-3xl">
+              <h2>
+                Genesis apps on
+                <br />
+                The Blockchain OS
+              </h2>
+              <p>
+                Bold, pioneering, ground breaking use cases, created in the
+                early days of Cartesi’s technology stack.
+              </p>
+            </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12 mb-12 lg:mb-24">
-              {Array.from({ length: 6 }).map((_, i) => (
-                <div key={i} data-anim-fade>
-                  <Link to="#" className="group">
+            <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-4">
+              {[
+                {
+                  title: "Carti",
+                  link: "#",
+                  description:
+                    "Carti is a decentralized package manager for Cartesi machines.",
+                  image: "../assets/images/logo-carti.svg",
+                },
+                {
+                  title: "Sim Racing eSports",
+                  link: "#",
+                  description:
+                    "Sim Racing eSports meets Crypto and Blockchain technology.",
+                  image: "../assets/images/logo-carti.svg",
+                },
+                {
+                  title: "Creol",
+                  link: "#",
+                  description:
+                    "Verified Carbon Certifi-cation for Carbon positive people.",
+                  image: "../assets/images/logo-carti.svg",
+                },
+                {
+                  title: "Creepts",
+                  link: "#",
+                  description:
+                    "Creepts is the first fully decentralized tower defense game.",
+                  image: "../assets/images/logo-carti.svg",
+                },
+                {
+                  title: "Texas HODL",
+                  link: "#",
+                  description:
+                    "Texas HODL’em brings back safety to the online poker table.",
+                  image: "../assets/images/logo-carti.svg",
+                },
+                {
+                  title: "Another one",
+                  link: "#",
+                  description:
+                    "Lorem ipsum. Itatur aut la prest, qui adignia exces porions equia.",
+                  image: "../assets/images/logo-carti.svg",
+                },
+              ].map(({ title, link, image, description }) => (
+                <div key={title}>
+                  <Link to={link} className="group">
                     <div className="overflow-hidden">
                       <StaticImage
-                        src={`https://picsum.photos/960/460`}
-                        alt="Article"
-                        className="transition-transform group-hover:scale-110 duration-700"
+                        src="../assets/images/logo-carti.svg"
+                        alt={title}
+                        width={300}
+                        className="transition-transform duration-700 group-hover:scale-110"
                       />
                     </div>
-                    <p className="mt-4 text-sm leading-tight">
-                      Carti is a decentralized package manager for Cartesi
-                      machines.
+                    <p className="mt-4 text-xs font-light leading-tight">
+                      {description}
                     </p>
                   </Link>
                 </div>
               ))}
             </div>
 
-            <AltNavigation className="mt-8 border-t border-gray-900">
-              <ReadmoreLink to="#" className=" hover:text-blue-500 font-light">
-                Get CTSI
-              </ReadmoreLink>
-            </AltNavigation>
-
-            <DownScrollLink to="#about-labs" />
+            <DownScrollLink to="#welcome-to-labs" />
           </div>
         </div>
-        {/*  */}
 
-        {/*  */}
-        <div
-          className="bg-blue-50 min-h-screen grid items-center section"
-          id="about-labs"
-        >
-          <div className="container max-w-5xl">
-            <h2 className="text-4xl mb-8 lg:mb-12 font-serif" data-anim-fade>
-              About labs
-            </h2>
+        <div className="relative h-screen overflow-hidden">
+          <StaticImage
+            src={`../assets/images/uploads/two-girls-staring-at-computer-screens.jpg`}
+            className="left-0 top-0 h-full w-full object-cover"
+            alt="token-01"
+          />
+        </div>
 
-            <div className="prose mb-12 lg:mb-24" data-anim-fade>
+        <div className="section bg-blue-50 text-gray-900" id="welcome-to-labs">
+          <div className="container max-w-4xl">
+            <div className="prose prose-headings:font-serif prose-headings:text-3xl">
+              <h2>Welcome to Labs.</h2>
               <p>
-                More information about labs, conse sita ne pos rersper umquiaspe
-                mostist, que nimus ex ex enderciis a sa eatus volla volupturia
-                culparisci utempel itatet hilit deliquiae pere pori cusae. Nem
-                hil excearum dolesenim quatur?
-              </p>
-              <p>
-                Iducimaios idundi blacidus eos ne natur? Et qui culparcimin
-                nulpa vendandigent labo. Tur as aut volendant utaectae odia
-                veliti consed quatis accae quae quis repereperro tet eum
-                quibusant officabo. Occus. Ehenecesto eumqui odi imendi unt. Ed
-                quiae. Boreperum, omnis rectatiis volupta tionsedis inum quam
-                exerum.
+                For the developers, the pioneers, and the idealists, Cartesi
+                foundation provides the step up. With extra cheques and
+                contributions coming from crowdsourcing platforms, accredited
+                investors, and other Cartesi partners, this is all about
+                providing invaluable technical and strategic advice to ensure
+                the success of our future-minded folk.
               </p>
             </div>
+            <DownScrollLink to="#how-to-apply-for-grants" />
+          </div>
+        </div>
 
-            <AltNavigation className="mt-8 border-t border-gray-900">
-              <ReadmoreLink to="#" className=" hover:text-blue-500 font-light">
-                Transit to blockchain
+        <div
+          className="section bg-blue-200 text-gray-900"
+          id="how-to-apply-for-grants"
+        >
+          <div className="container max-w-4xl">
+            <div className="prose prose-headings:font-serif prose-headings:text-3xl prose-h3:text-2xl">
+              <h2>
+                Funding for <br />
+                Developers
+              </h2>
+              <p>
+                Cartesi grants aim to foster the adoption of developers, grow
+                the The Blockchain OS ecosystem, and support our community.
+                Whether you’re a developer or a company, ignite your great ideas
+                through Cartesi grants.
+              </p>
+              <h3>How to apply for grants</h3>
+            </div>
+            <div>
+              <Collapse
+                label={
+                  <span className="text-lg transition-colors hover:text-blue-800">
+                    Prepare
+                  </span>
+                }
+                className="border-b border-b-gray-900 py-4 lg:py-6"
+              >
+                <div className="prose  py-4 text-base prose-p:mb-0">
+                  <p>
+                    We advise you to carefully read the developers documentation
+                    below.
+                  </p>
+                </div>
+              </Collapse>
+              <Collapse
+                label={
+                  <span className="text-lg transition-colors hover:text-blue-800">
+                    Reflect
+                  </span>
+                }
+                className="border-b border-b-gray-900 py-4 lg:py-6"
+              >
+                <div className="prose  py-4 text-base prose-p:mb-0">
+                  <p>
+                    Ready to apply for a grant? Define your project scope and
+                    try to calculate your budget and timeline, as well as 3
+                    project milestones to which the funding will be tied.
+                  </p>
+                </div>
+              </Collapse>
+              <Collapse
+                label={
+                  <span className="text-lg transition-colors hover:text-blue-800">
+                    Collect
+                  </span>
+                }
+                className="border-b border-b-gray-900 py-4 lg:py-6"
+              >
+                <div className="prose  py-4 text-base prose-p:mb-0">
+                  <p>
+                    Start to create and collect the docs needed to fill out the
+                    Request For Grant form. You will need to upload a proposal
+                    abstract and an outline or deck describing your proposed
+                    project with Cartesi. Make sure to include the problem,
+                    solution, target users, size of market, roadmap, budget and
+                    use of funds, why blockchain, and why Cartesi's Blockchain
+                    OS.
+                  </p>
+                </div>
+              </Collapse>
+              <Collapse
+                label={
+                  <span className="text-lg transition-colors hover:text-blue-800">
+                    Apply
+                  </span>
+                }
+                className="border-b border-b-gray-900 py-4 lg:py-6"
+              >
+                <div className="prose py-4 text-base prose-p:mb-0">
+                  <p>
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSeVa-oDyxbCnIk8abUyBiznHKTK0O9SFBAjVwtKOB_8Q8AjzQ/viewform?pli=1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Fill out the form
+                    </a>{" "}
+                    and you're done!
+                  </p>
+                </div>
+              </Collapse>
+            </div>
+            <AltNavigation className="mt-12">
+              <ReadmoreLink
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeVa-oDyxbCnIk8abUyBiznHKTK0O9SFBAjVwtKOB_8Q8AjzQ/viewform?pli=1"
+              >
+                Apply now
               </ReadmoreLink>
+              <ReadmoreLink to="/">Take me home</ReadmoreLink>
             </AltNavigation>
-
-            <DownScrollLink to="#articles" />
           </div>
         </div>
-        {/*  */}
-
-        {/*  */}
-        <div className="section" id="articles">
-          <div className="container max-w-6xl" data-anim-fade>
-            <BlogArticles />
-          </div>
-        </div>
-        {/*  */}
       </Layout>
     </>
   );
 };
 
-export const query = graphql`
-  {
-    allContentfulPageLabs {
-      edges {
-        node {
-          hero {
-            heroImage {
-              gatsbyImageData
-              title
-            }
-          }
-          title
-        }
-      }
-    }
-  }
-`;
 export default LabsPage;

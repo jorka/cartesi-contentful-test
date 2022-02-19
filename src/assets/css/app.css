@@ -9,12 +9,6 @@
 @import "./components/_section";
 @import "./components/_swiper";
 @import "./components/_header";
+@import "./components/_btn-outline";
 
 @import "tailwindcss/utilities";
-
-/* @supports (-webkit-touch-callout: none) {
-  .h-screen {
-    height: -webkit-fill-available;
-    height: stretch;
-  }
-} */

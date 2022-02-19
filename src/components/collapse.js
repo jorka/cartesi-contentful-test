@@ -19,16 +19,15 @@ const Collapse = ({ label, children, isExpanded = false, ...rest }) => {
       .timeline()
       .to(collapse.current, {
         height: "auto",
-        duration: 0.5,
-        ease: "power2.inOut",
+        duration: 0,
       })
       .to(collapseContent.current, {
         height: "auto",
-        duration: 0.5,
+        duration: 0.25,
         ease: "power2.inOut",
       })
       .to(iconPlusPath.current, {
-        delay: -0.5,
+        delay: -0.15,
         opacity: 1,
         rotate: 90,
         scale: 1,
@@ -50,7 +49,7 @@ const Collapse = ({ label, children, isExpanded = false, ...rest }) => {
     <div {...rest}>
       <button
         onClick={handleClick}
-        className="flex items-center gap-4 justify-between w-full"
+        className="flex w-full items-center justify-between gap-4"
       >
         {label}
         <span>
