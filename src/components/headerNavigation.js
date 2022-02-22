@@ -56,9 +56,9 @@ const MenuItem = ({ name, path, submenu, toggleNav, isExternal, icon }) => {
           className="navigation-item"
         >
           <div className="flex items-center">
-            {icon && (
+            {icon ? (
               <span className="mr-2 flex-shrink-0 lg:-my-2">{icon}</span>
-            )}
+            ) : null}
             <span>{name}</span>
           </div>
         </a>
@@ -73,9 +73,9 @@ const MenuItem = ({ name, path, submenu, toggleNav, isExternal, icon }) => {
           activeClassName="is-active"
         >
           <div className="flex items-center">
-            {icon && (
+            {icon ? (
               <span className="mr-2 flex-shrink-0 lg:-my-2">{icon}</span>
-            )}
+            ) : null}
             <span>{name}</span>
           </div>
         </AniLink>
@@ -125,7 +125,7 @@ const Submenu = ({ submenu, toggleNav, isOpen }) => {
 };
 
 const HeaderNavigation = ({ isHeaderInverted }) => {
-  const links = [
+  const menu1 = [
     {
       name: "Blockchain OS",
       path: "/blockchain-os",
@@ -144,6 +144,9 @@ const HeaderNavigation = ({ isHeaderInverted }) => {
       name: "People",
       path: "/people",
     },
+  ];
+
+  const menu2 = [
     {
       name: "Developers",
       // path: "/developers",
@@ -188,17 +191,32 @@ const HeaderNavigation = ({ isHeaderInverted }) => {
   return (
     <>
       <nav className="navigation">
-        {links.map(({ name, path, submenu, icon }) => (
-          <MenuItem
-            key={name}
-            name={name}
-            path={path}
-            submenu={submenu}
-            icon={icon}
-            isHeaderInverted={isHeaderInverted}
-            toggleNav={toggleNav}
-          />
-        ))}
+        <div className="navigation-menu">
+          {menu1.map(({ name, path, submenu, icon }) => (
+            <MenuItem
+              key={name}
+              name={name}
+              path={path}
+              submenu={submenu}
+              icon={icon}
+              isHeaderInverted={isHeaderInverted}
+              toggleNav={isNavigationOpen ? toggleNav : null}
+            />
+          ))}
+        </div>
+        <div className="navigation-menu">
+          {menu2.map(({ name, path, submenu, icon }) => (
+            <MenuItem
+              key={name}
+              name={name}
+              path={path}
+              submenu={submenu}
+              icon={icon}
+              isHeaderInverted={isHeaderInverted}
+              toggleNav={isNavigationOpen ? toggleNav : null}
+            />
+          ))}
+        </div>
       </nav>
       <button className="z-20 ml-auto lg:hidden" onClick={toggleNav}>
         <IconHamburger className="h-6 w-6 fill-current" />

@@ -19,7 +19,6 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "@react-google-maps/api": "^2.7.0",
     "gatsby": "^4.4.0",
     "gatsby-plugin-google-tagmanager": "^4.4.0",
     "gatsby-plugin-image": "^2.4.0",
@@ -34,6 +33,7 @@
     "gatsby-source-filesystem": "^4.4.0",
     "gatsby-transformer-sharp": "^4.4.0",
     "gsap": "^3.9.1",
+    "mapbox-gl": "^2.7.0",
     "prettier-plugin-tailwindcss": "^0.1.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

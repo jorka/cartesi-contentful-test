@@ -20,7 +20,10 @@ const AboutPage = () => {
         <div className="bg-yellow-600 pt-20 text-gray-900 lg:pt-24">
           <div className="section xl:pt-[10vh]">
             <div className="container max-w-4xl">
-              <div className="prose prose-lg text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif">
+              <div
+                className="prose prose-lg text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif"
+                data-anim-block
+              >
                 <h1>Hello, new world.</h1>
                 <p>
                   Blockchain technology is all about returning control to the
@@ -49,11 +52,15 @@ const AboutPage = () => {
           </div>
           <div className="section pt-0">
             <div className="container max-w-7xl">
-              <StaticImage
-                src="../assets/images/uploads/girl-laughing-at-men-joke.jpg"
-                alt=""
-                width={1280}
-              />
+              <div data-anim-image-reveal>
+                <div>
+                  <StaticImage
+                    src="../assets/images/uploads/girl-laughing-at-men-joke.jpg"
+                    alt=""
+                    width={1280}
+                  />
+                </div>
+              </div>
 
               <DownScrollLink to="#learn-more" />
             </div>
@@ -124,7 +131,7 @@ const AboutPage = () => {
         </div>
 
         <div className="section" id="articles">
-          <div className="container max-w-6xl" data-anim-fade>
+          <div className="container max-w-6xl">
             <BlogArticles />
           </div>
         </div>

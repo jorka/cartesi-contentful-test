@@ -22,7 +22,10 @@ const TokenPage = () => {
         <div className="bg-yellow-500 pt-20 text-gray-900 lg:pt-24">
           <div className="section xl:pt-[10vh]">
             <div className="container max-w-4xl">
-              <div className="prose prose-lg text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif">
+              <div
+                className="prose prose-lg text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif"
+                data-anim-block
+              >
                 <h1 className="flex items-center justify-center gap-6 text-center">
                   Hello, CTSI
                   <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50">
@@ -57,12 +60,15 @@ const TokenPage = () => {
           </div>
           <div className="section pt-0">
             <div className="container max-w-7xl">
-              <StaticImage
-                src="../assets/images/uploads/man-listening-to-music.jpg"
-                alt=""
-                width={1280}
-              />
-
+              <div data-anim-image-reveal>
+                <div>
+                  <StaticImage
+                    src="../assets/images/uploads/man-listening-to-music.jpg"
+                    alt=""
+                    width={1280}
+                  />
+                </div>
+              </div>
               <DownScrollLink to="#highlights" />
             </div>
           </div>
@@ -279,7 +285,7 @@ const TokenPage = () => {
         </div>
 
         <div className="section" id="articles">
-          <div className="container max-w-6xl" data-anim-fade>
+          <div className="container max-w-6xl">
             <BlogArticles />
           </div>
         </div>

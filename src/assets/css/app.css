@@ -9,6 +9,7 @@
 @import "./components/_section";
 @import "./components/_swiper";
 @import "./components/_header";
+@import "./components/_navigation";
 @import "./components/_btn-outline";
 
 @import "tailwindcss/utilities";

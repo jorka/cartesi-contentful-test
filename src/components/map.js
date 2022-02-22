@@ -1,48 +1,30 @@
 import React from "react";
-import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
-
-const containerStyle = {
-  width: "100%",
-  height: "60vh",
-};
-
-const center = {
-  lat: -3.745,
-  lng: -38.523,
-};
+import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+import "mapbox-gl/dist/mapbox-gl.css";
 
 function Map() {
-  const { isLoaded } = useJsApiLoader({
-    id: "google-map-script",
-    googleMapsApiKey: "AIzaSyDcFHgnb4bktOpx2gWFuqSJfAlEqQTgK3g",
-  });
+  mapboxgl.accessToken = process.env.GATSBY_MAPBOX_TOKEN;
+  const mapContainer = React.useRef(null);
+  const map = React.useRef(null);
+  const [lng] = React.useState(-70.9);
+  const [lat] = React.useState(42.35);
+  const [zoom] = React.useState(9);
 
-  const [map, setMap] = React.useState(null);
+  React.useEffect(() => {
+    if (map.current) return;
+    map.current = new mapboxgl.Map({
+      container: mapContainer.current,
+      style: "mapbox://styles/dimitarangelkov/ckzwd9aev006b14rzs78m3wf1",
+      center: [lng, lat],
+      zoom: zoom,
+    });
+  }, [lat, lng, zoom]);
 
-  const onLoad = React.useCallback(function callback(map) {
-    const bounds = new window.google.maps.LatLngBounds();
-    map.fitBounds(bounds);
-    setMap(map);
-  }, []);
-
-  const onUnmount = React.useCallback(function callback(map) {
-    setMap(null);
-  }, []);
-
-  return isLoaded ? (
-    <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={center}
-      zoom={10}
-      onLoad={onLoad}
-      onUnmount={onUnmount}
-    >
-      {/* Child components, such as markers, info windows, etc. */}
-      <></>
-    </GoogleMap>
-  ) : (
-    <></>
+  return (
+    <div>
+      <div ref={mapContainer} className="map-container h-[50vh]" />
+    </div>
   );
 }
 
-export default React.memo(Map);
+export default Map;

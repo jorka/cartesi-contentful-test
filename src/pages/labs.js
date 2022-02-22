@@ -20,7 +20,10 @@ const LabsPage = () => {
         <div className="bg-blue-200 pt-20 text-gray-900 lg:pt-24">
           <div className="section xl:pt-[10vh]">
             <div className="container max-w-4xl">
-              <div className="prose prose-lg text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif">
+              <div
+                className="prose prose-lg text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif"
+                data-anim-block
+              >
                 <h1>Hello, pioneers.</h1>
                 <p>
                   Cartesi Labs. A program run by the Cartesi Foundation; to fund
@@ -49,11 +52,15 @@ const LabsPage = () => {
           </div>
           <div className="section pt-0">
             <div className="container max-w-7xl">
-              <StaticImage
-                src="../assets/images/uploads/two-man-congratulating-each-other.jpg"
-                alt=""
-                width={1280}
-              />
+              <div data-anim-image-reveal>
+                <div>
+                  <StaticImage
+                    src="../assets/images/uploads/two-man-congratulating-each-other.jpg"
+                    alt=""
+                    width={1280}
+                  />
+                </div>
+              </div>
 
               <DownScrollLink to="#welcome-to-labs" />
             </div>

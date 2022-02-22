@@ -34,7 +34,10 @@ const PeoplePage = ({ data }) => {
         <div className="bg-blue-50 pt-20 text-gray-900 lg:pt-24">
           <div className="section xl:pt-[10vh]">
             <div className="container max-w-4xl">
-              <div className="prose prose-lg text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif">
+              <div
+                className="prose prose-lg text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif"
+                data-anim-block
+              >
                 <h1>Hello, ecosystem.</h1>
                 <p>
                   Hello Blockchain OS success. This is all about developer
@@ -66,11 +69,15 @@ const PeoplePage = ({ data }) => {
           </div>
           <div className="section pt-0">
             <div className="container max-w-7xl">
-              <StaticImage
-                src="../assets/images/uploads/girl-laughing-at-men-joke.jpg"
-                alt=""
-                width={1280}
-              />
+              <div data-anim-image-reveal>
+                <div>
+                  <StaticImage
+                    src="../assets/images/uploads/girl-laughing-at-men-joke.jpg"
+                    alt=""
+                    width={1280}
+                  />
+                </div>
+              </div>
 
               <DownScrollLink to="#meet" />
             </div>

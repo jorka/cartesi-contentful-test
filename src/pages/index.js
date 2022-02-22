@@ -10,7 +10,7 @@ import IconReadMore from "../assets/images/icon-read-more.svg";
 import Steps from "../components/steps";
 import scrollTo from "gatsby-plugin-smoothscroll";
 
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
   return (
     <>
       <Helmet>
@@ -21,7 +21,10 @@ const IndexPage = ({ data }) => {
         <div className="bg-gray-900 pt-20 text-yellow-50 lg:pt-24">
           <div className="section xl:pt-[10vh]">
             <div className="container max-w-4xl">
-              <div className="prose prose-lg prose-invert text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif">
+              <div
+                className="prose prose-lg prose-invert text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif"
+                data-anim-block
+              >
                 <h1>
                   Hello world.
                   <br /> There’s a new OS
@@ -54,11 +57,15 @@ const IndexPage = ({ data }) => {
 
           <div className="section pt-0">
             <div className="container max-w-7xl">
-              <StaticImage
-                src="../assets/images/uploads/two-girls-staring-at-computer-screens.jpg"
-                alt=""
-                width={1280}
-              />
+              <div data-anim-image-reveal>
+                <div>
+                  <StaticImage
+                    src="../assets/images/uploads/two-girls-staring-at-computer-screens.jpg"
+                    alt=""
+                    width={1280}
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
