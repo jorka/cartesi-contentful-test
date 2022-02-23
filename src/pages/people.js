@@ -71,9 +71,17 @@ const PeoplePage = ({ data }) => {
             <div className="container max-w-7xl">
               <div data-anim-image-reveal>
                 <div>
+                  {/* TODO - change this after we start to use GatsbyImage */}
                   <StaticImage
-                    src="../assets/images/uploads/girl-laughing-at-men-joke.jpg"
+                    src="../assets/images/uploads/002-mobile.jpg"
+                    class="sm:hidden"
                     alt=""
+                    width={768}
+                  />
+                  <StaticImage
+                    src="../assets/images/uploads/002.jpg"
+                    class="hidden sm:block"
+                    alt="Cartesi.io"
                     width={1280}
                   />
                 </div>
@@ -143,10 +151,18 @@ const PeoplePage = ({ data }) => {
             className="relative h-screen overflow-hidden "
             data-anim-image-reveal
           >
+            {/* TODO - change this after we start to use GatsbyImage */}
             <StaticImage
-              src={`../assets/images/uploads/man-inside-train.jpg`}
-              className="left-0 top-0 h-full w-full object-cover"
+              src="../assets/images/uploads/001-mobile.jpg"
+              class="left-0 top-0 h-full w-full object-cover sm:hidden"
               alt=""
+              width={768}
+            />
+            <StaticImage
+              src="../assets/images/uploads/001.jpg"
+              class="left-0 top-0 hidden h-full w-full object-cover sm:block"
+              alt="Cartesi.io"
+              width={1280}
             />
           </div>
         </div>

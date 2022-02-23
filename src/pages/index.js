@@ -59,9 +59,17 @@ const IndexPage = () => {
             <div className="container max-w-7xl">
               <div data-anim-image-reveal>
                 <div>
+                  {/* TODO - change this after we start to use GatsbyImage */}
                   <StaticImage
-                    src="../assets/images/uploads/two-girls-staring-at-computer-screens.jpg"
+                    src="../assets/images/uploads/003-mobile.jpg"
+                    class="sm:hidden"
                     alt=""
+                    width={768}
+                  />
+                  <StaticImage
+                    src="../assets/images/uploads/003.jpg"
+                    class="hidden sm:block"
+                    alt="Cartesi.io"
                     width={1280}
                   />
                 </div>

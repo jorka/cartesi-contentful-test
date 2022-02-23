@@ -51,9 +51,17 @@ const AboutPage = () => {
             <div className="container max-w-7xl">
               <div data-anim-image-reveal>
                 <div>
+                  {/* TODO - change this after we start to use GatsbyImage */}
                   <StaticImage
-                    src="../assets/images/uploads/man-inside-train.jpg"
+                    src="../assets/images/uploads/001-mobile.jpg"
+                    class="sm:hidden"
                     alt=""
+                    width={768}
+                  />
+                  <StaticImage
+                    src="../assets/images/uploads/001.jpg"
+                    class="hidden sm:block"
+                    alt="Cartesi.io"
                     width={1280}
                   />
                 </div>

@@ -177,9 +177,17 @@ const TokenPage = () => {
             <div className="container max-w-7xl">
               <div data-anim-image-reveal>
                 <div>
+                  {/* TODO - change this after we start to use GatsbyImage */}
                   <StaticImage
-                    src="../assets/images/uploads/man-listening-to-music.jpg"
+                    src="../assets/images/uploads/006-mobile.jpg"
+                    class="sm:hidden"
                     alt=""
+                    width={768}
+                  />
+                  <StaticImage
+                    src="../assets/images/uploads/006.jpg"
+                    class="hidden sm:block"
+                    alt="Cartesi.io"
                     width={1280}
                   />
                 </div>

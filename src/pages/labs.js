@@ -54,9 +54,17 @@ const LabsPage = () => {
             <div className="container max-w-7xl">
               <div data-anim-image-reveal>
                 <div>
+                  {/* TODO - change this after we start to use GatsbyImage */}
                   <StaticImage
-                    src="../assets/images/uploads/two-man-congratulating-each-other.jpg"
+                    src="../assets/images/uploads/005-mobile.jpg"
+                    class="sm:hidden"
                     alt=""
+                    width={768}
+                  />
+                  <StaticImage
+                    src="../assets/images/uploads/005.jpg"
+                    class="hidden sm:block"
+                    alt="Cartesi.io"
                     width={1280}
                   />
                 </div>
@@ -155,10 +163,18 @@ const LabsPage = () => {
             className="relative h-screen overflow-hidden "
             data-anim-image-reveal
           >
+            {/* TODO - change this after we start to use GatsbyImage */}
             <StaticImage
-              src={`../assets/images/uploads/two-girls-staring-at-computer-screens.jpg`}
-              className="left-0 top-0 h-full w-full object-cover"
+              src="../assets/images/uploads/003-mobile.jpg"
+              class="left-0 top-0 h-full w-full object-cover sm:hidden"
               alt=""
+              width={768}
+            />
+            <StaticImage
+              src="../assets/images/uploads/003.jpg"
+              class="left-0 top-0 hidden h-full w-full object-cover sm:block"
+              alt="Cartesi.io"
+              width={1280}
             />
           </div>
         </div>

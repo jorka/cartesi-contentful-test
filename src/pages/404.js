@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import * as React from "react";
 import { Helmet } from "react-helmet";
 
@@ -7,7 +8,19 @@ const NotFoundPage = () => {
       <Helmet>
         <title>404 | Cartesi.io</title>
       </Helmet>
-      <h1>Not found</h1>
+      <div className="grid h-screen place-content-center bg-gray-900 text-yellow-50">
+        <div>
+          <div className="prose prose-2xl prose-invert prose-h1:mb-0 prose-p:mt-0">
+            <h1>404</h1>
+            <p>Page Not found</p>
+          </div>
+          <p className="mt-20">
+            <Link to="/" class="btn-outline-inverted">
+              <span>Go home now</span>
+            </Link>
+          </p>
+        </div>
+      </div>
     </>
   );
 };

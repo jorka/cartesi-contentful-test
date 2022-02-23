@@ -32,7 +32,7 @@ const Steps = () => {
     >
       <div
         ref={moveDivRef}
-        className="grid grid-cols-2 gap-4 transition-transform duration-500 md:grid-cols-3 xl:w-[130rem] xl:grid-cols-5"
+        className="grid grid-cols-2 gap-4 bg-white transition-transform duration-500 md:grid-cols-3 xl:w-[130rem] xl:grid-cols-5"
       >
         <a
           href="https://medium.com/cartesi/cartesi-dapps-are-here-e07f358207d6"
