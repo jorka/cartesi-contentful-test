@@ -5,7 +5,7 @@ import * as React from "react";
 export function useTextAnimations() {
   gsap.registerPlugin(ScrollTrigger);
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     const textElements = gsap.utils.toArray("[data-anim-fade]");
 
     if (textElements.length) return;
@@ -24,9 +24,18 @@ export function useTextAnimations() {
         },
       });
     });
+
+    return () => {
+      if (textElements.length) return;
+
+      textElements.forEach((item, i) => {
+        const trigger = ScrollTrigger.getById("textAnimation");
+        trigger && trigger.kill();
+      });
+    };
   }, []);
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     const blockElements = gsap.utils.toArray("[data-anim-block]");
 
     if (!blockElements.length) return;
@@ -49,6 +58,15 @@ export function useTextAnimations() {
         });
       });
     });
+
+    return () => {
+      if (!blockElements.length) return;
+
+      blockElements.forEach((item, i) => {
+        const trigger = ScrollTrigger.getById("blockAnimation");
+        trigger && trigger.kill();
+      });
+    };
   }, []);
 }
 
@@ -78,7 +96,7 @@ export const counterAnimation = (targetRef, cb) => {
 export function useImageRevealAnimations() {
   gsap.registerPlugin(ScrollTrigger);
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     const imageElements = gsap.utils.toArray("[data-anim-image-reveal]");
 
     if (!imageElements.length) return;
@@ -88,7 +106,6 @@ export function useImageRevealAnimations() {
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: item,
-          toggleActions: "restart none none reset",
           id: "imageReveal",
         },
       });
@@ -110,5 +127,14 @@ export function useImageRevealAnimations() {
           delay: -1.5,
         });
     });
+
+    return () => {
+      if (!imageElements.length) return;
+
+      imageElements.forEach((item, i) => {
+        const trigger = ScrollTrigger.getById("imageReveal");
+        trigger && trigger.kill();
+      });
+    };
   }, []);
 }

@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import * as React from "react";
 import Layout from "../components/layout";
 import DownScrollLink from "../components/downScrollLink";
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
 import AltNavigation from "../components/altNavigation";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import Collapse from "../components/collapse";
@@ -72,7 +72,10 @@ const LabsPage = () => {
           id="created-by-heroes"
         >
           <div className="container max-w-5xl">
-            <div className="prose  prose-headings:font-serif prose-headings:text-3xl">
+            <div
+              className="prose  prose-headings:font-serif prose-headings:text-3xl"
+              data-anim-block
+            >
               <h2>
                 Genesis apps on
                 <br />
@@ -84,56 +87,52 @@ const LabsPage = () => {
               </p>
             </div>
 
-            <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-4">
+            <div
+              className="mt-12 grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-4"
+              data-anim-block
+            >
               {[
                 {
                   title: "Carti",
                   link: "#",
                   description:
                     "Carti is a decentralized package manager for Cartesi machines.",
-                  image: "../assets/images/logo-carti.svg",
+                  image: "genesis-apps/carti.svg",
                 },
                 {
                   title: "Sim Racing eSports",
                   link: "#",
                   description:
                     "Sim Racing eSports meets Crypto and Blockchain technology.",
-                  image: "../assets/images/logo-carti.svg",
+                  image: "genesis-apps/simracer.svg",
                 },
                 {
                   title: "Creol",
                   link: "#",
                   description:
                     "Verified Carbon Certifi-cation for Carbon positive people.",
-                  image: "../assets/images/logo-carti.svg",
+                  image: "genesis-apps/creol.svg",
                 },
                 {
                   title: "Creepts",
                   link: "#",
                   description:
                     "Creepts is the first fully decentralized tower defense game.",
-                  image: "../assets/images/logo-carti.svg",
+                  image: "genesis-apps/creepts.svg",
                 },
                 {
                   title: "Texas HODL",
                   link: "#",
                   description:
                     "Texas HODL’em brings back safety to the online poker table.",
-                  image: "../assets/images/logo-carti.svg",
-                },
-                {
-                  title: "Another one",
-                  link: "#",
-                  description:
-                    "Lorem ipsum. Itatur aut la prest, qui adignia exces porions equia.",
-                  image: "../assets/images/logo-carti.svg",
+                  image: "genesis-apps/poker.svg",
                 },
               ].map(({ title, link, image, description }) => (
                 <div key={title}>
                   <Link to={link} className="group">
-                    <div className="overflow-hidden">
-                      <StaticImage
-                        src="../assets/images/logo-carti.svg"
+                    <div className="overflow-hidden bg-gray-900">
+                      <img
+                        src={image}
                         alt={title}
                         width={300}
                         className="transition-transform duration-700 group-hover:scale-110"
@@ -151,17 +150,25 @@ const LabsPage = () => {
           </div>
         </div>
 
-        <div className="relative h-screen overflow-hidden">
-          <StaticImage
-            src={`../assets/images/uploads/two-girls-staring-at-computer-screens.jpg`}
-            className="left-0 top-0 h-full w-full object-cover"
-            alt="token-01"
-          />
+        <div className="bg-gray-900">
+          <div
+            className="relative h-screen overflow-hidden "
+            data-anim-image-reveal
+          >
+            <StaticImage
+              src={`../assets/images/uploads/two-girls-staring-at-computer-screens.jpg`}
+              className="left-0 top-0 h-full w-full object-cover"
+              alt=""
+            />
+          </div>
         </div>
 
         <div className="section bg-blue-50 text-gray-900" id="welcome-to-labs">
           <div className="container max-w-4xl">
-            <div className="prose prose-headings:font-serif prose-headings:text-3xl">
+            <div
+              className="prose prose-headings:font-serif prose-headings:text-3xl"
+              data-anim-block
+            >
               <h2>Welcome to Labs.</h2>
               <p>
                 For the developers, the pioneers, and the idealists, Cartesi
@@ -181,7 +188,10 @@ const LabsPage = () => {
           id="how-to-apply-for-grants"
         >
           <div className="container max-w-4xl">
-            <div className="prose prose-headings:font-serif prose-headings:text-3xl prose-h3:text-2xl">
+            <div
+              className="prose prose-headings:font-serif prose-headings:text-3xl prose-h3:text-2xl"
+              data-anim-block
+            >
               <h2>
                 Funding for <br />
                 Developers
@@ -194,7 +204,7 @@ const LabsPage = () => {
               </p>
               <h3>How to apply for grants</h3>
             </div>
-            <div>
+            <div data-anim-block>
               <Collapse
                 label={
                   <span className="text-lg transition-colors hover:text-blue-800">

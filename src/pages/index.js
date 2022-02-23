@@ -71,7 +71,10 @@ const IndexPage = () => {
 
           <div className="section pt-0" id="hello-bockchain-os">
             <div className="container max-w-4xl">
-              <div className="prose  prose-invert prose-headings:font-serif prose-headings:text-3xl">
+              <div
+                className="prose  prose-invert prose-headings:font-serif prose-headings:text-3xl"
+                data-anim-block
+              >
                 <h2>
                   Hello,
                   <br /> Blockchain OS
@@ -97,7 +100,7 @@ const IndexPage = () => {
 
           <div className="section pt-0">
             <div className="container max-w-4xl">
-              <div>
+              <div data-anim-block>
                 <Collapse
                   label={
                     <span className="text-lg transition-colors hover:text-blue-200">
@@ -184,7 +187,7 @@ const IndexPage = () => {
               </div>
             </div>
             <div className="container max-w-7xl pt-12 sm:pt-24">
-              <div className="prose  prose-invert">
+              <div className="prose  prose-invert" data-anim-block>
                 <table>
                   <colgroup>
                     <col span="1" style={{ width: "40%" }} />
@@ -279,7 +282,9 @@ const IndexPage = () => {
               </div>
             </div>
             <div className="container max-w-7xl pt-12 sm:pt-24">
-              <Steps />
+              <div>
+                <Steps />
+              </div>
             </div>
           </div>
 
@@ -292,7 +297,7 @@ const IndexPage = () => {
                   tech resources
                 </h2>
               </div>
-              <div className="flex flex-col pt-12 sm:pt-24">
+              <div className="flex flex-col pt-12 sm:pt-24" data-anim-block>
                 <a
                   href="https://cartesi.io/en/docs/intro/"
                   target="_blank"

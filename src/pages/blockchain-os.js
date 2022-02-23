@@ -70,7 +70,10 @@ const AboutPage = () => {
         <div className=" bg-blue-200" id="learn-more">
           <div className="section">
             <div className="container max-w-4xl">
-              <div className="prose prose-headings:font-serif prose-headings:text-3xl">
+              <div
+                className="prose prose-headings:font-serif prose-headings:text-3xl"
+                data-anim-block
+              >
                 <h2>An OS is needed to create this new world</h2>
                 <p>
                   The Cartesi Foundation is a non-profit organization dedicated
@@ -90,17 +93,22 @@ const AboutPage = () => {
           </div>
           <div className="section pt-0">
             <div className="container max-w-7xl">
-              <Video id="0McaBu8lU6c" />
+              <Video id="TnrxayQCLY4" />
             </div>
           </div>
         </div>
 
-        <div className="relative h-screen overflow-hidden">
-          <StaticImage
-            src={`../assets/images/uploads/man-inside-train.jpg`}
-            className="left-0 top-0 h-full w-full object-cover"
-            alt=""
-          />
+        <div className="bg-gray-900">
+          <div
+            className="relative h-screen overflow-hidden "
+            data-anim-image-reveal
+          >
+            <StaticImage
+              src={`../assets/images/uploads/man-inside-train.jpg`}
+              className="left-0 top-0 h-full w-full object-cover"
+              alt=""
+            />
+          </div>
         </div>
 
         <div
@@ -108,7 +116,10 @@ const AboutPage = () => {
           id="hello-new-economy"
         >
           <div className="container max-w-4xl">
-            <div className="prose prose-headings:font-serif prose-headings:text-3xl">
+            <div
+              className="prose prose-headings:font-serif prose-headings:text-3xl"
+              data-anim-block
+            >
               <h2>Hello new economy</h2>
               <p>
                 Envision potential revenue streams with more and more economic

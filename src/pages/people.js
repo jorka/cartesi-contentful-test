@@ -85,7 +85,7 @@ const PeoplePage = ({ data }) => {
         </div>
 
         <div className="section bg-yellow-500 text-gray-900" id="meet">
-          <div className="container max-w-5xl">
+          <div className="container max-w-5xl" data-anim-block>
             <h2 className="mb-8 font-serif text-4xl lg:mb-12">Meet</h2>
 
             <div className="mb-12 lg:mb-24">
@@ -99,7 +99,10 @@ const PeoplePage = ({ data }) => {
           id="created-by-heroes"
         >
           <div className="container max-w-5xl">
-            <div className="prose  prose-headings:font-serif prose-headings:text-3xl">
+            <div
+              className="prose  prose-headings:font-serif prose-headings:text-3xl"
+              data-anim-block
+            >
               <h2>
                 Contributors to
                 <br /> The Blockchain OS
@@ -112,16 +115,17 @@ const PeoplePage = ({ data }) => {
               </p>
             </div>
 
-            <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-4">
-              {Array.from({ length: 8 }).map((_, i) => (
-                <div key={i}>
+            <div className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-4">
+              {Array.from({ length: 29 }).map((_, i) => (
+                <div key={i} data-anim-block>
                   <div className="group">
-                    <div className="overflow-hidden">
-                      <StaticImage
-                        src="../assets/images/logo-carti.svg"
+                    <div className="flex items-center justify-center overflow-hidden bg-gray-900">
+                      <img
+                        src={`contributors/contributor-${i + 1}.svg`}
                         alt=""
-                        width={320}
-                        height={240}
+                        width="153"
+                        height="124"
+                        loading="lazy"
                         className="transition-transform duration-700 group-hover:scale-110"
                       />
                     </div>
@@ -134,12 +138,17 @@ const PeoplePage = ({ data }) => {
           </div>
         </div>
 
-        <div className="relative h-screen overflow-hidden">
-          <StaticImage
-            src={`../assets/images/uploads/man-inside-train.jpg`}
-            className="left-0 top-0 h-full w-full object-cover"
-            alt="about-01"
-          />
+        <div className="bg-gray-900">
+          <div
+            className="relative h-screen overflow-hidden "
+            data-anim-image-reveal
+          >
+            <StaticImage
+              src={`../assets/images/uploads/man-inside-train.jpg`}
+              className="left-0 top-0 h-full w-full object-cover"
+              alt=""
+            />
+          </div>
         </div>
 
         <div
@@ -147,7 +156,10 @@ const PeoplePage = ({ data }) => {
           id="decentralization"
         >
           <div className="container max-w-4xl">
-            <div className="prose prose-headings:font-serif prose-headings:text-3xl">
+            <div
+              className="prose prose-headings:font-serif prose-headings:text-3xl"
+              data-anim-block
+            >
               <h2>
                 Ambassadors of
                 <br /> The Blockchain OS
@@ -175,7 +187,10 @@ const PeoplePage = ({ data }) => {
           id="decentralization"
         >
           <div className="container max-w-4xl">
-            <div className="prose prose-invert prose-headings:font-serif prose-headings:text-3xl">
+            <div
+              className="prose prose-invert prose-headings:font-serif prose-headings:text-3xl"
+              data-anim-block
+            >
               <h2>
                 Friends of <br />
                 The Blockchain OS
@@ -196,7 +211,7 @@ const PeoplePage = ({ data }) => {
         </div>
 
         <div className="section bg-yellow-500 text-gray-900" id="meet">
-          <div className="container max-w-5xl">
+          <div className="container max-w-5xl" data-anim-block>
             <h2 className="mb-8 font-serif text-3xl lg:mb-12">
               Advisors to
               <br /> The Blockchain OS

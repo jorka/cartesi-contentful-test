@@ -4,6 +4,7 @@ import IconReadMore from "../assets/images/icon-read-more.svg";
 const Steps = () => {
   const [mousePosition, setMousePosition] = React.useState(0);
   const moveDivRef = React.useRef(null);
+
   const handleMouseMove = (e) => {
     setMousePosition((prev) => prev - e.movementX);
   };

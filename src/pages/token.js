@@ -13,6 +13,121 @@ import scrollTo from "gatsby-plugin-smoothscroll";
 import IconCTSI from "../assets/images/icon-ctsi.svg";
 
 const TokenPage = () => {
+  const wallets = [
+    {
+      name: "Atomic Wallet",
+      image: "/wallets/atomic-wallet.svg",
+    },
+    {
+      name: "Ledger",
+      image: "/wallets/ledger.svg",
+    },
+    {
+      name: "My Crypto",
+      image: "/wallets/my-crypto.svg",
+    },
+    {
+      name: "Trezor",
+      image: "/wallets/trezor.svg",
+    },
+    {
+      name: "Trust Wallet",
+      image: "/wallets/trust-wallet.svg",
+    },
+    {
+      name: "My Ether Wallet",
+      image: "/wallets/my-ether-wallet.svg",
+    },
+    {
+      name: "Guarda Wallet",
+      image: "/wallets/guarda-wallet.svg",
+    },
+    {
+      name: "Gnosis Safe",
+      image: "/wallets/gnosis-safe.svg",
+    },
+    {
+      name: "crypto.com",
+      image: "/wallets/crypto-com.svg",
+    },
+    {
+      name: "Coinbase Wallet",
+      image: "/wallets/coinbase.svg",
+    },
+  ];
+
+  const exchanges = [
+    "/exchanges/1inch.svg",
+    "/exchanges/binance.svg",
+    "/exchanges/bithump.svg",
+    "/exchanges/changelly.svg",
+    "/exchanges/coinbase.svg",
+    "/exchanges/coinmerce.svg",
+    "/exchanges/coinone.svg",
+    "/exchanges/crypto-com.svg",
+    "/exchanges/gate-io.svg",
+    "/exchanges/huobi.svg",
+    "/exchanges/idex.svg",
+    "/exchanges/kraken.svg",
+    "/exchanges/kucoin.svg",
+    "/exchanges/poloniex.svg",
+    "/exchanges/quickswap.svg",
+    "/exchanges/tokocrypto.svg",
+    "/exchanges/uniswap.svg",
+    "/exchanges/upbit.svg",
+    "/exchanges/wazrix.svg",
+  ];
+
+  const aggregators = [
+    {
+      name: "Blockfolio Signal",
+      image: "/aggregators/blockfolio-signal.svg",
+    },
+    {
+      name: "Blockfolio",
+      image: "/aggregators/blockfolio.svg",
+    },
+    {
+      name: "CoinGecko",
+      image: "/aggregators/coin-gecko.svg",
+    },
+    {
+      name: "CoinMarketCap",
+      image: "/aggregators/coin-market-cap.svg",
+    },
+    {
+      name: "Crypto.com",
+      image: "/aggregators/crypto-com.svg",
+    },
+    {
+      name: "Delta Direct",
+      image: "/aggregators/delata-direct.svg",
+    },
+    {
+      name: "Delta",
+      image: "/aggregators/delta.svg",
+    },
+    {
+      name: "Messari",
+      image: "/aggregators/messari.svg",
+    },
+  ];
+
+  const paymentServices = [
+    {
+      name: "Binance Pay",
+      image: "/payment-services/binance-pay.svg",
+    },
+    {
+      name: "Now Payments",
+      image: "/payment-services/now-payments.svg",
+    },
+    {
+      name: "Travala.com",
+      image: "/payment-services/travala.svg",
+    },
+  ];
+
   return (
     <>
       <Helmet>
@@ -120,12 +235,17 @@ const TokenPage = () => {
           </div>
         </div>
 
-        <div className="relative h-screen overflow-hidden">
-          <StaticImage
-            src={`../assets/images/uploads/woman-staring.jpg`}
-            className="left-0 top-0 h-full w-full object-cover"
-            alt="token-01"
-          />
+        <div className="bg-gray-900">
+          <div
+            className="relative h-screen overflow-hidden "
+            data-anim-image-reveal
+          >
+            <StaticImage
+              src={`../assets/images/uploads/woman-staring.jpg`}
+              className="left-0 top-0 h-full w-full object-cover"
+              alt=""
+            />
+          </div>
         </div>
 
         <div className="section  bg-blue-50" id="how-to-get-ctsi">
@@ -134,7 +254,7 @@ const TokenPage = () => {
               How to get CTSI
             </h2>
 
-            <div className="mb-12">
+            <div className="mb-12" data-anim-block>
               <Collapse
                 isExpanded
                 label={
@@ -165,47 +285,25 @@ const TokenPage = () => {
                     wallets. It can also be bridged to Avalanche, Binance Smart
                     Chain, or Polygon.
                   </p>
-                  <div className="mt-6 flex flex-wrap gap-6">
-                    <div className="flex flex-col items-center gap-3">
-                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50">
-                        <StaticImage
-                          src="../assets/images/icon-atomic.svg"
-                          alt=""
-                          width={32}
-                        />
-                      </span>
-                      <span className="text-xs font-light">Atomic</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-3">
-                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50">
-                        <StaticImage
-                          src="../assets/images/icon-trust-wallet.svg"
-                          alt=""
-                          width={32}
-                        />
-                      </span>
-                      <span className="text-xs font-light">Trust Wallet</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-3">
-                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50">
-                        <StaticImage
-                          src="../assets/images/icon-ledger.svg"
-                          alt=""
-                          width={32}
-                        />
-                      </span>
-                      <span className="text-xs font-light">Ledger</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-3">
-                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50">
-                        <StaticImage
-                          src="../assets/images/icon-my-crypto.svg"
-                          alt=""
-                          width={32}
-                        />
-                      </span>
-                      <span className="text-xs font-light">My Crypto</span>
-                    </div>
+                  <div className="mt-6 mb-4 grid grid-cols-3 gap-6 sm:grid-cols-4 sm:gap-12 lg:mt-12 lg:w-2/3">
+                    {wallets.map(({ name, image }) => (
+                      <div
+                        className="flex flex-col items-center gap-2"
+                        key={name}
+                      >
+                        <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50">
+                          <img
+                            src={image}
+                            alt=""
+                            className="h-16 w-16"
+                            loading="lazy"
+                          />
+                        </span>
+                        <span className="text-center text-xs font-light">
+                          {name}
+                        </span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </Collapse>
@@ -234,9 +332,21 @@ const TokenPage = () => {
               >
                 <div className="prose py-4 text-base prose-p:mb-0">
                   <p>
-                    Our scalability solutions provide an immense capacity
-                    increase to any blockchains our OS is integrated with.
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry’s
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer.
                   </p>
+                </div>
+                <div className="mt-6 mb-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
+                  {exchanges.map((item, i) => (
+                    <span
+                      className="flex items-center justify-center bg-gray-900 text-yellow-50"
+                      key={i}
+                    >
+                      <img src={item} alt="" loading="lazy" />
+                    </span>
+                  ))}
                 </div>
               </Collapse>
               <Collapse
@@ -248,10 +358,27 @@ const TokenPage = () => {
                 className="border-b border-gray-900 py-4 lg:py-6"
               >
                 <div className="prose py-4 text-base prose-p:mb-0">
-                  <p>
-                    Our scalability solutions provide an immense capacity
-                    increase to any blockchains our OS is integrated with.
-                  </p>
+                  <p>Track prices, updates, and announcements</p>
+                </div>
+                <div className="mt-6 mb-4 grid grid-cols-3 gap-6 sm:grid-cols-4 sm:gap-12 lg:mt-12 lg:w-2/3">
+                  {aggregators.map(({ name, image }) => (
+                    <div
+                      className="flex flex-col items-center gap-2"
+                      key={name}
+                    >
+                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50">
+                        <img
+                          src={image}
+                          alt=""
+                          className="h-16 w-16"
+                          loading="lazy"
+                        />
+                      </span>
+                      <span className="text-center text-xs font-light">
+                        {name}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </Collapse>
               <Collapse
@@ -264,9 +391,32 @@ const TokenPage = () => {
               >
                 <div className="prose py-4 text-base prose-p:mb-0">
                   <p>
-                    Our scalability solutions provide an immense capacity
-                    increase to any blockchains our OS is integrated with.
+                    Do you want to pay for that electric razor or holiday with
+                    CTSI? More and more shops accept CTSI as a payment via our
+                    trusted partners. Do you want to receive CTSI as a payment
+                    for your goods or services? Select one of our trusted
+                    partners to get started today!
                   </p>
+                </div>
+                <div className="mt-6 mb-4 grid grid-cols-3 gap-6 sm:grid-cols-4 sm:gap-12 lg:mt-12 lg:w-2/3">
+                  {paymentServices.map(({ name, image }) => (
+                    <div
+                      className="flex flex-col items-center gap-2"
+                      key={name}
+                    >
+                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50">
+                        <img
+                          src={image}
+                          alt=""
+                          className="h-16 w-16"
+                          loading="lazy"
+                        />
+                      </span>
+                      <span className="text-center text-xs font-light">
+                        {name}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </Collapse>
             </div>

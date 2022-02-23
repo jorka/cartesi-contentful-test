@@ -69,7 +69,10 @@ const AboutPage = () => {
           id="cartesi-foundation"
         >
           <div className="container max-w-4xl">
-            <div className="prose prose-invert prose-headings:font-serif prose-headings:text-3xl">
+            <div
+              className="prose prose-invert prose-headings:font-serif prose-headings:text-3xl"
+              data-anim-block
+            >
               <h2>
                 The Cartesi
                 <br />
@@ -92,12 +95,17 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className="relative h-screen overflow-hidden">
-          <StaticImage
-            src={`../assets/images/uploads/woman-in-library.jpg`}
-            className="left-0 top-0 h-full w-full object-cover"
-            alt=""
-          />
+        <div className="bg-gray-900">
+          <div
+            className="relative h-screen overflow-hidden "
+            data-anim-image-reveal
+          >
+            <StaticImage
+              src={`../assets/images/uploads/woman-in-library.jpg`}
+              className="left-0 top-0 h-full w-full object-cover"
+              alt=""
+            />
+          </div>
         </div>
 
         <div
@@ -105,7 +113,10 @@ const AboutPage = () => {
           id="decentralization"
         >
           <div className="container max-w-4xl">
-            <div className="prose prose-headings:font-serif prose-headings:text-3xl">
+            <div
+              className="prose prose-headings:font-serif prose-headings:text-3xl"
+              data-anim-block
+            >
               <h2>Why the Blockchain OS is, and will be, decentralized</h2>
               <p>
                 With a decentralized OS, not one company controls the features,
