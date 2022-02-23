@@ -1,64 +1,31 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import * as React from "react";
+gsap.registerPlugin(ScrollTrigger);
 
-export function useTextAnimations() {
-  gsap.registerPlugin(ScrollTrigger);
-
+export function useAnimations() {
   return React.useLayoutEffect(() => {
+    console.log("useTextAnimations");
     const blockElements = gsap.utils.toArray("[data-anim-block]");
-
-    if (!blockElements.length) return;
+    const imageElements = gsap.utils.toArray("[data-anim-image-reveal]");
 
     blockElements.forEach((item, i) => {
       const childs = item.children;
-      if (!childs.length) return;
-      [...childs].forEach((child, i) => {
-        gsap.from(child, {
-          opacity: 0,
-          y: 40,
-          duration: 1.5,
-          delay: i * 0.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: item,
-            start: "top 90%",
-            id: "blockAnimation",
-          },
-        });
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: item,
+          start: "top 90%",
+          id: "blockAnimation",
+        },
+      });
+      tl.from(childs, {
+        opacity: 0,
+        y: 40,
+        duration: 1.5,
+        ease: "power3.out",
+        stagger: 0.2,
       });
     });
-  }, []);
-}
-
-export const counterAnimation = (targetRef, cb) => {
-  if (!targetRef) return;
-  gsap.registerPlugin(ScrollTrigger);
-
-  gsap.from(targetRef, {
-    textContent: 0,
-    duration: 4,
-    ease: "power1.in",
-    snap: { textContent: 1 },
-    stagger: {
-      each: 1.0,
-      onUpdate: () => {
-        cb();
-      },
-    },
-    scrollTrigger: {
-      trigger: targetRef,
-      // markers: true,
-      id: "counter",
-    },
-  });
-};
-
-export function useImageRevealAnimations() {
-  gsap.registerPlugin(ScrollTrigger);
-
-  return React.useLayoutEffect(() => {
-    const imageElements = gsap.utils.toArray("[data-anim-image-reveal]");
 
     if (!imageElements.length) return;
 
@@ -90,3 +57,25 @@ export function useImageRevealAnimations() {
     });
   }, []);
 }
+
+export const counterAnimation = (targetRef, cb) => {
+  if (!targetRef) return;
+
+  gsap.from(targetRef, {
+    textContent: 0,
+    duration: 4,
+    ease: "power1.in",
+    snap: { textContent: 1 },
+    stagger: {
+      each: 1.0,
+      onUpdate: () => {
+        cb();
+      },
+    },
+    scrollTrigger: {
+      trigger: targetRef,
+      // markers: true,
+      id: "counter",
+    },
+  });
+};
