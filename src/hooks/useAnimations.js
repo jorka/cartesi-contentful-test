@@ -5,28 +5,7 @@ import * as React from "react";
 export function useTextAnimations() {
   gsap.registerPlugin(ScrollTrigger);
 
-  React.useEffect(() => {
-    const textElements = gsap.utils.toArray("[data-anim-fade]");
-
-    if (textElements.length) return;
-
-    textElements.forEach((item, i) => {
-      gsap.from(item, {
-        opacity: 0,
-        yPercent: 50,
-        duration: 1.5,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: item,
-          start: "top 90%",
-          toggleActions: "play none none reverse",
-          id: "textAnimation",
-        },
-      });
-    });
-  }, []);
-
-  React.useEffect(() => {
+  return React.useEffect(() => {
     const blockElements = gsap.utils.toArray("[data-anim-block]");
 
     if (!blockElements.length) return;
@@ -78,7 +57,7 @@ export const counterAnimation = (targetRef, cb) => {
 export function useImageRevealAnimations() {
   gsap.registerPlugin(ScrollTrigger);
 
-  React.useEffect(() => {
+  return React.useEffect(() => {
     const imageElements = gsap.utils.toArray("[data-anim-image-reveal]");
 
     if (!imageElements.length) return;
@@ -109,14 +88,5 @@ export function useImageRevealAnimations() {
           delay: -1.5,
         });
     });
-
-    return () => {
-      if (!imageElements.length) return;
-
-      imageElements.forEach((item, i) => {
-        const trigger = ScrollTrigger.getById("imageReveal");
-        trigger && trigger.kill();
-      });
-    };
   }, []);
 }
