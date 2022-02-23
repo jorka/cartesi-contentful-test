@@ -62,13 +62,13 @@ const IndexPage = () => {
                   {/* TODO - change this after we start to use GatsbyImage */}
                   <StaticImage
                     src="../assets/images/uploads/003-mobile.jpg"
-                    class="sm:hidden"
+                    className="sm:hidden"
                     alt=""
                     width={768}
                   />
                   <StaticImage
                     src="../assets/images/uploads/003.jpg"
-                    class="hidden sm:block"
+                    className="hidden sm:block"
                     alt="Cartesi.io"
                     width={1280}
                   />
@@ -290,9 +290,7 @@ const IndexPage = () => {
               </div>
             </div>
             <div className="container max-w-7xl pt-12 sm:pt-24">
-              <div>
-                <Steps />
-              </div>
+              <Steps />
             </div>
           </div>
 

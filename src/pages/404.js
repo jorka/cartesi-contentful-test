@@ -15,7 +15,7 @@ const NotFoundPage = () => {
             <p>Page Not found</p>
           </div>
           <p className="mt-20">
-            <Link to="/" class="btn-outline-inverted">
+            <Link to="/" className="btn-outline-inverted">
               <span>Go home now</span>
             </Link>
           </p>

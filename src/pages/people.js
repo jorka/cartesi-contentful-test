@@ -74,13 +74,13 @@ const PeoplePage = ({ data }) => {
                   {/* TODO - change this after we start to use GatsbyImage */}
                   <StaticImage
                     src="../assets/images/uploads/002-mobile.jpg"
-                    class="sm:hidden"
+                    className="sm:hidden"
                     alt=""
                     width={768}
                   />
                   <StaticImage
                     src="../assets/images/uploads/002.jpg"
-                    class="hidden sm:block"
+                    className="hidden sm:block"
                     alt="Cartesi.io"
                     width={1280}
                   />
@@ -154,13 +154,13 @@ const PeoplePage = ({ data }) => {
             {/* TODO - change this after we start to use GatsbyImage */}
             <StaticImage
               src="../assets/images/uploads/001-mobile.jpg"
-              class="left-0 top-0 h-full w-full object-cover sm:hidden"
+              className="left-0 top-0 h-full w-full object-cover sm:hidden"
               alt=""
               width={768}
             />
             <StaticImage
               src="../assets/images/uploads/001.jpg"
-              class="left-0 top-0 hidden h-full w-full object-cover sm:block"
+              className="left-0 top-0 hidden h-full w-full object-cover sm:block"
               alt="Cartesi.io"
               width={1280}
             />

@@ -6,7 +6,9 @@ const Steps = () => {
   const moveDivRef = React.useRef(null);
 
   const handleMouseMove = (e) => {
-    setMousePosition((prev) => prev - e.movementX);
+    setMousePosition((prev) => {
+      return prev - e.movementX;
+    });
   };
   const handleMouseEnter = (e) => {
     moveDivRef.current.style.transition = "none";
@@ -17,7 +19,7 @@ const Steps = () => {
   };
 
   React.useEffect(() => {
-    const matchMedia = window.matchMedia("(min-width: 1280px)");
+    const matchMedia = window.matchMedia("(min-width: 1024px)");
     if (matchMedia.matches) {
       moveDivRef.current.style.transform = `translateX(${mousePosition}px)`;
     }
@@ -29,16 +31,20 @@ const Steps = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       role="presentation"
+      className="overflow-auto lg:overflow-visible"
     >
       <div
         ref={moveDivRef}
-        className="grid grid-cols-2 gap-4 bg-white transition-transform duration-500 md:grid-cols-3 xl:w-[130rem] xl:grid-cols-5"
+        className="flex gap-6 transition-transform duration-500 ease-in-out"
+        style={{
+          width: "calc(((100vw - 76rem) / 2) + 76rem)",
+        }}
       >
         <a
           href="https://medium.com/cartesi/cartesi-dapps-are-here-e07f358207d6"
           target="_blank"
           rel="noreferrer"
-          className="bg-blue-500 p-6 text-gray-900 transition-transform duration-300 hover:scale-110 lg:p-8"
+          className="w-[33%] flex-shrink-0 bg-blue-500 p-6 text-gray-900 transition-transform duration-300 sm:w-1/5 lg:p-8 lg:hover:scale-110 "
         >
           <div className="mb-4 text-lg">
             <span>Step 1</span>
@@ -51,7 +57,7 @@ const Steps = () => {
           </div>
           <div>Learn the fundamentals of Cartesi Rollups.</div>
         </a>
-        <div className="bg-blue-300 p-6 text-gray-900 transition-transform duration-300 hover:scale-110 lg:p-8">
+        <div className="w-[33%] flex-shrink-0 bg-blue-300 p-6 text-gray-900 transition-transform duration-300 sm:w-1/5 lg:p-8 lg:hover:scale-110 ">
           <div className="mb-4 text-lg">
             <span>Step 2</span>
             <div className="flex items-center gap-2">
@@ -83,7 +89,7 @@ const Steps = () => {
             which are needed for the provided dapp examples.
           </div>
         </div>
-        <div className="bg-blue-50 p-6 text-gray-900 transition-transform duration-300 hover:scale-110 lg:p-8">
+        <div className="w-[33%] flex-shrink-0 bg-blue-50 p-6 text-gray-900 transition-transform duration-300 sm:w-1/5 lg:p-8 lg:hover:scale-110 ">
           <div className="mb-4 text-lg">
             <span>Step 3</span>
             <div className="flex items-center gap-2">
@@ -105,7 +111,7 @@ const Steps = () => {
             </a>
           </div>
         </div>
-        <div className="bg-yellow-50 p-6 text-gray-900 transition-transform duration-300 hover:scale-110 lg:p-8">
+        <div className="w-[33%] flex-shrink-0 bg-yellow-50 p-6 text-gray-900 transition-transform duration-300 sm:w-1/5 lg:p-8 lg:hover:scale-110 ">
           <div className="mb-4 text-lg">
             <span>Step 4</span>
             <div className="flex items-center gap-2">
@@ -123,7 +129,7 @@ const Steps = () => {
             to get creative.
           </div>
         </div>
-        <div className="bg-yellow-500 p-6 text-gray-900 transition-transform duration-300 hover:scale-110 lg:p-8">
+        <div className="w-[33%] flex-shrink-0 bg-yellow-500 p-6 text-gray-900 transition-transform duration-300 sm:w-1/5 lg:p-8 lg:hover:scale-110 ">
           <div className="mb-4 text-lg">
             <span>Going</span>
             <div className="flex items-center gap-2">
