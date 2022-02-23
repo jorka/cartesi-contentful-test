@@ -58,15 +58,6 @@ export function useTextAnimations() {
         });
       });
     });
-
-    return () => {
-      if (!blockElements.length) return;
-
-      blockElements.forEach((item, i) => {
-        const trigger = ScrollTrigger.getById("blockAnimation");
-        trigger && trigger.kill();
-      });
-    };
   }, []);
 }
 

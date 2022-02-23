@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import * as React from "react";
 import Layout from "../components/layout";
 import DownScrollLink from "../components/downScrollLink";
-import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 import AltNavigation from "../components/altNavigation";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import Collapse from "../components/collapse";
