@@ -24,15 +24,6 @@ export function useTextAnimations() {
         },
       });
     });
-
-    return () => {
-      if (textElements.length) return;
-
-      textElements.forEach((item, i) => {
-        const trigger = ScrollTrigger.getById("textAnimation");
-        trigger && trigger.kill();
-      });
-    };
   }, []);
 
   React.useEffect(() => {
