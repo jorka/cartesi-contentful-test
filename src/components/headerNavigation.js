@@ -90,7 +90,7 @@ const Submenu = ({ submenu, toggleNav, isOpen }) => {
       className={`transition ${
         isOpen
           ? "pointer-events-auto h-auto w-auto translate-y-0 opacity-100"
-          : "pointer-events-none h-0 w-0 translate-y-5 opacity-0"
+          : "pointer-events-none h-0 w-0 translate-y-5 overflow-hidden opacity-0"
       }`}
     >
       <ul className="navigation-submenu">
@@ -191,31 +191,33 @@ const HeaderNavigation = ({ isHeaderInverted }) => {
   return (
     <>
       <nav className="navigation">
-        <div className="navigation-menu">
-          {menu1.map(({ name, path, submenu, icon }) => (
-            <MenuItem
-              key={name}
-              name={name}
-              path={path}
-              submenu={submenu}
-              icon={icon}
-              isHeaderInverted={isHeaderInverted}
-              toggleNav={isNavigationOpen ? toggleNav : null}
-            />
-          ))}
-        </div>
-        <div className="navigation-menu">
-          {menu2.map(({ name, path, submenu, icon }) => (
-            <MenuItem
-              key={name}
-              name={name}
-              path={path}
-              submenu={submenu}
-              icon={icon}
-              isHeaderInverted={isHeaderInverted}
-              toggleNav={isNavigationOpen ? toggleNav : null}
-            />
-          ))}
+        <div className="navigation-holder">
+          <div className="navigation-menu">
+            {menu1.map(({ name, path, submenu, icon }) => (
+              <MenuItem
+                key={name}
+                name={name}
+                path={path}
+                submenu={submenu}
+                icon={icon}
+                isHeaderInverted={isHeaderInverted}
+                toggleNav={isNavigationOpen ? toggleNav : null}
+              />
+            ))}
+          </div>
+          <div className="navigation-menu">
+            {menu2.map(({ name, path, submenu, icon }) => (
+              <MenuItem
+                key={name}
+                name={name}
+                path={path}
+                submenu={submenu}
+                icon={icon}
+                isHeaderInverted={isHeaderInverted}
+                toggleNav={isNavigationOpen ? toggleNav : null}
+              />
+            ))}
+          </div>
         </div>
       </nav>
       <button className="z-20 ml-auto lg:hidden" onClick={toggleNav}>

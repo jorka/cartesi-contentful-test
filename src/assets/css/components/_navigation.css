@@ -1,9 +1,13 @@
 .navigation {
-  @apply fixed top-0 right-0 left-0 z-10 block h-screen flex-grow translate-x-full flex-col justify-end overflow-auto bg-gray-900 pt-24 text-lg text-yellow-50 transition-transform lg:static lg:flex lg:h-auto lg:translate-x-0 lg:flex-row lg:gap-6 lg:overflow-visible lg:bg-transparent lg:pt-0 lg:text-sm lg:text-inherit;
+  @apply fixed top-0 right-0 left-0 z-10 block h-screen flex-grow translate-x-full  bg-gray-900 pt-24 text-lg text-yellow-50 transition-transform lg:static lg:h-auto lg:translate-x-0 lg:bg-transparent lg:pt-0 lg:text-sm lg:text-inherit;
 }
 
 .navigation-menu {
   @apply right-0 flex flex-col last:mt-8 lg:flex-row lg:items-center lg:gap-6 lg:last:mt-0 xl:first:mx-auto xl:first:pr-[152px] xl:last:absolute;
+}
+
+.navigation-holder {
+  @apply h-full overflow-y-auto  pb-24 lg:flex lg:justify-end lg:gap-6 lg:overflow-visible lg:pb-0;
 }
 
 .navigation-is-open {
@@ -27,7 +31,7 @@
 }
 
 .navigation-submenu {
-  @apply left-0 bg-gray-900 py-4 px-6 text-base text-yellow-50 lg:absolute lg:flex lg:min-w-max lg:flex-col lg:text-sm;
+  @apply py-4 px-6 text-base text-yellow-50 lg:absolute lg:left-0 lg:flex lg:min-w-max lg:flex-col lg:bg-gray-900 lg:text-sm;
 }
 
 .navigation-submenu-item {
