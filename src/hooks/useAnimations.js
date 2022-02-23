@@ -5,7 +5,7 @@ import * as React from "react";
 export function useTextAnimations() {
   gsap.registerPlugin(ScrollTrigger);
 
-  return React.useEffect(() => {
+  return React.useLayoutEffect(() => {
     const blockElements = gsap.utils.toArray("[data-anim-block]");
 
     if (!blockElements.length) return;
@@ -57,7 +57,7 @@ export const counterAnimation = (targetRef, cb) => {
 export function useImageRevealAnimations() {
   gsap.registerPlugin(ScrollTrigger);
 
-  return React.useEffect(() => {
+  return React.useLayoutEffect(() => {
     const imageElements = gsap.utils.toArray("[data-anim-image-reveal]");
 
     if (!imageElements.length) return;

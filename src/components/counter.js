@@ -6,7 +6,7 @@ function Counter({ number }) {
 
   const counterRef = React.useRef(null);
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     counterAnimation(counterRef.current, () => setCount(number));
   }, [number]);
   return <span ref={counterRef}>{count}</span>;
