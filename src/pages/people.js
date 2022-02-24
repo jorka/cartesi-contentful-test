@@ -10,7 +10,7 @@ import scrollTo from "gatsby-plugin-smoothscroll";
 import AltNavigation from "../components/altNavigation";
 import ReadmoreLink from "../components/readmoreLink";
 import Map from "../components/map";
-import TeamListItem from "../components/teamListItem";
+import IconLinkedIn from "../assets/images/icon-linkedin.svg";
 
 const PeoplePage = ({ data }) => {
   const heroImage = withArtDirection(getImage(data.heroLarge), [
@@ -343,28 +343,48 @@ const PeoplePage = ({ data }) => {
 
   const advisors = [
     {
-      id: "f80be7e4-1dc3-4849-a5d3-d4d8bc88e87b",
-      name: "Erick de Moura",
-      position: "CEO",
-      image: "",
+      name: "Marina Niforos",
+      position: [
+        "Strategic Advisor",
+        "Associate professor at HEC Paris",
+        "EU Blockchain Observatory.",
+      ],
+      linkedIn: "https://fr.linkedin.com/in/marina-niforos/fr",
     },
     {
-      id: "1e3fa33e-364e-475c-a4d9-5cd71d09d2ad",
-      name: "Diego Nehab",
-      position: "Chief Technology Officer",
-      image: "",
+      name: "Serguei Popov, PhD",
+      position: ["Senior Advisor", "Co-Founder of IOTA"],
+      linkedIn: "https://www.linkedin.com/in/serguei-popov-631bb762/",
     },
     {
-      id: "0847ad28-147a-40d9-9442-eaa86d94e378",
-      name: "Colin Steil",
-      position: "COO",
-      image: "",
+      name: "William Bao Bean",
+      position: [
+        "General Partner at SOSV",
+        "Managing Director at Chinaccelerator",
+        "Managing Director at MOX",
+      ],
+      linkedIn: "https://www.linkedin.com/in/williambaobean/",
+    },
+
+    {
+      name: "Luiz Henrique De Figueiredo, PhD",
+      position: ["Co-creator of Lua programming language"],
+      linkedIn: "https://www.linkedin.com/in/williambaobean/",
     },
     {
-      id: "e5fc4d7d-b003-462d-a04e-124c76683e57",
-      name: "Augusto Teixeira",
-      position: "Chief Scientific Officer",
-      image: "",
+      name: "Pedro Argento",
+      position: ["DeFi Researcher"],
+      linkedIn: "https://www.linkedin.com/in/pedroargento/",
+    },
+    {
+      name: "Boris Povod",
+      position: ["Co-founder of Wings", "Co-founder of Cripti"],
+      linkedIn: "https://www.linkedin.com/in/boris-povod-361a1b79/",
+    },
+    {
+      name: "Stas Oskin",
+      position: ["Senior Advisor", "Core Dev & Bus Dev of Wings.ai"],
+      linkedIn: "https://www.linkedin.com/in/stasoskin/",
     },
   ];
 
@@ -578,19 +598,36 @@ const PeoplePage = ({ data }) => {
               Advisors to
               <br /> The Blockchain OS
             </h2>
-            <div className="prose">
-              <h3>Lorum ipsum</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est Lorem ipsum dolor sit
-              </p>
-            </div>
-
-            <div className="mt-12">
-              <TeamListItem items={advisors} category="founders" />
+          </div>
+          <div className="container max-w-7xl">
+            <div
+              className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-16 lg:mt-24 lg:grid-cols-4"
+              data-anim-block
+            >
+              {advisors.map(({ name, position, linkedIn }) => (
+                <div
+                  key={name}
+                  className="grid gap-y-1  sm:grid-rows-[minmax(auto,_4rem)__1fr]"
+                >
+                  <h3 className="leading-tight">{name}</h3>
+                  <div className="border-l border-gray-900 pl-6">
+                    <p>
+                      <a
+                        href={linkedIn}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <IconLinkedIn className="h-10 w-10 fill-current" />
+                      </a>
+                    </p>
+                    <ul className="mt-3 text-xs">
+                      {position.map((position) => (
+                        <li>{position}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
