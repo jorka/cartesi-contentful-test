@@ -26,16 +26,331 @@ const PeoplePage = ({ data }) => {
     },
   ]);
 
-  const teamCategories =
-    data.allContentfulPagePeople.edges[0].node.teamCategory;
+  const team = [
+    {
+      id: "6bc11f85-e85b-4c20-a0e4-fcf82d7366f4",
+      categoryName: "Founders",
+      teamMembers: [
+        {
+          id: "f80be7e4-1dc3-4849-a5d3-d4d8bc88e87b",
+          name: "Erick de Moura",
+          position: "CEO",
+          image: "",
+        },
+        {
+          id: "1e3fa33e-364e-475c-a4d9-5cd71d09d2ad",
+          name: "Diego Nehab",
+          position: "Chief Technology Officer",
+          image: "",
+        },
+        {
+          id: "0847ad28-147a-40d9-9442-eaa86d94e378",
+          name: "Colin Steil",
+          position: "COO",
+          image: "",
+        },
+        {
+          id: "e5fc4d7d-b003-462d-a04e-124c76683e57",
+          name: "Augusto Teixeira",
+          position: "Chief Scientific Officer",
+          image: "",
+        },
+      ],
+    },
+    {
+      id: "7e0e7d15-02a3-4fdf-a194-61ec9e017502",
+      categoryName: "Technical Team",
+      teamMembers: [
+        {
+          id: "6cc5345a-a779-4c1e-b27a-13e5b9be9b45",
+          name: "Danilo Tuler",
+          position: "Head of Engineering",
+          image: "",
+        },
+        {
+          id: "865ac139-c19e-4606-a214-eb058489b2b6",
+          name: "Jonathan Milton",
+          position: "Head of Product",
+          image: "",
+        },
+        {
+          id: "a2038312-765f-4bed-bc29-3832eb262128",
+          name: "Felipe Argento",
+          position: "Lead Blockchain Engineer",
+          image: "",
+        },
+        {
+          id: "270c62a9-32df-42fa-b7c8-864127b75cb4",
+          name: "Victor Fusco",
+          position: "Lead Software Engineer",
+          image: "",
+        },
+        {
+          id: "d2f51c5b-3234-46c5-b4a4-e5b63b2bac49",
+          name: "Aleksandr Mikhalevich",
+          position: "Software Engineer",
+          image: "",
+        },
+        {
+          id: "12fea013-6e9d-4ad7-9221-e51b0f6f0587",
+          name: "Bruno Menezes",
+          position: "Software Engineer",
+          image: "",
+        },
+        {
+          id: "0189b330-31d0-40e9-8507-8499a95ed1e6",
+          name: "Carlo Fragni",
+          position: "Senior Software Engineer",
+          image: "",
+        },
+        {
+          id: "05b65b6f-0f37-4c15-a398-c36dda069648",
+          name: "Claudio Da Silva",
+          position: "Project Manager",
+          image: "",
+        },
+        {
+          id: "9dca7844-ec74-4ab9-ba1e-93beca82afdb",
+          name: "Claudio Da Silva",
+          position: "Project Manager",
+          image: "",
+        },
+        {
+          id: "686539f7-0767-4bbb-85d6-2140ca329887",
+          name: "Enderson Maia",
+          position: "Software Engineer   ",
+          image: "",
+        },
+        {
+          id: "350d1e28-c2fb-4913-bc65-2500f685651c",
+          name: "Fabiana Cecin",
+          position: "Researcher",
+          image: "",
+        },
+        {
+          id: "762a1dea-6f92-403a-805f-d1b204cf4f06",
+          name: "Gabriel Barros",
+          position: "Blockchain Engineer",
+          image: "",
+        },
+        {
+          id: "43e56776-610d-442c-8799-7fa7a55a153e",
+          name: "Gabriel Coutinho",
+          position: "Blockchain Engineer",
+          image: "",
+        },
+        {
+          id: "9b8ed851-3c5f-484a-b5a3-85a15a355214",
+          name: "Gabriel Quadros Ligneul",
+          position: "Senior Software Engineer",
+          image: "",
+        },
+        {
+          id: "28647ed2-5abd-4a86-bb4e-cb9bcf01386d",
+          name: "Gimer Cervera",
+          position: "Blockchain Engineer",
+          image: "",
+        },
+        {
+          id: "d37fb516-05f2-4b53-8302-b826839255fe",
+          name: "Guilherme Dantas",
+          position: "Blockchain Engineer",
+          image: "",
+        },
+        {
+          id: "c401741d-5cee-451a-85da-7d9c99a26e4a",
+          name: "Joe Nance",
+          position: "Director - Cartesi Labs",
+          image: "",
+        },
+        {
+          id: "6c7459bb-8145-41ef-86a9-5f5b3ee3b398",
+          name: "Lourival Vieira Neto",
+          position: "Software Engineer",
+          image: "",
+        },
+        {
+          id: "c960fba1-81e6-4a69-9faa-fd58a6550c10",
+          name: "Marcel Moura",
+          position: "Software Engineer",
+          image: "",
+        },
+        {
+          id: "dab53d0d-0c46-4d07-96a4-892a9cb9bfb6",
+          name: "Marcelo Politzer",
+          position: "Software Engineer",
+          image: "",
+        },
+        {
+          id: "3abbb02d-ec26-4338-829c-02aac6b182dd",
+          name: "Marcos Pernambuco",
+          position: "Senior Software Engineer",
+          image: "",
+        },
+        {
+          id: "42a041e7-6a22-4295-b62c-709612c84597",
+          name: "Marko Atanasievski",
+          position: "Senior Software Engineer",
+          image: "",
+        },
+        {
+          id: "1da7b0c6-0229-400f-a5b1-674d034a5ef8",
+          name: "Nazim Faour",
+          position: "Technical Writer",
+          image: "",
+        },
+        {
+          id: "a9efcfa5-effe-4300-8150-b2726ba84eca",
+          name: "Pedro Argento",
+          position: "DeFi Researcher",
+          image: "",
+        },
+        {
+          id: "9f7d99ac-8b7e-417e-9168-3258cb962312",
+          name: "Roman Hodulák",
+          position: "Software Engineer",
+          image: "",
+        },
+        {
+          id: "b89fd2f6-3fe0-45cf-bbbf-565dba79cbeb",
+          name: "Stephen Chen",
+          position: "Software Engineer",
+          image: "",
+        },
+        {
+          id: "2b4cd05a-8bd9-4ad0-b82d-57ee80f60e25",
+          name: "Victor Yves",
+          position: "Software Engineer",
+          image: "",
+        },
+        {
+          id: "1905761d-a89d-4c39-87b4-9f3c92bd7cb7",
+          name: "Zehui Zheng",
+          position: "Blockchain Engineer",
+          image: "",
+        },
+        {
+          id: "0843f70b-f9bb-4604-9ffb-082f3abf1ca7",
+          name: "Ariel Varela",
+          position: "Business Ambassador",
+          image: "",
+        },
+        {
+          id: "e56c189f-fdc0-4105-b38f-d926411b5303",
+          name: "Marko Atanasievski",
+          position: "Senior Software Engineer",
+          image: "",
+        },
+        {
+          id: "4025ba20-8b83-4e71-9a24-be8e6ca05bcc",
+          name: "Gustavo Krieger",
+          position: "Blockchain Engineer",
+          image: "",
+        },
+        {
+          id: "9f60e79d-9936-4d8b-b0ee-76e7d89fe107",
+          name: "Jay Zhou",
+          position: "Blockchain Engineer",
+          image: "",
+        },
+        {
+          id: "973faa66-c5cb-4244-81f8-9af229119f6b",
+          name: "Renan Santos",
+          position: "Blockchain Engineer",
+          image: "",
+        },
+      ],
+    },
+    {
+      id: "da22e204-4e31-42e2-9ce2-b43f95232335",
+      categoryName: "Business Development",
+      teamMembers: [
+        {
+          id: "ad4b3fe6-2cdb-453a-be44-212de2395d06",
+          name: "Bruno Maia",
+          position: "Head of Business Development",
+          image: "",
+        },
+        {
+          id: "946a22ed-b52c-4edd-ae71-745492d9bc83",
+          name: "Maximilian Hatesuer",
+          position: "Business Development Manager",
+          image: "",
+        },
+        {
+          id: "5cf37528-1e72-4dd7-8c82-9ae96a9b32f7",
+          name: "Vinicius Ribeiro",
+          position: "Head of Expansion",
+          image: "",
+        },
+      ],
+    },
+    {
+      id: "114dd86d-03c4-44e8-a96f-643a8d3be58f",
+      categoryName: "Marketing & Legal",
+      teamMembers: [
+        {
+          id: "3104f0a4-6323-486e-9119-a18300315f9f",
+          name: "Nathalie Brahler",
+          position: "Head of Marketing",
+          image: "",
+        },
+        {
+          id: "8e09bf2c-e36e-4fbd-bd93-4965e9132e8b",
+          name: "Brandon Isaacson",
+          position: "General Counsel",
+          image: "",
+        },
+        {
+          id: "a75e80f4-93a3-4fb1-8d72-a70b40f23436",
+          name: "Jacky Ye",
+          position: "China Marketing Manager",
+          image: "",
+        },
+        {
+          id: "95afe7d5-8c2e-4a8e-8ca7-7155ee416ad3",
+          name: "Karmen Truong",
+          position: "Digital Marketing Manager",
+          image: "",
+        },
+        {
+          id: "892c2fa9-f5b7-48a3-8060-ea86ae119b5f",
+          name: "Payal Patel",
+          position: "Executive Assistant",
+          image: "",
+        },
+        {
+          id: "3141ee72-836d-425a-8ae8-baf4fecf0e88",
+          name: "Jesseca Dela Pena",
+          position: "Head of Engineering",
+          image: "",
+        },
+      ],
+    },
+    {
+      id: "2ab9aed6-74fb-4c82-a416-76380475f766",
+      categoryName: "Community Management",
+      teamMembers: [
+        {
+          id: "aa5ef6e5-8137-4e5f-916f-980a2f9e5b4b",
+          name: "Dinali Jay",
+          position: "Business Community Manager",
+          image: "",
+        },
+      ],
+    },
+  ];
 
-  const advisors = React.useMemo(
-    () =>
-      teamCategories.filter(
-        (category) => category.categoryName === "Our advisors"
-      )[0].teamMembers,
-    [teamCategories]
-  );
+  // const teamCategories =
+  //   data.allContentfulPagePeople.edges[0].node.teamCategory;
+
+  // const advisors = React.useMemo(
+  //   () =>
+  //     teamCategories.filter(
+  //       (category) => category.categoryName === "Our advisors"
+  //     )[0].teamMembers,
+  //   [teamCategories]
+  // );
 
   return (
     <>
@@ -99,10 +414,17 @@ const PeoplePage = ({ data }) => {
 
         <div className="section bg-yellow-500 text-gray-900" id="meet">
           <div className="container max-w-5xl" data-anim-block>
-            <h2 className="mb-8 font-serif text-4xl lg:mb-12">Meet</h2>
-
-            <div className="mb-12 lg:mb-24">
-              <TeamList items={teamCategories} />
+            <div className="prose prose-headings:font-serif prose-headings:text-4xl">
+              <h2>Meet our core contributors</h2>
+              <p>
+                Our decentralized team of scientists, engineers, and visionaries
+                share one goal: to create an inclusive, robust and future proof
+                OS for the new world. An OS that bridges over 30 years of
+                mainstream code with blockchain.
+              </p>
+            </div>
+            <div className="mt-12 lg:mt-24">
+              <TeamList items={team} />
             </div>
           </div>
         </div>
@@ -113,7 +435,7 @@ const PeoplePage = ({ data }) => {
         >
           <div className="container max-w-5xl">
             <div
-              className="prose  prose-headings:font-serif prose-headings:text-3xl"
+              className="prose prose-headings:font-serif prose-headings:text-3xl"
               data-anim-block
             >
               <h2>
@@ -241,7 +563,7 @@ const PeoplePage = ({ data }) => {
             </div>
 
             <div className="mt-12">
-              <TeamListItem items={advisors} />
+              {/* <TeamListItem items={advisors} /> */}
             </div>
           </div>
         </div>
@@ -252,45 +574,45 @@ const PeoplePage = ({ data }) => {
 
 export const query = graphql`
   {
-    allContentfulPagePeople {
-      edges {
-        node {
-          hero {
-            heroImage {
-              gatsbyImageData
-              title
-            }
-          }
-          teamCategory {
-            categoryName
-            description {
-              description
-            }
-            id
-            teamMembers {
-              id
-              name
-              image {
-                gatsbyImageData
-              }
-              position
-            }
-            subCategory {
-              categoryName
-              id
-              teamMembers {
-                id
-                image {
-                  gatsbyImageData
-                }
-                name
-                position
-              }
-            }
-          }
-        }
-      }
-    }
+    # allContentfulPagePeople {
+    #   edges {
+    #     node {
+    #       hero {
+    #         heroImage {
+    #           gatsbyImageData
+    #           title
+    #         }
+    #       }
+    #       teamCategory {
+    #         categoryName
+    #         description {
+    #           description
+    #         }
+    #         id
+    #         teamMembers {
+    #           id
+    #           name
+    #           image {
+    #             gatsbyImageData
+    #           }
+    #           position
+    #         }
+    #         subCategory {
+    #           categoryName
+    #           id
+    #           teamMembers {
+    #             id
+    #             image {
+    #               gatsbyImageData
+    #             }
+    #             name
+    #             position
+    #           }
+    #         }
+    #       }
+    #     }
+    #   }
+    # }
     heroLarge: file(relativePath: { eq: "uploads/001.jpg" }) {
       id
       root

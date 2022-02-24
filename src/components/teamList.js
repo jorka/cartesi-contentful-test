@@ -20,7 +20,12 @@ const TeamList = ({ items }) => {
               {item.description.description}
             </div>
           )}
-          {item.teamMembers && <TeamListItem items={item.teamMembers} />}
+          {item.teamMembers && (
+            <TeamListItem
+              category={item.categoryName}
+              items={item.teamMembers}
+            />
+          )}
           {item.subCategory && (
             <>
               <div className="py-6">
@@ -34,7 +39,10 @@ const TeamList = ({ items }) => {
                     }
                     className="py-4"
                   >
-                    <TeamListItem items={item.teamMembers} />
+                    <TeamListItem
+                      category={item.categoryName}
+                      items={item.teamMembers}
+                    />
                   </Collapse>
                 ))}
               </div>

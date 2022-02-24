@@ -6,8 +6,18 @@ const Steps = () => {
   const moveDivRef = React.useRef(null);
 
   const handleMouseMove = (e) => {
+    const { movementX } = e;
+    // const { clientX, movementX } = e;
+    // const refOffset = moveDivRef.current.offsetLeft;
+    // const refOffsetMoved = moveDivRef.current.getBoundingClientRect().left;
+    // const refWidth = moveDivRef.current.offsetWidth;
+    // const screenWidth = window.innerWidth;
+    // const mousePositionToRef = clientX - refOffset;
+    // const mousePositionToRefMoved = (clientX - refOffset) / refWidth;
+    // console.log(mousePositionToRef);
+    // console.log(refWidth);
     setMousePosition((prev) => {
-      return prev - e.movementX;
+      return prev - movementX;
     });
   };
   const handleMouseEnter = (e) => {
