@@ -1,16 +1,23 @@
+import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
-
 import * as React from "react";
+import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import { StaticImage } from "gatsby-plugin-image";
 import Video from "../components/video";
 import Collapse from "../components/collapse";
 import IconReadMore from "../assets/images/icon-read-more.svg";
 import Steps from "../components/steps";
 import scrollTo from "gatsby-plugin-smoothscroll";
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  const heroImage = withArtDirection(getImage(data.heroLarge), [
+    {
+      media: "(max-width: 640px)",
+      image: getImage(data.heroSmall),
+    },
+  ]);
+
   return (
     <>
       <Helmet>
@@ -59,18 +66,10 @@ const IndexPage = () => {
             <div className="container max-w-7xl">
               <div data-anim-image-reveal>
                 <div>
-                  {/* TODO - change this after we start to use GatsbyImage */}
-                  <StaticImage
-                    src="../assets/images/uploads/003-mobile.jpg"
-                    className="sm:hidden"
+                  <GatsbyImage
+                    image={heroImage}
                     alt=""
-                    width={768}
-                  />
-                  <StaticImage
-                    src="../assets/images/uploads/003.jpg"
-                    className="hidden sm:block"
-                    alt="Cartesi.io"
-                    width={1280}
+                    className="aspect-[1969/3500] sm:aspect-auto"
                   />
                 </div>
               </div>
@@ -369,5 +368,26 @@ const IndexPage = () => {
     </>
   );
 };
+
+export const imageQuery = graphql`
+  query {
+    heroLarge: file(relativePath: { eq: "uploads/007.jpg" }) {
+      id
+      root
+      relativePath
+      childImageSharp {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF], width: 1280)
+      }
+    }
+    heroSmall: file(relativePath: { eq: "uploads/007-mobile.jpg" }) {
+      id
+      root
+      relativePath
+      childImageSharp {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF], width: 768)
+      }
+    }
+  }
+`;
 
 export default IndexPage;

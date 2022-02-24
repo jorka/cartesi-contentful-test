@@ -1,18 +1,30 @@
+import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 
 import * as React from "react";
 import Layout from "../components/layout";
 import DownScrollLink from "../components/downScrollLink";
 import Collapse from "../components/collapse";
-import { StaticImage } from "gatsby-plugin-image";
+import {
+  GatsbyImage,
+  getImage,
+  withArtDirection,
+  StaticImage,
+} from "gatsby-plugin-image";
 import ReadmoreLink from "../components/readmoreLink";
 import BlogArticles from "../components/blogArticles";
-import Counter from "../components/counter";
 import AltNavigation from "../components/altNavigation";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import IconCTSI from "../assets/images/icon-ctsi.svg";
 
-const TokenPage = () => {
+const TokenPage = ({ data }) => {
+  const heroImage = withArtDirection(getImage(data.heroLarge), [
+    {
+      media: "(max-width: 640px)",
+      image: getImage(data.heroSmall),
+    },
+  ]);
+
   const wallets = [
     {
       name: "Atomic Wallet",
@@ -177,18 +189,10 @@ const TokenPage = () => {
             <div className="container max-w-7xl">
               <div data-anim-image-reveal>
                 <div>
-                  {/* TODO - change this after we start to use GatsbyImage */}
-                  <StaticImage
-                    src="../assets/images/uploads/006-mobile.jpg"
-                    className="sm:hidden"
+                  <GatsbyImage
+                    image={heroImage}
                     alt=""
-                    width={768}
-                  />
-                  <StaticImage
-                    src="../assets/images/uploads/006.jpg"
-                    className="hidden sm:block"
-                    alt="Cartesi.io"
-                    width={1280}
+                    className="aspect-[1969/3500] sm:aspect-auto"
                   />
                 </div>
               </div>
@@ -204,26 +208,26 @@ const TokenPage = () => {
             <div className="mb-12 grid grid-cols-3 gap-8 xl:mb-24">
               <div className="col-span-1 flex flex-col">
                 <span className="font-serif text-4xl leading-none text-blue-200">
-                  <Counter number={40} />
+                  <span data-anim-counter>40</span>
                   <span>+</span>
                 </span>
                 <span>Wallets & exchanges</span>
               </div>
               <div className="col-span-2 flex flex-col text-right">
                 <span className="font-serif text-4xl leading-none text-blue-200">
-                  <Counter number={139.96} /> <span>million</span>
+                  <span data-anim-counter>139.96</span> <span>million</span>
                 </span>
                 <span>CTSI staked</span>
               </div>
               <div className="col-span-2 flex flex-col">
                 <span className="font-serif text-4xl leading-none text-blue-200">
-                  <Counter number={54.96} /> <span>million</span>
+                  <span data-anim-counter>54.96</span> <span>million</span>
                 </span>
                 <span>CTSI staked</span>
               </div>
               <div className="col-span-1 flex flex-col text-right">
                 <span className="font-serif text-4xl leading-none text-blue-200">
-                  <Counter number={20} />
+                  <span data-anim-counter>20</span>
                   <span>+</span>
                 </span>
                 <span>Wallets & exchanges</span>
@@ -451,5 +455,26 @@ const TokenPage = () => {
     </>
   );
 };
+
+export const imageQuery = graphql`
+  query {
+    heroLarge: file(relativePath: { eq: "uploads/006.jpg" }) {
+      id
+      root
+      relativePath
+      childImageSharp {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF], width: 1280)
+      }
+    }
+    heroSmall: file(relativePath: { eq: "uploads/006-mobile.jpg" }) {
+      id
+      root
+      relativePath
+      childImageSharp {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF], width: 768)
+      }
+    }
+  }
+`;
 
 export default TokenPage;

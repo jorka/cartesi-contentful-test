@@ -33,9 +33,16 @@ module.exports = {
       },
     },
 
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `./src/assets/images/`,
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {

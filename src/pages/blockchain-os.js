@@ -1,16 +1,28 @@
+import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
-
 import * as React from "react";
+import {
+  GatsbyImage,
+  StaticImage,
+  getImage,
+  withArtDirection,
+} from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import ReadmoreLink from "../components/readmoreLink";
 import DownScrollLink from "../components/downScrollLink";
-import { StaticImage } from "gatsby-plugin-image";
 import AltNavigation from "../components/altNavigation";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import Video from "../components/video";
 import BlogArticles from "../components/blogArticles";
 
-const AboutPage = () => {
+const BlockchainOsPage = ({ data }) => {
+  const heroImage = withArtDirection(getImage(data.heroLarge), [
+    {
+      media: "(max-width: 640px)",
+      image: getImage(data.heroSmall),
+    },
+  ]);
+
   return (
     <>
       <Helmet>
@@ -54,18 +66,10 @@ const AboutPage = () => {
             <div className="container max-w-7xl">
               <div data-anim-image-reveal>
                 <div>
-                  {/* TODO - change this after we start to use GatsbyImage */}
-                  <StaticImage
-                    src="../assets/images/uploads/002-mobile.jpg"
-                    className="sm:hidden"
+                  <GatsbyImage
+                    image={heroImage}
                     alt=""
-                    width={768}
-                  />
-                  <StaticImage
-                    src="../assets/images/uploads/002.jpg"
-                    className="hidden sm:block"
-                    alt="Cartesi.io"
-                    width={1280}
+                    className="aspect-[1969/3500] sm:aspect-auto"
                   />
                 </div>
               </div>
@@ -167,4 +171,25 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export const imageQuery = graphql`
+  query {
+    heroLarge: file(relativePath: { eq: "uploads/002.jpg" }) {
+      id
+      root
+      relativePath
+      childImageSharp {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF], width: 1280)
+      }
+    }
+    heroSmall: file(relativePath: { eq: "uploads/002-mobile.jpg" }) {
+      id
+      root
+      relativePath
+      childImageSharp {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF], width: 768)
+      }
+    }
+  }
+`;
+
+export default BlockchainOsPage;

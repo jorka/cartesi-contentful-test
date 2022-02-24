@@ -8,6 +8,7 @@ export function useAnimations() {
     console.log("useTextAnimations");
     const blockElements = gsap.utils.toArray("[data-anim-block]");
     const imageElements = gsap.utils.toArray("[data-anim-image-reveal]");
+    const counterElements = gsap.utils.toArray("[data-anim-counter]");
 
     blockElements.forEach((item, i) => {
       const childs = item.children;
@@ -26,8 +27,6 @@ export function useAnimations() {
         stagger: 0.2,
       });
     });
-
-    if (!imageElements.length) return;
 
     imageElements.forEach((item, i) => {
       let childDiv = item.querySelector("div");
@@ -55,27 +54,29 @@ export function useAnimations() {
           delay: -1.5,
         });
     });
+
+    counterElements.forEach((item, i) => {
+      const finalValue = item.textContent;
+
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: item,
+          id: "counterAnimation",
+        },
+      });
+
+      tl.from(item, {
+        textContent: 0,
+        duration: 4,
+        ease: "power1.in",
+        snap: { textContent: 1 },
+        stagger: {
+          each: 1.0,
+          onComplete: function () {
+            this.targets()[0].innerText = finalValue;
+          },
+        },
+      });
+    });
   }, []);
 }
-
-export const counterAnimation = (targetRef, cb) => {
-  if (!targetRef) return;
-
-  gsap.from(targetRef, {
-    textContent: 0,
-    duration: 4,
-    ease: "power1.in",
-    snap: { textContent: 1 },
-    stagger: {
-      each: 1.0,
-      onUpdate: () => {
-        cb();
-      },
-    },
-    scrollTrigger: {
-      trigger: targetRef,
-      // markers: true,
-      id: "counter",
-    },
-  });
-};
