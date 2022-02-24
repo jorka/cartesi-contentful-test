@@ -610,7 +610,7 @@ const PeoplePage = ({ data }) => {
                   className="grid gap-y-1  sm:grid-rows-[minmax(auto,_4rem)__1fr]"
                 >
                   <h3 className="leading-tight">{name}</h3>
-                  <div className="border-l border-gray-900 pl-6">
+                  <div className="border-l border-gray-900 pl-3 sm:pl-6">
                     <p>
                       <a
                         href={linkedIn}
