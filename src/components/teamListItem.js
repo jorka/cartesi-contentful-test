@@ -6,12 +6,13 @@ import "swiper/css/navigation";
 SwiperCore.use([Pagination, Navigation]);
 
 const TeamListItem = ({ items, category }) => {
-  const imagePathFromName = (name) => {
+  const imagePathFromName = (name, category) => {
     const nameFormatted = name.toLowerCase().replace(/\s/g, "-");
     const categoryFormatted = category
       .toLowerCase()
       .replace(/\s/g, "-")
-      .replace(/&/g, "and");
+      .replace(/&/g, "and")
+      .replace(/á/g, "a");
     return `/team/${categoryFormatted}/${nameFormatted}.png`;
   };
 
@@ -36,12 +37,14 @@ const TeamListItem = ({ items, category }) => {
         {items.map((item) => (
           <SwiperSlide key={item.id}>
             <div className="group flex flex-col items-center justify-center py-12 text-center">
-              <div className="h-16 w-16 overflow-hidden rounded-full transition-transform duration-500 group-hover:scale-110 sm:h-24  sm:w-24">
-                <img
-                  src={imagePathFromName(item.name)}
-                  alt={item.name}
-                  className="h-16 w-16 overflow-hidden rounded-full transition-transform duration-700 group-hover:scale-125 sm:h-24 sm:w-24"
-                />
+              <div className="relative h-16 w-16 overflow-hidden rounded-full transition-transform duration-500 group-hover:scale-105 sm:h-24 sm:w-24">
+                <div className="absolute h-full w-full transition-transform duration-500 group-hover:scale-125">
+                  <img
+                    src={imagePathFromName(item.name, category)}
+                    alt={item.name}
+                    className="absolute left-0 top-0 h-full w-full object-cover"
+                  />
+                </div>
               </div>
               <h3 className="mt-4 mb-1">{item.name}</h3>
               <p className="text-xs leading-none opacity-50 sm:text-sm">

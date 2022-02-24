@@ -5,7 +5,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function useAnimations() {
   return React.useLayoutEffect(() => {
-    console.log("useTextAnimations");
     const blockElements = gsap.utils.toArray("[data-anim-block]");
     const imageElements = gsap.utils.toArray("[data-anim-image-reveal]");
     const counterElements = gsap.utils.toArray("[data-anim-counter]");

@@ -341,6 +341,33 @@ const PeoplePage = ({ data }) => {
     },
   ];
 
+  const advisors = [
+    {
+      id: "f80be7e4-1dc3-4849-a5d3-d4d8bc88e87b",
+      name: "Erick de Moura",
+      position: "CEO",
+      image: "",
+    },
+    {
+      id: "1e3fa33e-364e-475c-a4d9-5cd71d09d2ad",
+      name: "Diego Nehab",
+      position: "Chief Technology Officer",
+      image: "",
+    },
+    {
+      id: "0847ad28-147a-40d9-9442-eaa86d94e378",
+      name: "Colin Steil",
+      position: "COO",
+      image: "",
+    },
+    {
+      id: "e5fc4d7d-b003-462d-a04e-124c76683e57",
+      name: "Augusto Teixeira",
+      position: "Chief Scientific Officer",
+      image: "",
+    },
+  ];
+
   // const teamCategories =
   //   data.allContentfulPagePeople.edges[0].node.teamCategory;
 
@@ -563,7 +590,7 @@ const PeoplePage = ({ data }) => {
             </div>
 
             <div className="mt-12">
-              {/* <TeamListItem items={advisors} /> */}
+              <TeamListItem items={advisors} category="founders" />
             </div>
           </div>
         </div>
