@@ -166,7 +166,7 @@ const BlockchainOsPage = ({ data }) => {
 
 export const imageQuery = graphql`
   query {
-    heroLarge: file(relativePath: { eq: "uploads/002.jpg" }) {
+    heroLarge: file(relativePath: { eq: "uploads/016.jpg" }) {
       id
       root
       relativePath
@@ -174,7 +174,7 @@ export const imageQuery = graphql`
         gatsbyImageData(formats: [AUTO, WEBP, AVIF], width: 1280)
       }
     }
-    heroSmall: file(relativePath: { eq: "uploads/002-mobile.jpg" }) {
+    heroSmall: file(relativePath: { eq: "uploads/016-mobile.jpg" }) {
       id
       root
       relativePath
