@@ -4,12 +4,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 import Layout from "../components/layout";
 import DownScrollLink from "../components/downScrollLink";
-import {
-  GatsbyImage,
-  getImage,
-  withArtDirection,
-  StaticImage,
-} from "gatsby-plugin-image";
+import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image";
 import AltNavigation from "../components/altNavigation";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import Collapse from "../components/collapse";
@@ -22,6 +17,13 @@ const LabsPage = ({ data }) => {
       image: getImage(data.heroSmall),
     },
   ]);
+  const fullscreenImage = withArtDirection(getImage(data.fullscreenLarge), [
+    {
+      media: "(max-width: 640px)",
+      image: getImage(data.fullscreenSmall),
+    },
+  ]);
+
   return (
     <>
       <Helmet>
@@ -166,18 +168,10 @@ const LabsPage = ({ data }) => {
             className="relative h-screen overflow-hidden "
             data-anim-image-reveal
           >
-            {/* TODO - change this after we start to use GatsbyImage */}
-            <StaticImage
-              src="../assets/images/uploads/003-mobile.jpg"
-              className="left-0 top-0 h-full w-full object-cover sm:hidden"
+            <GatsbyImage
+              image={fullscreenImage}
+              className="left-0 top-0 h-full w-full object-cover"
               alt=""
-              width={768}
-            />
-            <StaticImage
-              src="../assets/images/uploads/003.jpg"
-              className="left-0 top-0 hidden h-full w-full object-cover sm:block"
-              alt="Cartesi.io"
-              width={1280}
             />
           </div>
         </div>
@@ -325,6 +319,22 @@ export const imageQuery = graphql`
       }
     }
     heroSmall: file(relativePath: { eq: "uploads/005-mobile.jpg" }) {
+      id
+      root
+      relativePath
+      childImageSharp {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF], width: 768)
+      }
+    }
+    fullscreenLarge: file(relativePath: { eq: "uploads/008.jpg" }) {
+      id
+      root
+      relativePath
+      childImageSharp {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF], width: 1280)
+      }
+    }
+    fullscreenSmall: file(relativePath: { eq: "uploads/008-mobile.jpg" }) {
       id
       root
       relativePath

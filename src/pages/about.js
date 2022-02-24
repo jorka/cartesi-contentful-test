@@ -2,12 +2,7 @@ import { graphql } from "gatsby";
 
 import { Helmet } from "react-helmet";
 import * as React from "react";
-import {
-  GatsbyImage,
-  getImage,
-  withArtDirection,
-  StaticImage,
-} from "gatsby-plugin-image";
+import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import ReadmoreLink from "../components/readmoreLink";
 import DownScrollLink from "../components/downScrollLink";
@@ -19,6 +14,12 @@ const AboutPage = ({ data }) => {
     {
       media: "(max-width: 640px)",
       image: getImage(data.heroSmall),
+    },
+  ]);
+  const fullscreenImage = withArtDirection(getImage(data.fullscreenLarge), [
+    {
+      media: "(max-width: 640px)",
+      image: getImage(data.fullscreenSmall),
     },
   ]);
 
@@ -113,8 +114,8 @@ const AboutPage = ({ data }) => {
             className="relative h-screen overflow-hidden "
             data-anim-image-reveal
           >
-            <StaticImage
-              src={`../assets/images/uploads/woman-in-library.jpg`}
+            <GatsbyImage
+              image={fullscreenImage}
               className="left-0 top-0 h-full w-full object-cover"
               alt=""
             />
@@ -173,6 +174,22 @@ export const imageQuery = graphql`
       }
     }
     heroSmall: file(relativePath: { eq: "uploads/003-mobile.jpg" }) {
+      id
+      root
+      relativePath
+      childImageSharp {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF], width: 768)
+      }
+    }
+    fullscreenLarge: file(relativePath: { eq: "uploads/002.jpg" }) {
+      id
+      root
+      relativePath
+      childImageSharp {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF], width: 1280)
+      }
+    }
+    fullscreenSmall: file(relativePath: { eq: "uploads/002-mobile.jpg" }) {
       id
       root
       relativePath
