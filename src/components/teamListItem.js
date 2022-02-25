@@ -36,8 +36,13 @@ const TeamListItem = ({ items, category }) => {
       >
         {items.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="group flex flex-col items-center justify-center py-12 text-center">
-              <a href={item.linkedIn} target="_blank" rel="noreferrer">
+            <div>
+              <a
+                href={item.linkedIn}
+                target="_blank"
+                rel="noreferrer"
+                className="group flex flex-col items-center justify-center py-12 text-center"
+              >
                 <div className="relative h-16 w-16 overflow-hidden rounded-full transition-transform duration-500 group-hover:scale-105 sm:h-24 sm:w-24">
                   <div className="absolute h-full w-full transition-transform duration-500 group-hover:scale-125">
                     <img
