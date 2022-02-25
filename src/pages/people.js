@@ -641,6 +641,8 @@ const PeoplePage = ({ data }) => {
                 <a
                   key={name}
                   href={linkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group grid gap-y-1  sm:grid-rows-[minmax(min-content,_4rem)__1fr]"
                 >
                   <h3 className="leading-tight group-hover:text-blue-600">
