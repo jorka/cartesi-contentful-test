@@ -10,7 +10,6 @@ import scrollTo from "gatsby-plugin-smoothscroll";
 import AltNavigation from "../components/altNavigation";
 import ReadmoreLink from "../components/readmoreLink";
 import Map from "../components/map";
-import IconLinkedIn from "../assets/images/icon-linkedin.svg";
 
 const PeoplePage = ({ data }) => {
   const heroImage = withArtDirection(getImage(data.heroLarge), [
@@ -195,7 +194,8 @@ const PeoplePage = ({ data }) => {
           id: "43e56776-610d-442c-8799-7fa7a55a153e",
           name: "Gabriel Coutinho",
           position: "Software Engineer",
-          linkedIn: "https://www.linkedin.com/in/gabriel-coutinho-de-paula-72183a86/",
+          linkedIn:
+            "https://www.linkedin.com/in/gabriel-coutinho-de-paula-72183a86/",
           image: "",
         },
         {
@@ -638,28 +638,20 @@ const PeoplePage = ({ data }) => {
               data-anim-block
             >
               {advisors.map(({ name, position, linkedIn }) => (
-                <div
+                <a
                   key={name}
-                  className="grid gap-y-1  sm:grid-rows-[minmax(auto,_4rem)__1fr]"
+                  href={linkedIn}
+                  className="group grid gap-y-1  sm:grid-rows-[minmax(min-content,_4rem)__1fr]"
                 >
-                  <h3 className="leading-tight">{name}</h3>
-                  <div className="border-l border-gray-900 pl-3 sm:pl-6">
-                    <p>
-                      <a
-                        href={linkedIn}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <IconLinkedIn className="h-10 w-10 fill-current" />
-                      </a>
-                    </p>
-                    <ul className="mt-3 text-xs">
-                      {position.map((position) => (
-                        <li>{position}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                  <h3 className="leading-tight group-hover:text-blue-600">
+                    {name}
+                  </h3>
+                  <ul className="mt-2 border-l border-gray-900 py-1 pl-3 text-xs sm:pl-6">
+                    {position.map((position) => (
+                      <li>{position}</li>
+                    ))}
+                  </ul>
+                </a>
               ))}
             </div>
           </div>
