@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 import IconReadMore from "../assets/images/icon-read-more.svg";
 
@@ -133,7 +134,12 @@ const Steps = () => {
           </div>
           <div>
             Edit the echo.py script in the repo, and play around.{" "}
-            <a href="#" className="underline" target="_blank" rel="noreferrer">
+            <a
+              href="https://cartesi.io/docs/"
+              className="underline"
+              target="_blank"
+              rel="noreferrer"
+            >
               Read the docs
             </a>{" "}
             to get creative.
@@ -151,10 +157,19 @@ const Steps = () => {
           </div>
           <div>
             Feel like taking your code to the next level? Apply for a{" "}
-            <a href="#" className="underline" target="_blank" rel="noreferrer">
+            <Link to="/labs" className="underline">
               Cartesi Labs grant
+            </Link>{" "}
+            and bring your code to life! Get help from other devs on our{" "}
+            <a
+              href="https://discord.com/invite/NDYYaFrFbQ"
+              className="underline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              discord
             </a>
-            !
+            .
           </div>
         </div>
       </div>
