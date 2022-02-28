@@ -8,6 +8,8 @@ import ReadmoreLink from "../components/readmoreLink";
 import DownScrollLink from "../components/downScrollLink";
 import AltNavigation from "../components/altNavigation";
 import scrollTo from "gatsby-plugin-smoothscroll";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import ReadMoreIcon from "../assets/images/icon-read-more.svg";
 
 const AboutPage = ({ data }) => {
   const heroImage = withArtDirection(getImage(data.heroLarge), [
@@ -30,7 +32,7 @@ const AboutPage = ({ data }) => {
       </Helmet>
       <Layout>
         <div className="bg-yellow-50 pt-20 text-gray-900 lg:pt-24">
-          <div className="section xl:pt-[10vh]">
+          <div className="section flex flex-col justify-center py-12 xl:min-h-[80vh]">
             <div className="container max-w-4xl">
               <div
                 className="prose prose-lg text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif"
@@ -151,9 +153,12 @@ const AboutPage = ({ data }) => {
               </p>
             </div>
             <AltNavigation className="mt-12 border-t border-blue-900 lg:mt-24">
-              <ReadmoreLink to="/blockchain-os">
-                Enter the blockchain OS (start coding)
-              </ReadmoreLink>
+              <AnchorLink to="/#hello-bockchain-os">
+                <span className="group inline-flex items-center gap-4">
+                  Enter the blockchain OS (start coding)
+                  <ReadMoreIcon className="flex-shrink-0 fill-current transition-transform group-hover:translate-x-2" />
+                </span>
+              </AnchorLink>
               <ReadmoreLink to="/">Take me home</ReadmoreLink>
             </AltNavigation>
           </div>

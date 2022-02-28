@@ -31,7 +31,7 @@ const LabsPage = ({ data }) => {
       </Helmet>
       <Layout>
         <div className="bg-blue-200 pt-20 text-gray-900 lg:pt-24">
-          <div className="section xl:pt-[10vh]">
+          <div className="section flex flex-col justify-center py-12 xl:min-h-[80vh]">
             <div className="container max-w-4xl">
               <div
                 className="prose prose-lg text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif"
@@ -216,8 +216,15 @@ const LabsPage = ({ data }) => {
                 through Cartesi grants.
               </p>
               <h3>How to apply for grants</h3>
+              <p>
+                Just by knowing the parameters and scope of your idea takes
+                something. Your vision, should you chose to progress with
+                applying for funding means taking ownership. From budgets to
+                benchmarking and from milestones to marketing, we’ll guide you
+                along the way.
+              </p>
             </div>
-            <div data-anim-block>
+            <div data-anim-block className="mt-12 sm:mt-24">
               <Collapse
                 label={
                   <span className="text-lg transition-colors hover:text-blue-800">

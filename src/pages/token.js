@@ -11,6 +11,8 @@ import BlogArticles from "../components/blogArticles";
 import AltNavigation from "../components/altNavigation";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import IconCTSI from "../assets/images/icon-ctsi.svg";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import ReadMoreIcon from "../assets/images/icon-read-more.svg";
 
 const TokenPage = ({ data }) => {
   const heroImage = withArtDirection(getImage(data.heroLarge), [
@@ -30,99 +32,117 @@ const TokenPage = ({ data }) => {
     {
       name: "Atomic Wallet",
       image: "/wallets/atomic-wallet.svg",
+      link: "https://atomicwallet.io/",
     },
     {
       name: "Ledger",
       image: "/wallets/ledger.svg",
+      link: "https://www.ledger.com/",
     },
     {
       name: "My Crypto",
       image: "/wallets/my-crypto.svg",
+      link: "https://mycrypto.com/",
     },
     {
       name: "Trezor",
       image: "/wallets/trezor.svg",
+      link: "https://trezor.io/",
     },
     {
       name: "Trust Wallet",
       image: "/wallets/trust-wallet.svg",
+      link: "https://trustwallet.com/",
     },
     {
       name: "My Ether Wallet",
       image: "/wallets/my-ether-wallet.svg",
+      link: "https://www.myetherwallet.com/",
     },
     {
       name: "Guarda Wallet",
       image: "/wallets/guarda-wallet.svg",
+      link: "https://guarda.com/",
     },
     {
       name: "Gnosis Safe",
       image: "/wallets/gnosis-safe.svg",
+      link: "https://gnosis-safe.io/",
     },
     {
       name: "crypto.com",
       image: "/wallets/crypto-com.svg",
+      link: "http://crypto.com/",
     },
     {
       name: "Coinbase Wallet",
       image: "/wallets/coinbase.svg",
+      link: "https://www.coinbase.com/wallet",
     },
   ];
 
   const exchanges = [
-    "/exchanges/1inch.svg",
-    "/exchanges/binance.svg",
-    "/exchanges/bithump.svg",
-    "/exchanges/changelly.svg",
-    "/exchanges/coinbase.svg",
-    "/exchanges/coinmerce.svg",
-    "/exchanges/coinone.svg",
-    "/exchanges/crypto-com.svg",
-    "/exchanges/gate-io.svg",
-    "/exchanges/huobi.svg",
-    "/exchanges/idex.svg",
-    "/exchanges/kraken.svg",
-    "/exchanges/kucoin.svg",
-    "/exchanges/poloniex.svg",
-    "/exchanges/quickswap.svg",
-    "/exchanges/tokocrypto.svg",
-    "/exchanges/uniswap.svg",
-    "/exchanges/upbit.svg",
-    "/exchanges/wazrix.svg",
+    { image: "/exchanges/1inch.svg", link: "https://app.1inch.io/" },
+    { image: "/exchanges/binance.svg", link: "https://www.binance.com/" },
+    { image: "/exchanges/bithumb.svg", link: "https://www.bithumb.com/ " },
+    { image: "/exchanges/changelly.svg", link: "https://changelly.com/" },
+    { image: "/exchanges/coinbase.svg", link: "https://coinbase.com/" },
+    { image: "/exchanges/coinmerce.svg", link: "https://coinmerce.io/" },
+    { image: "/exchanges/coinone.svg", link: "https://coinone.co.kr/" },
+    { image: "/exchanges/crypto-com.svg", link: "http://crypto.com/" },
+    { image: "/exchanges/gate-io.svg", link: "https://www.gate.io/" },
+    { image: "/exchanges/huobi.svg", link: "https://www.huobi.com/" },
+    { image: "/exchanges/idex.svg", link: "https://idex.io/" },
+    { image: "/exchanges/kraken.svg", link: "https://www.kraken.com/" },
+    { image: "/exchanges/kucoin.svg", link: "https://www.kucoin.com/" },
+    { image: "/exchanges/poloniex.svg", link: "https://poloniex.com/" },
+    { image: "/exchanges/quickswap.svg", link: "https://quickswap.exchange/" },
+    { image: "/exchanges/tokocrypto.svg", link: "https://www.tokocrypto.com/" },
+    { image: "/exchanges/uniswap.svg", link: "https://uniswap.org/" },
+    { image: "/exchanges/upbit.svg", link: "https://upbit.com/" },
+    { image: "/exchanges/wazrix.svg", link: "https://wazirx.com/" },
   ];
 
   const aggregators = [
     {
       name: "Blockfolio Signal",
       image: "/aggregators/blockfolio-signal.svg",
+      link: "https://blockfolio.com/signal",
     },
     {
       name: "Blockfolio",
       image: "/aggregators/blockfolio.svg",
+      link: "https://blockfolio.com/",
     },
     {
       name: "CoinGecko",
       image: "/aggregators/coin-gecko.svg",
+      link: "https://www.coingecko.com/",
     },
     {
       name: "CoinMarketCap",
       image: "/aggregators/coin-market-cap.svg",
+      link: "https://coinmarketcap.com/",
     },
     {
       name: "Crypto.com",
       image: "/aggregators/crypto-com.svg",
+      link: "http://crypto.com/",
     },
     {
       name: "Delta Direct",
       image: "/aggregators/delata-direct.svg",
+      link: "https://delta.app/en/direct",
     },
     {
       name: "Delta",
       image: "/aggregators/delta.svg",
+      link: "https://delta.app/",
     },
     {
       name: "Messari",
       image: "/aggregators/messari.svg",
+      link: "https://messari.io/",
     },
   ];
 
@@ -130,14 +150,17 @@ const TokenPage = ({ data }) => {
     {
       name: "Binance Pay",
       image: "/payment-services/binance-pay.svg",
+      link: "https://pay.binance.com/",
     },
     {
       name: "Now Payments",
       image: "/payment-services/now-payments.svg",
+      link: "https://nowpayments.io/",
     },
     {
       name: "Travala.com",
       image: "/payment-services/travala.svg",
+      link: "https://travala.com/",
     },
   ];
 
@@ -148,7 +171,7 @@ const TokenPage = ({ data }) => {
       </Helmet>
       <Layout>
         <div className="bg-yellow-500 pt-20 text-gray-900 lg:pt-24">
-          <div className="section xl:pt-[10vh]">
+          <div className="section flex flex-col justify-center py-12 xl:min-h-[80vh]">
             <div className="container max-w-4xl">
               <div
                 className="prose prose-lg text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif"
@@ -237,7 +260,9 @@ const TokenPage = ({ data }) => {
 
             <AltNavigation className="mt-8 border-t border-yellow-50">
               <ReadmoreLink
-                to="#"
+                href="https://explorer.cartesi.io/"
+                target="_blank"
+                rel="noreferrer"
                 className="font-light text-yellow-50 hover:text-blue-200"
               >
                 See all highlights
@@ -298,26 +323,29 @@ const TokenPage = ({ data }) => {
                     wallets. It can also be bridged to Avalanche, Binance Smart
                     Chain, or Polygon.
                   </p>
-                  <div className="mt-6 mb-4 grid grid-cols-3 gap-6 sm:grid-cols-4 sm:gap-12 lg:mt-12 lg:w-2/3">
-                    {wallets.map(({ name, image }) => (
-                      <div
-                        className="flex flex-col items-center gap-2"
-                        key={name}
-                      >
-                        <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50">
-                          <img
-                            src={image}
-                            alt=""
-                            className="h-16 w-16"
-                            loading="lazy"
-                          />
-                        </span>
-                        <span className="text-center text-xs font-light">
-                          {name}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+                </div>
+                <div className="mt-6 mb-4 grid grid-cols-3 gap-6 sm:grid-cols-4 sm:gap-12 lg:mt-12 lg:w-2/3">
+                  {wallets.map(({ name, image, link }) => (
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group flex flex-col items-center gap-2 no-underline"
+                      key={name}
+                    >
+                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50 transition-colors group-hover:bg-blue-800">
+                        <img
+                          src={image}
+                          alt=""
+                          className="h-16 w-16"
+                          loading="lazy"
+                        />
+                      </span>
+                      <span className="text-center text-xs font-light">
+                        {name}
+                      </span>
+                    </a>
+                  ))}
                 </div>
               </Collapse>
               <Collapse
@@ -330,8 +358,20 @@ const TokenPage = ({ data }) => {
               >
                 <div className="prose py-4 text-base prose-p:mb-0">
                   <p>
-                    Our scalability solutions provide an immense capacity
-                    increase to any blockchains our OS is integrated with.
+                    Want to earn rewards for participating in the network?
+                    <br />
+                    Consider staking. Staking is a way for holders to earn CTSI
+                    rewards in return for participating in the network.
+                  </p>
+                  <p>
+                    <ReadmoreLink
+                      href="https://explorer.cartesi.io/pools"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-light no-underline hover:text-blue-500"
+                    >
+                      How to stake CTSI
+                    </ReadmoreLink>
                   </p>
                 </div>
               </Collapse>
@@ -345,20 +385,23 @@ const TokenPage = ({ data }) => {
               >
                 <div className="prose py-4 text-base prose-p:mb-0">
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry’s
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer.
+                    You can trade CTSI against cash or crypto on the world's
+                    largest exchanges. We are continuously expanding our
+                    international reach with CTSI and its ease to acquire for
+                    users around the world.
                   </p>
                 </div>
                 <div className="mt-6 mb-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
                   {exchanges.map((item, i) => (
-                    <span
-                      className="flex items-center justify-center bg-gray-900 text-yellow-50"
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center justify-center bg-gray-900 text-yellow-50 transition-colors hover:bg-blue-800"
                       key={i}
                     >
-                      <img src={item} alt="" loading="lazy" />
-                    </span>
+                      <img src={item.image} alt="" loading="lazy" />
+                    </a>
                   ))}
                 </div>
               </Collapse>
@@ -374,12 +417,15 @@ const TokenPage = ({ data }) => {
                   <p>Track prices, updates, and announcements</p>
                 </div>
                 <div className="mt-6 mb-4 grid grid-cols-3 gap-6 sm:grid-cols-4 sm:gap-12 lg:mt-12 lg:w-2/3">
-                  {aggregators.map(({ name, image }) => (
-                    <div
-                      className="flex flex-col items-center gap-2"
+                  {aggregators.map(({ name, image, link }) => (
+                    <a
+                      className="group flex flex-col items-center gap-2"
+                      href={link}
+                      target="_blank"
+                      rel="noreferrer"
                       key={name}
                     >
-                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50">
+                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50 transition-colors group-hover:bg-blue-800">
                         <img
                           src={image}
                           alt=""
@@ -390,7 +436,7 @@ const TokenPage = ({ data }) => {
                       <span className="text-center text-xs font-light">
                         {name}
                       </span>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </Collapse>
@@ -412,12 +458,15 @@ const TokenPage = ({ data }) => {
                   </p>
                 </div>
                 <div className="mt-6 mb-4 grid grid-cols-3 gap-6 sm:grid-cols-4 sm:gap-12 lg:mt-12 lg:w-2/3">
-                  {paymentServices.map(({ name, image }) => (
-                    <div
-                      className="flex flex-col items-center gap-2"
+                  {paymentServices.map(({ name, image, link }) => (
+                    <a
+                      className="group flex flex-col items-center gap-2"
                       key={name}
+                      target="_blank"
+                      rel="noreferrer"
+                      href={link}
                     >
-                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50">
+                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50 transition-colors group-hover:bg-blue-800">
                         <img
                           src={image}
                           alt=""
@@ -428,7 +477,7 @@ const TokenPage = ({ data }) => {
                       <span className="text-center text-xs font-light">
                         {name}
                       </span>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </Collapse>
@@ -438,9 +487,12 @@ const TokenPage = ({ data }) => {
               <ReadmoreLink to="#" className="font-light hover:text-blue-500">
                 Hear from CTSI holders
               </ReadmoreLink>
-              <ReadmoreLink to="#" className="font-light hover:text-blue-500">
-                Hello new economy
-              </ReadmoreLink>
+              <AnchorLink to="/blockchain-os#hello-new-economy">
+                <span className="group inline-flex items-center gap-4">
+                  Hello new economy
+                  <ReadMoreIcon className="flex-shrink-0 fill-current transition-transform group-hover:translate-x-2" />
+                </span>
+              </AnchorLink>
             </AltNavigation>
 
             <DownScrollLink to="#articles" />

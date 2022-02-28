@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
       </Helmet>
       <Layout invertedHeader>
         <div className="bg-gray-900 pt-20 text-yellow-50 lg:pt-24">
-          <div className="section xl:pt-[10vh]">
+          <div className="section flex flex-col justify-center py-12 xl:min-h-[80vh]">
             <div className="container max-w-4xl">
               <div
                 className="prose prose-lg prose-invert text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif"
@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
 
-          <div className="section pt-0">
+          <div className="section p-0">
             <div className="container max-w-7xl">
               <div data-anim-image-reveal>
                 <div>
@@ -76,7 +76,7 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
 
-          <div className="section pt-0" id="hello-bockchain-os">
+          <div className="section" id="hello-bockchain-os">
             <div className="container max-w-4xl">
               <div
                 className="prose  prose-invert prose-headings:font-serif prose-headings:text-3xl"
@@ -118,8 +118,8 @@ const IndexPage = ({ data }) => {
                 >
                   <div className="prose prose-invert py-4 text-base prose-p:mb-0">
                     <p>
-                      Our scalability solutions provide an immense capacity
-                      increase to any blockchains our OS is integrated with.
+                      Cartesi provides an over 10,000x increase to computational
+                      scalability for blockchain.
                     </p>
                   </div>
                 </Collapse>
@@ -133,38 +133,24 @@ const IndexPage = ({ data }) => {
                 >
                   <div className="prose prose-invert py-4 text-base prose-p:mb-0">
                     <p>
-                      Our scalability solutions provide an immense capacity
-                      increase to any blockchains our OS is integrated with.
+                      The blockchain OS allows for much more sophisticated
+                      decentralized applications, which would otherwise be
+                      impossible on layer-1.
                     </p>
                   </div>
                 </Collapse>
                 <Collapse
                   label={
                     <span className="text-lg transition-colors hover:text-blue-200">
-                      Programmable
+                      Familiar
                     </span>
                   }
                   className="border-b border-b-yellow-50 py-4 lg:py-6"
                 >
                   <div className="prose prose-invert py-4 text-base prose-p:mb-0">
                     <p>
-                      Our scalability solutions provide an immense capacity
-                      increase to any blockchains our OS is integrated with.
-                    </p>
-                  </div>
-                </Collapse>
-                <Collapse
-                  label={
-                    <span className="text-lg transition-colors hover:text-blue-200">
-                      Inviting
-                    </span>
-                  }
-                  className="border-b border-b-yellow-50 py-4 lg:py-6"
-                >
-                  <div className="prose prose-invert py-4 text-base prose-p:mb-0">
-                    <p>
-                      Our scalability solutions provide an immense capacity
-                      increase to any blockchains our OS is integrated with.
+                      The blockchain OS enables the use of mainstream languages
+                      and tools like, C++, Python, and SQLite.
                     </p>
                   </div>
                 </Collapse>
@@ -178,8 +164,41 @@ const IndexPage = ({ data }) => {
                 >
                   <div className="prose prose-invert py-4 text-base prose-p:mb-0">
                     <p>
-                      Our scalability solutions provide an immense capacity
-                      increase to any blockchains our OS is integrated with.
+                      Cartesi endows traditional applications with the same
+                      level of security guarantees achieved by the underlying
+                      blockchain.
+                    </p>
+                  </div>
+                </Collapse>
+                <Collapse
+                  label={
+                    <span className="text-lg transition-colors hover:text-blue-200">
+                      Multichain & portable
+                    </span>
+                  }
+                  className="border-b border-b-yellow-50 py-4 lg:py-6"
+                >
+                  <div className="prose prose-invert py-4 text-base prose-p:mb-0">
+                    <p>
+                      Blockchain-agnostic and currently supporting all EVM
+                      chains: Ethereum, Binance Smart Chain, Avalanche, Polygon,
+                      etc.
+                    </p>
+                  </div>
+                </Collapse>
+                <Collapse
+                  label={
+                    <span className="text-lg transition-colors hover:text-blue-200">
+                      Privacy guaranteed
+                    </span>
+                  }
+                  className="border-b border-b-yellow-50 py-4 lg:py-6"
+                >
+                  <div className="prose prose-invert py-4 text-base prose-p:mb-0">
+                    <p>
+                      From games where players conceal their data to enterprise
+                      applications that run on sensitive data, the blockchain OS
+                      preserves privacy on your applications.
                     </p>
                   </div>
                 </Collapse>
@@ -348,7 +367,7 @@ const IndexPage = ({ data }) => {
                   </span>
                 </a>
                 <a
-                  href="https://github.com/cartesi/cips"
+                  href="https://www.youtube.com/watch?v=8kEBwJt2YLM&t=141s&ab_channel=TechWithTim"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-between gap-4 border-b border-yellow-50 py-4 text-lg transition-colors hover:text-blue-200 lg:py-6"
@@ -356,6 +375,17 @@ const IndexPage = ({ data }) => {
                   <span>
                     Learn the basics of Web3 and smart contract development
                   </span>
+                  <span className="flex-shrink-0">
+                    <IconReadMore className="fill-current" />
+                  </span>
+                </a>
+                <a
+                  href="https://github.com/cartesi/cips"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-between gap-4 border-b border-yellow-50 py-4 text-lg transition-colors hover:text-blue-200 lg:py-6"
+                >
+                  <span>Learn about our CIP process</span>
                   <span className="flex-shrink-0">
                     <IconReadMore className="fill-current" />
                   </span>

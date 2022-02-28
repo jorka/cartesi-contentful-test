@@ -402,7 +402,8 @@ const PeoplePage = ({ data }) => {
     {
       name: "Luiz Henrique De Figueiredo, PhD",
       position: ["Co-creator of Lua programming language"],
-      linkedIn: "https://www.linkedin.com/in/williambaobean/",
+      linkedIn:
+        "https://www.linkedin.com/in/luiz-henrique-de-figueiredo-b2458313/",
     },
     {
       name: "Pedro Argento",
@@ -440,8 +441,8 @@ const PeoplePage = ({ data }) => {
       </Helmet>
       <Layout>
         <div className="bg-blue-50 pt-20 text-gray-900 lg:pt-24">
-          <div className="section xl:pt-[10vh]">
-            <div className="container max-w-4xl">
+          <div className="section flex flex-col justify-center py-12 xl:min-h-[80vh]">
+            <div className="container max-w-6xl">
               <div
                 className="prose prose-lg text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif"
                 data-anim-block

@@ -53,5 +53,6 @@ module.exports = {
     },
     `gatsby-plugin-react-svg`,
     `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-anchor-links`,
   ],
 };

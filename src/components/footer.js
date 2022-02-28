@@ -11,23 +11,23 @@ const Footer = () => {
             <div>
               <ul className="mb-6">
                 <li>
-                  <Link to="#" className="hover:text-gray-200">
+                  <Link to="/about" className="hover:text-gray-200">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="hover:text-gray-200">
-                    CTSI Coins
+                  <Link to="/token" className="hover:text-gray-200">
+                    CTSI Token
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="hover:text-gray-200">
+                  <Link to="/labs" className="hover:text-gray-200">
                     Labs
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="hover:text-gray-200">
-                    Cartesians
+                  <Link to="/people" className="hover:text-gray-200">
+                    People
                   </Link>
                 </li>
               </ul>
@@ -50,9 +50,14 @@ const Footer = () => {
               </ul>
               <ul>
                 <li>
-                  <Link to="#" className="hover:text-gray-200">
+                  <a
+                    href="/cartesi_whitepaper.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-gray-200"
+                  >
                     Our whitepaper
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <Link to="#" className="hover:text-gray-200">
@@ -83,25 +88,45 @@ const Footer = () => {
 
               <ul className="mb-6">
                 <li>
-                  <Link to="#" className="hover:text-gray-200">
+                  <a
+                    href="https://discord.gg/Pt2NrnS"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-gray-200"
+                  >
                     Discord
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="#" className="hover:text-gray-200">
+                  <a
+                    href="https://www.github.com/cartesi"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-gray-200"
+                  >
                     Github
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="#" className="hover:text-gray-200">
+                  <a
+                    href="https://www.twitter.com/cartesiproject"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-gray-200"
+                  >
                     Twitter
-                  </Link>
+                  </a>
                 </li>
 
                 <li>
-                  <Link to="#" className="hover:text-gray-200">
+                  <a
+                    href="https://t.me/cartesiannouncements"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-gray-200"
+                  >
                     Telegram
-                  </Link>
+                  </a>
                 </li>
               </ul>
               <p>

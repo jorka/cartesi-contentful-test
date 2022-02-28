@@ -9,6 +9,7 @@ import AltNavigation from "../components/altNavigation";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import Video from "../components/video";
 import BlogArticles from "../components/blogArticles";
+import ReadMoreIcon from "../assets/images/icon-read-more.svg";
 
 const BlockchainOsPage = ({ data }) => {
   const heroImage = withArtDirection(getImage(data.heroLarge), [
@@ -31,7 +32,7 @@ const BlockchainOsPage = ({ data }) => {
       </Helmet>
       <Layout>
         <div className="bg-yellow-600 pt-20 text-gray-900 lg:pt-24">
-          <div className="section xl:pt-[10vh]">
+          <div className="section flex flex-col justify-center py-12 xl:min-h-[80vh]">
             <div className="container max-w-4xl">
               <div
                 className="prose prose-lg text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif"
@@ -89,17 +90,22 @@ const BlockchainOsPage = ({ data }) => {
               >
                 <h2>An OS is needed to create this new world</h2>
                 <p>
-                  The Cartesi Foundation is a non-profit organization dedicated
-                  to supporting the Cartesi technology and the decentralization
-                  of the Cartesi network. The Foundation’s mission is to be a
-                  supporting member of the Cartesi community, alongside the many
-                  devoted contributors and participants that give Cartesi life,
-                  through funding, education, grants, strategic alliances, and
-                  other focused activities. The Foundation is committed to
-                  supporting the development of the first operating system (OS)
-                  for blockchains; bringing mainstream scalability and
-                  convenience to developers and users of decentralized
-                  applications.
+                  Our digital revolution would not be possible without operating
+                  systems. Software that has been developed for decades on
+                  platforms like Linux underpins all of the applications and
+                  services we use every day.
+                </p>
+                <p>
+                  Now, a new Web of value, also known as Web 3, is being built
+                  on the Blockchain. Operating systems are unfortunately lost in
+                  the shift from the old web to the new value web. As a result,
+                  it's difficult for programmers and designers to work together
+                  to create a digital environment that is genuinely
+                  decentralized and inclusive.
+                </p>
+                <p>
+                  Blockchains must have a good operating system in order to
+                  reach their full potential and create a new world.
                 </p>
               </div>
             </div>
@@ -148,8 +154,14 @@ const BlockchainOsPage = ({ data }) => {
               </p>
             </div>
             <AltNavigation className="mt-12 border-t border-blue-900 lg:mt-24">
-              <ReadmoreLink to="#">Learn more</ReadmoreLink>
-              <ReadmoreLink to="#">The economy of the OS</ReadmoreLink>
+              <button onClick={() => scrollTo("#articles")}>
+                <span className="group inline-flex items-center gap-4">
+                  Learn more
+                  <ReadMoreIcon className="flex-shrink-0 fill-current transition-transform group-hover:translate-x-2" />
+                </span>
+              </button>
+
+              <ReadmoreLink to="/token">The economy of the OS</ReadmoreLink>
             </AltNavigation>
           </div>
         </div>
