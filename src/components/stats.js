@@ -81,7 +81,7 @@ const Stats = () => {
                 0
               </span>
             </span>
-            <span>CTSI Price:</span>
+            <span>CTSI Price</span>
           </div>
           <div className="col-span-2 flex flex-col text-right">
             <span className="font-serif text-4xl leading-none text-blue-200">
