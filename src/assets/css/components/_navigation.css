@@ -31,9 +31,9 @@
 }
 
 .navigation-submenu {
-  @apply py-4 px-6 text-base text-yellow-50 lg:absolute lg:left-0 lg:flex lg:min-w-max lg:flex-col lg:bg-gray-900 lg:text-sm;
+  @apply py-4 px-6 text-base text-yellow-50   lg:absolute lg:left-0 lg:flex lg:min-w-max lg:flex-col lg:bg-gray-900 lg:bg-opacity-[0.95] lg:text-sm;
 }
 
 .navigation-submenu-item {
-  @apply block border-t py-4 hover:text-blue-300 group-first:border-0 lg:p-3;
+  @apply block border-t py-4 hover:text-blue-300 group-first:border-0 lg:py-3;
 }

@@ -164,10 +164,12 @@ const HeaderNavigation = ({ isHeaderInverted }) => {
         {
           name: "Become a node runner",
           path: "https://explorer.cartesi.io/staking",
+          isExternal: true,
         },
         {
           name: "The CIP process",
           path: "https://github.com/cartesi/cips",
+          isExternal: true,
         },
       ],
     },

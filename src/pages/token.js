@@ -13,6 +13,7 @@ import scrollTo from "gatsby-plugin-smoothscroll";
 import IconCTSI from "../assets/images/icon-ctsi.svg";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import ReadMoreIcon from "../assets/images/icon-read-more.svg";
+import Stats from "../components/stats";
 
 const TokenPage = ({ data }) => {
   const heroImage = withArtDirection(getImage(data.heroLarge), [
@@ -229,34 +230,7 @@ const TokenPage = ({ data }) => {
           <div className="container max-w-5xl">
             <h2 className="mb-8 font-serif text-2xl lg:mb-16">Highlights</h2>
 
-            <div className="mb-12 grid grid-cols-3 gap-8 xl:mb-24">
-              <div className="col-span-1 flex flex-col">
-                <span className="font-serif text-4xl leading-none text-blue-200">
-                  <span data-anim-counter>40</span>
-                  <span>+</span>
-                </span>
-                <span>Wallets & exchanges</span>
-              </div>
-              <div className="col-span-2 flex flex-col text-right">
-                <span className="font-serif text-4xl leading-none text-blue-200">
-                  <span data-anim-counter>139.96</span> <span>million</span>
-                </span>
-                <span>CTSI staked</span>
-              </div>
-              <div className="col-span-2 flex flex-col">
-                <span className="font-serif text-4xl leading-none text-blue-200">
-                  <span data-anim-counter>54.96</span> <span>million</span>
-                </span>
-                <span>CTSI staked</span>
-              </div>
-              <div className="col-span-1 flex flex-col text-right">
-                <span className="font-serif text-4xl leading-none text-blue-200">
-                  <span data-anim-counter>20</span>
-                  <span>+</span>
-                </span>
-                <span>Wallets & exchanges</span>
-              </div>
-            </div>
+            <Stats />
 
             <AltNavigation className="mt-8 border-t border-yellow-50">
               <ReadmoreLink

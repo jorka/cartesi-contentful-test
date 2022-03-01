@@ -4,13 +4,13 @@ module.exports = {
     title: `Cartesi`,
   },
   plugins: [
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        accessToken: `qC0bPLKs1fLSkYJ3lJR-wrgz5NlsXDRAXmJ2IGPuhH0`,
-        spaceId: `wpoprmv1hzgw`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-contentful`,
+    //   options: {
+    //     accessToken: `qC0bPLKs1fLSkYJ3lJR-wrgz5NlsXDRAXmJ2IGPuhH0`,
+    //     spaceId: `wpoprmv1hzgw`,
+    //   },
+    // },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-transition-link`,
@@ -54,5 +54,20 @@ module.exports = {
     `gatsby-plugin-react-svg`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-anchor-links`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Cartesi`,
+        short_name: `Cartesi`,
+        start_url: `/`,
+        background_color: `#1E1941`,
+        theme_color: `#FFFAE6`,
+        display: `standalone`,
+        icon: `src/assets/images/favicon.svg`,
+        icon_options: {
+          purpose: `any`,
+        },
+      },
+    },
   ],
 };

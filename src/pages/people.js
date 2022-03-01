@@ -262,13 +262,6 @@ const PeoplePage = ({ data }) => {
           image: "",
         },
         {
-          id: "a9efcfa5-effe-4300-8150-b2726ba84eca",
-          name: "Pedro Argento",
-          position: "DeFi Researcher",
-          linkedIn: "https://www.linkedin.com/in/pedroargento/",
-          image: "",
-        },
-        {
           id: "1da7b0c6-0229-400f-a5b1-674d034a5ef8",
           name: "Nazim Faour",
           position: "Technical Writer",
@@ -550,7 +543,7 @@ const PeoplePage = ({ data }) => {
               ))}
             </div>
 
-            <DownScrollLink to="#welcome-to-labs" />
+            <DownScrollLink to="#decentralization" />
           </div>
         </div>
 
@@ -626,7 +619,7 @@ const PeoplePage = ({ data }) => {
           </div>
         </div>
 
-        <div className="section bg-yellow-500 text-gray-900" id="meet">
+        <div className="section bg-yellow-500 text-gray-900" id="advisors">
           <div className="container max-w-5xl" data-anim-block>
             <h2 className="mb-8 font-serif text-3xl lg:mb-12">
               Advisors to

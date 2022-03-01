@@ -224,7 +224,7 @@ const IndexPage = ({ data }) => {
                       <th className="border-x border-yellow-50 text-center">
                         Ethereum
                       </th>
-                      <th className="text-center">Cartesi on Ethereum</th>
+                      <th className="text-center">Cartesi Rollups</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -245,55 +245,63 @@ const IndexPage = ({ data }) => {
                     <tr>
                       <td>Development tools</td>
                       <td className="border-x border-yellow-50 text-center text-blue-300">
-                        Nascent/ Immature toolchain
+                        Nascent / Immature toolchain
                       </td>
-                      <td className="text-center text-yellow-500">
-                        All that supports Linux
-                      </td>
+                      <td className="text-center text-yellow-500">All</td>
                     </tr>
                     <tr>
                       <td>Smart contact privacy</td>
                       <td className="border-x border-yellow-50 text-center text-blue-300">
-                        No
+                        None (very expensive)
                       </td>
-                      <td className="text-center text-yellow-500">Yes</td>
+                      <td className="text-center text-yellow-500">
+                        Possible (no extra cost)
+                      </td>
                     </tr>
                     <tr>
                       <td>Computational Throughput</td>
                       <td className="border-x border-yellow-50 text-center text-blue-300">
-                        &times;
+                        x
                       </td>
                       <td className="text-center text-yellow-500">
-                        &gt; 10,000&times;
+                        &gt; 10,000x (no fees)
                       </td>
                     </tr>
                     <tr>
                       <td>Transaction Throughput</td>
                       <td className="border-x border-yellow-50 text-center text-blue-300">
-                        &times;
+                        x
                       </td>
                       <td className="text-center text-yellow-500">
-                        &gt; 30&times;
+                        x; &gt; 15x; &gt; 40x <sup>*</sup>
                       </td>
                     </tr>
                     <tr>
-                      <td>Fee costs</td>
+                      <td>Fee costs per tx</td>
                       <td className="border-x border-yellow-50 text-center text-blue-300">
-                        Very high
+                        x
                       </td>
                       <td className="text-center text-yellow-500">
-                        Negligible
+                        x; &gt; x/15; x/40; <sup>**</sup>
                       </td>
                     </tr>
                     <tr>
                       <td>Security</td>
-                      <td className="border-x border-yellow-50 text-center text-blue-300"></td>
+                      <td className="border-x border-yellow-50 text-center text-blue-300">
+                        L1 consensus
+                      </td>
                       <td className="text-center text-yellow-500">
-                        Same guarantees as ETH
+                        Similar to L1 consensus
                       </td>
                     </tr>
                   </tbody>
                 </table>
+                <p id="footnotes" className="mt-6 text-xs text-gray-400">
+                  <sup>*</sup> Respectively for each phase: Cartesi Rollups;
+                  CR+Aggregator V1; CR+Aggregator V2
+                  <br />
+                  <sup>**</sup> Transaction cost only. Computation is for free.
+                </p>
               </div>
             </div>
           </div>
