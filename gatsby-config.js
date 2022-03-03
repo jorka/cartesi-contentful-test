@@ -1,7 +1,12 @@
+const admonitions = require("remark-admonitions");
+const replacements = require("./replacements.json");
+
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.cartesi.io`,
-    title: `Cartesi`,
+    title: `Cartesi.io`,
+    description: `Cartesi is an open source project that connects Linux software stacks with blockchain technology, for the creation of scalable DApps.`,
+    siteUrl: "https://cartesi.io",
+    author: `@cartesi`,
   },
   plugins: [
     // {
@@ -11,10 +16,43 @@ module.exports = {
     //     spaceId: `wpoprmv1hzgw`,
     //   },
     // },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("sass"),
+        postCssPlugins: [require("tailwindcss")],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/intl`,
+        // supported language
+        languages: [`en`, `zh`, `ru`, `ko`],
+        // language file path
+        defaultLanguage: `en`,
+        // option to redirect to `/en` when connecting `/`
+        redirect: false,
+      },
+    },
+    `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-transition-link`,
-    `gatsby-plugin-mdx`,
+    {
+      resolve: "gatsby-plugin-transition-link",
+      options: {
+        injectPageProps: false,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `docs`,
+        path: `${__dirname}/docs/docs/`,
+      },
+      __key: `docs`,
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -23,15 +61,48 @@ module.exports = {
       },
       __key: `pages`,
     },
-
     {
-      resolve: `gatsby-plugin-google-tagmanager`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        id: `YOUR_GOOGLE_TAGMANAGER_ID`,
-        includeInDevelopment: false,
-        enableWebVitalsTracking: true,
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          // default: require.resolve("./src/components/layout.js"),
+          // content: require.resolve("./src/components/layoutContent.js"),
+        },
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-embedder`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              withWebp: true,
+              linkImagesToOriginal: false,
+            },
+          },
+          `gatsby-remark-responsive-iframe`,
+          `gatsby-remark-copy-linked-files`,
+          {
+            resolve: `gatsby-remark-find-replace`,
+            options: {
+              replacements: replacements,
+              prefix: "%",
+            },
+          },
+        ],
+        remarkPlugins: [admonitions],
+        plugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-images`],
       },
     },
+
+    // {
+    //   resolve: `gatsby-plugin-google-tagmanager`,
+    //   options: {
+    //     id: `YOUR_GOOGLE_TAGMANAGER_ID`,
+    //     includeInDevelopment: false,
+    //     enableWebVitalsTracking: true,
+    //   },
+    // },
 
     `gatsby-plugin-image`,
     {
@@ -67,6 +138,56 @@ module.exports = {
         icon_options: {
           purpose: `any`,
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-124332259-1`,
+        head: false,
+        defer: false,
+        cookieDomain: `cartesi.io`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+  
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+        }`,
+        resolveSiteUrl: ({ site }) => {
+          //Alternativly, you may also pass in an environment variable (or any location) at the beginning of your `gatsby-config.js`.
+          return site.siteMetadata.siteUrl;
+        },
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.nodes.map((node) => {
+            return {
+              url: `${site.siteMetadata.siteUrl}${node.path}`,
+              changefreq: `daily`,
+              priority: 0.7,
+            };
+          }),
+      },
+      // The plugin will create sitemap index(sitemap.xml) file.
+      sitemapSize: 1,
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.cartesi.io",
+        sitemap: "https://www.cartesi.io/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
   ],

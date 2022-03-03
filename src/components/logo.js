@@ -4,7 +4,15 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 const Logo = ({ ...props }) => {
   return (
     <h1 className="relative z-20">
-      <AniLink cover direction="right" duration={0.8} bg="#1E1941" to="/">
+      <AniLink
+        cover
+        direction="right"
+        duration={0.8}
+        bg="#1E1941"
+        to="/"
+        title="Cartesi"
+        aria-label="Cartesi"
+      >
         <svg
           id="logo"
           xmlns="http://www.w3.org/2000/svg"

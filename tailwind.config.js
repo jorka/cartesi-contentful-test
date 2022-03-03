@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./docs/docs/**/*.{md,mdx}"],
   theme: {
     fontSize: {
       xs: "var(--step--2)",
@@ -85,7 +85,7 @@ module.exports = {
               "--tw-prose-captions": theme("colors.gray[900]"),
               "--tw-prose-code": theme("colors.gray[900]"),
               "--tw-prose-pre-code": theme("colors.gray[100]"),
-              "--tw-prose-pre-bg": theme("colors.gray[900]"),
+              "--tw-prose-pre-bg": theme("colors.yellow[50]"),
               "--tw-prose-th-borders": theme("colors.gray[300]"),
               "--tw-prose-td-borders": theme("colors.gray[200]"),
               "--tw-prose-invert-body": theme("colors.yellow.50"),
@@ -137,6 +137,40 @@ module.exports = {
                 fontWeight: "400",
                 fontSize: "var(--step-0)",
                 fontWeight: "normal",
+              },
+              code: {
+                fontWeight: "inherit",
+                background: "var(--tw-prose-pre-bg)",
+                padding: "0.1em",
+                borderRadius: "0.3em",
+              },
+            },
+          ],
+        },
+        sm: {
+          css: [
+            {
+              fontSize: "var(--step--1)",
+
+              h1: {
+                fontWeight: "400",
+                fontSize: "var(--step-4)",
+              },
+              h2: {
+                fontWeight: "400",
+                fontSize: "var(--step-3)",
+              },
+              h3: {
+                fontWeight: "400",
+                fontSize: "var(--step-2)",
+              },
+              h4: {
+                fontWeight: "400",
+                fontSize: "var(--step-1)",
+              },
+              h5: {
+                fontWeight: "400",
+                fontSize: "var(--step-0)",
               },
             },
           ],

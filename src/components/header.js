@@ -3,6 +3,7 @@ import HeaderNavigation from "./headerNavigation";
 import Logo from "./logo";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { injectIntl } from "gatsby-plugin-intl";
 
 const Header = ({ isStatic, isInverted }) => {
   const headerRef = React.useRef(null);
@@ -10,6 +11,25 @@ const Header = ({ isStatic, isInverted }) => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const setHeaderHeight = React.useCallback(() => {
+    const header = headerRef.current;
+    const headerHeight = header.getBoundingClientRect().height;
+    document.documentElement.style.setProperty(
+      "--header-height",
+      `${headerHeight}px`
+    );
+  }, []);
+
+  React.useEffect(() => {
+    setHeaderHeight();
+
+    window.addEventListener("resize", setHeaderHeight);
+
+    return () => {
+      window.removeEventListener("resize", setHeaderHeight);
+    };
+  }, [headerRef, setHeaderHeight]);
 
   React.useEffect(() => {
     if (isStatic) return;
@@ -67,4 +87,4 @@ const Header = ({ isStatic, isInverted }) => {
     </header>
   );
 };
-export default Header;
+export default injectIntl(Header);

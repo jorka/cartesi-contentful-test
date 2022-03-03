@@ -1,0 +1,36 @@
+#container {
+  .codeBlockTitle {
+    background-color: rgb(41, 45, 64) !important;
+    border-top-left-radius: var(--ifm-global-radius);
+    border-top-right-radius: var(--ifm-global-radius);
+    border-bottom: 1px solid #eee !important;
+    font-family: SFMono-Regular, Menio, Monaco, Consolas Liberation Mono,
+      Courier New !important;
+    font-weight: bold !important;
+    padding: 14px 16px;
+    width: 100%;
+    font-size: 0.85em;
+  }
+
+  .pre {
+    background-color: rgb(41, 45, 64) !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin-bottom: var(--ifm-leading);
+
+    .code {
+      font-size: 10pt;
+      font-family: SFMono-Regular, Menio, Monaco, Consolas Liberation Mono,
+        Courier New;
+      white-space: pre !important;
+      overflow: auto;
+      size: 1.6;
+    }
+  }
+
+  .contentWithTitle {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-top: 0;
+  }
+}

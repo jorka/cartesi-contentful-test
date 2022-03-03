@@ -1,4 +1,5 @@
 import { Link } from "gatsby";
+import { injectIntl } from "gatsby-plugin-intl";
 import * as React from "react";
 import Logo from "./logo";
 
@@ -70,9 +71,14 @@ const Footer = () => {
             <div>
               <ul className="mb-6">
                 <li>
-                  <Link to="#" className="hover:text-gray-200">
+                  <a
+                    href="/docs"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-gray-200"
+                  >
                     Docs
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <Link to="#" className="hover:text-gray-200">
@@ -144,4 +150,4 @@ const Footer = () => {
     </footer>
   );
 };
-export default Footer;
+export default injectIntl(Footer);

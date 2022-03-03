@@ -1,0 +1,30 @@
+.swiper {
+  @apply px-32;
+}
+
+.swiper-slide {
+  height: auto !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply hidden transition-colors;
+  --swiper-navigation-size: 1.5rem !important;
+  display: none !important;
+  color: rgb(30 25 65 / var(--tw-text-opacity)) !important;
+
+  @media (min-width: 768px) {
+    display: block !important;
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0 !important;
+}
+
+.swiper-button-prev {
+  left: 0 !important;
+}
+.swiper-button-next {
+  right: 0 !important;
+}

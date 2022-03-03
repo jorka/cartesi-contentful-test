@@ -3,17 +3,14 @@ import { Helmet } from "react-helmet";
 
 import * as React from "react";
 import Layout from "../components/layout";
-import DownScrollLink from "../components/downScrollLink";
-import Collapse from "../components/collapse";
-import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image";
-import ReadmoreLink from "../components/readmoreLink";
+import { getImage, withArtDirection } from "gatsby-plugin-image";
 import BlogArticles from "../components/blogArticles";
-import AltNavigation from "../components/altNavigation";
-import scrollTo from "gatsby-plugin-smoothscroll";
-import IconCTSI from "../assets/images/icon-ctsi.svg";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
-import ReadMoreIcon from "../assets/images/icon-read-more.svg";
-import Stats from "../components/stats";
+import Hero from "../components/token/hero";
+import ImageUnderHero from "../components/imageUnderHero";
+import Highlights from "../components/token/highlights";
+import ImageScreen from "../components/ImageScreen";
+import HowToGetCtsi from "../components/token/howToGetCtsi";
+import { injectIntl } from "gatsby-plugin-intl";
 
 const TokenPage = ({ data }) => {
   const heroImage = withArtDirection(getImage(data.heroLarge), [
@@ -84,8 +81,11 @@ const TokenPage = ({ data }) => {
 
   const exchanges = [
     { image: "/exchanges/1inch.svg", link: "https://app.1inch.io/" },
+    { image: "/exchanges/bancor.svg", link: "https://www.bancor.network/" },
+    { image: "/exchanges/binance-us.svg", link: "https://www.binance.us/" },
     { image: "/exchanges/binance.svg", link: "https://www.binance.com/" },
     { image: "/exchanges/bithumb.svg", link: "https://www.bithumb.com/ " },
+    { image: "/exchanges/bitvavo.svg", link: "https://bitvavo.com/" },
     { image: "/exchanges/changelly.svg", link: "https://changelly.com/" },
     { image: "/exchanges/coinbase.svg", link: "https://coinbase.com/" },
     { image: "/exchanges/coinmerce.svg", link: "https://coinmerce.io/" },
@@ -96,11 +96,13 @@ const TokenPage = ({ data }) => {
     { image: "/exchanges/idex.svg", link: "https://idex.io/" },
     { image: "/exchanges/kraken.svg", link: "https://www.kraken.com/" },
     { image: "/exchanges/kucoin.svg", link: "https://www.kucoin.com/" },
+    { image: "/exchanges/newton.svg", link: "https://www.newton.co/" },
     { image: "/exchanges/poloniex.svg", link: "https://poloniex.com/" },
     { image: "/exchanges/quickswap.svg", link: "https://quickswap.exchange/" },
     { image: "/exchanges/tokocrypto.svg", link: "https://www.tokocrypto.com/" },
     { image: "/exchanges/uniswap.svg", link: "https://uniswap.org/" },
     { image: "/exchanges/upbit.svg", link: "https://upbit.com/" },
+    { image: "/exchanges/vauld.svg", link: "https://www.vauld.com/" },
     { image: "/exchanges/wazrix.svg", link: "https://wazirx.com/" },
   ];
 
@@ -172,312 +174,22 @@ const TokenPage = ({ data }) => {
       </Helmet>
       <Layout>
         <div className="bg-yellow-500 pt-20 text-gray-900 lg:pt-24">
-          <div className="section flex flex-col justify-center py-12 xl:min-h-[80vh]">
-            <div className="container max-w-4xl">
-              <div
-                className="prose prose-lg text-center prose-headings:font-serif prose-headings:text-4xl prose-p:font-serif"
-                data-anim-block
-              >
-                <h1 className="flex items-center justify-center gap-6 text-center">
-                  Hello, CTSI
-                  <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50">
-                    <IconCTSI className="h-10 w-10 fill-current" />
-                  </span>
-                </h1>
-                <p>
-                  The token for The Blockchain OS has been designed to overcome
-                  the problems of scalability and inconvenience of blockchain
-                  applications. CTSI is the fuel of the network. When you use
-                  and stake CTSI, you collaborate with decentralization,
-                  security, and convenience for The Blockchain OS.
-                </p>
-              </div>
-              <div className="mt-8 flex flex-col justify-center gap-4 text-center sm:flex-row sm:items-center lg:mt-16">
-                <button
-                  onClick={() => scrollTo("#how-to-get-ctsi")}
-                  className="btn-outline"
-                >
-                  <span>How to get CTSI</span>
-                </button>
-                <a
-                  href="https://explorer.cartesi.io/pools"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-outline"
-                >
-                  <span>Stake CTSI and earn rewards</span>
-                </a>
-              </div>
-            </div>
-          </div>
+          <Hero />
           <div className="section pt-0">
-            <div className="container max-w-7xl">
-              <div data-anim-image-reveal>
-                <div>
-                  <GatsbyImage
-                    image={heroImage}
-                    alt=""
-                    className="aspect-[1969/3500] sm:aspect-auto"
-                  />
-                </div>
-              </div>
-              <DownScrollLink to="#highlights" />
-            </div>
+            <ImageUnderHero image={heroImage} scrollTo="#highlights" />
           </div>
         </div>
 
-        <div className="section bg-gray-900 text-yellow-50" id="highlights">
-          <div className="container max-w-5xl">
-            <h2 className="mb-8 font-serif text-2xl lg:mb-16">Highlights</h2>
+        <Highlights />
+        <ImageScreen image={fullscreenImage} />
+        <HowToGetCtsi
+          wallets={wallets}
+          exchanges={exchanges}
+          aggregators={aggregators}
+          paymentServices={paymentServices}
+        />
 
-            <Stats />
-
-            <AltNavigation className="mt-8 border-t border-yellow-50">
-              <ReadmoreLink
-                href="https://explorer.cartesi.io/"
-                target="_blank"
-                rel="noreferrer"
-                className="font-light text-yellow-50 hover:text-blue-200"
-              >
-                See all highlights
-              </ReadmoreLink>
-            </AltNavigation>
-
-            <DownScrollLink to="#how-to-get-ctsi" />
-          </div>
-        </div>
-
-        <div className="bg-gray-900">
-          <div
-            className="relative h-screen overflow-hidden "
-            data-anim-image-reveal
-          >
-            <GatsbyImage
-              image={fullscreenImage}
-              className="left-0 top-0 h-full w-full object-cover"
-              alt=""
-            />
-          </div>
-        </div>
-
-        <div className="section  bg-blue-50" id="how-to-get-ctsi">
-          <div className="container max-w-5xl">
-            <h2 className="mb-8 font-serif text-2xl lg:mb-12">
-              How to get CTSI
-            </h2>
-
-            <div className="mb-12" data-anim-block>
-              <Collapse
-                isExpanded
-                label={
-                  <span className="text-lg transition-colors hover:text-blue-500">
-                    Buy your CTSI
-                  </span>
-                }
-                className="border-b border-gray-900 py-4 lg:py-6"
-              >
-                <div className="prose py-4 text-base prose-p:mb-0">
-                  <p>
-                    You can buy CTSI directly via Transak here or via one of our
-                    exchanges.
-                  </p>
-                </div>
-              </Collapse>
-              <Collapse
-                label={
-                  <span className="text-lg transition-colors hover:text-blue-500">
-                    Store your CTSI safely
-                  </span>
-                }
-                className="border-b border-gray-900 py-4 lg:py-6"
-              >
-                <div className="prose py-4 text-base prose-p:mb-0">
-                  <p>
-                    CTSI is a token on Ethereum and supported by all major
-                    wallets. It can also be bridged to Avalanche, Binance Smart
-                    Chain, or Polygon.
-                  </p>
-                </div>
-                <div className="mt-6 mb-4 grid grid-cols-3 gap-6 sm:grid-cols-4 sm:gap-12 lg:mt-12 lg:w-2/3">
-                  {wallets.map(({ name, image, link }) => (
-                    <a
-                      href={link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="group flex flex-col items-center gap-2 no-underline"
-                      key={name}
-                    >
-                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50 transition-colors group-hover:bg-blue-800">
-                        <img
-                          src={image}
-                          alt=""
-                          className="h-16 w-16"
-                          loading="lazy"
-                        />
-                      </span>
-                      <span className="text-center text-xs font-light">
-                        {name}
-                      </span>
-                    </a>
-                  ))}
-                </div>
-              </Collapse>
-              <Collapse
-                label={
-                  <span className="text-lg transition-colors hover:text-blue-500">
-                    Stake your CTSI
-                  </span>
-                }
-                className="border-b border-gray-900 py-4 lg:py-6"
-              >
-                <div className="prose py-4 text-base prose-p:mb-0">
-                  <p>
-                    Want to earn rewards for participating in the network?
-                    <br />
-                    Consider staking. Staking is a way for holders to earn CTSI
-                    rewards in return for participating in the network.
-                  </p>
-                  <p>
-                    <ReadmoreLink
-                      href="https://explorer.cartesi.io/pools"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="font-light no-underline hover:text-blue-500"
-                    >
-                      How to stake CTSI
-                    </ReadmoreLink>
-                  </p>
-                </div>
-              </Collapse>
-              <Collapse
-                label={
-                  <span className="text-lg transition-colors hover:text-blue-500">
-                    Trade your CTSI
-                  </span>
-                }
-                className="border-b border-gray-900 py-4 lg:py-6"
-              >
-                <div className="prose py-4 text-base prose-p:mb-0">
-                  <p>
-                    You can trade CTSI against cash or crypto on the world's
-                    largest exchanges. We are continuously expanding our
-                    international reach with CTSI and its ease to acquire for
-                    users around the world.
-                  </p>
-                </div>
-                <div className="mt-6 mb-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
-                  {exchanges.map((item, i) => (
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center justify-center bg-gray-900 text-yellow-50 transition-colors hover:bg-blue-800"
-                      key={i}
-                    >
-                      <img src={item.image} alt="" loading="lazy" />
-                    </a>
-                  ))}
-                </div>
-              </Collapse>
-              <Collapse
-                label={
-                  <span className="text-lg transition-colors hover:text-blue-500">
-                    Track your CTSI
-                  </span>
-                }
-                className="border-b border-gray-900 py-4 lg:py-6"
-              >
-                <div className="prose py-4 text-base prose-p:mb-0">
-                  <p>Track prices, updates, and announcements</p>
-                </div>
-                <div className="mt-6 mb-4 grid grid-cols-3 gap-6 sm:grid-cols-4 sm:gap-12 lg:mt-12 lg:w-2/3">
-                  {aggregators.map(({ name, image, link }) => (
-                    <a
-                      className="group flex flex-col items-center gap-2"
-                      href={link}
-                      target="_blank"
-                      rel="noreferrer"
-                      key={name}
-                    >
-                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50 transition-colors group-hover:bg-blue-800">
-                        <img
-                          src={image}
-                          alt=""
-                          className="h-16 w-16"
-                          loading="lazy"
-                        />
-                      </span>
-                      <span className="text-center text-xs font-light">
-                        {name}
-                      </span>
-                    </a>
-                  ))}
-                </div>
-              </Collapse>
-              <Collapse
-                label={
-                  <span className="text-lg transition-colors hover:text-blue-500">
-                    Pay with your CTSI
-                  </span>
-                }
-                className="border-b border-gray-900 py-4 lg:py-6"
-              >
-                <div className="prose py-4 text-base prose-p:mb-0">
-                  <p>
-                    Do you want to pay for that electric razor or holiday with
-                    CTSI? More and more shops accept CTSI as a payment via our
-                    trusted partners. Do you want to receive CTSI as a payment
-                    for your goods or services? Select one of our trusted
-                    partners to get started today!
-                  </p>
-                </div>
-                <div className="mt-6 mb-4 grid grid-cols-3 gap-6 sm:grid-cols-4 sm:gap-12 lg:mt-12 lg:w-2/3">
-                  {paymentServices.map(({ name, image, link }) => (
-                    <a
-                      className="group flex flex-col items-center gap-2"
-                      key={name}
-                      target="_blank"
-                      rel="noreferrer"
-                      href={link}
-                    >
-                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-900 text-yellow-50 transition-colors group-hover:bg-blue-800">
-                        <img
-                          src={image}
-                          alt=""
-                          className="h-16 w-16"
-                          loading="lazy"
-                        />
-                      </span>
-                      <span className="text-center text-xs font-light">
-                        {name}
-                      </span>
-                    </a>
-                  ))}
-                </div>
-              </Collapse>
-            </div>
-
-            <AltNavigation>
-              <ReadmoreLink to="#" className="font-light hover:text-blue-500">
-                Hear from CTSI holders
-              </ReadmoreLink>
-              <AnchorLink to="/blockchain-os#hello-new-economy">
-                <span className="group inline-flex items-center gap-4">
-                  Hello new economy
-                  <ReadMoreIcon className="flex-shrink-0 fill-current transition-transform group-hover:translate-x-2" />
-                </span>
-              </AnchorLink>
-            </AltNavigation>
-
-            <DownScrollLink to="#articles" />
-          </div>
-        </div>
-
-        <div className="section" id="articles">
-          <div className="container max-w-6xl">
-            <BlogArticles />
-          </div>
-        </div>
+        <BlogArticles />
       </Layout>
     </>
   );
@@ -520,4 +232,4 @@ export const imageQuery = graphql`
   }
 `;
 
-export default TokenPage;
+export default injectIntl(TokenPage);

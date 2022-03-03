@@ -1,4 +1,5 @@
 import { Link } from "gatsby";
+import { injectIntl } from "gatsby-plugin-intl";
 import * as React from "react";
 import { Helmet } from "react-helmet";
 
@@ -25,4 +26,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage;
+export default injectIntl(NotFoundPage);

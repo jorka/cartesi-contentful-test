@@ -3,6 +3,8 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import IconHamburger from "../assets/images/icon-hamburger.svg";
 import IconToggle from "../assets/images/icon-arrow-down.svg";
 import IconCTSI from "../assets/images/icon-ctsi.svg";
+import IconClose from "../assets/images/icon-close.svg";
+import { injectIntl } from "gatsby-plugin-intl";
 
 const MenuItem = ({ name, path, submenu, toggleNav, isExternal, icon }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -153,7 +155,7 @@ const HeaderNavigation = ({ isHeaderInverted }) => {
       submenu: [
         {
           name: "Explore documentation",
-          path: "https://cartesi.io/en/docs/intro/",
+          path: "/docs",
           isExternal: true,
         },
         {
@@ -226,11 +228,19 @@ const HeaderNavigation = ({ isHeaderInverted }) => {
           </div>
         </div>
       </nav>
-      <button className="z-20 ml-auto lg:hidden" onClick={toggleNav}>
-        <IconHamburger className="h-6 w-6 fill-current" />
+      <button
+        className="z-20 ml-auto lg:hidden"
+        onClick={toggleNav}
+        aria-label="Toggle navigation"
+      >
+        {isNavigationOpen ? (
+          <IconClose className="h-6 w-6 fill-current" />
+        ) : (
+          <IconHamburger className="h-6 w-6 fill-current" />
+        )}
       </button>
     </>
   );
 };
 
-export default HeaderNavigation;
+export default injectIntl(HeaderNavigation);
