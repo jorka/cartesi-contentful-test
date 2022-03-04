@@ -8,7 +8,7 @@ import BlogArticles from '../components/blogArticles';
 import Hero from '../components/token/hero';
 import ImageUnderHero from '../components/imageUnderHero';
 import Highlights from '../components/token/highlights';
-import ImageScreen from '../components/ImageScreen';
+import ImageScreen from '../components/imageScreen';
 import HowToGetCtsi from '../components/token/howToGetCtsi';
 import { injectIntl } from 'gatsby-plugin-intl';
 

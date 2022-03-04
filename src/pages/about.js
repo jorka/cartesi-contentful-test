@@ -7,7 +7,7 @@ import Layout from '../components/layout';
 import Hero from '../components/about/hero';
 import ImageUnderHero from '../components/imageUnderHero';
 import CartesiFoundation from '../components/about/cartesiFoundation';
-import ImageScreen from '../components/ImageScreen';
+import ImageScreen from '../components/imageScreen';
 import Decentralization from '../components/about/decentralization';
 import { injectIntl } from 'gatsby-plugin-intl';
 

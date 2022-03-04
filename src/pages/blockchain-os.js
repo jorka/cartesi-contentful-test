@@ -7,7 +7,7 @@ import BlogArticles from '../components/blogArticles';
 import Hero from '../components/blockchainOs/hero';
 import ImageUnderHero from '../components/imageUnderHero';
 import LearnMore from '../components/blockchainOs/learnMore';
-import ImageScreen from '../components/ImageScreen';
+import ImageScreen from '../components/imageScreen';
 import HelloNewEconomy from '../components/blockchainOs/helloNewEconomy';
 import { injectIntl } from 'gatsby-plugin-intl';
 

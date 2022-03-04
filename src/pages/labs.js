@@ -6,7 +6,7 @@ import { getImage, withArtDirection } from 'gatsby-plugin-image';
 import Hero from '../components/labs/hero';
 import ImageUnderHero from '../components/imageUnderHero';
 import GenesisApps from '../components/labs/genesisApps';
-import ImageScreen from '../components/ImageScreen';
+import ImageScreen from '../components/imageScreen';
 import WelcomeToLabs from '../components/labs/welcomeToLabs';
 import HowToApplyForGrants from '../components/labs/howToApplyForGrants';
 import { injectIntl } from 'gatsby-plugin-intl';

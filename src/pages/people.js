@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 import { getImage, withArtDirection } from 'gatsby-plugin-image';
 import Hero from '../components/people/hero';
 import ImageUnderHero from '../components/imageUnderHero';
-import ImageScreen from '../components/ImageScreen';
+import ImageScreen from '../components/imageScreen';
 import Meet from '../components/people/meet';
 import Contributors from '../components/people/contributors';
 import Ambassadors from '../components/people/ambassadors';
