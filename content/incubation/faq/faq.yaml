@@ -1,0 +1,21 @@
+# This file is intended to maintain the hierarchy of questions on the FAQ section from Incubation page.
+# Each question must have a markdown file on /content/incubation/faq/
+# The first part of the markdown file is important to extract the question, so it must be the same on this file (faq.yaml), to correctly pull the data.
+# The name of the file is not relevant.
+
+title: FAQ
+content:
+  - section:
+      name: General Questions
+      questions:
+        - question: Can teams participate?
+        - question: Can l submit more than one idea?
+        - question: Do l keep the intellectual property rights of my work?
+        - question: How can l submit my application to join?
+        - question: Is it open to all regions?
+        - question: What is the language of communication?
+        - question: What happens if I decide to leave the program before the end, or if l don’t submit a DApp in the end?
+        - question: What is Quadratic Funding? How much money will the best team receive?
+        - question: Can you give me an example of how Quadratic Funding works?
+        - question: How much funding will each of the three selected teams receive? When will they receive it?
+        - question: How will l receive mentoring? How often?

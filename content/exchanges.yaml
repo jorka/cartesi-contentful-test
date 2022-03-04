@@ -1,0 +1,258 @@
+title: Exchanges - Trade CTSI
+content:
+  - exchange:
+      name: Binance
+      image: binance.svg
+      color: '#F3BA2F'
+      trades:
+        - from: CTSI
+          icon: true
+          to: BTC
+          link: https://www.binance.com/en/trade/CTSI_BTC
+        - from: CTSI
+          icon: true
+          to: USDT
+          link: https://www.binance.com/en/trade/CTSI_USDT
+        - from: CTSI
+          icon: true
+          to: BNB
+          link: https://www.binance.com/en/trade/CTSI_BNB
+        - from: CTSI
+          icon: true
+          to: BUSD
+          link: https://www.binance.com/en/trade/CTSI_BUSD
+        - from: Liquid
+          to: Swap
+          link: https://www.binance.com/en/swap/liquidity
+  - exchange:
+      name: Coinbase
+      image: coinbase.png
+      color: '#0050ff'
+      trades:
+        - from: CTSI
+          icon: true
+          to: USD
+          link: https://pro.coinbase.com/trade/CTSI-USD
+        - from: CTSI
+          icon: true
+          to: BTC
+          link: https://pro.coinbase.com/trade/CTSI-BTC
+        - from: TRADE
+          icon: true
+          to: CTSI
+          link: https://www.coinbase.com/price/cartesi
+  - exchange:
+      name: Kraken
+      image: kraken.svg
+      color: '#5e3fde'
+      trades:
+        - from: CTSI
+          icon: true
+          to: EUR
+          link: https://trade.kraken.com/charts/KRAKEN:CTSI-EUR
+        - from: CTSI
+          icon: true
+          to: USD
+          link: https://trade.kraken.com/charts/KRAKEN:CTSI-USD
+  - exchange:
+      name: Huobi
+      image: huobi.png
+      color: '#1d2242'
+      trades:
+        - from: CTSI
+          icon: true
+          to: USDT
+          link: https://www.huobi.com/en-us/exchange/ctsi_usdt
+  - exchange:
+      name: Wazirx
+      image: wazirx.svg
+      color: '#2994FF'
+      trades:
+        - from: CTSI
+          icon: true
+          to: USDT
+          link: https://wazirx.com/exchange/CTSI-USDT
+        - from: CTSI
+          icon: true
+          to: INR
+          link: https://wazirx.com/exchange/CTSI-INR
+  - exchange:
+      name: Tokocrypto
+      image: tokocrypto.svg
+      color: '#5EA64E'
+      trades:
+        - from: CTSI
+          icon: true
+          to: BTC
+          link: https://www.tokocrypto.com/trade/CTSI_BTC
+        - from: CTSI
+          icon: true
+          to: USDT
+          link: https://www.tokocrypto.com/trade/CTSI_USDT
+  - exchange:
+      name: IDEX
+      image: idex.svg
+      color: '#004B6A'
+      trades:
+        - from: CTSI
+          icon: true
+          to: ETH
+          link: https://idex.market/eth/ctsi
+  - exchange:
+      name: changelly
+      image: changelly.svg
+      color: '#10D078'
+      trades:
+        - from: BTC
+          icon: true
+          to: CTSI
+          link: https://changelly.com/exchange/btc/ctsi
+        - from: ETH
+          icon: true
+          to: CTSI
+          link: https://changelly.com/exchange/eth/ctsi
+        - from: USDT
+          icon: true
+          to: CTSI
+          link: https://changelly.com/exchange/usdt/ctsi
+  - exchange:
+      name: Gate.io
+      image: gateio.svg
+      color: '#DE5959'
+      trades:
+        - from: CTSI
+          icon: true
+          to: USDT
+          link: https://www.gate.io/trade/CTSI_USDT
+  - exchange:
+      name: UNISWAP
+      image: uniswap.png
+      color: '#FF2E92'
+      trades:
+        - from: CTSI
+          icon: true
+          to: ETH
+          link: https://uniswap.info/pair/0x58EEB5D44Dc41965AB0a9E563536175C8dc5C3B3
+        - from: CTSI
+          icon: true
+          to: DAI
+          link: https://uniswap.info/pair/0x6fb7fd64810521dff21c9da3e56bddbf0e71e535
+        - from: CTSI
+          icon: true
+          to: USDT
+          link: https://info.uniswap.org/pair/0xb99f5a767f8d854698955fba6954370d13b6b22d
+  - exchange:
+      name: Upbit
+      image: upbit.svg
+      color: '#0074FF'
+      trades:
+        - from: CTSI
+          icon: true
+          to: BTC
+          link: https://upbit.com/exchange?code=CRIX.UPBIT.BTC-CTSI
+  - exchange:
+      name: coinone
+      image: coinone.png
+      color: '#01BCFF'
+      trades:
+        - from: CTSI
+          icon: true
+          to: KRW
+          link: https://coinone.co.kr/exchange/trade/ctsi
+  - exchange:
+      name: 1inch
+      image: 1inch.svg
+      color: '#083751'
+      trades:
+        - from: USDC
+          icon: true
+          to: CTSI
+          link: https://1inch.exchange/#/USDC/CTSI
+  - exchange:
+      name: Coinmerce
+      image: coinmerce.svg
+      color: '#158BFD'
+      trades:
+        - from: CTSI
+          icon: true
+          to: EUR
+          link: https://coinmerce.io/en/cartesi
+  - exchange:
+      name: Quickswap
+      image: QuickSwap.png
+      color: '#8daef8'
+      trades:
+        - from: CTSI
+          icon: true
+          to: WMATIC
+          link: https://info.quickswap.exchange/pair/0xb2e178aa4fa1f0b263a636e8b61e10886fc1938b
+        - from: CTSI
+          icon: true
+          to: QUICK
+          link: https://info.quickswap.exchange/pair/0x4f4b7477850466d96cbcab5b74e58150ed0f2b24
+  - exchange:
+      name: Crypto
+      image: crypto.svg
+      color: '#002e73'
+      trades:
+        - from: CTSI
+          icon: true
+          to: USDT
+          link: https://crypto.com/exchange/trade/spot/CTSI_USDT
+  - exchange:
+      name: Poloniex
+      image: poloniex.png
+      color: '#182734'
+      trades:
+        - from: USDT
+          icon: true
+          to: CTSI
+          link: https://poloniex.com/exchange/USDT_CTSI
+  - exchange:
+      name: Bithumb
+      image: bithumb.svg
+      color: '#dbdbdb'
+      trades:
+        - from: CTSI
+          icon: true
+          to: KRW
+          link: https://www.bithumb.com/trade/order/CTSI_KRW
+        - from: CTSI
+          icon: true
+          to: BTC
+          link: https://www.bithumb.com/trade/order/CTSI_BTC
+  - exchange:
+      name: KuCoin
+      image: kucoin.svg
+      color: '#23AF91'
+      trades:
+        - from: CTSI
+          icon: true
+          to: USDT
+          link: https://trade.kucoin.com/CTSI-USDT
+        - from: CTSI
+          icon: true
+          to: BTC
+          link: https://trade.kucoin.com/CTSI-BTC
+  - exchange:
+      name: Bitvavo
+      image: bitvavo.svg
+      color: '#0051FF'
+      trades:
+        - from: CTSI
+          icon: true
+          to: EUR
+          link: https://account.bitvavo.com/markets/CTSI-EUR
+  - exchange:
+      name: Binance US
+      image: binance-us.svg
+      color: '#12161C'
+      trades:
+        - from: CTSI
+          icon: true
+          to: USD
+          link: https://www.binance.us/en/trade/pro/CTSI_USD
+        - from: CTSI
+          icon: true
+          to: USDT
+          link: https://www.binance.us/en/trade/pro/CTSI_USDT

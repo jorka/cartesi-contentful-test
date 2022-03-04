@@ -152,10 +152,10 @@
   --ifm-font-color-base-inverse: var(--ifm-color-content-inverse);
   --ifm-font-color-secondary: var(--ifm-color-content-secondary);
   --ifm-font-family-base: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
-    Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --ifm-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+    'Liberation Mono', 'Courier New', monospace;
   --ifm-font-size-base: 100%;
   --ifm-font-weight-light: 300;
   --ifm-font-weight-normal: 400;
@@ -345,11 +345,11 @@
   max-width: 100%;
 }
 
-.admonition img[align="right"] {
+.admonition img[align='right'] {
   padding-left: var(--image-alignment-padding);
 }
 
-.admonition img[align="left"] {
+.admonition img[align='left'] {
   padding-right: var(--image-alignment-padding);
 }
 
@@ -370,7 +370,7 @@
 
 .admonition .markdown:after,
 .admonition .markdown:before {
-  content: "";
+  content: '';
   display: table;
 }
 
@@ -568,7 +568,7 @@
 
 .admonition hr:after,
 .admonition hr:before {
-  content: "";
+  content: '';
   display: table;
 }
 
@@ -764,7 +764,7 @@
   background-image: url('data:image/svg+xml;utf8,<svg alt="Chevron Right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve"><g><g><polygon points="79.093,0 48.907,30.187 146.72,128 48.907,225.813 79.093,256 207.093,128"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>');
   background-image: var(--ifm-breadcrumb-separator);
   background-position: 50%;
-  content: " ";
+  content: ' ';
   display: inline-block;
   height: 0.625rem;
   height: calc(

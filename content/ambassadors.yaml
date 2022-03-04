@@ -1,0 +1,32 @@
+title: Ambassadorial Program
+content:
+  - ambassador:
+      name: Heyod Hewow
+      description: Russian Ambassador
+      link:
+      image: ambassador-heyod-hewow.png
+  - ambassador:
+      name: Sharp Ye
+      description: Chinese Ambassador
+      link: https://www.linkedin.com/in/sharp-ye-864660176
+      image: ambassador-sharp-ye.png
+  - ambassador:
+      name: Viet Anh
+      description: Vietnamese Ambassador
+      link: https://www.linkedin.com/in/peteranh910
+      image: ambassador-viet-ahn.png
+  - ambassador:
+      name: Wonhyoung Lim
+      description: Korean Ambassador
+      link: https://www.linkedin.com/in/wonhyoung-lim-158b86175
+      image: ambassador-wonhyoung-lim.png
+  - ambassador:
+      name: Berkay Korkmazz
+      description: Turkish Ambassador
+      link: https://www.linkedin.com/in/berkayykorkmaz
+      image: ambassador-berkay-korkmazz.png
+  - ambassador:
+      name: Helen IMAH
+      description: Nigerian Ambassador
+      link: https://www.linkedin.com/in/helenimah
+      image: ambassador-helen-imah.png

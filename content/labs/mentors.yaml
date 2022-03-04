@@ -1,0 +1,62 @@
+title: Mentors
+content:
+  # - mentor:
+  #     name: Edward Thomson
+  #     role: Web3 Foundation
+  #     image: edward-thomson.svg
+  #     bio: Blockchain, Web3, Astrophysics, Maths, Investments, Enterprise & Entrepreneurship
+  #     link: https://www.linkedin.com/in/edward-thomson-080ba519/?originalSubdomain=ch
+  - mentor:
+      name: Oscar Ramos
+      role: Full Stack Innovator
+      image: oscar-ramos.svg
+      bio: Business Development, Product Management, Strategy and Innovation Consulting and Venture Capital Investment
+      link: https://www.linkedin.com/in/oscarramosm/
+  - mentor:
+      name: Serguei Popov, PhD
+      roles:
+        - role: Co-Founder of IOTA
+        - role: Cartesi Advisor
+      image: serguei-popov.svg
+      bio: Member Board of Directors & Co-Founder at IOTA
+      link: https://www.linkedin.com/in/serguei-popov-631bb762//
+  - mentor:
+      name: Diego Nehab, PhD
+      role: CTO of Cartesi
+      image: diego-nehab.svg
+      bio: Chief Technology Officer at Cartesi
+      link: https://www.linkedin.com/in/diegonehab/
+  - mentor:
+      name: Augusto Teixeira, PhD
+      role: CSO of Cartesi
+      image: augusto-teixeira.svg
+      bio: Chief Scientific Officer at Cartesi
+      link: https://www.linkedin.com/in/augusto-teixeira-39a3a8169/
+  - mentor:
+      name: Erick de Moura
+      bio: Chief Executive Officer at Cartesi
+      image: erick-moura-member.svg
+      photo: large
+      link: https://www.linkedin.com/in/erickdemoura/
+  - mentor: 
+      name: Colin Steil
+      bio: Chief Operations Officer at Cartesi
+      image: colin-steil.png
+      link: https://www.linkedin.com/in/colinsteil/
+  - mentor:
+      name: Bruno Maia
+      bio: Head of Business Development at Cartesi
+      image: bruno-maia.svg
+      link: https://www.linkedin.com/in/bmaia/
+  - mentor:
+      name: Arjun Krishan Kalsy
+      role: Vice President, Growth at Polygon
+      image: arjun-krishan.svg
+      bio: Vice President, Growth at Polygon Computer Vision, AI
+      link: https://www.linkedin.com/in/arjunkrishankalsy/
+      doubleLine: double
+  # - mentor:
+  #     name: Milton Jonathan
+  #     bio: Senior Software Engineer
+  #     image: milton-jonathan-members.svg
+  #     link: https://www.linkedin.com/in/milton-jonathan/

@@ -1,0 +1,55 @@
+<svg width="206" height="170" viewBox="0 0 206 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.2" filter="url(#filter0_d)">
+<rect x="13.0001" y="121.129" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+<rect x="49.0003" y="121.129" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+<rect x="13.0001" y="85.1276" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+<rect x="49.0003" y="85.1276" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+<rect x="84.9998" y="85.1276" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+<rect x="49.0003" y="49.1277" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+<rect x="84.9998" y="49.1277" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+<rect x="13.0002" y="13.1284" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+<rect x="84.9998" y="13.1284" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+<rect x="121" y="121.129" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+<rect x="121" y="85.1276" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+<rect x="121" y="49.1277" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+<rect x="121" y="13.1284" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+<rect x="157" y="121.129" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+<rect x="157" y="85.1276" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+<rect x="157" y="49.1277" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+<rect x="157" y="13.1284" width="36" height="36" stroke="black" stroke-opacity="0.3"/>
+</g>
+<path d="M193 88.9143H84.575L70.4326 76.3433H13.8631L32.3268 95.1998H193V88.9143Z" fill="white" stroke="#666666"/>
+<path d="M193 95.2001H32.3268L38.6123 101.486H193V95.2001Z" fill="white" stroke="#666666"/>
+<path d="M193 101.486H38.6123L59.8259 121.128H187.107V110.914L193 107.771V101.486Z" fill="white" stroke="#666666"/>
+<rect width="12.571" height="9.42826" transform="matrix(-1 0 0 1 62.576 66.9158)" fill="white" stroke="#666666"/>
+<rect width="12.3846" height="9.90769" transform="matrix(-1 0 0 1 128.6 79.0206)" fill="white" stroke="#666666"/>
+<rect width="12.3846" height="9.90769" transform="matrix(-1 0 0 1 140.984 79.0206)" fill="white" stroke="#666666"/>
+<rect width="22.2923" height="30.9615" transform="matrix(-1 0 0 1 175.661 57.9666)" fill="white" stroke="#666666"/>
+<rect width="12.571" height="9.42826" transform="matrix(-1 0 0 1 56.2903 57.4871)" fill="white" stroke="#666666"/>
+<rect width="12.3846" height="11.1461" transform="matrix(-1 0 0 1 122.408 67.8745)" fill="white" stroke="#666666"/>
+<rect width="12.3846" height="11.1461" transform="matrix(-1 0 0 1 134.792 67.8745)" fill="white" stroke="#666666"/>
+<rect width="12.571" height="9.42826" transform="matrix(-1 0 0 1 50.0048 66.9158)" fill="white" stroke="#666666"/>
+<rect width="12.3846" height="9.90769" transform="matrix(-1 0 0 1 116.215 79.0206)" fill="white" stroke="#666666"/>
+<rect width="12.571" height="9.42826" transform="matrix(-1 0 0 1 43.7194 57.4871)" fill="white" stroke="#666666"/>
+<rect width="12.3846" height="11.1461" transform="matrix(-1 0 0 1 110.023 67.8745)" fill="white" stroke="#666666"/>
+<rect width="12.571" height="9.42826" transform="matrix(-1 0 0 1 50.0048 48.0587)" fill="white" stroke="#666666"/>
+<rect width="12.3846" height="9.90769" transform="matrix(-1 0 0 1 116.215 57.9666)" fill="white" stroke="#666666"/>
+<rect width="12.3846" height="9.90769" transform="matrix(-1 0 0 1 128.6 57.9666)" fill="white" stroke="#666666"/>
+<rect width="10.825" height="5.41252" transform="matrix(-1 0 0 1 169.997 65.6498)" fill="white" stroke="#666666"/>
+<rect width="12.571" height="9.42826" transform="matrix(-1 0 0 1 37.4341 66.9158)" fill="white" stroke="#666666"/>
+<rect width="12.3846" height="9.90769" transform="matrix(-1 0 0 1 103.831 79.0206)" fill="white" stroke="#666666"/>
+<line y1="-0.5" x2="9.42826" y2="-0.5" transform="matrix(5.66629e-08 -1 -1 -3.37202e-08 163.318 57.4872)" stroke="#666666"/>
+<line y1="-0.5" x2="10.9996" y2="-0.5" transform="matrix(-1 0 0 1 169.429 48.0595)" stroke="#666666"/>
+<line y1="-0.5" x2="10.9996" y2="-0.5" transform="matrix(-1 0 0 1 169.429 51.83)" stroke="#666666"/>
+<defs>
+<filter id="filter0_d" x="0.500061" y="0.628418" width="205" height="169" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="6"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.93956 0 0 0 0 1 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>

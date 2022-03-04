@@ -1,0 +1,20 @@
+<svg width="210" height="144" viewBox="0 0 210 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="111" y="9" width="36" height="30" fill="white" stroke="black"/>
+<path d="M163 10C163 6.68629 165.686 4 169 4H187C190.314 4 193 6.68629 193 10V48H163V10Z" fill="white" stroke="black"/>
+<rect x="170" y="48" width="16" height="10" fill="white" stroke="black"/>
+<rect x="147" y="17" width="16" height="14" fill="white" stroke="black"/>
+<rect x="1" y="113" width="104" height="30" fill="white" stroke="black"/>
+<path d="M16 93C16 91.8954 16.8954 91 18 91H32C33.1046 91 34 91.8954 34 93V113H16V93Z" fill="white" stroke="black"/>
+<path d="M77.7108 58.6211H34.5703C30.152 58.6211 26.5703 62.2028 26.5703 66.6211V91.4971" stroke="black"/>
+<path d="M86.8436 22.0918H30.918C26.4997 22.0918 22.918 25.6735 22.918 30.0918L22.918 91.4968" stroke="black"/>
+<path d="M93.5283 22L52 113H80.8019L123 22H93.5283Z" fill="white" stroke="black"/>
+<circle cx="109" cy="24" r="23" fill="white" stroke="black"/>
+<circle cx="109" cy="24" r="12" fill="black" stroke="black"/>
+<path d="M178 58L178 74" stroke="black"/>
+<path d="M63 113L95.5 42.5" stroke="black"/>
+<path d="M132 20L147 20" stroke="black"/>
+<rect x="163" y="20" width="30" height="15" fill="black"/>
+<rect x="1" y="113" width="104" height="15" fill="black"/>
+<rect x="147" y="81" width="62" height="62" fill="white" stroke="black"/>
+<path d="M178 98L179.395 103.192L182.326 98.6852L182.049 104.054L186.229 100.674L184.306 105.694L189.326 103.771L185.946 107.951L191.315 107.674L186.808 110.605L192 112L186.808 113.395L191.315 116.326L185.946 116.049L189.326 120.229L184.306 118.306L186.229 123.326L182.049 119.946L182.326 125.315L179.395 120.808L178 126L176.605 120.808L173.674 125.315L173.951 119.946L169.771 123.326L171.694 118.306L166.674 120.229L170.054 116.049L164.685 116.326L169.192 113.395L164 112L169.192 110.605L164.685 107.674L170.054 107.951L166.674 103.771L171.694 105.694L169.771 100.674L173.951 104.054L173.674 98.6852L176.605 103.192L178 98Z" fill="black" stroke="black"/>
+</svg>

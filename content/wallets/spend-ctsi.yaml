@@ -1,0 +1,13 @@
+content:
+  - spend:
+      name: Binance Pay
+      img: binance.png
+      link: https://www.binance.com/en/support/faq/d6fabc736d1f4e7fb60e56afe6d1f3b9
+  - spend:
+      name: Travala.com
+      img: travala.png
+      link: https://www.travala.com/
+  - spend:
+      name: NOWPayments
+      img: nowPayments.png
+      link: https://nowpayments.io/supported-coins/ctsi-payments

@@ -1,0 +1,19 @@
+content:
+  - testimonial:
+      name: Zane Starr
+      image: zane-starr.png
+      brand: Carti-logo.png
+      bio: "Joining Cartesi's DApp incubation program was an awesome experience that helped me take my project to the next level. The team was super supportive and the feedback I received during the process was invaluable, I can't recommend the program enough!"
+      link: https://cartesi.io
+  - testimonial:
+      name: Miguel Gomes
+      image: miguel-gomes.png
+      brand: SimThunder-logo.png
+      bio: "Besides the financial support which is vital for small teams like ours, participating in the Cartesi DApp Incubation program gave us the opportunity to work closely with the Cartesi team, discussing ideas and finding new opportunities in our own project. It also enabled us to establish a partnership with Cartesi that goes beyond the program itself. It was a true game-changer for us."
+      link: https://cartesi.io
+  - testimonial:
+      name: Joshua Bijak
+      image: joshua-bijak.png
+      brand: Creol-logo.png
+      bio: "The DApp Incubation Program is a fantastic way to explore new ideas with Cartesi. Thanks to it, Creol's systems have drastically improved and verifiable climate change action just got 100x more secure and trusted."
+      link: https://cartesi.io

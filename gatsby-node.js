@@ -1,17 +1,17 @@
-const { createFilePath } = require("gatsby-source-filesystem");
-const path = require("path");
-const sidebars = require("./docs/sidebars");
+const { createFilePath } = require('gatsby-source-filesystem');
+const path = require('path');
+const sidebars = require('./docs/sidebars');
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   // you only want to operate on `Mdx` nodes. If you had content from a
   // remote CMS you could also check to see if the parent node was a
   // `File` node here
-  if (node.internal.type === "Mdx") {
+  if (node.internal.type === 'Mdx') {
     const value = createFilePath({ node, getNode });
     createNodeField({
       // Name of the field you are adding
-      name: "slug",
+      name: 'slug',
       // Individual MDX node
       node,
       // Generated value based on filepath with "docs" prefix. you
@@ -46,8 +46,8 @@ exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
   }
 
   // get a flat list of items from tree
-  const nodeItems = (node) => {
-    if (typeof node === "string") {
+  const nodeItems = node => {
+    if (typeof node === 'string') {
       return node;
     } else if (Array.isArray(node)) {
       return node.flatMap(nodeItems);
@@ -58,7 +58,7 @@ exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
   let items = nodeItems(sidebars.docs);
 
   // fix sidebar doc path
-  items = items.map((slug) => `/docs/${slug}/`);
+  items = items.map(slug => `/docs/${slug}/`);
 
   // get doc nodes
   const docs = result.data.allMdx.edges;

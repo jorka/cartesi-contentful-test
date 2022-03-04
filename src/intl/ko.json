@@ -1,1 +1,1585 @@
-{}
+{
+  "menu": {
+    "about": {
+      "title": "당사 소개",
+      "subitem": {
+        "company": {
+          "title": "회사"
+        },
+        "team": {
+          "title": "팀"
+        },
+        "careers": {
+          "title": "커리어"
+        },
+        "press": {
+          "title": "언론"
+        },
+        "contactUs": {
+          "title": "문의하기"
+        },
+        "faq": {
+          "title": "FAQ"
+        }
+      }
+    },
+    "community": {
+      "title": "커뮤니티",
+      "subitem": {
+        "explorer": {
+          "title": "Explorer"
+        },
+        "ambassadors": {
+          "title": "앰버서더"
+        },
+        "channels": {
+          "title": "채널"
+        },
+        "walletExchanges": {
+          "title": "Wallet & Exchanges"
+        },
+        "reserveMining": {
+          "title": "Reserve Mining"
+        }
+      }
+    },
+    "developers": {
+      "title": "개발자",
+      "subitem": {
+        "technology": {
+          "title": "기술"
+        },
+        "whitepaper": {
+          "title": "백서"
+        },
+        "lightpaper": {
+          "title": "라이트페이퍼"
+        },
+        "ctsiMacroeconomy": {
+          "title": "CTSI 거시 경제"
+        },
+        "github": {
+          "title": "깃허브"
+        },
+        "ctsiToken": {
+          "title": "CTSI 토큰"
+        },
+        "developerPortal": {
+          "title": "개발자 포털"
+        },
+        "incubation": {
+          "title": "디앱 인큐베이션 프로그램"
+        }
+      }
+    },
+    "dApps": {
+      "title": "디앱",
+      "subitem": {
+        "creepts": {
+          "title": "Creepts"
+        }
+      }
+    },
+    "blog": {
+      "title": "블로그"
+    },
+    "whitepaper": {
+      "title": "백서"
+    },
+    "incubation": {
+      "awards": {
+        "title": "Awards"
+      },
+      "howItWorks": {
+        "title": "How it Works"
+      },
+      "timeline": {
+        "title": "Timeline"
+      },
+      "applyNow": {
+        "title": "Apply Now"
+      },
+      "categories": {
+        "title": "Categories"
+      },
+      "mentors": {
+        "title": "Mentors"
+      },
+      "rules": {
+        "title": "Rules"
+      },
+      "faq": {
+        "title": "FAQ"
+      }
+    },
+    "ambassadors": {
+      "rewards": {
+        "title": "Rewards & Benefits"
+      },
+      "overview": {
+        "title": "Overview"
+      },
+      "whoShouldBecomeAmbassadors": {
+        "title": "Who Should Become an Ambassador"
+      },
+      "whatItTakes": {
+        "title": "What it Takes"
+      },
+      "getStarted": {
+        "title": "Get Started"
+      }
+    }
+  },
+  "homeOld": {
+    "title": "Cartesi",
+    "description": "Cartesi is a open source project that connects Linux open-source software stacks with blockchain technology, for the creation of scalable DApps.",
+    "initial": {
+      "title": "The Operating System for DApps",
+      "titleContinue": "",
+      "description": "Build your DApp off-chain with Linux, Maintain on-chain security",
+      "getStarted": {
+        "title": "GET STARTED",
+        "link": ""
+      },
+      "video": {
+        "title": "WATCH THE VIDEO",
+        "link": ""
+      }
+    },
+    "shapingTheFuture": {
+      "title": "A bridge between Linux and blockchain",
+      "description": "Build scalable DApps using a fully-fledged Linux operating system and mainstream software stacks. Run complex computations off-chain, free from blockchain limitations and fees, while retaining decentralization and security. DApps with Cartesi are easier to build, scalable and more powerful."
+    },
+    "whyBuildInCartesi": {
+      "title": "Why Build in Cartesi",
+      "scalable": {
+        "title": "Scalable",
+        "description": "Intensive computations performed off-chain while retaining the security guarantees of the blockchain."
+      },
+      "versatile": {
+        "title": "Versatile",
+        "description": "DApp logic built on a real operating system utilizing the thousands of open-source software components available for Linux."
+      },
+      "easyToBuild": {
+        "title": "Easy to build",
+        "description": "Developers use familiar software stacks and popular standards to create DApps."
+      },
+      "fullyDecentralized": {
+        "title": "Fully-Decentralized",
+        "description": "Consensus securely reached on-chain. No reputation protocol, no TEE, or central servers on the cloud."
+      },
+      "portable": {
+        "title": "Portable",
+        "description": "Cartesi will make DApps portable across the most important public blockchains that support smart contracts."
+      },
+      "private": {
+        "title": "Private",
+        "description": "DApp state can be kept private among application participants."
+      },
+      "button": {
+        "startBuildingToday": "Start building today"
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "step1": "Code your main DApp logic using Linux and Linux-compatible software stacks. Your program will run off-chain, handling complex computations over massive amounts of data.",
+      "step2": "Cross-compile the program to be deployed on Cartesi's virtual machine that emulates a RISC-V microprocessor and runs an embedded Linux distribution.",
+      "step3": "At runtime, your DApp smart contracts delegate computations to the program running off-chain on Cartesi Nodes. Nodes claim the results to the blockchain.",
+      "step4": "Cartesi Nodes are run by DApp users themselves or by service providers they trust. Through their nodes, honest users can infallibly prove their claims to the blockchain and enforce their interests.",
+      "step5": "In rare cases of dispute, the blockchain starts an interactive dispute resolution between Cartesi Nodes and runs a single step of the original computation with a negligible amount of data and at a very low cost.",
+      "step6": "Your DApp is running heavy and complex computation off-chain, while retaining full decentralization and the strong security guarantees of the blockchain.",
+      "button": {
+        "learnMore": "Learn More"
+      }
+    },
+    "useCases": {
+      "title": "Cartesi Use Cases",
+      "deFi": {
+        "title": "DeFi",
+        "description": "Cartesi applications will be able to perform complex and intensive computation involving large amounts of data, potentially from multiple sources. This will release DeFi from the current scalability constraints of blockchain. It will also help interoperability between blockchains and services — such as futures and insurance markets."
+      },
+      "gaming": {
+        "title": "Gaming",
+        "description": "Cartesi will unleash vast new possibilities for blockchain games. Developers will be able to use traditional tools and libraries that can be compiled for Linux. Additionally, game state processing will be free from the computational limits and high fees of blockchains without the need to sacrifice decentralization."
+      },
+      "machineLearning": {
+        "title": "Machine Learning",
+        "description": "A decentralised marketplace for Al and computational tasks. With the power of Cartesi's decentralized automated verification, developers will be able to create services that allow new DApps to outsource and distribute work. This opens new possibilities for lower-cost Al by outsourcing experts and bots."
+      },
+      "theFutureOfAutomation": {
+        "title": "The Future of Automation",
+        "description": "With the power of Cartesi's decentralized verification, applications will be able to outsource and distribute verifiable work. This opens new possibilities for trustless marketplaces and autonomous systems involving humans and machines, propelling loT, data science and Al through new business models."
+      },
+      "logistics": {
+        "title": "Logistics & Optimization",
+        "description": "With Cartesi, professionals in fields such as logistics and transportation will be able to offer their services and be hired by enterprises internationally and without the need for intermediaries."
+      },
+      "research": {
+        "title": "Research",
+        "description": "Outsourced computation can allow for millions of users to lend their idle computing power. This can benefit scientific research, 3D rendering, video transcoding and many other computationally intensive tasks that are actually verifiable. No reputation system needed. No sybil attacks."
+      },
+      "creeptsTowerDefense": {
+        "title": "Creepts Tower Defense",
+        "subtitle": "First Fully Decentralized Tower Defense DApp",
+        "playNow": "PLAY NOW"
+      }
+    },
+    "roadmap": {
+      "title": "Our Roadmap",
+      "expandRoadmap": "Expand Roadmap",
+      "hideRoadmap": "Hide Roadmap",
+      "startBuildingToday": "START BUILDING TODAY"
+    },
+    "partners": {
+      "title": "Partners & Backers"
+    }
+  },
+  "home": {
+    "title": "Cartesi - The Blockchain OS. Home to what’s next.",
+    "description": "Cartesi is the first OS on the blockchain. Our Layer-2 solution integrates Linux and standard programming environments to blockchain. This allows developers to code scalable smart contracts with rich software tools, libraries, and services they’re used to.",
+    "menu": {
+      "about": {
+        "title": "소개"
+      },
+      "blog": {
+        "title": "블로그"
+      },
+      "ecosystem": {
+        "title": "지갑 & 거래소"
+      },
+      "labs": {
+        "title": "Labs"
+      },
+      "products": {
+        "title": "제품",
+        "subitem": {
+          "descartes": {
+            "title": "Descartes",
+            "description": "이더리움을 위한 분산형 컴퓨팅 오라클"
+          },
+          "descartesRollups": {
+            "title": "Descartes Rollups",
+            "description": "주류 소프트웨어 스택으로 구축된 확장 가능한 스마트 계약"
+          },
+          "noether": {
+            "title": "Noether",
+            "description": "고성능 데이터 가용성 레이어"
+          }
+        }
+      },
+      "DApps": {
+        "title": "DApps"
+      },
+      "stakeCTSI": {
+        "title": "Stake CTSI"
+      }
+    },
+    "initial": {
+      "title": " 로 스마트 계약을 코딩하세요",
+      "secondTitle": "Code Smart Contracts with",
+      "description": "한 차원 높은 스마트 계약",
+      "links": {
+        "docs": {
+          "title": "문서",
+          "link": ""
+        },
+        "explorer": {
+          "title": "탐색기",
+          "link": ""
+        },
+        "faq": {
+          "title": "FAQ",
+          "link": ""
+        },
+        "useCtsi": {
+          "title": "CTSI 사용",
+          "link": ""
+        },
+        "buildWithCartesi": {
+          "title": "카르테시로 구축",
+          "link": "https://www.github.com/cartesi"
+        },
+        "joinTheCommunity": {
+          "title": "커뮤니티 참여",
+          "link": ""
+        }
+      },
+      "announcement": {
+        "title": "DELEGATED STAKING IS NOW LIVE",
+        "subtitle": {
+          "title": "Mainnet: Beta",
+          "link": {
+            "title": "",
+            "link": ""
+          }
+        },
+        "runANode": {
+          "title": "Run A Node (No Pool)",
+          "link": "https://medium.com/cartesi/how-cartesi-is-changing-the-game-introducing-cartesi-texas-hodlem-181d319d3a01"
+        },
+        "createAPool": {
+          "title": "Create A Pool",
+          "link": "https://poker.cartesi.io/"
+        }
+      }
+    },
+    "mainContent": {
+      "products": {
+        "card1": {
+          "title": "무제한 코딩",
+          "description": "주류 소프트웨어 스택으로 스마트 계약을 구축하세요. Solidity에서 Linux가 지원하는 광범위한 소프트웨어 구성 요소로 생산적으로 도약하십시오."
+        },
+        "card2": {
+          "title": "대규모 확장성",
+          "description": "백만 배의 컴퓨팅 확장성, 대용량 파일의 데이터 가용성 및 낮은 트랜잭션 비용을 지원합니다. 이더리움의 강력한 보안 보장을 모두 유지하면서 말이죠."
+        },
+        "card3": {
+          "title": "프라이버시 보장",
+          "description": "플레이어가 데이터를 숨기는 게임에서부터 민감한 데이터에서 실행되는 엔터프라이즈 애플리케이션에 이르기까지 디앱에서 개인 정보를 보호하세요."
+        }
+      },
+
+      "button1": "Learn more",
+
+      "technology": {
+        "descartes": {
+          "title": "Descartes",
+          "subtitle": "이더리움을 위한 분산형 컴퓨팅 오라클",
+          "paragraph1": "Descartes는 스마트 계약으로 완전히 지정된 Linux 가상 머신에서 오프체인으로 대규모 연산 작업을 실행합니다.",
+          "paragraph2": "연산 결과는 정직한 Descartes 노드 러너에 의해 온체인에서 완전히 검증되고 시행 가능하며, 이더리움의 강력한 보안 보장을 유지합니다.",
+          "learnMore": {
+            "title": "더 알아보기",
+            "link": ""
+          }
+        },
+
+        "rollups": {
+          "title": "Descartes Rollups",
+          "subtitle": "주류 소프트웨어 스택으로 구축된 확장 가능한 스마트 계약",
+          "paragraph1": "Descartes Rollups는 대화식 분쟁 해결 기능이 있는 Optimistic Rollups의 변형입니다. Solidity 대신 수많은 주류 소프트웨어 구성 요소를 사용하여 Linux VM에서 실행되는 스마트 계약을 코딩하세요.",
+          "paragraph2": "블록체인의 강력한 보안 보장을 유지하면서 백만 배의 연산 이득으로 이더리움의 확장성 한계를 극복하세요.",
+          "learnMore": {
+            "title": "더 알아보기",
+            "link": "https://medium.com/cartesi/scalable-smart-contracts-on-ethereum-built-with-mainstream-software-stacks-8ad6f8f17997"
+          }
+        },
+
+        "noether": {
+          "title": "Noether",
+          "subtitle": "고성능 데이터 가용성 레이어",
+          "paragraph1": "Noether는 임시 데이터 가용성을 위해 설계된 카르테시의 사이드 체인입니다. 이를 통해 디앱은 훨씬 적은 비용으로 대용량 파일의 높은 처리량과 저장을 달성할 수 있습니다.",
+          "paragraph2": "이제 Noether의 지분증명 시스템이 준비되었습니다. CTSI를 스테이킹하고 채굴 보상을 획득하여 카르테시의 성장하는 검증자 네트워크에 참여하세요.",
+          "learnMore": {
+            "title": "더 알아보기",
+            "link": ""
+          },
+          "stakeCtsi": {
+            "title": "CTSI 스테이킹",
+            "link": ""
+          }
+        }
+      }
+    },
+    "ecosystem": {
+      "title": "카르테시 생태계",
+      "card1": {
+        "description": "앰버서더 & 지역",
+        "link1": {
+          "title": "더 알아보기"
+        }
+      },
+      "card2": {
+        "description": "스테이킹된 CTSI",
+        "link1": {
+          "title": "카르테시 탐색기를 만나보세요"
+        }
+      },
+      "card3": {
+        "description": "지갑 & 거래소",
+        "link1": {
+          "title": "CTSI 구매"
+        },
+        "link2": {
+          "title": "CTSI 거래"
+        },
+        "link3": {
+          "title": "CTSI 스테이킹"
+        }
+      },
+      "supportedChains": {
+        "title": "지원되는 체인",
+        "subtitle": "선호하는 블록체인을 사용하여 카르테시로 개발해보세요",
+        "chains": {
+          "binance": "Binance Smart Chain"
+        }
+      },
+      "buildWithCartesi": {
+        "title": "카르테시로 구축",
+        "subtitle": "사람들이 카르테시로 무엇을 만들고 있는지 만나보세요",
+        "more": "그리고 더…"
+      }
+    },
+    "community": {
+      "title": "커뮤니티에 참여하세요",
+      "discord": {
+        "title": "디스코드",
+        "description": "개발자 커뮤니티"
+      },
+      "telegram": {
+        "title": "텔레그램",
+        "description": "Select your group"
+      },
+      "twitter": {
+        "title": "트위터",
+        "description": "최신 뉴스를 받아가세요"
+      },
+      "github": {
+        "title": "깃허브",
+        "description": "카르테시로 구축하세요"
+      }
+    },
+    "footer": {
+      "title": "카르테시의 최신 정보를 받아가세요:",
+      "subtitle": "",
+      "subscribe": "구독",
+      "email": "이메일",
+      "pages": {
+        "company": {
+          "title": "회사",
+          "link": ""
+        },
+        "team": {
+          "title": "팀",
+          "link": ""
+        },
+        "careers": {
+          "title": "직업",
+          "link": ""
+        },
+        "press": {
+          "title": "언론",
+          "link": ""
+        },
+        "contact": {
+          "title": "문의하기",
+          "link": ""
+        },
+        "blog": {
+          "title": "블로그",
+          "link": ""
+        },
+        "dapps": {
+          "title": "디앱",
+          "link": ""
+        },
+        "ambassadors": {
+          "title": "앰버서더",
+          "link": ""
+        },
+        "channels": {
+          "title": "채널",
+          "link": ""
+        },
+        "ecosystem": {
+          "title": "지갑 & 거래소",
+          "link": ""
+        },
+        "technology": {
+          "title": "기술",
+          "link": ""
+        },
+        "whitepaper": {
+          "title": "백서",
+          "link": ""
+        },
+        "github": {
+          "title": "깃허브",
+          "link": ""
+        },
+        "ctsitoken": {
+          "title": "CTSI 토큰",
+          "link": ""
+        },
+        "developer": {
+          "title": "개발자 포털",
+          "link": ""
+        },
+        "article": {
+          "macroeconomy": "CTSI 거시 경제"
+        },
+        "faq": {
+          "title": "FAQ",
+          "link": ""
+        },
+        "lightpaper": {
+          "title": "라이트페이퍼",
+          "link": ""
+        },
+        "ctsibeginners": {
+          "title": "CTSI for Beginners",
+          "link": ""
+        },
+        "partners": {
+          "title": "파트너 & 후원자",
+          "link": ""
+        },
+        "privacy": {
+          "title": "개인 정보 보호 정책",
+          "link": ""
+        },
+        "incubation": {
+          "title": "디앱 인큐베이션 프로그램"
+        },
+        "explorer": {
+          "title": "탐색기"
+        },
+        "reserveMining": {
+          "title": "리저브 마이닝"
+        },
+        "roadmap": {
+          "title": "로드맵"
+        },
+        "labs": {
+          "title": "Cartesi Labs"
+        }
+      },
+      "descriptionLeft": "All rights reserved © Cartesi Foundation Ltd.",
+      "descriptionRight": "카르테시 프로젝트는 카르테시 재단에서 만들어졌습니다.",
+      "socialList": {
+        "discord": {
+          "title": "디스코드",
+          "link": "https://discord.gg/Pt2NrnS"
+        },
+        "github": {
+          "title": "깃허브",
+          "link": "https://www.github.com/cartesi"
+        },
+        "telegram": {
+          "title": "텔레그램",
+          "link": "https://t.me/cartesiannouncements"
+        },
+        "weChat": {
+          "title": "위챗",
+          "link": "https://m.bihu.com/article/1635314025"
+        },
+        "twitter": {
+          "title": "트위터",
+          "link": "https://www.twitter.com/cartesiproject"
+        },
+        "medium": {
+          "title": "미디엄",
+          "link": "https://www.medium.com/cartesi"
+        },
+        "reddit": {
+          "title": "레딧",
+          "link": "https://www.reddit.com/r/cartesi/"
+        },
+        "youtube": {
+          "title": "유튜브",
+          "link": "https://www.youtube.com/c/Cartesiproject/videos"
+        }
+      },
+      "gdpr": {
+        "description": "We use cookies to ensure that we give you the best experience on our website. By using the website, you agree to the use of cookies.",
+        "buttonOk": "OK",
+        "buttonPrivacyPolicy": "PRIVACY POLICY"
+      }
+    }
+  },
+  "aboutCartesi": {
+    "title": "About Cartesi",
+    "description": "Cartesi makes the development of DApps easy, scalable, and cost-efficient by incorporating tools developers already use and have evolved over the last 30 years.",
+    "initial": {
+      "title": "About Cartesi",
+      "titleContinue": "The Operating System for DApps"
+    },
+    "story": {
+      "title": "Our Story",
+      "description": {
+        "paragraph01": "Cartesi was founded in 2018 by Erick de Moura, Augusto Teixeira, Diego Nehab and Colin Steil. The founding team initially got into blockchain as a result of one of the founders, Augusto Teixeira, being friends with Serguei Popov, the founder of IOTA. Serguei became one of Cartesi’s earliest investors and advisors.",
+        "paragraph02": "Augusto had the original idea of creating a trustless AI marketplace for data scientists. Later, the team realized they were tapping into a broader scope and the project evolved into developing a versatile layer-2 Linux infrastructure to overcome the problems of scalability, of computation, and infrastructure for blockchain applications.",
+        "paragraph03": "Cartesi is special in the blockchain universe because it allows decentralized applications to run within a Linux environment. Complex processing can be executed off-chain, free from a blockchain’s computational limits and corresponding fees. Cartesi is chain-agnostic and  developers won’t need to worry about the longevity of particular blockchains.",
+        "paragraph04": "Cartesi has received funding by prominent investors and funds such as SNZ, SOSV, Artesian and others.",
+        "paragraph05": "Cartesi’s vision is to make the development of DApps easy, scalable, and cost-efficient by incorporating tools developers already use and have evolved over the last 30 years. Cartesi will allow DApps to be closer to what we experience with regular apps we use every day, making the broader adoption of blockchain a reality. "
+      }
+    },
+    "explanation": {
+      "firstRow": {
+        "left": "Cartesi was founded in 2018 by Erick de Moura, Augusto Teixeira, Diego Nehab and Colin Steil.",
+        "right": {
+          "one": "The founding team initially got into blockchain as a result of one of the founders, Augusto Teixeira, being academic co-author with Serguei Popov, the founder of IOTA.",
+          "two": "Serguei became one of Cartesi’s earliest investors and advisors. Augusto had the original idea of creating a trustless AI marketplace for data scientists. "
+        }
+      },
+      "secondRow": {
+        "left": {
+          "description": "The Cartesi team realized they were tapping into a broader scope and the project evolved into developing a versatile layer-2 Linux infrastructure to overcome the problems of scalability, of computation, and infrastructure for blockchain applications.",
+          "author": "Serguei Popov, founder of IOTA"
+        },
+        "right": {
+          "title": "Careers",
+          "description": "We are looking for people to join our team!",
+          "button": "learn more"
+        }
+      }
+    },
+    "partners": {
+      "title": "Partners",
+      "description": "Cartesi has received funding by prominent investors and funds such as SNZ, SOSV, Artesian and others."
+    },
+    "development": {
+      "title": "The Team",
+      "person01": {
+        "name": "Danilo Tuler",
+        "office": "Head of Engineering"
+      },
+      "person02": {
+        "name": "Felipe Argento",
+        "office": "Blockchain Engineer"
+      },
+      "person03": {
+        "name": "Gabriel Barros",
+        "office": "Blockchain Engineer"
+      },
+      "person04": {
+        "name": "Victor Fusco",
+        "office": "Senior Software Engineer"
+      },
+      "person05": {
+        "name": "Milton Jonathan",
+        "office": "Senior Software Engineer"
+      },
+      "person06": {
+        "name": "Fabiana Cecin, PhD",
+        "office": "Software Engineer"
+      },
+      "person07": {
+        "name": "Stephen Chen",
+        "office": "Software Engineer"
+      },
+      "person08": {
+        "name": "Carlo Fragni",
+        "office": "Senior Software Engineer"
+      },
+      "person09": {
+        "name": "Gabriel Coutinho",
+        "office": "Software Engineer"
+      },
+      "person10": {
+        "name": "Marcos Pernambuco ",
+        "office": "Senior Software Engineer"
+      }
+    },
+    "advisors": {
+      "title": "Advisors",
+      "person01": {
+        "name": "Serguei Popov, PhD",
+        "office01": "Senior Advisor",
+        "office02": "Co-Founder of IOTA"
+      },
+      "person02": {
+        "name": "Stas Oskin",
+        "office01": "Senior Advisor",
+        "office02": "Core Dev & Bus Dev of Wings.ai"
+      },
+      "person03": {
+        "name": "William Bao Bean",
+        "office01": "General Partner at SOSV",
+        "office02": "Managing Director at Chinaccelerator",
+        "office03": "Managing Director at MOX"
+      },
+      "person04": {
+        "name": "Luiz Henrique de Figueiredo, PhD",
+        "office01": "Co-creator of Lua",
+        "office02": "programming language"
+      },
+      "person05": {
+        "name": "Boris Povod",
+        "office01": "Co-founder of Wings",
+        "office02": "Co-founder of Cripti"
+      },
+      "person06": {
+        "name": "Michael Hwang",
+        "office01": "Managing Director, Big Bang Angels",
+        "office02": "Board Member, Across Asia Alliance"
+      },
+      "person07": {
+        "name": "T.k. Hamed",
+        "office01": "Founder of CTE Advisor",
+        "office02": "6 Year Crypto Veteran",
+        "office03": "Growth Hacker & Strategist"
+      },
+      "person08": {
+        "name": "Pedro Argento",
+        "office01": "DeFi Researcher"
+      }
+    },
+    "papers": {
+      "ctsiMacroeconomy": "CTSI Macroeconomy",
+      "whitepaper": "Whitepaper",
+      "lightpaper": "Lightpaper",
+      "download": "Download"
+    }
+  },
+  "news": {
+    "title": "블로그",
+    "more": "더 읽기"
+  },
+  "footer": {
+    "title": "최신 정보를 받아가세요:",
+    "subtitle": "뉴스레터 구독",
+    "socialList": {
+      "github": {
+        "title": "Github",
+        "link": "https://www.github.com/cartesi"
+      },
+      "twitter": {
+        "title": "Twitter",
+        "link": "https://www.twitter.com/cartesiproject"
+      },
+      "discord": {
+        "title": "Discord",
+        "link": "https://discord.gg/Pt2NrnS"
+      },
+      "medium": {
+        "title": "Medium",
+        "link": "https://www.medium.com/cartesi"
+      },
+      "telegram": {
+        "title": "Telegram",
+        "link": "https://t.me/cartesiannouncements"
+      }
+    },
+    "subscribe": "구독",
+    "email": "이메일",
+    "pages": {
+      "company": {
+        "title": "회사",
+        "link": ""
+      },
+      "team": {
+        "title": "팀",
+        "link": ""
+      },
+      "careers": {
+        "title": "커리어",
+        "link": ""
+      },
+      "press": {
+        "title": "언론",
+        "link": ""
+      },
+      "contact": {
+        "title": "문의하기",
+        "link": ""
+      },
+      "blog": {
+        "title": "블로그",
+        "link": ""
+      },
+      "dapps": {
+        "title": "디앱",
+        "link": ""
+      },
+      "ambassadors": {
+        "title": "앰버서더",
+        "link": ""
+      },
+      "channels": {
+        "title": "채널",
+        "link": ""
+      },
+      "ecosystem": {
+        "title": "생태계",
+        "link": ""
+      },
+      "technology": {
+        "title": "기술",
+        "link": ""
+      },
+      "whitepaper": {
+        "title": "백서",
+        "link": ""
+      },
+      "github": {
+        "title": "깃허브",
+        "link": ""
+      },
+      "ctsitoken": {
+        "title": "CTSI 토큰",
+        "link": ""
+      },
+      "developer": {
+        "title": "개발자 포털",
+        "link": ""
+      },
+      "article": {
+        "macroeconomy": "CTSI 거시 경제"
+      },
+      "faq": {
+        "title": "FAQ",
+        "link": ""
+      },
+      "lightpaper": {
+        "title": "라이트페이퍼",
+        "link": ""
+      },
+      "ctsibeginners": {
+        "title": "CTSI for Beginners",
+        "link": ""
+      },
+      "partners": {
+        "title": "Partners & Backers",
+        "link": ""
+      },
+      "privacy": {
+        "title": "개인정보보호정책",
+        "link": ""
+      },
+      "incubation": {
+        "title": "디앱 인큐베이션 프로그램"
+      },
+      "explorer": {
+        "title": "Explorer"
+      },
+      "reserveMining": {
+        "title": "Reserve Mining"
+      },
+      "roadmap": {
+        "title": "Roadmap"
+      }
+    },
+    "description": "카르테시 프로젝트는 카르테시 재단에 의해 위탁됩니다.",
+    "gdpr": {
+      "description": "당사는 당사 웹 사이트에서 최상의 경험을 제공하기 위해 쿠키를 사용합니다. 웹 사이트를 사용함으로써 귀하는 쿠키 사용에 동의합니다.",
+      "buttonOk": "예",
+      "buttonPrivacyPolicy": "개인정보보호정책"
+    }
+  },
+  "press": {
+    "title": "Cartesi in the Media",
+    "description": "If you would like to talk about Cartesi in a publication or media presentation, we are happy to answer your questions. Get in touch with us!",
+    "mediaCoverage": {
+      "title": "Media Coverage & Enquiries",
+      "description": "If you would like to talk about Cartesi in a publication or media presentation, we are happy to answer your questions. Also, feel free to reach out if you’ve already written about us and would like us to feature your article below. Get in touch with us at press@cartesi.io"
+    },
+    "cartesiMedia": {
+      "title": "Cartesi in the Media"
+    },
+    "latestUpdates": {
+      "title": "Latest Updates",
+      "more": {
+        "title": "VIEW ALL ARTICLES",
+        "link": ""
+      }
+    }
+  },
+  "community": {
+    "title": "Cartesi Community",
+    "description": "Contribute to building the future of the decentralized web. As we continue to expand, we are on the lookout for passionate and talented leaders to join our movement.",
+    "join": {
+      "title": "Join the Cartesi Community",
+      "description": "Contribute to building the future of the decentralized web. As we continue to expand, we are on the lookout for passionate and talented leaders to join our movement bringing novel ideas to scale the ecosystem and drive continuous improvements to our infrastructure."
+    },
+    "become": {
+      "title": "Become a Cartesi Ambassador",
+      "description": "Join our program and tell the world about our unique technology. Start a new community, represent our work, mentor other members, participate in events, build content, and help us scale the Cartesi ecosystem. You will get exclusive access to our latest innovations and upcoming plans, receive rewards, and you’ll be at the forefront of a significant technology breakthrough",
+      "button1": "learn more"
+    },
+    "channels": {
+      "title": "채널",
+      "telegram": {
+        "title": "Telegram",
+        "button": "JOIN GROUP"
+      },
+      "medium": {
+        "title": "Medium",
+        "button": "READ THE BLOG"
+      },
+      "discord": {
+        "title": "Discord",
+        "button": "DEV COMMUNITY"
+      },
+      "github": {
+        "title": "GitHub",
+        "button": "START BUILDING"
+      },
+      "twitter": {
+        "title": "Twitter",
+        "button": "FOLLOW US"
+      },
+      "reddit": {
+        "title": "Reddit",
+        "button": "JOIN THE COMMUNITY"
+      },
+      "facebook": {
+        "title": "Facebook",
+        "button": "CONNECT"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "button": "CONNECT"
+      }
+    },
+    "groups": {
+      "title": "Cartesi International Groups",
+      "russo": {
+        "title": "Pусский",
+        "button": "вступить в группу",
+        "country": "RU"
+      },
+      "chines": {
+        "title": "中文",
+        "button": "加入",
+        "country": "CN"
+      },
+      "chines2": {
+        "title": "Emmanuel-111",
+        "button": "加入",
+        "country": "CN"
+      },
+      "turkey": {
+        "title": "Türkçe",
+        "button": "katılmak",
+        "country": "TR"
+      },
+      "vietnam": {
+        "title": "Tiếng Việt",
+        "button": "Tham Gia Nhóm",
+        "country": "VN"
+      },
+      "korea": {
+        "title": "한국어",
+        "button": "그룹에 가입",
+        "country": "KR"
+      },
+      "india": {
+        "title": "भारतीय",
+        "button": "हिस्सा लेना",
+        "country": "IN"
+      },
+      "indonesia": {
+        "title": "Komunitas",
+        "button": "Grup Indonesia",
+        "country": "MC"
+      }
+    },
+    "upcoming": {
+      "title": "Upcoming Events",
+      "button": "READ MORE"
+    }
+  },
+  "wallets": {
+    "title": "Cartesi Ecosystem",
+    "description": "Welcome to the Cartesi Ecosystem. Store and track CTSI with our trusted partners. Trade CTSI on the world's largest exchanges.",
+    "initial": {
+      "title": "Wallets & Exchanges",
+      "description": "Welcome to the Cartesi Ecosystem. Store and track CTSI with our trusted partners. Trade CTSI on the world's largest exchanges. We are continuously expanding our international reach with CTSI and it’s ease to acquire for users around the world."
+    },
+    "exchanges": {
+      "title": "Exchanges - Trade CTSI"
+    },
+    "wallets": {
+      "title": "Wallets - Securely Store CTSI",
+      "wallet": {
+        "atomicWallet": "Atomic Wallet",
+        "ledger": "Ledger",
+        "myCrypto": "My Crypto",
+        "trezor": "Trezor",
+        "trustWallet": "Trust Wallet"
+      }
+    },
+    "ctsiUpdates": {
+      "title": "Track CTSI Prices, Updates, and Announcements",
+      "updates": {
+        "blockfolio": "Blockfolio",
+        "delta": "Delta",
+        "coinMarketCap": "CoinMarketCap",
+        "coinGecko": "CoinGecko",
+        "blockfolioSignal": "Blockfolio Signal",
+        "deltaDirect": "Delta Direct",
+        "messari": "Messari",
+        "crypto": "crypto.com"
+      }
+    },
+    "spendCTSI": {
+      "title": "Spend CTSI",
+      "description": "Buy, pay and receive in CTSI"
+    }
+  },
+  "ambassadors": {
+    "title": "앰버서더",
+    "initial": {
+      "title": "Become a Cartesi Ambassador",
+      "description": "Tell the world about our unique technology and be at the forefront of a significant blockchain breakthrough",
+      "applyNow": {
+        "title": "Apply Now"
+      }
+    },
+    "whoBecomeAmbassadors": {
+      "title": "who should become an ambassador",
+      "description": "As a Cartesi ambassador, you will represent our unique ecosystem, have first-hand access to shaping our strategy and help drive blockchain adoption around the world.",
+      "card01": {
+        "title": "Existing community leaders",
+        "description": "Having an already existing user-base or community that you’re the leader of and capability to promote Cartesi within your group."
+      },
+      "card02": {
+        "title": "Experts",
+        "description": "Speakers, bloggers and highly experienced people within the technology and cryptocurrency industry, especially in DeFi and Gaming"
+      },
+      "card03": {
+        "title": "Marketers & Content creators",
+        "description": "Marketers & Content creators: you love building content and have out of the box ideas. Even if you are not crypto-savvy, you can still contact us."
+      },
+      "card04": {
+        "title": "Students & Academia",
+        "description": "Students who are researching the blockchain space and want to be part of a major movement in the future."
+      },
+      "card05": {
+        "title": "Influencers",
+        "description": "Global, regional, and local crypto influencers; community managers, experts, traders, and marketers."
+      },
+      "card06": {
+        "title": "Developers & Tech talent",
+        "description": "You have blockchain technical expertise and interest in building DApps"
+      }
+    },
+    "whatItTakes": {
+      "title": "what it takes to become a cartesi ambassador",
+      "description": "Occupying the leading role of a Cartersi ambassador is an exceptional opportunity. Our program is very competitive and we are accepting top talent only. Below we have highlighted some of the criteria we are looking for.",
+      "list": {
+        "1": "Hands-on knowledge about crypto markets and the blockchain space.",
+        "2": "Background in community management or being a proven influencer or marketing service provider.",
+        "3": "Extensive understanding and genuine enthusiasm for Cartesi.",
+        "4": "Highly motivated and connected within cryptocurrency or mainstream marketing spheres.",
+        "5": "Exemplary talent and impeccable communication skills.",
+        "6": "Ability to engage and share Cartesi and Cartesi’s DApps with creative individuals.",
+        "7": "Highly motivated and connected within cryptocurrency or mainstream marketing spheres."
+      }
+    },
+    "whatIsExpected": {
+      "title": "what is expected of an ambassador",
+      "description": "Attend the onboarding training sessions and read as much as you can about Cartesi so that you can get a deep understanding of our technology. Build and grow your community. It could be a local Meetup group, a Telegram community, Twitter, Facebook or LinkedIn groups, a Subreddit, a student group and more. Come up with cool ideas on how to drive excitement about Cartesi. You can choose some of the ideas we already have, complete monthly challenges or come up with brand new ideas!",
+      "expected01": {
+        "1": "Sponsor or run pitch nights",
+        "2": "Run office hours",
+        "3": "Build video tutorials",
+        "4": "Translate a Cartesi post or article",
+        "5": "Host trainings and mini hackathons",
+        "6": "Build eBooks and training guides"
+      },
+      "expected02": {
+        "1": "Collaborate with local groups, foundations, startup incubators, university groups to co-host events",
+        "2": "Write a blog post or case study about potential, real-world blockchain applications and, if approved by Cartesi, it will get featured on our channels",
+        "3": "Invite local speakers and host interview sessions. Invite professors or host sessions within university classes",
+        "4": "Discuss blockchain & crypto trends and run thought leadership events"
+      }
+    },
+    "getStarted": {
+      "title": "Get Started",
+      "subtitle": "All applications must be in english",
+      "form": {
+        "field01": {
+          "placeholder": "Full Name",
+          "invalidFeedback": "Please enter required field!"
+        },
+        "field02": {
+          "placeholder": "Telegram Handle (@)",
+          "invalidFeedback": "Please enter required field!"
+        },
+        "field03": {
+          "placeholder": "Representing Country",
+          "invalidFeedback": "Please select an country!"
+        },
+        "field04": {
+          "placeholder": "Area of Expertise",
+          "invalidFeedback": "Please enter required field!"
+        },
+        "field05": {
+          "placeholder": "How long have you been involved in crypto or blockchain?",
+          "invalidFeedback": "Please enter required field!"
+        },
+        "field06": {
+          "placeholder": "About Yourself",
+          "invalidFeedback": "Please enter required field"
+        },
+        "field07": {
+          "placeholder": "Describe your experiences and professional background",
+          "invalidFeedback": "Please enter required field!"
+        },
+        "field08": {
+          "placeholder": "Link some references and resources we can examine",
+          "invalidFeedback": "Please enter required field!"
+        },
+        "field09": {
+          "placeholder": "Explain why you want to be an ambassador",
+          "invalidFeedback": "Please enter required field!"
+        },
+        "field10": {
+          "placeholder": "Any final questions or comments?",
+          "invalidFeedback": "Please enter required field!"
+        },
+        "check": {
+          "placeholder": "Agree to terms and conditions",
+          "invalidFeedback": "You must agree before submitting."
+        }
+      },
+      "expandForm": "Expand Form",
+      "hideForm": "Hide Form",
+      "successFeedback": {
+        "title": "Thank you!",
+        "subtitle": "your information has been sent"
+      }
+    },
+    "about": {
+      "title": "About the Program",
+      "paragraph": "As we continue our expansion, we keep looking for passionate and talented leaders to join the movement and scale the Cartesi ecosystem. Cartesi is currently the only infrastructure that allows developers to use Linux and mainstream software stacks to build DApps in an easy way, while maintaining the security of the blockchain. Join our program to get exclusive access to our latest innovations and enjoy the rewards."
+    },
+    "rewardsAndBenefits": {
+      "title": "Rewards and benefits",
+      "description": "As a Cartesi ambassador, you will represent our unique ecosystem, have first-hand access to shaping our strategy and help drive blockchain adoption around the world.",
+      "items": {
+        "item1": "High rewards in USD or CTSI",
+        "item2": "Official title and recognition on Cartesi’s channels",
+        "item3": "Early access to official releases and exclusive news",
+        "item4": "Opportunity to become a Cartesi MVP and gain an additional annual 2K in CTSI",
+        "item5": "Networking opportunities with Cartesi Team members, partners, and other ambassadors.",
+        "item6": "Swag, conference tickets, free training seminars and more",
+        "item7": "Training and mentoring opportunities with leaders in the crypto space"
+      }
+    },
+    "ourAmbassadors": {
+      "title": "Our Ambassadors",
+      "firstAmbassador": {
+        "name": "Sharp Ye",
+        "nationality": "Chinese Ambassador"
+      },
+      "secondAmbassador": {
+        "name": "Viet Anh",
+        "nationality": "Vietnamese Ambassador"
+      },
+      "thirdAmbassador": {
+        "name": "Berkay Korkmazz",
+        "nationality": "Turkish Ambassador"
+      },
+      "fourthAmbassador": {
+        "name": "Heyod Hewow",
+        "nationality": "Russian Ambassador"
+      },
+      "fifthAmbassador": {
+        "name": "Wonhyoung Lim",
+        "nationality": "Korean Ambassador"
+      },
+      "sixthAmbassador": {
+        "name": "Mykhailo Lapshii",
+        "nationality": "Ukrainian Ambassador"
+      },
+      "seventhAmbassador": {
+        "name": "bubbalex",
+        "nationality": "Global Ambassador"
+      },
+      "eightAmbassador": {
+        "name": "Eslam A.Saber",
+        "nationality": "Arabic Ambassador"
+      },
+      "ninthAmbassador": {
+        "name": "Irlan Pierre",
+        "nationality": "Brazilian Ambassador"
+      },
+      "tenthAmbassador": {
+        "name": "Honda Takahashi",
+        "nationality": "Japanese Ambassador"
+      },
+      "eleventhAmbassador": {
+        "name": "Mc Givellon",
+        "nationality": "Philippines Ambassador"
+      },
+      "twelfthAmbassador": {
+        "name": "Sandy Ariel Varela",
+        "nationality": "Spanish Ambassador"
+      },
+      "thirteenthAmbassador": {
+        "name": "Paul Ujah",
+        "nationality": "Global Ambassador"
+      },
+      "fourteenthAmbassador": {
+        "name": "Token Expert",
+        "nationality": "Global Ambassador"
+      }
+    }
+  },
+
+  "faq": {
+    "title": "FAQ",
+    "initial": {
+      "title": "Frequently Asked Questions"
+    },
+    "faqFooter": {
+      "title": "Have any questions?",
+      "button": {
+        "telegram": "JOIN OUR TELEGRAM GROUP"
+      }
+    }
+  },
+  "incubation": {
+    "title": "Incubation Program",
+    "description": "Cartesi DApp Incubation Program.",
+    "initial": {
+      "title": "Cartesi DApp Incubation Program",
+      "subtitle": "Build your DApp with Cartesi",
+      "description": "$80K+ in prizes to the best three DApps",
+      "applyNow": {
+        "title": "APPLICATIONS CLOSED",
+        "link": "https://gitcoin.co/hackathon/cartesi-incubator/onboard"
+      },
+      "video": {
+        "title": "Watch The Video"
+      }
+    },
+    "whatIsCartesi": {
+      "title": "What is Cartesi",
+      "description": "Cartesi is the only infrastructure that allows developers to use Linux and mainstream software stacks to build powerful DApps. Complex processing can be executed off-chain, free from blockchain's computational limits and corresponding fees.",
+      "applyNow": {
+        "title": "APPLICATIONS CLOSED",
+        "link": "https://gitcoin.co/hackathon/cartesi-incubator/onboard"
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "step1": "**In phase I, between September 14 - October 12, 2020**, submit your application to join the Cartesi DApp Incubation program in partnership with Gitcoin. You may request a budget **(up to 20K USD)** that you think will be enough to fund your project for three months and set your own development milestones along with delivery deadlines. With the timely achievement of each milestone, a portion of the total amount you requested will get unlocked and paid out to your team.",
+      "step2": "**In phase II, three teams will be selected out of all the applicants** to build their Cartesi DApps, which must be **submitted by February 1, 2021.** Build your DApp in your preferred industry, while receiving mentoring from top experts in the field.",
+      "step3": "**In Phase III, between Feb 17 - 28**, an additional award will be determined by a Quadratic Funding system from Gitcoin. Cartesi **will invest additional 20K in a matching pool** (plus any extra amount raised by the community) to be distributed across the three projects in accordance with the number of votes each one has gathered.",
+      "applyNow": {
+        "title": "APPLICATIONS CLOSED",
+        "link": "https://gitcoin.co/hackathon/cartesi-incubator/onboard"
+      },
+      "metadata": "Submit your application by October 12, 2020 before midnight ET."
+    },
+    "awards": {
+      "title": "Awards",
+      "section1": {
+        "title": "THREE SELECTED TEAMS",
+        "upTo": "UP TO",
+        "amount": "20K USD",
+        "subtitle": "TO EACH TEAM",
+        "item1": "Up to 20K USD to each of the three teams selected to join the Incubation program",
+        "item2": "Access to mentoring and training by experts in blockchain",
+        "item3": "Promotion of your DApp in Cartesi's channels and additional publicity opportunities"
+      },
+      "section2": {
+        "title": "ADDITIONAL AWARDS",
+        "amount": "+20K USD",
+        "item1": "Cartesi will invest +20K USD in a matching pool, to be distributed among the top three teams according to the Quadartic Funding system. But that’s not all! Any additional funds raised by the community will get added as a bonus to each team’s winnings."
+      }
+    },
+    "timeline": {
+      "title": "Timeline",
+      "poweredBy": "Powered by*",
+      "point1": {
+        "title": "September 14 - October 12, 2020",
+        "description": "Submit your idea by filling out the application forms"
+      },
+      "point2": {
+        "title": "October 13 - October 22, 2020",
+        "description": "Review of applications"
+      },
+      "point3": {
+        "title": "October 23, 2020",
+        "description": "Announcement of the three teams to join the incubation program"
+      },
+      "point4": {
+        "title": "October 26 - January 25, 2020",
+        "description": "Incubation program, mentoring & DApp building"
+      },
+      "point5": {
+        "title": "February 8 - 19",
+        "description": "Gitcoin community voting"
+      },
+      "point6": {
+        "title": "February 1, 2021",
+        "description": "Submission of final DApps"
+      },
+      "point7": {
+        "title": "February 17 - 28, 2021",
+        "description": "Gitcoin Grants round"
+      }
+    },
+    "applyNow": {
+      "title": "Apply Now",
+      "description": "Submit your application by October 12, 2020 before midnight ET.",
+      "applyNow": {
+        "title": "APPLICATIONS CLOSED",
+        "link": "https://gitcoin.co/hackathon/cartesi-incubator/onboard"
+      }
+    },
+    "categories": {
+      "title": "Ideas for DApp Development",
+      "deFi": {
+        "title": "DeFi",
+        "download": "Download subscription template",
+        "description": "Interested in DeFi? Applications built on Cartesi will be able to perform complex and intensive computation involving large amounts of data. These features give DeFi immense power, releasing it from the current scalability constraints of blockchain, in a fully decentralized way. Additionally, Cartesi allows for blockchain introspection. Parties can enter into contracts that depend on the entire state of the blockchain where the contracts are themselves defined. "
+      },
+      "gaming": {
+        "title": "Gaming",
+        "download": "Download subscription template",
+        "description": "Gamer at heart? Cartesi will unleash vast new possibilities for blockchain games. You will be able to use traditional tools and libraries that can be compiled for Linux for your decentralized game logic. Additionally, game state processing will be free from the computational limits and high fees of blockchains without the need to sacrifice decentralization. Check out Creepts https://creepts.cartesi.io/en/, our first tower defense game"
+      },
+      "socialImpact": {
+        "title": "Social Impact",
+        "download": "Download subscription template",
+        "description": "Come up with an idea that will improve a social cause, such as safeguarding data privacy, improving the lives of others, facilitating transactions in communities, monitoring violence and other similar causes."
+      },
+      "subtitle": "We are open to all ideas",
+      "description": "Build a Cartesi DApp in any field you choose. Put your creativity at work.",
+      "applyNow": {
+        "title": "APPLICATIONS CLOSED",
+        "link": "https://gitcoin.co/hackathon/cartesi-incubator/onboard"
+      }
+    },
+    "criteria": {
+      "title": "Criteria",
+      "item1": "Originality and creativity of the idea",
+      "item2": "Functionality of the code and the DApp",
+      "item3": "Practicality and expected reach",
+      "item4": "Great user experience (when applicable)",
+      "item5": "No plagiarism or infringement on intellectual property rights",
+      "item6": "Relevance and priorities of the Cartesi ecosystem",
+      "item7": "Solving a true problem",
+      "item8": "Ability of the team to continue development ",
+      "item9": "Team’s qualifications and proven experience",
+      "item10": "Clarity and quality of the technical proposal",
+      "item11": "Clear deliverables and milestones",
+      "item12": "Proposed product documentation",
+      "item13": "Security of the DApp’s users",
+      "item14": "Development methodologies (e.g. automated testing, CI, tools, processes)"
+    },
+    "judges": {
+      "title": "Judges"
+    },
+    "mentors": {
+      "title": "Mentors",
+      "subtitle": "Receive mentoring and advice from experts in the blockchain space"
+    },
+    "rules": {
+      "title": "Rules",
+      "fullTerms": {
+        "title": "Full Terms & Conditions",
+        "link": ""
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "applyNow": {
+        "title": "APPLICATIONS CLOSED",
+        "link": "https://gitcoin.co/hackathon/cartesi-incubator/onboard"
+      }
+    }
+  },
+  "staking": {
+    "title": "CTSI Delegated Staking Is Now Live | Mainnet: Full Release",
+    "description": "Stake CTSI or become a Node Runner. Enter the system that will power Noether - Cartesi's Data Availability Oracle, optimized for ephemeral data. Join the network, stake safely and earn rewards.",
+    "initial": {
+      "title": "DELEGATED STAKING IS NOW LIVE",
+      "subtitle": "Mainnet: Full Release",
+      "subtitleAfterCountdown": "It's Time to Stake",
+      "buyCtsiNow": {
+        "title": "CTSI 얻기",
+        "link": ""
+      },
+      "firstSection": {
+        "title": "지금 사전 스테이킹 하세요",
+        "subtitle": "CTSI",
+        "button": {
+          "title": "지금 사전 스테이킹 하세요",
+          "link": "https://explorer.cartesi.io",
+          "links": {
+            "item1": {
+              "name": "Cartesi Explorer",
+              "url": "https://explorer.cartesi.io"
+            },
+            "item2": {
+              "name": "MyCointainer",
+              "url": "https://www.mycointainer.com/assets/cartesi"
+            },
+            "item3": {
+              "name": "Coinone",
+              "url": "https://coinone.co.kr/plus/daily/ctsi/91"
+            }
+          }
+        }
+      },
+      "secondSection": {
+        "title": "노드를 운영해보세요",
+        "button": {
+          "title": "노드를 운영해보세요",
+          "link": "https://medium.com/cartesi/running-a-node-and-staking-42523863970e"
+        }
+      }
+    },
+    "whyStakeCtsi": {
+      "title": "PoS 시스템 런칭",
+      "subtitle": "Noether를 구동할 시스템에 참여하세요",
+      "subtitleLink": "Noether",
+      "card1": {
+        "title": "네트워크에 참여",
+        "description": "Noether를 위한 안전한 인프라를 만드는 데 도움이 되는 초기 노드 러너가 되어보세요"
+      },
+      "card2": {
+        "title": "보상 받기",
+        "description": "카르테시가 첫 번째 채굴 예비 배치를 공개합니다. 향후 6개월 동안 청구된 블록 당 2,900 CTSI를 획득하세요."
+      },
+      "card3": {
+        "title": "안전하게 스테이킹",
+        "description": "스테이킹 계약은 테스트 되고 감사됩니다. 또한 노드 비가동률 때문에 슬래싱 또는 위험이 없습니다."
+      },
+      "card4": {
+        "title": "융통성",
+        "description": "자금이 장기간 동안 스테이킹 계약에 잠겨있을 필요가 없습니다."
+      },
+      "button": {
+        "title": "작동 원리",
+        "link": "https://link.medium.com/FxQkhNgNGbb"
+      }
+    },
+    "meetNoether": {
+      "title": "NOETHER를 만나보세요",
+      "subtitle": "Noether는 임시 데이터에 최적화된 카르테시의 데이터 가용성 오라클입니다",
+      "description": "Noether가 필요한 이유는 무엇일까요? 블록체인에 저장된 데이터는 영구적으로 유지되므로 일시적인 데이터 가용성만 요구하는 대부분의 디앱의 요구에 대해 불필요하게 비용이 많이 듭니다. Noether는 이더리움의 애플리케이션을 위한 새롭고 효율적이고 비용-효율적인 지평을 여는 새로운 임시 저장소 데이터 렛저입니다.",
+      "button": {
+        "title": "기사 읽기"
+      }
+    },
+    "stakingAuctions": {
+      "title": "스테이킹 옥션",
+      "subtitle": "카르테시는 지분증명 시스템의 주요 문제를 극복하는 스테이킹 시스템을 개발하고 있습니다:",
+      "item1": {
+        "title": "사용자의 위험 선호도에 대한 추정이 없습니다"
+      },
+      "item2": {
+        "title": "사용자의 보상이 네트워크에 스테이킹 된 총 자금에 따라 달라지지 않고 항상 알려져 있습니다"
+      },
+      "item3": {
+        "title": "이 시스템을 통해 스테이커는 다양한 위험 선호를 표현하고 적용할 수 있습니다"
+      },
+      "item4": {
+        "title": "이 시스템은 네트워크의 보안을 유지하면서 인플레이션을 최소화하도록 균형을 이룹니다"
+      },
+      "button": {
+        "title": "CTSI 거시 경제",
+        "link": "https://medium.com/cartesi/the-ctsi-macroeconomy-ea60a35ab2f3"
+      }
+    },
+    "earlyAccess": {
+      "title": "로드맵",
+      "item1": {
+        "title": "PoS 시스템 런칭"
+      },
+      "item2": {
+        "title": "위임된 스테이킹"
+      },
+      "item3": {
+        "title": "Noether"
+      },
+      "item4": {
+        "title": "스테이킹 옥션"
+      }
+    }
+  },
+  "labs": {
+    "title": "Cartesi Labs",
+    "description": "Cartesi Labs is a continuous program run by the Cartesi Foundation to fund research and development of decentralized systems with Cartesi's technology stack.",
+    "initial": {
+      "title": "Cartesi Labs",
+      "subtitle": "Cartesi Labs is a continuous program run by the Cartesi Foundation to fund research and development of decentralized systems with Cartesi's technology stack."
+    },
+    "informationCard": {
+      "labDetails": {
+        "cartesiLabText": "Cartesi Lab consists of grants, accelerator and academic programs aimed at incentivizing the development of the Cartesi ecosystem. Initial funds are typically given by the Cartesi Foundation with extra cheques and contributions also coming from crowdsourcing platforms, accredited investors, and other Cartesi partners. Cartesi Lab also provides technical and strategic advisory, accelerating the success of projects built on Cartesi.",
+
+        "fundSizeTitle": "Fund size",
+
+        "quantity": {
+          "value": "1,000,000",
+          "coin": "USD"
+        },
+
+        "miniCards": {
+          "cardOne": {
+            "title": "Projects",
+            "content": "4"
+          },
+
+          "cardTwo": {
+            "title": "Countries",
+            "content": "4"
+          },
+
+          "cardThree": {
+            "title": "Funds allocated",
+            "value": "103k",
+            "coin": "USD"
+          }
+        }
+      },
+
+      "labGrants": {
+        "description": {
+          "title": "Cartesi Labs Grants",
+          "text": "Cartesi Labs covers research and development in different categories, including initial proposals for the development of decentralized systems, academic research that proves valuable to Cartesi's ecosystem, start-ups, enterprise integration, tooling, infrastructure, or anything you can think of built on Cartesi."
+        },
+
+        "cardsGrants": {
+          "cardIgniter": {
+            "title": "Igniter",
+            "text": "The Cartesi Labs Igniter Grant aims to foster the adoption of Cartesi and grow the ecosystem through supporting our community, software developers, and companies who would like to ignite their ideas on Cartesi.",
+            "textShowHidden": "In the first batch of the Igniter Grant program, Cartesi Lab will fund up to 25K USD per project for 2-5 projects.",
+
+            "listItems": {
+              "text1": "Gaming",
+              "text2": "IoT",
+              "text3": "DeFi",
+              "text4": "NFT's",
+              "text5": "Surprise us!"
+            }
+          },
+
+          "cardAccelerator": {
+            "title": "Accelerator",
+            "text": "The Cartesi Labs accelerator program aims to bring projects built on Cartesi to the next level. For those leveraging Cartesi’s products, we will provide a larger investment into the project along with support that will accelerate your project's growth.",
+            "textShowHidden": "Cartesi will bring its branding, technical expertise, and business mentorship to ensure you succeed. Cartesi will also work with its selected list of venture capital firms, niche accelerators, and incubation partners to further support Cartesi Lab Accelerator start-ups."
+          },
+
+          "cardResearcher": {
+            "title": "Researcher",
+            "text": "The Cartesi Labs is all about pushing the boundaries of what is doable, making the impossible, possible. A research grant applicant will support our superstar R&D team in its initiatives or explore new ones altogether - both individuals and institutions are welcome to apply!",
+
+            "listItems": {
+              "text1": "Add IMPA - Cartesi Lab under this"
+            }
+          },
+
+          "cardToolmaker": {
+            "title": "Toolmaker",
+            "text": "Rich tooling, convenience for developers and great user experience are fundamental for Cartesi to become widely adopted and pervasive. This grant focuses on building out tools, infrastructure, or improving Cartesi products."
+          }
+        },
+
+        "applyNow": {
+          "title": "Apply Now"
+        }
+      }
+    },
+    "mentors": {
+      "title": "Mentors"
+    },
+    "partners": {
+      "title": "Partners"
+    },
+    "testimonials": {
+      "title": "Testimonials"
+    },
+    "termsAndConditions": {
+      "title": "Terms and Conditions"
+    }
+  }
+}

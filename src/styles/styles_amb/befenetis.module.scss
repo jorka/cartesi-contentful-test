@@ -1,0 +1,119 @@
+#ambBenefits {
+  @import "root.scoped.scss";
+
+  .benefits {
+    background: url("../../images/ambassadorsOldPage/bottom-content.png") repeat-x
+      center -2px;
+    padding: 37rem 0 5rem;
+    margin-top: -263px;
+    // transform: translateY(-263px);
+    & .content {
+      @extend .col-12;
+      @extend .col-md-6;
+      p {
+        @extend %font-regular;
+        font-size: rem(20);
+        margin: 3rem 0;
+        line-height: 1.8;
+      }
+      &:nth-child(2) {
+        @extend .col-md-6;
+        @extend .col-lg-5;
+      }
+      &-item {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+        p {
+          margin: 0;
+          font-size: 1rem;
+          padding-left: 2rem;
+          // line-height: normal;
+        }
+      }
+    }
+    // .icons {
+    //   height: 40px;
+    // }
+    // .ico-calander {
+    //   width: 67px;
+    // }
+    // .ico-network {
+    //   width: 63px;
+    // }
+    // .ico-megaphone {
+    //   width: 64px;
+    // }
+    // .ico-certified {
+    //   width: 44px;
+    // }
+    // .ico-star {
+    //   width: 71px;
+    // }
+    // .ico-key {
+    //   width: 64px;
+    // }
+    .ico-block {
+      width: 34px;
+    }
+    // .ico-position {
+    //   width: 97px;
+    // }
+    @media (max-width: 993.98px) {
+      padding: 54rem 0 5rem;
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      & .content {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%;
+        margin: 2rem auto 0;
+      }
+    }
+    @media (max-width: 767.98px) {
+      padding: 12rem 0 0;
+      margin: inherit;
+      background-size: contain;
+      & .content {
+        .titles {
+          text-align: center;
+        }
+        &-item {
+          margin: 2rem 0;
+        }
+        &:nth-child(1) {
+          p {
+            text-align: center;
+          }
+        }
+      }
+      .btn-azul {
+        display: block;
+        margin: 0 auto;
+      }
+      //   .ico-calander {
+      //     width: 107px;
+      //   }
+      //   .ico-network {
+      //     width: 98px;
+      //   }
+      //   .ico-megaphone {
+      //     width: 100px;
+      //   }
+      //   .ico-certified {
+      //     width: 69px;
+      //   }
+      //   .ico-star {
+      //     width: 111px;
+      //   }
+      //   .ico-key {
+      //     width: 99px;
+      //   }
+      .ico-block {
+        width: 40px;
+      }
+      //   .ico-position {
+      //     width: 100px;
+      //   }
+    }
+  }
+}

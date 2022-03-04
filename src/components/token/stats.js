@@ -1,7 +1,7 @@
-import React from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { injectIntl } from "gatsby-plugin-intl";
+import React from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import { injectIntl } from 'gatsby-plugin-intl';
 
 const Stats = () => {
   const [stats, setStats] = React.useState();
@@ -9,20 +9,20 @@ const Stats = () => {
 
   React.useEffect(() => {
     fetch(`https://explorer.cartesi.io/api/mainnet/stats`)
-      .then((response) => response.json())
-      .then((resultData) => {
+      .then(response => response.json())
+      .then(resultData => {
         setStats(resultData);
         ScrollTrigger.refresh();
       });
   }, []);
 
   React.useLayoutEffect(() => {
-    const counterElements = gsap.utils.toArray("[data-anim-counter]");
+    const counterElements = gsap.utils.toArray('[data-anim-counter]');
 
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: counterElements[0],
-        id: "counterAnimation",
+        id: 'counterAnimation',
       },
     });
 
@@ -32,11 +32,11 @@ const Stats = () => {
       tl.to(
         target,
         {
-          val: item.getAttribute("data-anim-counter"),
-          ease: "power4.out",
+          val: item.getAttribute('data-anim-counter'),
+          ease: 'power4.out',
           duration: 3,
           onUpdate: function () {
-            item.innerText = target.val.toLocaleString("en-US", {
+            item.innerText = target.val.toLocaleString('en-US', {
               minimumFractionDigits: item.dataset.displayDecimal ? 2 : 0,
               maximumFractionDigits: item.dataset.displayDecimal ? 2 : 0,
             });
@@ -72,11 +72,11 @@ const Stats = () => {
   }, [stats]);
 
   return (
-    <div className="mb-12 grid grid-cols-3 gap-x-4 gap-y-10 xl:mb-24">
+    <div className='mb-12 grid grid-cols-3 gap-x-4 gap-y-10 xl:mb-24'>
       {stats && (
         <>
-          <div className="col-span-1 flex flex-col">
-            <span className="font-serif text-4xl leading-none text-blue-200">
+          <div className='col-span-1 flex flex-col'>
+            <span className='font-serif text-4xl leading-none text-blue-200'>
               <span>$</span>
               <span data-display-decimal data-anim-counter={formatted.price}>
                 0
@@ -84,8 +84,8 @@ const Stats = () => {
             </span>
             <span>CTSI Price</span>
           </div>
-          <div className="col-span-2 flex flex-col text-right">
-            <span className="font-serif text-4xl leading-none text-blue-200">
+          <div className='col-span-2 flex flex-col text-right'>
+            <span className='font-serif text-4xl leading-none text-blue-200'>
               <span
                 data-display-decimal
                 data-anim-counter={formatted.circulatingSupply}
@@ -96,8 +96,8 @@ const Stats = () => {
             </span>
             <span>Circ. Supply</span>
           </div>
-          <div className="col-span-2 flex flex-col">
-            <span className="font-serif text-4xl leading-none text-blue-200">
+          <div className='col-span-2 flex flex-col'>
+            <span className='font-serif text-4xl leading-none text-blue-200'>
               <span
                 data-display-decimal
                 data-anim-counter={formatted.totalStaked}
@@ -108,21 +108,21 @@ const Stats = () => {
             </span>
             <span>CTSI staked</span>
           </div>
-          <div className="col-span-1 flex flex-col text-right">
-            <span className="font-serif text-4xl leading-none text-blue-200">
+          <div className='col-span-1 flex flex-col text-right'>
+            <span className='font-serif text-4xl leading-none text-blue-200'>
               <span data-anim-counter={formatted.totalUsers}>0</span>
             </span>
             <span>Total Users</span>
           </div>
 
-          <div className="col-span-1 flex flex-col">
-            <span className="font-serif text-4xl leading-none text-blue-200">
+          <div className='col-span-1 flex flex-col'>
+            <span className='font-serif text-4xl leading-none text-blue-200'>
               <span data-anim-counter={formatted.hiredNodes}>0</span>
             </span>
             <span>Active Nodes</span>
           </div>
-          <div className="col-span-2 flex flex-col text-right">
-            <span className="font-serif text-4xl leading-none text-blue-200">
+          <div className='col-span-2 flex flex-col text-right'>
+            <span className='font-serif text-4xl leading-none text-blue-200'>
               <span
                 data-display-decimal
                 data-anim-counter={formatted.projectedAnnualEarnings}
@@ -132,19 +132,6 @@ const Stats = () => {
               <span>%</span>
             </span>
             <span>Projected Annual Earnings</span>
-          </div>
-
-          <div className="col-span-2 flex flex-col">
-            <span className="font-serif text-4xl leading-none text-blue-200">
-              <span
-                data-display-decimal
-                data-anim-counter={formatted.participationRate}
-              >
-                0
-              </span>
-              <span>%</span>
-            </span>
-            <span>Participation Rate</span>
           </div>
         </>
       )}

@@ -1,0 +1,53 @@
+title: Mentors
+page: incubation/mentors
+content:
+  - mentor:
+      name: Edward Thomson
+      role: Web3 Foundation
+      image: edward-thompson.png
+      bio: Blockchain, Web3, Astrophysics, Maths, Investments, Enterprise & Entrepreneurship
+      link: https://www.linkedin.com/in/edward-thomson-080ba519/?originalSubdomain=ch
+  - mentor:
+      name: Oscar Ramos
+      role: Full Stack Innovator
+      image: oscar-ramos.png
+      bio: Business Development, Product Management, Strategy and Innovation Consulting and Venture Capital Investment.
+      link: https://www.linkedin.com/in/oscarramosm/
+  - mentor:
+      name: Serguei Popov
+      roles:
+        - role: Co-Founder of IOTA
+        - role: Cartesi Advisor
+      image: serguei-popov.png
+      bio: Senior Researcher at Universidade do Porto, Director of Research IOTA Foundation
+      link: https://www.linkedin.com/in/serguei-popov-631bb762/
+  - mentor:
+      name: Stas Oskin
+      role: Biz Dev at dfinance
+      image: stas-oskin.png
+      bio: Core developer, architecture designer and project manager.
+      link: https://www.linkedin.com/in/stasoskin/
+  - mentor:
+      name: Boris Povod
+      role: Co-Founder and R&D Lead at dfinance
+      image: boris-povod.png
+      bio: Blockchain Developer. Team Management. Web Development
+      link: https://www.linkedin.com/in/boris-povod-361a1b79/
+  - mentor:
+      name: Diego Nehab, PhD
+      role: CTO of Cartesi
+      image: diego-nehab.png
+      bio: Researcher at IMPA, Post-doctoral Researcher at Microsoft Research Redmond.
+      link: https://www.linkedin.com/in/diegonehab/
+  - mentor:
+      name: Augusto Teixeira, PhD
+      role: CSO of Cartesi
+      image: augusto-teixeira.png
+      bio: Postdoctoral Researcher at Ecole normale supérieure, 
+      link: https://www.linkedin.com/in/augusto-teixeira-39a3a8169/
+  - mentor:
+      name: Arjun Krishan Kalsy
+      role: Vice President, Growth at Matic
+      image: arjun-krishan-kalsy.png
+      bio: Computer Vision, AI
+      link: https://www.linkedin.com/in/arjunkrishankalsy/

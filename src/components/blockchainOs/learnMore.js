@@ -1,14 +1,14 @@
-import { injectIntl } from "gatsby-plugin-intl";
-import React from "react";
-import Video from "../video";
+import { injectIntl } from 'gatsby-plugin-intl';
+import React from 'react';
+import Video from '../video';
 
 const LearnMore = () => {
   return (
-    <div className=" bg-blue-200" id="learn-more">
-      <div className="section">
-        <div className="container max-w-4xl">
+    <div className=' bg-blue-200' id='learn-more'>
+      <div className='section'>
+        <div className='container max-w-4xl'>
           <div
-            className="prose prose-headings:font-serif prose-headings:text-3xl"
+            className='prose prose-headings:font-serif prose-headings:text-3xl'
             data-anim-block
           >
             <h2>An OS is needed to create this new world</h2>
@@ -33,9 +33,9 @@ const LearnMore = () => {
           </div>
         </div>
       </div>
-      <div className="section pt-0">
-        <div className="container max-w-7xl">
-          <Video id="-PiditRIHvk" />
+      <div className='section pt-0'>
+        <div className='container max-w-7xl'>
+          <Video id='9u1Uh2EmJvk' />
         </div>
       </div>
     </div>

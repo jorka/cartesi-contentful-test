@@ -1,0 +1,57 @@
+#ambInterestarea {
+  @import "root.scoped.scss";
+
+  .interestarea {
+    padding: 5rem 0 10rem;
+    @extend .text-center;
+    background: $azul-medio url("../../images/ambassadorsOldPage/bg-lines.png")
+      no-repeat center center;
+    .icons {
+      width: auto;
+      height: 60px;
+    }
+    .titles {
+      @extend .text-center;
+    }
+    & .content {
+      @extend .col-12;
+      @extend .col-md-11;
+      &-info {
+        margin: 2rem 0;
+      }
+      &-item {
+        @extend .col-12;
+        @extend .col-md-4;
+        margin: 1rem 0;
+        // &:nth-child(2),
+        // &:nth-child(5) {
+        //   @extend .col-md-3;
+        //   @extend .mx-auto;
+        // }
+        p {
+          @extend %font-regular;
+          font-size: 1rem;
+          margin: 2rem 0 0;
+        }
+      }
+    }
+    .btn-azul {
+      position: relative;
+      z-index: 1;
+    }
+    .icons {
+      margin: auto;
+    }
+    .ico-eye {
+      width: 80px;
+      height: auto;
+    }
+    @media (min-width: 768px) {
+      background-attachment: fixed;
+      height: 100vh;
+    }
+    @media (max-width: 767.98px) {
+      padding: 5rem 0 0;
+    }
+  }
+}

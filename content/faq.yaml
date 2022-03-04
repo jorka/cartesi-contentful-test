@@ -1,0 +1,48 @@
+# This file is intended to maintain the hierarchy of questions on the FAQ page.
+# Each question must have a markdown file on /content/faq/
+# The first part of the markdown file is important to extract the question and section, so it must be the same on this file (faq.yaml), to correctly pull the data.
+# The name of the file is not relevant.
+
+title: FAQ
+content:
+  - section:
+      name: General Questions
+      questions:
+        - question: Can you give us a brief introduction of Cartesi? What is the vision of the project and what are the problems Cartesi is going to solve?
+          questions:
+            - question: Could you please elaborate on the relevance of offering Linux and its supported software stacks?
+            - question: How do you see this new infrastructure brought about by Cartesi impacting the ecosystem?
+        - question: Who are the founders and co-founders of the project?
+        - question: What is Cartesi’s biggest innovation and has it been academically verified?
+        - question: Can you give me a simple explanation of how Cartesi works?
+        - question: What is the target industry for your project?
+          questions:
+            - question: Which use cases does Cartesi intend to mainly focus on? Finance, logistics & optimization, or gaming? How will Cartesi collaborate with other Public blockchains to create these use cases?
+        - question: Why do we need Cartesi?
+        - question: Is Cartesi a public chain? What’s the TPS of Cartesi?
+        - question: What differences does Cartesi have with other Layer-1 solutions and layer 2 solutions? Why do you design this way?
+        - question: What is the difference between Cartesi and Truebit?
+          questions:
+            - question: Are there any other important design distinctions with Truebit?
+        - question: What is the current status of the project and what is the roadmap of Cartesi?
+        - question: What's your plan for growth? How do you attract users and developers?
+          questions:
+            - question: How about onboarding developers to create DApps for Cartesi?
+  - section:
+      name: Token Questions
+      questions:
+        - question: What is the utility of the Cartesi Token (CTSI)?
+        - question: Why do you think a native token is necessary for your project?
+        - question: What is the total token supply?
+        - question: What are the notable funds that are supporting Cartesi? Are there any traditional funds involved as well?
+  - section:
+      name: Technical Questions
+      questions:
+        - question: Linux on blockchains? What does that mean? Ethereum and implementations of Plasma also run on Linux.
+        - question: Could you clarify whether we should be worried about the huge attack vectors surrounding traditional a Linux development environment running on Cartesi Nodes?
+        - question: What is "Reproducibility" in Cartesi, does it really work for reproducibility within a Linux OS and VM?
+        - question: What is the "Verifiability" in Cartesi? Is it truly secure and trustworthy?
+        - question: The decentralization of POS has recently become a focus of discussion. How does cartesi achieve full decentralization of its system?
+        - question: What is the governance mechanism of Cartesi?
+        - question: What’s the advantage of Cartesi’s Layer-2 system compared with Nervos?
+        - question: Which Linux distributions are currently implemented or does Cartesi plan to support?

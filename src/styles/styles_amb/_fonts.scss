@@ -1,0 +1,36 @@
+/* FONTS
+------------------------------------------------ */
+@font-face {
+  font-family: 'Rubik Light';
+  src: url('../../fonts/rubik/Rubik-Light.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik Regular';
+  src: url('../../fonts/rubik/Rubik-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik BoldItalic';
+  src: url('../../fonts/rubik/Rubik-BoldItalic.ttf') format('truetype');
+  font-display: swap;
+}
+
+%font-light {
+  font-weight: 300;
+}
+%font-regular {
+  font-weight: 400;
+}
+%font-medium {
+  font-weight: 500;
+}
+%font-bold {
+  font-weight: 700;
+}
+
+/* FONT AWESOME
+------------------------------------------------ */
+@import 'font-awesome';

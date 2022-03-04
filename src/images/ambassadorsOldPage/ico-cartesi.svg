@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="74" height="75" class="hidden sr-only">
+    <g viewBox="0 0 74 75" fill="none" xmlns="http://www.w3.org/2000/svg" id="ico-cartesi">
+    <path d="M17.123 25.157L38.846 1.314l8.945 23.908m-.304 34.008L34.796 73.1 25.85 49.172" stroke="#fff" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M56.714 49.172L47.487 59.23" stroke="#fff" stroke-width="2" stroke-miterlimit="10"></path>
+    <path d="M47.747 25.222h15.594l8.945 23.95H41.4l-8.944-23.95H1.573l8.944 23.95h15.334" stroke="#fff" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M47.769 25.222l-21.94 23.95" stroke="#fff" stroke-width="2" stroke-miterlimit="10"></path>
+  </g>
+</svg>

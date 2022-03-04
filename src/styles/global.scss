@@ -1,0 +1,185 @@
+@import './variables.scss';
+
+// Slick used for carousel
+// @import "./slick/slick";
+// @import "./slick/slickTheme";
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/rubik/Rubik-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/rubik/Rubik-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/rubik/Rubik-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/rubik/Rubik-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+div,
+article,
+img,
+i {
+  font-family: 'Rubik', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: #000000;
+}
+
+button {
+  border-radius: 3px !important;
+  border: none;
+  font-size: 14px !important;
+  text-transform: capitalize;
+  font-weight: 400;
+  width: 213px;
+  height: 53px;
+  padding: 10px 20px;
+  transition: all 0.22s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+
+  @media (max-width: 456px) {
+    padding: 5px;
+    max-width: 185px;
+  }
+}
+
+.news {
+  border-radius: 3px;
+}
+
+@media (max-width: 450px) {
+  .slick-arrow {
+    z-index: 1;
+    &.slick-next {
+      right: -10px !important;
+    }
+    &.slick-prev {
+      left: -20px !important;
+    }
+  }
+}
+
+a:hover {
+  transition: ease;
+  color: #1f70c1 !important ;
+}
+
+#header-general {
+  @media (min-width: 1059px) {
+    .navbar-expand-xl {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      max-width: 1501px;
+      margin: auto;
+
+      .navbar-toggler {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: 500px) and (max-width: 1059px) {
+    .navbar-expand-xl {
+      flex-flow: wrap;
+      justify-content: space-between;
+
+      .navbar-toggler {
+        display: block;
+      }
+
+      .navbar-collapse:not(.show) {
+        display: none !important;
+      }
+      .navbar-collapse {
+        display: block !important;
+        flex-basis: 100%;
+      }
+
+      .navbar-nav {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+// design system for titles with subtitle
+.title-and-subtitle-box {
+  //only the tags: h1 and p
+  h1 {
+    font-weight: 500;
+    font-size: 43pt;
+    line-height: 77px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    font-feature-settings: 'liga' off;
+    color: #000;
+
+    @media (max-width: 560px) {
+      font-size: 9vw;
+      line-height: 11vw;
+    }
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 21pt;
+    line-height: 135%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    font-feature-settings: 'liga' off;
+    color: #000000;
+
+    @media (max-width: 560px) {
+      font-size: 4.4vw;
+      line-height: 6vw;
+    }
+  }
+}
+
+.page-not-found {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.page-not-found {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}

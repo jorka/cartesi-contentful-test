@@ -1,22 +1,18 @@
-import * as React from "react";
-import HeaderNavigation from "./headerNavigation";
-import Logo from "./logo";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { injectIntl } from "gatsby-plugin-intl";
+import * as React from 'react';
+import HeaderNavigation from './headerNavigation';
+import Logo from './logo';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { injectIntl } from 'gatsby-plugin-intl';
 
 const Header = ({ isStatic, isInverted }) => {
   const headerRef = React.useRef(null);
-
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const setHeaderHeight = React.useCallback(() => {
     const header = headerRef.current;
     const headerHeight = header.getBoundingClientRect().height;
     document.documentElement.style.setProperty(
-      "--header-height",
+      '--header-height',
       `${headerHeight}px`
     );
   }, []);
@@ -24,10 +20,10 @@ const Header = ({ isStatic, isInverted }) => {
   React.useEffect(() => {
     setHeaderHeight();
 
-    window.addEventListener("resize", setHeaderHeight);
+    window.addEventListener('resize', setHeaderHeight);
 
     return () => {
-      window.removeEventListener("resize", setHeaderHeight);
+      window.removeEventListener('resize', setHeaderHeight);
     };
   }, [headerRef, setHeaderHeight]);
 
@@ -37,21 +33,21 @@ const Header = ({ isStatic, isInverted }) => {
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.refresh(true);
 
-    const scrolledUpClasses = ["is-scrolled"];
-    const defaultClasses = ["is-transparent"];
+    const scrolledUpClasses = ['is-scrolled'];
+    const defaultClasses = ['is-transparent'];
 
     const headerAnim = gsap
       .from(header, {
-        yPercent: "-100",
+        yPercent: '-100',
         duration: 0.5,
-        ease: "power2.inOut",
+        ease: 'power2.inOut',
         paused: true,
       })
       .progress(1);
 
     ScrollTrigger.create({
-      id: "header",
-      start: "40px top",
+      id: 'header',
+      start: '40px top',
       end: 99999,
 
       onUpdate: ({ direction, progress }) => {
@@ -74,12 +70,12 @@ const Header = ({ isStatic, isInverted }) => {
   return (
     <header
       ref={headerRef}
-      className={`header ${isStatic ? "is-static" : "is-transparent"} ${
-        isInverted ? "is-inverted" : ""
+      className={`header ${isStatic ? 'is-static' : 'is-transparent'} ${
+        isInverted ? 'is-inverted' : ''
       }`}
     >
-      <div className="container">
-        <div className="flex items-center justify-between">
+      <div className='container'>
+        <div className='flex items-center justify-between'>
           <Logo />
           <HeaderNavigation isHeaderInverted={isInverted} />
         </div>

@@ -1,0 +1,222 @@
+title: The Team
+content:
+  - member:
+      name: Erick de Moura
+      role: CEO
+      image: erick-moura-member.svg
+      link: https://www.linkedin.com/in/erickdemoura/
+  - member:
+      name: Colin Steil
+      role: COO
+      image: colin-steil-members.svg
+      link: https://www.linkedin.com/in/colinsteil/
+  - member:
+      name: Augusto Teixeira
+      role: Chief Scientific Officer
+      image: augusto-teixeira-members.svg
+      link: https://www.linkedin.com/in/augusto-teixeira-39a3a8169/
+  - member:
+      name: Diego Nehab
+      role: Chief Technology Officer
+      image: diego-nehab-members.svg
+      link: https://www.linkedin.com/in/diegonehab/
+  - member:
+      name: Danilo Tuler
+      role: Head of Engineering
+      image: danilo-tuler-members.svg
+      link: https://www.linkedin.com/in/danilotuler/
+  - member:
+      name: Bruno Maia
+      role: Head of Business Development
+      image: bruno-maia.svg
+      link: https://www.linkedin.com/in/bmaia/
+  - member:
+      name: Milton Jonathan
+      role: Head of Product
+      image: milton-jonathan-members.svg
+      link: https://www.linkedin.com/in/milton-jonathan/
+  - member:
+      name: Victor Fusco
+      role: Lead Software Engineer
+      image: victor-fusco-members.svg
+      link: https://www.linkedin.com/in/victorfusco/
+  - member:
+      name: Carlo Fragni
+      role: Senior Software Engineer
+      image: carlo-fragni-members.svg
+      link: https://www.linkedin.com/in/carlo-fragni-6a298920/
+  - member:
+      name: Marcos Pernambuco
+      role: Senior Software Engineer
+      image: marcos-pernambuco.png
+      link: https://www.linkedin.com/in/marcos-pernambuco-4b80371/
+  - member:
+      name: Gabriel Coutinho
+      role: Software Engineer
+      image: gabriel-coutinho-members.svg
+      link: https://www.linkedin.com/in/gabriel-coutinho-de-paula-72183a86/
+  - member:
+      name: Stephen Chen
+      role: Software Engineer
+      image: stephen-chen-members.svg
+      link: https://www.linkedin.com/in/stephen-chen-65624851/
+  - member:
+      name: Felipe Argento
+      role: Lead Blockchain Engineer
+      image: felipe-argento-members.svg
+      link: https://www.linkedin.com/in/felipe-argento-ba5494b2/
+  - member:
+      name: Gabriel Barros
+      role: Blockchain Engineer
+      image: gabriel-barros-members.svg
+      link: https://www.linkedin.com/in/gbbabarros/
+  - member:
+      name: Zehui Zheng
+      role: Blockchain Engineer
+      image: zehui-zheng-members-2.svg
+      link: https://www.linkedin.com/in/zehui-zheng-639b1b1b4/
+  - member:
+      name: Victor Yves
+      role: Software Engineer
+      image: victor-yves-members-1.svg
+      link: https://www.linkedin.com/in/victoryvescrispim/
+  - member:
+      name: Gabriel Quadros Ligneul
+      role: Senior Software Engineer
+      image: gabriel-ligneul.svg
+      link: https://www.linkedin.com/in/gabriel-ligneul/
+  - member:
+      name: Vinicius Ribeiro
+      role: Head of Expansion
+      image: vinicius-ribeiro.svg
+      link: https://www.linkedin.com/in/viniciusfariasribeiro/
+  - member:
+      name: Fabiana Cecin
+      role: Researcher
+      image: fabiana-cecin.png
+      link: https://www.linkedin.com/in/fabiana-cecin-9983a919a/
+  - member:
+      name: Claudio Da Silva
+      role: Project Manager
+      image: claudio-silva.png
+      link: https://www.linkedin.com/in/claudio-silva-34931a11/
+  - member:
+      name: Mayowa Tudonu
+      role: Software Engineer
+      image: mayowa-tudonu.png
+      link: https://www.linkedin.com/in/mayowa-tudonu/
+  - member:
+      name: Marko Atanasievski
+      role: Senior Software Engineer
+      image: marko-a.png
+      link: https://www.linkedin.com/in/marko-atana
+  - member:
+      name: Nathalie Braehler
+      role: Head of Marketing
+      image: nathalie.png
+      link: https://www.linkedin.com/in/nathaliebrahler/
+  - member:
+      name: Aleksandr Mikhalevich
+      role: Software Engineer
+      image: alex.png
+      link: https://www.linkedin.com/in/alex-mikhalevich-10611671/
+  - member:
+      name: Enderson Maia
+      role: Software Engineer
+      image: enderson.png
+      link: https://www.linkedin.com/in/endersonmaia
+  - member:
+      name: Jesseca Dela Pena
+      role: HR and Admin Manager
+      image: jesseca.png
+      link: https://www.linkedin.com/in/jesseca-p-hr/
+  - member:
+      name: Karmen Truong
+      role: Digital Marketing Manager
+      image: karmen.png
+      link: https://www.linkedin.com/in/karmen-truong/
+  - member:
+      name: Lourival Vieira Neto
+      role: Software Engineer
+      image: lourival.png
+      link: https://www.linkedin.com/in/lourivalneto
+  - member:
+      name: Marcel Moura
+      role: Software Engineer
+      image: marcel.png
+      link: https://www.linkedin.com/in/marcelmoura/
+  - member:
+      name: Marcelo Politzer
+      role: Software Engineer
+      image: marcelo.png
+      link: https://www.linkedin.com/in/marcelo-politzer-couto
+  - member:
+      name: Maximilian Hatesuer
+      role: Business Development Manager
+      image: maximilian.png
+      link: https://www.linkedin.com/in/maximilian-hatesuer/
+  - member:
+      name: Payal Patel
+      role: Executive Assistant
+      image: payal.png
+      link: https://www.linkedin.com/in/payal-patel-gurgaon/
+  - member:
+      name: Victor Nogueira
+      role: Software Engineer
+      image: victor.png
+      link: https://www.linkedin.com/in/victor-nogueira-647029154/
+  - member:
+      name: Guilherme Dantas
+      role: Blockchain Engineering Intern
+      image: guilherme-dantas.png
+      link: https://www.linkedin.com/in/guidanoli/
+  - member:
+      name: Jacky Ye
+      role: China Marketing Manager
+      image: jacky-ye.png
+      link: https://www.linkedin.com/in/jacky-a5b201193/
+  - member:
+      name: Pedro Argento
+      role: DeFi Researcher
+      image: pedro-argento.png
+      link: https://www.linkedin.com/in/pedroargento/
+  - member:
+      name: Gimer Cervera
+      role: Blockchain Engineer
+      image: gimer-cervera.png
+      link: https://www.linkedin.com/in/gimercervera/
+  - member:
+      name: Brandon Isaacson
+      role: General Counsel
+      image: Brandon-Isaacson.png
+      link: https://www.linkedin.com/in/bisaacson/
+  - member:
+      name: Bruno Menezes
+      role: Software Engineer
+      image: Bruno-Menezes.png
+      link: https://www.linkedin.com/in/brunodmenezes/
+  - member:
+      name: Dinali Jay
+      role: Business Community Manager
+      image: Dinali-Jay.png
+      link: https://www.linkedin.com/in/dinalijay/
+  - member:
+      name: Joe Nance
+      role: Cartesi Labs Director
+      image: Joe-Nance.png
+      link: https://www.linkedin.com/in/joe-nance89/
+  #   - member:
+  #       name: Jacopo Buriollo
+  #       role: Technical Community Manager - Software Engineer
+  #       image: Jacopo-Buriollo.png
+  #       link: https://www.linkedin.com/in/jacopoburiollo/
+  - member:
+      name: Nazim Faour
+      role: Technical Writer
+      image: Nazim-Faour.png
+      link: https://www.linkedin.com/in/nazim-faour-17058b120/
+  - member:
+      name: Roman Hodulak
+      role: Software Engineer
+      image: Roman-Hodulak.png
+      link: https://www.linkedin.com/in/roman-hodulak

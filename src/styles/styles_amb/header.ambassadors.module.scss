@@ -1,0 +1,193 @@
+// IMPORTS -----------------------------------------------------------------------------------------
+
+#amb-header {
+  // ROOT !!ATENÇÂO este 'import' deve ocorrer dentro do escopo do elemento, para não afetar todo o sistema!!
+  @import "root.scoped.scss";
+  // HEADER STYLE ------------------------------------------------------------------------------------
+  #header {
+    background: url("../../images/ambassadorsOldPage/bg-header.png") repeat-x center 0;
+    height: 540px;
+    .btnBlue {
+      // margin: 100px 0 0 640px;
+      width: rem(170);
+      height: rem(55);
+      margin: 11% 0 0 60%;
+      padding: initial;
+      font-size: rem(24);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (max-width: 1199.98px) {
+      .btnBlue {
+        margin: 14% 0 0 60%;
+      }
+    }
+    // @media (max-width: 991.98px) {
+    //   .btn-azul {
+    //     margin: 14% 0 0 60%;
+    //   }
+    // }
+    // @media(min-width: 768px) {
+
+    // }
+    @media (max-width: 767.98px) {
+      .btnBlue {
+        margin: 24% 0 0 50%;
+        transform: translateX(-50%);
+        width: 90%;
+      }
+    }
+  }
+
+  .header {
+    &Navbar {
+      &Menu {
+        .navItem {
+          padding: rem(0 45);
+        }
+        .navLink {
+          @extend %font-medium;
+          font-size: rem(18);
+          color: $azul-escuro;
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      &Navbar {
+        padding: 3rem 0 !important;
+      }
+    }
+    @media (max-width: 1199.98px) {
+      .dropdown {
+        &-item {
+          padding: 0.25rem 1.5rem;
+        }
+      }
+      .navItem {
+        padding: 0 1.5rem;
+      }
+    }
+    @include media-breakpoint-only(md) {
+      // padding: 3rem 0;
+      box-shadow: none;
+      &Navbar {
+        padding: 2rem 0;
+      }
+      .dropdown {
+        &-item {
+          padding: 0.25rem 1rem;
+        }
+      }
+      &Content {
+        &-title {
+          margin: 20px auto;
+          width: 60%;
+        }
+      }
+      .container {
+        max-width: 100%;
+      }
+      .navItem {
+        padding: 0 0.5rem;
+      }
+      &Content {
+        p {
+          margin: 9rem 0 0;
+        }
+      }
+    }
+    @media (max-width: 767.98px) {
+      // p {
+      //   font-size: 20px;
+      // }
+      &NavbarMenu,
+      .dropdown {
+        text-align: center;
+        .navLink {
+          font-size: 1.8rem;
+        }
+        &-menu {
+          text-align: center;
+        }
+      }
+    }
+  }
+  /* icon menu mobile */
+  .nav-icon {
+    // margin: 1em;
+    width: 40px;
+    &:after,
+    &:before,
+    div {
+      background-color: $azul-escuro;
+      border-radius: 3px;
+      content: "";
+      display: block;
+      height: 5px;
+      margin: 7px 0;
+      transition: all 0.2s ease-in-out;
+    }
+    &.open {
+      div {
+        transform: scale(0);
+      }
+      &::before {
+        transform: translateY(12px) rotate(135deg);
+      }
+      &:after {
+        transform: translateY(-12px) rotate(-135deg);
+      }
+    }
+  }
+  .navbar-toggler {
+    width: fit-content;
+    height: auto;
+    padding: 0;
+    outline: 0 !important;
+  }
+  /* menu languages */
+  .dropdown {
+    @include media-breakpoint-up(xl) {
+      &:hover {
+        .dropdown-menu {
+          position: absolute;
+          display: block;
+          float: none;
+          margin: 0;
+        }
+      }
+    }
+    &-menu {
+      background: transparent;
+      padding: 0;
+      border: 0;
+    }
+    &-item {
+      @extend %font-medium;
+      font-size: rem(18);
+      color: $azul-escuro;
+      padding: 0.25rem 0.5rem;
+    }
+    .nav-link {
+      @extend %font-medium;
+      font-size: rem(18);
+      color: $azul-escuro;
+    }
+  }
+
+  .logo-cartesi {
+    width: 169px;
+    height: 53px;
+  }
+
+  // título do header
+
+  .titles {
+    color: $azul-escuro;
+  }
+}

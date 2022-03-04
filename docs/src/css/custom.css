@@ -1,0 +1,40 @@
+/**
+ * Copyright (c) 2017-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #555555;
+  --ifm-color-primary-dark: #4d4d4d;
+  --ifm-color-primary-darker: #484848;
+  --ifm-color-primary-darkest: #3b3b3b;
+  --ifm-color-primary-light: #5e5e5e;
+  --ifm-color-primary-lighter: #626262;
+  --ifm-color-primary-lightest: #6e6e6e;
+  --ifm-link-decoration: underline;
+}
+
+
+.navbar--fixed-top{
+    height: 90px;
+}
+
+.navbar__brand {
+    height: 3rem;
+    margin-left: 2rem;
+}
+
+.footer--dark {
+    background: linear-gradient(178.26deg,#060505 22.29%,#454545 104.81%);
+}
+
+code { white-space: pre; }

@@ -1,0 +1,42 @@
+title: Wallets - Securely Store CTSI
+content:
+  - wallet:
+      name: Atomic Wallet
+      link: https://atomicwallet.io
+      image: atomic-wallet.png
+  - wallet:
+      name: Ledger
+      link: https://www.ledger.com
+      image: ledger.png
+  - wallet:
+      name: My Crypto
+      link: https://mycrypto.com
+      image: my-crypto.png
+  - wallet:
+      name: Trezor
+      link: https://trezor.io
+      image: trezor.png
+  - wallet:
+      name: Trust Wallet
+      link: https://trustwallet.com
+      image: trust-wallet.png
+  - wallet:
+      name: My Ether Wallet
+      link: https://www.myetherwallet.com/access-my-wallet
+      image: ether-wallet.png
+  - wallet:
+      name: Guarda Wallet
+      link: https://guarda.com/
+      image: guarda-wallet.png
+  - wallet:
+      name: Gnosis Safe
+      link: https://gnosis-safe.io/
+      image: gnosis-wallet.png
+  - wallet:
+      name: crypto.com
+      link: https://crypto.com/
+      image: crypto.svg
+  - wallet:
+      name: Coinbase Wallet
+      link: https://wallet.coinbase.com/
+      image: coinbase.png

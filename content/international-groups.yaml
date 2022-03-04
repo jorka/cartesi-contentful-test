@@ -1,0 +1,103 @@
+# The flags are based on ISO 3166-2
+
+title: Cartesi International Groups
+content:
+  - group:
+      name: Pусский
+      flag: RU
+      image: telegram.svg
+      color: "#2DA4D8"
+      button: вступить в группу
+      link: https://t.me/CartesiRU
+  - group:
+      name: 中文
+      flag: CN
+      image: telegram.svg
+      color: "#2DA4D8"
+      button: 加入
+      link: https://t.me/CartesiCN
+  - group:
+      name: Emmanuel-111
+      flag: CN
+      image: weChat.svg
+      color: "#25DF73"
+      button: 加入
+      link: https://www.wechat.com
+  - group:
+      name: Türkçe
+      flag: TR
+      image: telegram.svg
+      color: "#2DA4D8"
+      button: katılmak
+      link: https://t.me/CartesiTR
+  - group:
+      name: Tiếng Việt
+      flag: VN
+      image: telegram.svg
+      color: "#2DA4D8"
+      button: Tham Gia Nhóm
+      link: https://t.me/CartesiVN
+  - group:
+      name: 한국어
+      flag: KR
+      image: telegram.svg
+      color: "#2DA4D8"
+      button: 그룹에 가입
+      link: https://t.me/CartesiKR
+  - group:
+      name: भारतीय
+      flag: IN
+      image: telegram.svg
+      color: "#2DA4D8"
+      button: हिस्सा लेना
+      link: https://t.me/cartesiindia
+  - group:
+      name: Komunitas
+      flag: ID
+      image: telegram.svg
+      color: "#2DA4D8"
+      button: Grup Indonesia
+      link: https://t.me/CartesiID
+  - group:
+      name: Spanish
+      flag: ES
+      image: telegram.svg
+      color: "#2DA4D8"
+      button: Spanish
+      link: https://t.me/CartesiSpanish
+  - group:
+      name: Japanese
+      flag: JP
+      image: telegram.svg
+      color: "#2DA4D8"
+      button: Japanese
+      link: https://t.me/CartesiJP
+  - group:
+      name: Philippines
+      flag: PH
+      image: telegram.svg
+      color: "#2DA4D8"
+      button: Philippines
+      link: https://t.me/CartesiPH
+  - group:
+      name: Brazilian
+      flag: BR
+      image: telegram.svg
+      color: "#2DA4D8"
+      button: Brazilian
+      link: https://t.me/CartesiBR
+  - group:
+      name: English
+      flag: US
+      image: telegram.svg
+      color: "#2DA4D8"
+      button: English
+      link: https://t.me/cartesiproject
+  - group:
+      name: Arabic
+      flag: SA
+      image: telegram.svg
+      color: "#2DA4D8"
+      button: English
+      link: https://t.me/CartesiArabic
+

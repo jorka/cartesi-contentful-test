@@ -1,0 +1,40 @@
+title: Judges
+page: incubation/judges
+content:
+  - judge:
+      name: Erick Moura
+      role: CEO of Cartesi
+      image: erick-de-moura.png
+      link: https://www.linkedin.com/in/erickdemoura/
+  - judge:
+      name: Colin Steil
+      role: COO of Cartesi
+      image: colin-steil.png
+      link: https://www.linkedin.com/in/colinsteil/
+  - judge:
+      name: Augusto Teixeira, PhD
+      role: CSO of Cartesi
+      image: augusto-teixeira.png
+      link: https://www.linkedin.com/in/augusto-teixeira-39a3a8169/
+  - judge:
+      name: Diego Nehab, PhD
+      role: CTO of Cartesi
+      image: diego-nehab.png
+      link: https://www.linkedin.com/in/diegonehab/
+  - judge:
+      name: Serguei Popov
+      roles:
+        - role: Co-Founder of IOTA
+        - role: Cartesi Advisor
+      image: serguei-popov.png
+      link: https://www.linkedin.com/in/serguei-popov-631bb762/
+  - judge:
+      name: Danilo Tuler
+      role: Head of Engineering at Cartesi
+      image: danilo-tuler.png
+      link: https://www.linkedin.com/in/danilotuler/
+#   - judge:
+#       name: Milton Jonathan
+#       role: Senior Software Engineer
+#       image: milton-jonathan.png
+#       link: https://www.linkedin.com/in/milton-jonathan/

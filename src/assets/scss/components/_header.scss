@@ -13,7 +13,7 @@
     }
   }
 
-  .is-scrolled {
+  &.is-scrolled {
     @apply fixed bg-gray-900 text-yellow-50;
   }
 }

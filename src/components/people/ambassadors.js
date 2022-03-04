@@ -1,16 +1,14 @@
-import { injectIntl } from "gatsby-plugin-intl";
-import React from "react";
-import AltNavigation from "../altNavigation";
-import ReadmoreLink from "../readmoreLink";
-import Map from "./map";
+import { injectIntl } from 'gatsby-plugin-intl';
+import React from 'react';
+import Map from './map';
 
 const Ambassadors = () => {
   return (
     <>
-      <div className="section bg-yellow-50 text-gray-900" id="ambassadors">
-        <div className="container max-w-4xl">
+      <div className='section bg-yellow-50 text-gray-900' id='ambassadors'>
+        <div className='container max-w-4xl'>
           <div
-            className="prose prose-headings:font-serif prose-headings:text-3xl"
+            className='prose prose-headings:font-serif prose-headings:text-3xl'
             data-anim-block
           >
             <h2>
@@ -26,9 +24,11 @@ const Ambassadors = () => {
               are the ambassadors, striving to develop a brighter future.
             </p>
           </div>
+          {/*
           <AltNavigation className="mt-12 border-t border-blue-900 lg:mt-24">
             <ReadmoreLink to="#">Become an ambassador</ReadmoreLink>
           </AltNavigation>
+          */}
         </div>
       </div>
       <Map />

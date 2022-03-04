@@ -1,0 +1,55 @@
+#ambAbout {
+  @import "style.scss";
+
+  // a,
+  // p,
+  // h1,
+  // h3,
+  // h4,
+  // h5,
+  h2 {
+  /* About the program */
+    position: absolute;
+    left: 35.89%;
+    right: 36.61%;
+    top: 10.21%;
+    bottom: 88.87%;
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 57px;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: capitalize;
+
+    color: #000000;
+  }
+
+  .about {
+    p {
+      //styleName: Text;
+      position: absolute;
+      left: 20.89%;
+      right: 22.14%;
+      top: 11.69%;
+      bottom: 86.4%;
+      
+      /* Text */
+      
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 150%;
+      /* or 30px */
+      
+      text-align: center;
+      font-feature-settings: 'liga' off;
+      
+      color: #000000;
+    }
+  }
+}

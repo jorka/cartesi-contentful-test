@@ -1,0 +1,35 @@
+# The layout has 3 rows and 8 columns
+# There are two behaviors when the square of the layout has no partner: EMPTY or STRIPED
+content:
+  - item:
+      name: SOSV
+      image: sosv.png
+      link: https://sosv.com
+  # - item:
+  #     name: Gitcoin
+  #     image: gitcoin.png
+  #     link: https://gitcoin.co/
+  - item:
+      name: Dlab
+      image: dlab.png
+      link: https://dlab.vc/
+  - item:
+      name: Artesian
+      image: artesian.png
+      link: https://www.artesianinvest.com
+  # - item:
+  #     name: Polygon
+  #     image: polygon.svg
+  #     link: https://polygon.technology/
+  # - item:
+  #     name: Avalanche
+  #     image: avalanche.svg
+  #     link: https://explorer.avax.network/
+  # - item:
+  #     name: Elrond
+  #     image: elrond.svg
+  #     link: https://medium.com/cartesi/cartesi-partners-with-elrond-to-bring-the-worlds-prevailing-os-to-the-internet-scale-blockchain-af0fcba26b59
+  - item:
+      name: IMPA
+      image: impa.png
+      link: https://impa.br/

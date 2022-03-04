@@ -1,16 +1,16 @@
-import React from "react";
-import AltNavigation from "../altNavigation";
-import ReadmoreLink from "../readmoreLink";
-import ReadMoreIcon from "../../assets/images/icon-read-more.svg";
-import scrollTo from "gatsby-plugin-smoothscroll";
-import { injectIntl } from "gatsby-plugin-intl";
+import React from 'react';
+import AltNavigation from '../altNavigation';
+import ReadmoreLink from '../readmoreLink';
+import ReadMoreIcon from '../../assets/images/icon-read-more.svg';
+import scrollTo from 'gatsby-plugin-smoothscroll';
+import { injectIntl } from 'gatsby-plugin-intl';
 
 const HelloNewEconomy = () => {
   return (
-    <div className="section bg-yellow-500 text-gray-900" id="hello-new-economy">
-      <div className="container max-w-4xl">
+    <div className='section bg-yellow-500 text-gray-900' id='hello-new-economy'>
+      <div className='container max-w-4xl'>
         <div
-          className="prose prose-headings:font-serif prose-headings:text-3xl"
+          className='prose prose-headings:font-serif prose-headings:text-3xl'
           data-anim-block
         >
           <h2>Hello new economy</h2>
@@ -27,15 +27,15 @@ const HelloNewEconomy = () => {
             game’s growth through playing to earn.
           </p>
         </div>
-        <AltNavigation className="mt-12 border-t border-blue-900 lg:mt-24">
-          <button onClick={() => scrollTo("#articles")}>
-            <span className="group inline-flex items-center gap-4">
+        <AltNavigation className='mt-12 border-t border-blue-900 lg:mt-24'>
+          <button onClick={() => scrollTo('#articles')}>
+            <span className='group inline-flex items-center gap-4'>
               Learn more
-              <ReadMoreIcon className="flex-shrink-0 fill-current transition-transform group-hover:translate-x-2" />
+              <ReadMoreIcon className='flex-shrink-0 fill-current transition-transform group-hover:translate-x-2' />
             </span>
           </button>
 
-          <ReadmoreLink to="/token">The economy of the OS</ReadmoreLink>
+          <ReadmoreLink to='/en/token'>The economy of the OS</ReadmoreLink>
         </AltNavigation>
       </div>
     </div>
